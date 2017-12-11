@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^trang-chu.html$ index.php
+RewriteRule ^lien-he.html$ lien_he.php
+RewriteRule ^danh-sach-hoa$ hoa.php
+RewriteRule ^san-pham/([a-zA-Z_-]+)-([0-9]+).html$ chi_tiet_hoa.php?ten_hoa=$1&id=$2
+RewriteRule ^loai-hoa/([a-zA-Z_-]+)-([0-9]+)$ hoa.php?ten_loai=$1&loai_hoa=$2
+RewriteRule ^tin-tuc/([a-zA-Z_-]+)-([0-9]+).html$ tin_tuc.php?ten_tin=$1&ma_tin=$2
+RewriteRule ^danh-sach-hoa/page/([0-9]+)$ hoa.php?page=$1
+RewriteRule ^loai-hoa/([a-zA-Z_-]+)-([0-9]+)/page/([0-9+])$ hoa.php?ten_loai=$1&loai_hoa=$2&page=$3
+RewriteRule ^gio-hang.html$ xem_gio_hang.php
+RewriteRule ^xoa/([0-9]+)$ xoagiohang.php?id={$sp->MaHoa}
