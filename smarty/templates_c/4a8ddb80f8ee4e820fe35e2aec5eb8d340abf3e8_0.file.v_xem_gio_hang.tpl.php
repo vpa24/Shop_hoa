@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-11 03:51:18
+/* Smarty version 3.1.30, created on 2017-12-11 13:36:53
   from "C:\wamp64\www\shop_hoa\views\v_xem_gio_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2e00b69f7722_01559243',
+  'unifunc' => 'content_5a2e89f5403585_19616363',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4a8ddb80f8ee4e820fe35e2aec5eb8d340abf3e8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_xem_gio_hang.tpl',
-      1 => 1512964277,
+      1 => 1512966158,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2e00b69f7722_01559243 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2e89f5403585_19616363 (Smarty_Internal_Template $_smarty_tpl) {
 if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
-	<h2 class="giohang_rong">Rất tiếc bạn chưa mua hàng....!</h2>
+	<div class="canh_giua">
+			<h2 class="giohang_rong">Rất tiếc bạn chưa mua hàng....!</h2>
+	</div>
 <?php } else { ?>
 <form method="post">
 	<div class="check-out">
