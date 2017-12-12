@@ -53,11 +53,11 @@ class pager
 
 			if(($curpage!=1)&&($curpage))
 			{
-				$page_list.='<span class="div_trang">'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=1\" title=\"Trang đầu\"><<</a></span>";
+				$page_list.='<span>'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=1\" title=\"Trang đầu\"><<</a></span>";
 			}
 			if(($curpage-1)>0)
 			{
-				$page_list.='<span class="div_trang">'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".($curpage-1)."\" title=\"Về trang trước\"><</a></span>";
+				$page_list.='<span>'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".($curpage-1)."\" title=\"Về trang trước\"><</a></span>";
 			}
 
 			$vtdau=max($curpage-2,1);
@@ -65,7 +65,7 @@ class pager
 
 
 			if($vtdau>1){
-			$page_list.='<span class="div_trang">'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".($vtdau-1)."' title='Trang ".($vtdau-1)."'>...</a></span>";
+			$page_list.='<span>'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".($vtdau-1)."' title='Trang ".($vtdau-1)."'>...</a></span>";
 			}
 
 
@@ -73,23 +73,23 @@ class pager
 				{
 					if($i==$curpage)
 					{
-						$page_list.='<span class="div_trang">'."<b>".$i."</b></span>";
+						$page_list.='<span class="active">'.$i."</b></span>";
 					}
 					else
 					{
-						$page_list.='<span class="div_trang">'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".$i."' title='Trang ".$i."'>".$i."</a></span>";
+						$page_list.='<span>'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".$i."' title='Trang ".$i."'>".$i."</a></span>";
 					}
 				}
 
 			if($vtcuoi<$pages){
-				$page_list.='<span class="div_trang">'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".($vtcuoi+1)."' title='Trang ".($vtcuoi+1)."'>...</a></span>";
+				$page_list.='<span>'."<a href ='".$_SERVER['PHP_SELF']."?".$querystring."page=".($vtcuoi+1)."' title='Trang ".($vtcuoi+1)."'>...</a></span>";
 			}
 
 
 			if(($curpage+1)<=$pages)
 			{
-				$page_list.='<span class="div_trang">'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".($curpage+1)."\" title=\"Đến trang sau\">></a></span>";
-				$page_list.='<span class="div_trang">'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".$pages."\" title=\"Đến trang cuối\">>></a></span>";
+				$page_list.='<span>'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".($curpage+1)."\" title=\"Đến trang sau\">></a></span>";
+				$page_list.='<span>'."<a href =\"".$_SERVER['PHP_SELF']."?".$querystring."page=".$pages."\" title=\"Đến trang cuối\">>></a></span>";
 			}
 			return $page_list;
 	}

@@ -1,36 +1,28 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-12 05:18:28
+/* Smarty version 3.1.30, created on 2017-12-12 13:48:49
   from "C:\wamp64\www\shop_hoa\views\v_chi_tiet_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2f66a4087fb7_67640684',
+  'unifunc' => 'content_5a2fde41c677f6_32136945',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f480e303df46b9b31a8487d0c239ab88e32b604f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_chi_tiet_hoa.tpl',
-      1 => 1513055798,
+      1 => 1513086527,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:views/v_hoa_cung_loai.tpl' => 1,
   ),
 ),false)) {
-function content_5a2f66a4087fb7_67640684 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2fde41c677f6_32136945 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-
-            <!-- BEGIN HEADER PAGE -->
-            <div id="bsm_header_page">
-                <h1>Chi tiết hoa <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</h1>
-            </div>
-            <!-- END HEADER PAGE -->
-
-            <!-- BEGIN PRODUCT DETAILS -->
             <div id="bsm_product_details" class="container">
                 <form method="post" action="gio_hang.php?MaHoa=<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 ">
@@ -73,48 +65,8 @@ function content_5a2f66a4087fb7_67640684 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </form>
             </div>
-            <!-- END PRODUCT DETAILS -->
-            <!-- BEGIN NEW PRODUCTS -->
-            <div id="bsm_products" class="bsm_new_products">
-                <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
-                    <h1>Những mẫu hoa đẹp</h1>
-                    <img src="public/img/divider.png" alt="">
-                </div>
-                <div id="bsm_new_products" class="container">
-                    <div class="swiper-wrapper">
-                        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['hoa_cung_loai']->value, 'hoa');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
-?>
-                        <div class="bsm_product swiper-slide">
-                            <div class="bsm_product_image">
-                                <img class="img-responsive hinh_anh" src="public/images/hoa/<?php echo $_smarty_tpl->tpl_vars['hoa']->value->Hinh;?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
-">
-                            </div>
-                            <div class="bsm_product_info">
-                                 <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['hoa']->value->TenHoa);?>
--<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
-.html"><h4><?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
-</h4></a>
-                                <span><?php echo number_format($_smarty_tpl->tpl_vars['hoa']->value->Gia);?>
- vnđ</span>
-                            </div>
-                            <div class="bsm_product_hover">
-                            </div>
-                        </div>
-                        <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+            <?php $_smarty_tpl->_subTemplateRender("file:views/v_hoa_cung_loai.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-                    </div>
-                </div>
-                <div class="bsm_products_new_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-                <div class="bsm_products_new_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-            </div>
-            <!-- END NEW PRODUCTS -->
 <?php }
 }

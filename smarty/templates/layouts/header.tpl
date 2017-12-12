@@ -8,12 +8,12 @@
                 <i class="bsm_header_mobile_search_button fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 bsm_logo">
-                <a href="trang-chu.html">
+                <a href=".">
                     <img src="img/logo.png" alt="">
                 </a>
             </div>
             <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
-                    <li ><a href="trang-chu.html">Trang chủ</a></li>
+                    <li ><a href=".">Trang chủ</a></li>
                     <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                 </ul>
                 <ul class="bsm_header_nav_left">
@@ -82,13 +82,13 @@
                 <div class="col-md-5">
                     <nav>
                         <ul class="bsm_header_nav_left">
-                            <li ><a href="trang-chu.html">Trang chủ</a></li>
+                            <li ><a href=".">Trang chủ</a></li>
                             <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-md-2">
-                    <a href="trang-chu.html">
+                    <a href=".">
                         <img src="public/img/logo2.png" alt="">
                     </a>
                 </div>

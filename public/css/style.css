@@ -1360,18 +1360,16 @@ p {
     cursor: pointer;
     line-height: 30px;
 }
+
 #bsm_listing_products .bsm_products_pagination span i {
     margin: 2.5px;
     font-size: 14px;
 }
 #bsm_listing_products .bsm_products_pagination a {
-    width: 65px;
-    height: 30px;
-    background-color: #FFFFFF;
-    margin: 0 5px;
-    text-align: center;
-    cursor: pointer;
-    line-height: 30px;
+  color: #D9C2A0;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: monospace;
 }
 #bsm_listing_products .bsm_products_pagination span.active {
     cursor: text;

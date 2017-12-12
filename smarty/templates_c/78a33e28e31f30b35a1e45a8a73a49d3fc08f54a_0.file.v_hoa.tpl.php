@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-10 13:47:45
+/* Smarty version 3.1.30, created on 2017-12-12 14:37:41
   from "C:\wamp64\www\shop_hoa\views\v_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2d3b017d6b45_12583732',
+  'unifunc' => 'content_5a2fe9b5dcb442_36425938',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '78a33e28e31f30b35a1e45a8a73a49d3fc08f54a' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_hoa.tpl',
-      1 => 1512901055,
+      1 => 1513089456,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2d3b017d6b45_12583732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2fe9b5dcb442_36425938 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
             <!-- BEGIN HEADER PAGE -->
             <div id="bsm_header_page">
@@ -91,10 +91,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
                       </div>
+                      <?php if (count($_smarty_tpl->tpl_vars['doc_hoa']->value > 9)) {?>
                         <div class="bsm_products_pagination">
                             <?php echo $_smarty_tpl->tpl_vars['phan_trang']->value;?>
 
                         </div>
+                      <?php }?>
                 </div>
             </div>
             <!-- END LISTING PRODUCTS -->

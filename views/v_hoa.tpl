@@ -40,9 +40,11 @@
                         </a>
                         {/foreach}
                       </div>
+                      {if count($doc_hoa>9)}
                         <div class="bsm_products_pagination">
                             {$phan_trang}
                         </div>
+                      {/if}
                 </div>
             </div>
             <!-- END LISTING PRODUCTS -->
