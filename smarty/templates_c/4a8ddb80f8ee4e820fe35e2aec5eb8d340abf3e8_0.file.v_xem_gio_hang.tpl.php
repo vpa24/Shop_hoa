@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-11 13:36:53
+/* Smarty version 3.1.30, created on 2017-12-12 07:19:53
   from "C:\wamp64\www\shop_hoa\views\v_xem_gio_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2e89f5403585_19616363',
+  'unifunc' => 'content_5a2f83193e1709_90970289',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4a8ddb80f8ee4e820fe35e2aec5eb8d340abf3e8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_xem_gio_hang.tpl',
-      1 => 1512966158,
+      1 => 1513063191,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2e89f5403585_19616363 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f83193e1709_90970289 (Smarty_Internal_Template $_smarty_tpl) {
 if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
 	<div class="canh_giua">
 			<h2 class="giohang_rong">Rất tiếc bạn chưa mua hàng....!</h2>
@@ -31,6 +31,10 @@ if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
     <div class="container">
     	<div class="bs-example4" data-example-id="simple-responsive-table">
         <div class="table-responsive">
+					<div class="canh_giua">
+							<h2 class="giohang_rong">Giỏ hàng của bạn</h2>
+					</div>
+
         	<table class="table-heading simpleCart_shelfItem">
 	    		  <tr>
 		    			<th>Sản Phẩm</th>
@@ -100,7 +104,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 					</div>
 				</div>
 				<div class="tong_cong">
-        	<h3>Tổng cộng: <span class="tong_tien"><?php echo number_format($_smarty_tpl->tpl_vars['tongtt']->value);?>
+        	<h3>Tổng cộng: <span class="tong_tien"><?php $_tmp_array = isset($_smarty_tpl->tpl_vars['smarty']) ? $_smarty_tpl->tpl_vars['smarty']->value : array();
+if (!is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess) {
+settype($_tmp_array, 'array');
+}
+$_tmp_array['session']['tongtt'] = $_smarty_tpl->tpl_vars['tongtt']->value;
+$_smarty_tpl->_assignInScope('smarty', $_tmp_array);
+echo number_format($_smarty_tpl->tpl_vars['tongtt']->value);?>
  đ</span></h3>
     	</div>
 			<div class="produced">

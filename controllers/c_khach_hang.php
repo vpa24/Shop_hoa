@@ -3,7 +3,7 @@ session_start();
 class C_khach_hang
 {
     function them_khach_hang(){
-        if(isset($_POST['luu'])){      
+        if(isset($_POST['luu'])){
           include("models/m_khach_hang.php");
           $m_khach_hang=new M_khach_hang();
           $ten=$_POST['ten_kh'];

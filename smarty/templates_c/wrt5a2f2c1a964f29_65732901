@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-12 05:18:28
+/* Smarty version 3.1.30, created on 2017-12-12 01:08:42
   from "C:\wamp64\www\shop_hoa\views\v_chi_tiet_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2f66a4087fb7_67640684',
+  'unifunc' => 'content_5a2f2c1a960993_45118789',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f480e303df46b9b31a8487d0c239ab88e32b604f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_chi_tiet_hoa.tpl',
-      1 => 1513055798,
+      1 => 1513040841,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2f66a4087fb7_67640684 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f2c1a960993_45118789 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
             <!-- BEGIN HEADER PAGE -->
@@ -33,6 +33,7 @@ function content_5a2f66a4087fb7_67640684 (Smarty_Internal_Template $_smarty_tpl)
             <!-- BEGIN PRODUCT DETAILS -->
             <div id="bsm_product_details" class="container">
                 <form method="post" action="gio_hang.php?MaHoa=<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
+&gia=<?php echo $_smarty_tpl->tpl_vars['hoa']->value->Gia;?>
 ">
                     <div id="bsm_product_details_content">
                       <div class="grid">
