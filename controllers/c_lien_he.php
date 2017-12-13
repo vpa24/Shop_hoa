@@ -11,7 +11,7 @@ class C_lien_he
         $smarty->assign('title', $title);
         $view = "views/v_lien_he.tpl";
         $smarty->assign('view', $view);
-        $smarty->display("chi_tiet_hoa/layout.tpl");
+        $smarty->display("gioi_thieu/layout.tpl");
     }
 }
 ?>

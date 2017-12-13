@@ -1,12 +1,8 @@
-            <!-- BEGIN HEADER PAGE -->
-            <div id="bsm_header_page">
-                <h1>Liên hệ</h1>
-            </div>
-            <!-- END HEADER PAGE -->
+
 
             <!-- BEGIN CONTACT -->
             <div id="bsm_contact">
-                <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
+                <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section" style="margin-top: 30px">
                   <h1>Flowers Shop</h1>
                     <img src="public/img/divider.png" alt="">
                 </div>

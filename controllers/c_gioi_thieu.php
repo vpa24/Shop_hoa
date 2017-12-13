@@ -8,8 +8,10 @@ class C_gioi_thieu
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $title = "Giới thiệu";
+        $view = "views/v_gioi_thieu.tpl";
+        $smarty->assign('view', $view);
         $smarty->assign('title', $title);
-        $smarty->display("layout.tpl");
+        $smarty->display("gioi_thieu/layout.tpl");
     }
 }
 ?>

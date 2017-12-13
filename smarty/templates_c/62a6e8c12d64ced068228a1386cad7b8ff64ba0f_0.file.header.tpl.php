@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-12 14:15:06
+/* Smarty version 3.1.30, created on 2017-12-12 08:05:13
   from "C:\wamp64\www\shop_hoa\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2fe46a89f6d0_82626664',
+  'unifunc' => 'content_5a2f8db90c5450_66311523',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '62a6e8c12d64ced068228a1386cad7b8ff64ba0f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1513088103,
+      1 => 1513049938,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2fe46a89f6d0_82626664 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f8db90c5450_66311523 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -32,12 +32,12 @@ function content_5a2fe46a89f6d0_82626664 (Smarty_Internal_Template $_smarty_tpl)
                 <i class="bsm_header_mobile_search_button fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 bsm_logo">
-                <a href=".">
-                    <img src="img/logo.png" alt="">
+                <a href="trang-chu.html">
+                    <img src="http://marry.vn/wp-content/uploads/users/335244/2014/10/12/logo-600x416-pixel.png" alt="" style="width: 160px;height: 68px;">                
                 </a>
             </div>
             <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
-                    <li ><a href=".">Trang chủ</a></li>
+                    <li ><a href="trang-chu.html">Trang chủ</a></li>
                     <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                 </ul>
                 <ul class="bsm_header_nav_left">
@@ -106,15 +106,15 @@ function content_5a2fe46a89f6d0_82626664 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-5">
                     <nav>
                         <ul class="bsm_header_nav_left">
-                            <li ><a href=".">Trang chủ</a></li>
+                            <li ><a href="trang-chu.html">Trang chủ</a></li>
                             <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-md-2">
-                    <a href=".">
-                        <img src="public/img/logo2.png" alt="">
-                    </a>
+                    <a href="trang-chu.html">
+                    <img src="http://marry.vn/wp-content/uploads/users/335244/2014/10/12/logo-600x416-pixel.png" alt="" style="width: 165px;height: 130px;">                
+                </a>
                 </div>
                 <div class="col-md-5">
                     <nav>

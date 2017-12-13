@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-08 09:39:59
+/* Smarty version 3.1.30, created on 2017-12-09 08:14:00
   from "C:\wamp64\www\shop_hoa\admin\views\v_loai_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2a5def8f2929_06041289',
+  'unifunc' => 'content_5a2b9b488ec1a1_93174557',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '25cd52eb449299c85667506876d2d31623e9c67b' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\admin\\views\\v_loai_hoa.tpl',
-      1 => 1512725824,
+      1 => 1512807237,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2a5def8f2929_06041289 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2b9b488ec1a1_93174557 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
@@ -48,13 +48,15 @@ foreach ($_from as $_smarty_tpl->tpl_vars['loai_hoa']->value) {
 "><?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
 </a></td>
                   <td>
-                    <button type="button" class="btn btn-primary" id="update<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+                    <button type="button" class="btn btn-primary" onclick="getId(<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+)" id="update<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 " data-toggle="modal" data-target="#edit<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 " >Sửa</button>
                     <button type="button" onclick="deleteAjax(<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 )" class="btn btn-danger">Xóa</button>
                   </td>
                 </tr>
+                
                 <div class="modal fade" id="edit<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -68,21 +70,27 @@ foreach ($_from as $_smarty_tpl->tpl_vars['loai_hoa']->value) {
                       </div>
                       <div class="modal-body">
                         <form method="POST" action="loai_hoa.php">
-                          <input type="hidden" name="ma_loai" >
+                          <input type="hidden" name="ma_loai" value="<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+">
                           <div class="form-group">
                             <label for="recipient-name" class="form-control-label">Tên loại hoa:</label>
-                            <input type="text" class="form-control ten_loai" name="ten_loai" value="<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
-">
+                            <input type="text" class="form-control ten_loai" name="ten_loai" id="ten_loai<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+" value="<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
+" autocomplete="off">
+                            <div id="tenLoaiResult<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+"></div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn btn-success" name="btn_update">Cập nhật</button>
+                            <button type="submit" class="btn btn-success" name="btn_update" id="checkUpdate<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+">Cập nhật</button>
                           </div>
                         </form>
                       </div>
                     </div>
                   </div>
                 </div>
+                
               <?php
 }
 }
@@ -96,6 +104,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
         <?php echo '<script'; ?>
  src="public/js/ajax/ajax_delete_loai_hoa.js"><?php echo '</script'; ?>
 >
-
-<?php }
+        <?php echo '<script'; ?>
+ src="public/js/ajax/ajax_kt_trung_loai_hoa.js"><?php echo '</script'; ?>
+><?php }
 }

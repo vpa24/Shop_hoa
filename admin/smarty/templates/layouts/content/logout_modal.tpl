@@ -10,7 +10,7 @@
           <div class="modal-body">Chọn "Đăng xuất" để xóa tất cả các phiên và quay về trang chủ</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy bỏ</button>
-            <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+            <a class="btn btn-primary" href="dang_xuat.php">Đăng xuất</a>
           </div>
         </div>
       </div>

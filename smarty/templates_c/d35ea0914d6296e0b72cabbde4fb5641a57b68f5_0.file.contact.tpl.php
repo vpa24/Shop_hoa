@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-01 14:16:25
+/* Smarty version 3.1.30, created on 2017-12-12 08:05:13
   from "C:\wamp64\www\shop_hoa\smarty\templates\layouts\body\contact.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a216439e10022_44663184',
+  'unifunc' => 'content_5a2f8db94aaa19_26950025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd35ea0914d6296e0b72cabbde4fb5641a57b68f5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\smarty\\templates\\layouts\\body\\contact.tpl',
-      1 => 1512137785,
+      1 => 1513050541,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a216439e10022_44663184 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f8db94aaa19_26950025 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <section class="send-email">
     <div class="container">
         <div class="col-sm-9">
             <div class="col-sm-4 text-left">
-                <span>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</span>
+                <span>Nhận tin khuyến mãi</span>
             </div>
             <div class="input-group col-sm-4">
                 <input type="text" class="form-control" placeholder="Nhập email...">

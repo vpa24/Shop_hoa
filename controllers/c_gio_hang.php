@@ -24,35 +24,35 @@ class C_gio_hang{
     }
     function xem_gio_hang(){
       if(isset($_SESSION['giohang'])){
-        include("models/m_hoa.php");
-        $m_hoa=new M_hoa();
-        $hoa=$m_hoa->doc_tat_ca_hoa();
-        include("models/m_chi_tiet_hoa.php");
-        $m_chi_tiet_hoa=new M_chi_tiet_hoa();
-        if(isset($_POST["btnCapnhat"])){
-          $sl=$_POST["sl"];
-          $i=0;
-          foreach($_SESSION["giohang"] as $k=>$value){
-              $_SESSION["giohang"][$k]=$sl[$i];
-              $i++;
-          }
-        }
-        $tongtt=0;
-        foreach($_SESSION["giohang"] as $k=>$value){
-          $ct_hoa=$m_chi_tiet_hoa->doc_theo_ma_hoa($k);
-          $tongtt+=$value*$ct_hoa->Gia;
-        }
-        $_SESSION['tongtt']=$tongtt;
-        include("URL.php");
-      }
-     include("Smarty_shop_hoa.php");
-     $smarty = new Smarty_Shop_Hoa();
-     $view = "views/v_xem_gio_hang.tpl";
-     $smarty->assign('title', 'Giỏ hàng của bạn');
-     $smarty->assign('giohang', $_SESSION["giohang"]);
-     $smarty->assign('hoa', $hoa);
-     $smarty->assign('view', $view);
-     $smarty->display("gio_hang/layout.tpl");
+         include("models/m_hoa.php");
+         $m_hoa=new M_hoa();
+         $hoa=$m_hoa->doc_tat_ca_hoa();
+         include("models/m_chi_tiet_hoa.php");
+         $m_chi_tiet_hoa=new M_chi_tiet_hoa();
+         if(isset($_POST["btnCapnhat"])){
+           $sl=$_POST["sl"];
+           $i=0;
+           foreach($_SESSION["giohang"] as $k=>$value){
+               $_SESSION["giohang"][$k]=$sl[$i];
+               $i++;
+           }
+         }
+         $tongtt=0;
+         foreach($_SESSION["giohang"] as $k=>$value){
+           $ct_hoa=$m_chi_tiet_hoa->doc_theo_ma_hoa($k);
+           $tongtt+=$value*$ct_hoa->Gia;
+         }
+         $_SESSION['tongtt']=$tongtt;
+         include("URL.php");
+       }
+      include("Smarty_shop_hoa.php");
+      $smarty = new Smarty_Shop_Hoa();
+      $view = "views/v_xem_gio_hang.tpl";
+      $smarty->assign('title', 'Giỏ hàng của bạn');
+      $smarty->assign('giohang', $_SESSION["giohang"]);
+      $smarty->assign('hoa', $hoa);
+      $smarty->assign('view', $view);
+      $smarty->display("gio_hang/layout.tpl");
    }
     function luu_gio_hang() {
       $MaKH= $_SESSION['ma_kh'];

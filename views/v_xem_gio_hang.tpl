@@ -8,10 +8,6 @@
     <div class="container">
     	<div class="bs-example4" data-example-id="simple-responsive-table">
         <div class="table-responsive">
-					<div class="canh_giua">
-							<h2 class="giohang_rong">Giỏ hàng của bạn</h2>
-					</div>
-
         	<table class="table-heading simpleCart_shelfItem">
 	    		  <tr>
 		    			<th>Sản Phẩm</th>
@@ -49,7 +45,7 @@
 					</div>
 				</div>
 				<div class="tong_cong">
-        	<h3>Tổng cộng: <span class="tong_tien">{$smarty.session.tongtt=$tongtt}{number_format($tongtt)} đ</span></h3>
+        	<h3>Tổng cộng: <span class="tong_tien">{number_format($tongtt)} đ</span></h3>
     	</div>
 			<div class="produced">
     	 	<input type="submit" value="Cập nhập giỏ hàng" name="btnCapnhat" class="one" />

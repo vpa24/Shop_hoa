@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-09 05:06:01
+/* Smarty version 3.1.30, created on 2017-12-12 08:05:13
   from "C:\wamp64\www\shop_hoa\smarty\templates\layouts\body\tin_tuc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2b6f39a4ece0_22302578',
+  'unifunc' => 'content_5a2f8db9289be3_96208595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e66692af8e47b56d7042027aea2baf023e2ffdd' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\smarty\\templates\\layouts\\body\\tin_tuc.tpl',
-      1 => 1512795960,
+      1 => 1513038237,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2b6f39a4ece0_22302578 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f8db9289be3_96208595 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section class="container" style="padding-bottom:25px; margin-bottom: 15px">
     <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
@@ -44,12 +44,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['tin']->value) {
 -<?php echo $_smarty_tpl->tpl_vars['tin']->value->MaTT;?>
 .html"><?php echo $_smarty_tpl->tpl_vars['tin']->value->TenTT;?>
 </a></h3>
-            <div class="text ellipsis">
-                <span>
-                    <p class="hidden-text"><?php echo $_smarty_tpl->tpl_vars['tin']->value->NoiDung;?>
-</p>
-                </span>
-            </div>
         </figcaption>
     </figure>
         </div>

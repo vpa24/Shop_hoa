@@ -42,6 +42,20 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Cài đặt</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="doi_mat_khau.php">Đổi mật khẩu</a>
+            </li>
+            <li>
+              <a href=".">SEO</a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -52,7 +66,11 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Xin chào Nguyễn Văn A</a>
+          <a class="nav-link">Xin chào 
+          {if isset($smarty.session.hoTen)}
+            {$smarty.session.hoTen}
+          {/if}
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-11 00:52:53
+/* Smarty version 3.1.30, created on 2017-12-12 08:25:32
   from "C:\wamp64\www\shop_hoa\views\v_lien_he.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2dd6e5975c40_78774879',
+  'unifunc' => 'content_5a2f927ce8ee56_16660168',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd60e66cf1b9d26be20ad5ecfc75c1beef2ae3b3' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\views\\v_lien_he.tpl',
-      1 => 1512953570,
+      1 => 1513050799,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2dd6e5975c40_78774879 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f927ce8ee56_16660168 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-            <!-- BEGIN HEADER PAGE -->
-            <div id="bsm_header_page">
-                <h1>Liên hệ</h1>
-            </div>
-            <!-- END HEADER PAGE -->
+
 
             <!-- BEGIN CONTACT -->
             <div id="bsm_contact">
-                <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
+                <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section" style="margin-top: 30px">
                   <h1>Flowers Shop</h1>
                     <img src="public/img/divider.png" alt="">
                 </div>

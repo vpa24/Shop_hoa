@@ -2,7 +2,7 @@
     <div class="container">
         <div class="col-sm-9">
             <div class="col-sm-4 text-left">
-                <span>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</span>
+                <span>Nhận tin khuyến mãi</span>
             </div>
             <div class="input-group col-sm-4">
                 <input type="text" class="form-control" placeholder="Nhập email...">

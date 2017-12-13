@@ -1,10 +1,4 @@
 
-            <!-- BEGIN HEADER PAGE -->
-            <div id="bsm_header_page">
-                <h1>Chi tiết tin tức</h1>
-            </div>
-            <!-- END HEADER PAGE -->
-
             <!-- BEGIN PRODUCT DETAILS -->
 
             <div class="container">

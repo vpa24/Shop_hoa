@@ -8,12 +8,12 @@
                 <i class="bsm_header_mobile_search_button fa fa-search" aria-hidden="true"></i>
             </div>
             <div class="col-md-2 bsm_logo">
-                <a href=".">
-                    <img src="img/logo.png" alt="">
+                <a href="trang-chu.html">
+                    <img src="http://marry.vn/wp-content/uploads/users/335244/2014/10/12/logo-600x416-pixel.png" alt="" style="width: 160px;height: 68px;">                
                 </a>
             </div>
             <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
-                    <li ><a href=".">Trang chủ</a></li>
+                    <li ><a href="trang-chu.html">Trang chủ</a></li>
                     <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                 </ul>
                 <ul class="bsm_header_nav_left">
@@ -82,15 +82,15 @@
                 <div class="col-md-5">
                     <nav>
                         <ul class="bsm_header_nav_left">
-                            <li ><a href=".">Trang chủ</a></li>
+                            <li ><a href="trang-chu.html">Trang chủ</a></li>
                             <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-md-2">
-                    <a href=".">
-                        <img src="public/img/logo2.png" alt="">
-                    </a>
+                    <a href="trang-chu.html">
+                    <img src="http://marry.vn/wp-content/uploads/users/335244/2014/10/12/logo-600x416-pixel.png" alt="" style="width: 165px;height: 130px;">                
+                </a>
                 </div>
                 <div class="col-md-5">
                     <nav>

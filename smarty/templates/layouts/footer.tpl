@@ -10,7 +10,10 @@
 </footer>
         <script src="public/js/jquery.js"></script>
         <script src="public/js/bootstrap.js"></script>
+        <script src="public/js/chat.js"></script>
         <script src="public/js/slider.js"></script>
+        <script src="public/js/slider/bxslider.min.js"></script>
+        <script src="public/js/slider/script.slider.js"></script>
         <script src="public/js/jquery.elevatezoom.js"></script>
         <script src="public/js/jquery.elevateZoom-3.0.8.min.js"></script>
         <script src="public/js/imagezoom.js"></script>

@@ -1,4 +1,6 @@
 <?php
+session_start();
+include("kiem_tra_session.php");
 class C_index {
     function hien_thi_trang_index(){
         //Model

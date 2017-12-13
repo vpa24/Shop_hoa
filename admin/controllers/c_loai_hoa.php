@@ -1,4 +1,6 @@
 <?php
+session_start();
+include("kiem_tra_session.php");
 class C_loai_hoa 
 {
     function hien_thi_loai_hoa(){
@@ -9,8 +11,15 @@ class C_loai_hoa
         if(isset($_POST['btn_update'])){
             $tenLoai = $_POST['ten_loai'];
             $maLoai = $_POST['ma_loai'];
-            print_r($tenLoai);
-            $update = $m_loai_hoa->update_loai_hoa($tenLoai,$maLoai);
+            $kiem_tra = $m_loai_hoa->kiem_tra_loai_hoa($tenLoai);
+            if($kiem_tra){
+                echo "<script type='text/javascript'>alert('Trùng tên loại');</script>";
+            }else{
+                $update = $m_loai_hoa->update_loai_hoa($tenLoai,$maLoai);
+                if($update){
+                    header('Location: loai_hoa.php');
+                }
+            }
         }
         //Controller
         include("Smarty_admin.php");

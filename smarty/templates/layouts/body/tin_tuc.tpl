@@ -10,11 +10,6 @@
         <a href="tin-tuc/{makeURL($tin->TenTT)}-{$tin->MaTT}.html"><img class="img-thumbnail" src="public/images/tin_tuc/{$tin->Hinh}" style="height:160px;width:100%;object-fit: cover;"></a>
         <figcaption>
             <h3 class="tieu_deTT"><a href="tin-tuc/{makeURL($tin->TenTT)}-{$tin->MaTT}.html">{$tin->TenTT}</a></h3>
-            <div class="text ellipsis">
-                <span>
-                    <p class="hidden-text">{$tin->NoiDung}</p>
-                </span>
-            </div>
         </figcaption>
     </figure>
         </div>

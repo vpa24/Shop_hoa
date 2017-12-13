@@ -1,4 +1,6 @@
 <?php
+session_start();
+include("kiem_tra_session.php");
 class C_hoa_don 
 {
     function hien_thi_hoa_don(){

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-07 12:47:16
+/* Smarty version 3.1.30, created on 2017-12-09 08:10:27
   from "C:\wamp64\www\shop_hoa\admin\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2938545e1810_53965388',
+  'unifunc' => 'content_5a2b9a737796f8_51614947',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed307630b922dbb73390ec0545e0d13e281ecf87' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\admin\\views\\v_index.tpl',
-      1 => 1512650359,
+      1 => 1512807025,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2938545e1810_53965388 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2b9a737796f8_51614947 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Icon Cards-->
@@ -121,5 +121,68 @@ function content_5a2938545e1810_53965388 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <!-- Example Notifications Card-->
         </div>
-<?php }
+
+    <?php echo '<script'; ?>
+>
+    // Chart.js scripts
+    // -- Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#292b2c';
+    // -- Bar Chart Example
+    var ctx = document.getElementById("myBarChart");
+    var myLineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+    labels: ["Hoa bó", "Hoa hộp", "Hoa cắm giỏ"],
+    datasets: [{
+    label: "Revenue",
+    backgroundColor: "rgba(2,117,216,1)",
+    borderColor: "rgba(2,117,216,1)",
+    data: [49, 11, 15],
+    }],
+    },
+    options: {
+    scales: {
+    xAxes: [{
+      time: {
+        unit: 'month'
+      },
+      gridLines: {
+        display: false
+      },
+      ticks: {
+        maxTicksLimit: 3
+      }
+    }],
+    yAxes: [{
+      ticks: {
+        min: 0,
+        max: 100,
+        maxTicksLimit: 5
+      },
+      gridLines: {
+        display: true
+      }
+    }],
+    },
+    legend: {
+    display: false
+    }
+    }
+    });
+    // -- Pie Chart Example
+    var ctx = document.getElementById("myPieChart");
+    var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+    labels: ["Thành công", "Trả hàng", "Hủy hàng"],
+    datasets: [{
+    data: [70, 15.58, 11.25],
+    backgroundColor: ['#28a745', '#dc3545', '#ffc107'],
+    }],
+    },
+    });
+
+    <?php echo '</script'; ?>
+><?php }
 }

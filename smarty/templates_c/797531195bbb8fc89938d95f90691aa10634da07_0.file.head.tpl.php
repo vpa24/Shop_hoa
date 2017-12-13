@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-09 08:55:25
+/* Smarty version 3.1.30, created on 2017-12-12 08:25:20
   from "C:\wamp64\www\shop_hoa\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2ba4fd241950_88185422',
+  'unifunc' => 'content_5a2f9270936cb5_12906746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '797531195bbb8fc89938d95f90691aa10634da07' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1512809711,
+      1 => 1513067039,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2ba4fd241950_88185422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2f9270936cb5_12906746 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +41,13 @@ function content_5a2ba4fd241950_88185422 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <link rel="stylesheet" href="public/css/animate.css">
         <link rel="stylesheet" href="public/css/slider.css">
+        <link rel="stylesheet" type="text/css" href="public/css/css-font.css" media="all" />
+        <link rel="stylesheet" href="public/css/danh-muc-css.css">
         <link rel="stylesheet" href="public/css/style.css">
         <link rel="stylesheet" href="public/css/responsive.css">
 
         <!-- STYLE FONTS -->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">

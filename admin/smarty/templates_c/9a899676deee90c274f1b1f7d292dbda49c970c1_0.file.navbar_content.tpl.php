@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-07 10:07:44
+/* Smarty version 3.1.30, created on 2017-12-11 00:46:40
   from "C:\wamp64\www\shop_hoa\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2912f0426b44_96080327',
+  'unifunc' => 'content_5a2dd570f25608_24569157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9a899676deee90c274f1b1f7d292dbda49c970c1' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1512641263,
+      1 => 1512953200,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a2912f0426b44_96080327 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a2dd570f25608_24569157 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href=".">Quản lý cửa hàng</a>
@@ -66,6 +66,20 @@ function content_5a2912f0426b44_96080327 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Cài đặt</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="doi_mat_khau.php">Đổi mật khẩu</a>
+            </li>
+            <li>
+              <a href=".">SEO</a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -76,7 +90,12 @@ function content_5a2912f0426b44_96080327 (Smarty_Internal_Template $_smarty_tpl)
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Xin chào Nguyễn Văn A</a>
+          <a class="nav-link">Xin chào 
+          <?php if (isset($_SESSION['hoTen'])) {?>
+            <?php echo $_SESSION['hoTen'];?>
+
+          <?php }?>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
