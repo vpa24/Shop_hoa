@@ -1,4 +1,5 @@
 <?php
+session_start();
 class C_chi_tiet_hoa
 {
     function hien_thi_trang_chi_tiet_hoa(){

@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-12-13 08:31:57
+  from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\body\san_pham.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a30e57dafe9d3_81866805',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'aa65ca70570ec4adcc0daa9d621f516e9bf249f1' => 
+    array (
+      0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\body\\san_pham.tpl',
+      1 => 1513090550,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a30e57dafe9d3_81866805 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="container">  
 <!-- show Product custom -->
 <div class="cms-static-mix-custom-product block-custom-product">
@@ -126,13 +150,15 @@
 					<!-- MAP -->
 					<!-- MAP -->
 				</div>
-				<script type="text/javascript">
+				<?php echo '<script'; ?>
+ type="text/javascript">
 jQuery(document).ready(function () {
 	jQuery(".zvwqfjykbn").magicproduct({
 		selector : ".zvwqfjykbn", // Selector product grid
 	});
 });
-</script>
+<?php echo '</script'; ?>
+>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 custom-product custom2">
 				<div class= "bmqodnfrgh magicproduct mage-custom">
@@ -346,15 +372,18 @@ jQuery(document).ready(function () {
 					<!-- MAP -->
 					<!-- MAP -->
 				</div>
-				<script type="text/javascript">
+				<?php echo '<script'; ?>
+ type="text/javascript">
 jQuery(document).ready(function () {
 	jQuery(".vmqhdvpnqm").magicproduct({
 		selector : ".vmqhdvpnqm", // Selector product grid
 	});
 });
-</script>
+<?php echo '</script'; ?>
+>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
+</div><?php }
+}

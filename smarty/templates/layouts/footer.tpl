@@ -64,5 +64,19 @@ $(document).ready(function(){
 
 });
 </script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    jQuery(".zvwqfjykbn").magicproduct({
+      selector : ".zvwqfjykbn", // Selector product grid
+    });
+  });
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+  jQuery(".vmqhdvpnqm").magicproduct({
+    selector : ".vmqhdvpnqm", // Selector product grid
+  });
+});
+</script>
     </body>
 </html>

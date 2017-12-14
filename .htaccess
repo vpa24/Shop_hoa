@@ -1,5 +1,4 @@
 RewriteEngine On
-RewriteRule ^trang-chu.html$ index.php
 RewriteRule ^lien-he.html$ lien_he.php
 RewriteRule ^danh-sach-hoa$ hoa.php
 RewriteRule ^san-pham/([a-zA-Z_-]+)-([0-9]+).html$ chi_tiet_hoa.php?ten_hoa=$1&id=$2

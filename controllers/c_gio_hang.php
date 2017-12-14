@@ -2,9 +2,13 @@
 @session_start();
 class C_gio_hang{
     function them_gio_hang(){
-      if(isset($_GET['MaHoa']) && isset($_POST['them'])){
+      if(isset($_GET['MaHoa']) && isset($_POST['them'])||(isset($_GET['MaHoa']))){
         $id=$_GET['MaHoa'];
-        $sl=$_POST['so_luong'];
+        if(isset($_POST['them'])){
+            $sl=$_POST['so_luong'];
+        }
+        else
+          $sl=1;
         if(isset($_SESSION["giohang"])){
           foreach($_SESSION["giohang"] as $k=>$value){
             if($k==$id){
@@ -18,6 +22,7 @@ class C_gio_hang{
         if($_SESSION["giohang"]==null){
             $_SESSION["giohang"][$id]=$sl;
         }
+        $_SESSION['tong_gio_hang']=count($_SESSION['giohang']);
         //echo json_encode($_SESSION["giohang"]);
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       }
@@ -42,14 +47,20 @@ class C_gio_hang{
            $ct_hoa=$m_chi_tiet_hoa->doc_theo_ma_hoa($k);
            $tongtt+=$value*$ct_hoa->Gia;
          }
+         $_SESSION['tong_gio_hang']=count($_SESSION['giohang']);
          $_SESSION['tongtt']=$tongtt;
          include("URL.php");
+         $giohang=$_SESSION["giohang"];
+       }
+       else{
+         $giohang=[];
+         $hoa=[];
        }
       include("Smarty_shop_hoa.php");
       $smarty = new Smarty_Shop_Hoa();
       $view = "views/v_xem_gio_hang.tpl";
       $smarty->assign('title', 'Giỏ hàng của bạn');
-      $smarty->assign('giohang', $_SESSION["giohang"]);
+      $smarty->assign('giohang', $giohang);
       $smarty->assign('hoa', $hoa);
       $smarty->assign('view', $view);
       $smarty->display("gio_hang/layout.tpl");
@@ -63,6 +74,8 @@ class C_gio_hang{
       foreach($_SESSION["giohang"] as $k=>$value){
         $kq=$m_hoa_don->luu_chi_tiet_hoa_don($k,$value,$ma_hoa_don);
       }
+      $_SESSION['tong_gio_hang']=0;
+      session_destroy();
       include("Smarty_shop_hoa.php");
       $smarty = new Smarty_Shop_Hoa();
       $view = "views/v_dh_thanh_cong.tpl";

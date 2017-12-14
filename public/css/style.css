@@ -110,7 +110,7 @@ a:active,
 a:hover {
     text-decoration: none;
 }
-p,h2,h3,h4,h5,h6,div,br,li,td,article,td, tr, th, span, i{
+p,h2,h5,h6,div,br,li,td,article,td, tr, th, i{
     font-size: 13px;
 }
 ul {
@@ -1869,6 +1869,22 @@ th{
   line-height: 1;
   text-transform: uppercase;
 }
+.giohang{
+  font-size: 4.2rem;
+  margin-bottom: 15px;
+  display: inline-block;
+  background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding:20px 0 50px 0;
+  font-family: "stratum","Arial Narrow","Trebuchet MS",sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+}
 .canh_giua{
   text-align: center;
 }
@@ -2116,7 +2132,7 @@ th{
 .bx-viewport .products-grid{padding: 0px;}
 .products-grid.last{border-bottom:0}
 .products-grid .product-name{
-  margin:10px 0 10px 10px;
+  margin:0 0 10px 0px;
 }
 .products-grid .product-name a {
   font-size:18px;
@@ -2139,7 +2155,6 @@ th{
 .products-grid .price-box{
   display: block;
   float: left;
-  margin: 5px;
   max-width: calc(100% - 35px);
 }
 .products-grid .availability{margin: 0;padding: 7px 0 8px;float: right;color: #df3737;}
@@ -2182,7 +2197,7 @@ transition: all 0.3s;
 .alo-after-content .container{max-width: 100%;padding: 0 30px;}
 .products-grid .item,.products-grid .item .category-products-grid{ background-color: #fff;transition: all 0.3s}
 .products-grid .item:hover{z-index: 999}
-.category-products .products-grid .item:hover{box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); padding-bottom: 48px; margin-bottom: -48px; position: relative; z-index: 9;}
+.category-products .products-grid .item:hover{box-shadow: 0 0 6px rgba(1, 1, 1, 0.3); position: relative; z-index: 9;}
 .short-desc ul li{font-size: 12px; color: #7d7d7d; font-weight: normal; margin: 5px 0; line-height: 15px; position: relative; padding-left: 12px}
 .short-desc ul li:before{content: ""; width: 4px; height: 4px; position: absolute; left: 0; bottom: 3px; background-color: #7d7d7d; border-radius: 50%;}
 .sku{margin-top: 32px}
@@ -2233,7 +2248,7 @@ animation: transl 0.8s linear 0s infinite;}
 	to {transform: translateX(15px); opacity: 0;}
 }
 .cms-page-banner .box-content .btn-shop:first-letter{text-transform: uppercase;}
-.cms-page-banner .box-content .btn-shop:after{content: ">>"; font-size: 13px; width: 17px; height: 17px; text-align: center; border-radius: 50%; color: #fff; background-color: #fed700; display: inline-block; vertical-align: middle; margin-left: 7px; line-height: 17px}
+.cms-page-banner .box-content .btn-shop:after{content: "\62";font-family: "untitled-font-6" !important; font-size: 13px; width: 17px; height: 17px; text-align: center; border-radius: 50%; color: #fff; background-color: #fed700; display: inline-block; vertical-align: middle; margin-left: 7px; line-height: 17px}
 .cms-page-banner .box-content > a{display: block; position: relative; overflow: hidden;}
 .cms-page-banner .box-content:before, .cms-page-banner .box-content:after{content: ""; position: absolute; width: 50px; height: 200%; background-color: rgba(255, 255, 255, 0.5);transform: rotate(35deg);-webkit-transform: rotate(35deg);-o-transform: rotate(35deg);-moz-transform: rotate(35deg);z-index: 1;transition: all 0.7s;}
 .cms-page-banner .box-content{position: relative; overflow: hidden;}
@@ -2307,7 +2322,7 @@ animation: transl 0.8s linear 0s infinite;}
    line-height: 25px;
    margin: 0 0 15px;
    text-transform: capitalize;
-   padding:10px;
+   padding:10px 10px 10px 0px;
    font-family: monospace;
  }
 .product-view .product-shop .product-left-block {
@@ -2350,6 +2365,7 @@ animation: transl 0.8s linear 0s infinite;}
 }
 .products-sku .text-sku,.products-sku{color: #333;font-size: 14px;;}
 .product-view .product-shop .short-description{
+  height: 250px;
   font-weight: 300;
   padding:45px 0 0;
   color: #333;
@@ -2717,7 +2733,7 @@ button.button{
   font-size: 15px;
 }
 .quang_cao{
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
 }
 .product-shop-content{
   margin-left: -25px;
@@ -2727,4 +2743,50 @@ button.button{
 }
 .chi_tiet_hoa{
   float: left;
+}
+.mau_hoa{
+  margin-top: 20px;
+}
+.mau_hoa_moi{
+  margin-bottom: 10px;
+}
+.hinh_san_pham{
+  width: 75px !important;
+  height: 100px !important;
+}
+.td_sl{
+  margin: 15px auto;
+}
+.tong_tien{
+color: #3D9970;
+}
+.sl_gio_hang{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #27c24c;
+  position: absolute;
+  right: 60px;
+  top: 3px;
+  z-index: 100;
+}
+.tong_sl{
+  font-family: monospace;
+  display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+
+}
+.hinh_gio_hang{
+  width: 30px;
+  position: relative;
+  margin-top: -20px;
 }

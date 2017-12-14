@@ -16,15 +16,18 @@
                         </a>
                     </div>
                     <h2 class="product-name">
-                      <a href="" title="{$hoa->TenHoa}">{$hoa->TenHoa}</a>
+                      <a href="san-pham/{makeURL($hoa->TenHoa)}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}">{$hoa->TenHoa}</a>
                     </h2>
                     <div class="actions-no hover-box">
                         <div class="actions">
                             <div class="price-box">
-                                <a href="" class="minimal-price-link">
+                                <a class="minimal-price-link">
                                     <span class="mua_online">Mua online:</span>
                                     <span class="price" id="product-minimal-price-2678">{number_format({$hoa->Gia})} ₫</span>
                                 </a>
+                            </div>
+                            <div class="actions-cart">
+                                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>

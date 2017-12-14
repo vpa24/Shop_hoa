@@ -5,6 +5,9 @@
 {else}
 <form method="post">
 	<div class="check-out">
+		<div class="canh_giua">
+				<h2 class="giohang">Giỏ hàng của bạn</h2>
+		</div>
     <div class="container">
     	<div class="bs-example4" data-example-id="simple-responsive-table">
         <div class="table-responsive">
