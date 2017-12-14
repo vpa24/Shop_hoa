@@ -1,7 +1,8 @@
 <?php
 class C_gioi_thieu
 {
-    function hien_thi_trang_gioi_thieu(){      
+    public function hien_thi_trang_gioi_thieu()
+    {
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $title = "Giới thiệu";
@@ -11,4 +12,3 @@ class C_gioi_thieu
         $smarty->display("gioi_thieu/layout.tpl");
     }
 }
-?>

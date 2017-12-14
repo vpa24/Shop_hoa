@@ -1,4 +1,4 @@
-<div class="short-description">
+<div class="short-description hidden-xs">
     <div class="magic-category clearfix">
         <div class="block-title-tabs clearfix">
             <ul class="magictabs">

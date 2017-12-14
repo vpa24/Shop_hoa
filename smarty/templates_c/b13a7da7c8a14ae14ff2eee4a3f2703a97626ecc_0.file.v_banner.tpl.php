@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 11:21:31
+/* Smarty version 3.1.30, created on 2017-12-14 02:13:40
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_banner.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a310d3b59f356_68847245',
+  'unifunc' => 'content_5a31de5447c5f1_11357681',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b13a7da7c8a14ae14ff2eee4a3f2703a97626ecc' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_banner.tpl',
-      1 => 1513164061,
+      1 => 1513217619,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a310d3b59f356_68847245 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a31de5447c5f1_11357681 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="container">
+<div class="container hidden-xs">
     <div class="cms-page-banner">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box">

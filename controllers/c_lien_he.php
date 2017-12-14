@@ -1,10 +1,8 @@
 <?php
 class C_lien_he
 {
-    function hien_thi_trang_lien_he(){
-        //Model
-
-        //View
+    public function hien_thi_trang_lien_he()
+    {
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $title = "Liên hệ";
@@ -14,4 +12,3 @@ class C_lien_he
         $smarty->display("gioi_thieu/layout.tpl");
     }
 }
-?>

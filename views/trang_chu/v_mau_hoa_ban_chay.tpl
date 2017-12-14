@@ -29,7 +29,10 @@
                     </div>
                 </div>
             </li>
-    {/foreach}
+        {/foreach}
         </ul>
+        <div class="cta">
+            <button onclick="location.href='http://localhost/shop_hoa-master/danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+        </div>
     </div>
 </div>

@@ -19,20 +19,17 @@
         {include file="views/trang_chu/v_mau_hoa_moi.tpl" }
         {include file="views/trang_chu/v_mau_hoa_ban_chay.tpl" }
         {include file="views/trang_chu/v_mau_hoa_giam_gia.tpl" }
-
     </div>
 </div>
 {include file="layouts/body/quang_cao.tpl"}
-
 <div class="container">
-<!-- show Product custom -->
-<div class="cms-static-mix-custom-product block-custom-product">
-	<div class="container">
-		<div class="row">
-			{include file="views/trang_chu/v_san_pham_giam_gia.tpl" }
-			{include file="views/trang_chu/v_san_pham_noi_bat.tpl" }
-			{include file="views/trang_chu/v_san_pham_re_nhat.tpl" }
-		</div>
-	</div>
-</div>
+  <div class="cms-static-mix-custom-product block-custom-product">
+  	<div class="container">
+  		<div class="row">
+  			{include file="views/trang_chu/v_san_pham_giam_gia.tpl" }
+  			{include file="views/trang_chu/v_san_pham_noi_bat.tpl" }
+  			{include file="views/trang_chu/v_san_pham_re_nhat.tpl" }
+  		</div>
+  	</div>
+  </div>
 </div>

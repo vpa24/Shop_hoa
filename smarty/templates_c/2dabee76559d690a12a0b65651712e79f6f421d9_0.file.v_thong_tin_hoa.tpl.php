@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 08:35:43
+/* Smarty version 3.1.30, created on 2017-12-14 02:26:31
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_thong_tin_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30e65fe44da9_27247771',
+  'unifunc' => 'content_5a31e157098ff1_61540738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2dabee76559d690a12a0b65651712e79f6f421d9' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_thong_tin_hoa.tpl',
-      1 => 1513090550,
+      1 => 1513218389,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a30e65fe44da9_27247771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a31e157098ff1_61540738 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="short-description">
+<div class="short-description hidden-xs">
     <div class="magic-category clearfix">
         <div class="block-title-tabs clearfix">
             <ul class="magictabs">

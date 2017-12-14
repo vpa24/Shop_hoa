@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container hidden-xs">
     <div class="cms-page-banner">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box">

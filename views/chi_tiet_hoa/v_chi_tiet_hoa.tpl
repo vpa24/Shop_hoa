@@ -8,7 +8,7 @@
             </p>
         </div>
         <p class="availability in-stock">Tình trạng: <span>Còn hàng</span></p>
-        <div class="product-qty" style="margin: 0px 0px 10px 5px">
+        <div class="product-qty" style="margin: 0px 0px 10px 0px">
           <div class="sl">Số lượng:</div>
           <div class="quantity">
             <div class="quantity-select">
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="add-to-cart" style="margin: 0px 0px 10px 5px">
+        <div class="add-to-cart" style="margin: 0px 0px 10px 0px">
           <button type="submit" title="Mua ngay" name="them" class="button btn-cart">
               <span>
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>

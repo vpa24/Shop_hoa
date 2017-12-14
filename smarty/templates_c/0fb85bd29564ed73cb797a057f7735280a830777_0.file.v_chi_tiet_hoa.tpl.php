@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 12:59:22
+/* Smarty version 3.1.30, created on 2017-12-14 02:26:30
   from "C:\wamp64\www\shop_hoa-master\views\v_chi_tiet_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31242a1d9506_82069373',
+  'unifunc' => 'content_5a31e156dd24a7_53879379',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fb85bd29564ed73cb797a057f7735280a830777' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_chi_tiet_hoa.tpl',
-      1 => 1513169911,
+      1 => 1513218380,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layouts/body/quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a31242a1d9506_82069373 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a31e156dd24a7_53879379 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:views/chi_tiet_hoa/v_thanh_danh_muc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

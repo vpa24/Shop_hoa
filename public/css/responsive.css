@@ -498,7 +498,7 @@
 
 }
 @media screen and (max-width: 767px) {
-    
+
     body {
         padding-top: 50px;
     }
@@ -1958,7 +1958,20 @@
         margin-bottom: 0;
         margin-top: 15px;
     }
-
+    .slider-area{
+        margin-top: 20px !important;
+    }
+    .product-left-block{
+        margin-left: 25px;
+    }
+    .hinh_ct{
+        margin: 0 auto;
+    }
+    .quantity {
+        margin: 0 auto;
+        margin-left: 5px;
+        float: left;
+    }
 }
 @media screen and (max-width: 320px) {
 
@@ -1992,7 +2005,12 @@
         width: 45px;
         height: 45px;
     }
-
+    .block-slider .block-slider4{
+        margin-top: 20px;
+    }
+    .slider-area{
+        margin-top: 20px !important;
+    }
 }
 
 @keyframes bsm_phone_mobile_button{

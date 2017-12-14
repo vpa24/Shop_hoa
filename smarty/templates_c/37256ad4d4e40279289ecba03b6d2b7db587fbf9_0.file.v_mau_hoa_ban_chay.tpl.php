@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 01:35:02
+/* Smarty version 3.1.30, created on 2017-12-14 02:56:34
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31d546302885_37099503',
+  'unifunc' => 'content_5a31e862de79d8_33025197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37256ad4d4e40279289ecba03b6d2b7db587fbf9' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_ban_chay.tpl',
-      1 => 1513215300,
+      1 => 1513220193,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a31d546302885_37099503 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a31e862de79d8_33025197 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu2" class="tab-pane fade in">
     <div class="category-products">
@@ -71,13 +71,16 @@ echo number_format($_prefixVariable1);?>
                     </div>
                 </div>
             </li>
-    <?php
+        <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
         </ul>
+        <div class="cta">
+            <button onclick="location.href='http://localhost/shop_hoa-master/danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+        </div>
     </div>
 </div>
 <?php }

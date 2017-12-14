@@ -10,12 +10,11 @@
         <title>{$title} | Shop hoa tươi</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
-
+        <link href="public/images/fav.png" rel="shortcut icon" type="image/x-icon" /> 
         <!-- STYLE CSS -->
         <link rel="stylesheet" href="public/css/bootstrap.min.css">
         <link rel="stylesheet" href="public/css/font-awesome.min.css">
         <link rel="stylesheet" href="public/css/animate.css">
-        <link rel="stylesheet" href="public/css/slider.css">
         <link rel="stylesheet" type="text/css" href="public/css/css-font.css" media="all" />
         <link rel="stylesheet" href="public/css/danh-muc-css.css">
         <link rel="stylesheet" href="public/css/style.css">

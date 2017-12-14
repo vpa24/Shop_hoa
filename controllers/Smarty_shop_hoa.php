@@ -2,20 +2,16 @@
 include("smarty/libs/Smarty.class.php");
 class Smarty_Shop_Hoa extends Smarty
 {
-	function __construct()
-	{
-		parent::__construct();
-		$this->setCacheDir("smarty/cache/");
-		$this->setCompileDir("smarty/templates_c/");
-		$this->setConfigDir("smarty/configs/");
-		$this->setTemplateDir("smarty/templates/");	
-	}
-	function Hien_thi_giao_dien($layout)
-	{
-		$this->display($layout);	
-	}
-	
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setCacheDir("smarty/cache/");
+        $this->setCompileDir("smarty/templates_c/");
+        $this->setConfigDir("smarty/configs/");
+        $this->setTemplateDir("smarty/templates/");
+    }
+    public function Hien_thi_giao_dien($layout)
+    {
+        $this->display($layout);
+    }
 }
-
-?>
