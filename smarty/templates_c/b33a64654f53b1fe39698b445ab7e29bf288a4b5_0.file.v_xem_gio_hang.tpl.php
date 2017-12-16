@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 10:55:58
+/* Smarty version 3.1.30, created on 2017-12-16 12:49:16
   from "C:\wamp64\www\shop_hoa-master\views\v_xem_gio_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a34fbbe28fa85_05565346',
+  'unifunc' => 'content_5a35164c1706f1_25947583',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b33a64654f53b1fe39698b445ab7e29bf288a4b5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_xem_gio_hang.tpl',
-      1 => 1513421689,
+      1 => 1513428534,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a34fbbe28fa85_05565346 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a35164c1706f1_25947583 (Smarty_Internal_Template $_smarty_tpl) {
 if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
 	<div class="canh_giua">
 			<h2 class="giohang_rong">Rất tiếc bạn chưa mua hàng....!</h2>
@@ -64,7 +64,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['sp']->value) {
 -<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
 .html"><?php echo $_smarty_tpl->tpl_vars['sp']->value->TenHoa;?>
 </a></h4></td>
-							 <td><?php echo number_format($_smarty_tpl->tpl_vars['sp']->value->Gia);?>
+							 <td id="tong_tien_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+"><?php echo number_format($_smarty_tpl->tpl_vars['sp']->value->Gia);?>
  đ</td>
 							 <td>
 									<div class="quantity td_sl">

@@ -23,8 +23,7 @@
                                 </div>
                             </div>
                             <div class="actions-cart">
-                                <a href="gio_hang.php?MaHoa={$hoa->MaHoa}"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                            </div>
+                                <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>

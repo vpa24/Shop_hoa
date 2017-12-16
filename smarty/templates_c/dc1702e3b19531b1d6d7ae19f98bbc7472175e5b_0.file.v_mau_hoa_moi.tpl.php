@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 09:23:15
+/* Smarty version 3.1.30, created on 2017-12-16 12:01:10
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_moi.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a34e6030fc6a2_58846598',
+  'unifunc' => 'content_5a350b06ecf756_39347560',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dc1702e3b19531b1d6d7ae19f98bbc7472175e5b' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_moi.tpl',
-      1 => 1513416192,
+      1 => 1513425668,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a34e6030fc6a2_58846598 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a350b06ecf756_39347560 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu1" class="tab-pane fade in active">
     <div class="category-products">
@@ -63,9 +63,9 @@ echo number_format($_prefixVariable1);?>
                                     </a>
                                 </div>
                             </div>
-                            <div class="actions-cart">
-                                <a href="gio_hang.php?MaHoa=<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
-"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                            <div class="actions-cart" >
+                                <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
+)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

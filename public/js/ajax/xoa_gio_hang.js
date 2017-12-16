@@ -10,4 +10,5 @@ function xoagiohang(id){
           swal("Sản phẩm đã xóa thành công", {
               icon: "success",
           })
+          //window.location="gio-hang.html";
 }

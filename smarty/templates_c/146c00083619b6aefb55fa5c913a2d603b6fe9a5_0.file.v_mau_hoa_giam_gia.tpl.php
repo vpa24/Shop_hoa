@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 02:56:35
+/* Smarty version 3.1.30, created on 2017-12-16 12:36:24
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_giam_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31e86315d2d6_29308955',
+  'unifunc' => 'content_5a351348485631_20771915',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '146c00083619b6aefb55fa5c913a2d603b6fe9a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_giam_gia.tpl',
-      1 => 1513220166,
+      1 => 1513427766,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a31e86315d2d6_29308955 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a351348485631_20771915 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">
@@ -64,8 +64,8 @@ echo number_format($_prefixVariable2);?>
                                 </div>
                             </div>
                             <div class="actions-cart">
-                                <a href="gio_hang.php?MaHoa=<?php echo $_smarty_tpl->tpl_vars['hoa_km']->value->MaHoa;?>
-"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_km']->value->MaHoa;?>
+)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
         </ul>
         <div class="cta">
-            <button onclick="location.href='http://localhost/shop_hoa-master/danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            <button onclick="location.href='danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </div>
     </div>
 </div>

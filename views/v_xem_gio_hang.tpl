@@ -26,7 +26,7 @@
 						  			 {$tongtt =$tongtt+ $gh*$sp->Gia}
 						 <tr class="cart-header" id="delete{$sp->MaHoa}">
                <td><h4 class="ten_sp"><a href="san-pham/{makeURL($sp->TenHoa)}-{$sp->MaHoa}.html">{$sp->TenHoa}</a></h4></td>
-							 <td>{number_format($sp->Gia)} đ</td>
+							 <td id="tong_tien_{$sp->MaHoa}">{number_format($sp->Gia)} đ</td>
 							 <td>
 									<div class="quantity td_sl">
 	   								<div class="quantity-select">

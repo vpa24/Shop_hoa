@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="actions-cart">
-                                <a href="gio_hang.php?MaHoa={$hoa_ban_chay->MaHoa}"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                                  <a  onclick="chuyen_huong_gio_hang({$hoa_ban_chay->MaHoa})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
         {/foreach}
         </ul>
         <div class="cta">
-            <button onclick="location.href='http://localhost/shop_hoa-master/danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            <button onclick="location.href='danh-sach-hoa'">Xem thêm hoa <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </div>
     </div>
 </div>

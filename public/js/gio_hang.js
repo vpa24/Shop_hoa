@@ -1,23 +1,25 @@
-function chonmua(id)
-{
-	if(kiemtra(id))
-	{
-
-    var sl=document.getElementById("sl_" + id).value;
-		// Chuyển trang lưu session
-		window.location="chon_mua.php?MaHoa=" + id + "&sl=" + sl;
+function chuyen_huong_gio_hang(MaHoa) {
+	$.ajax({
+			type:'get',
+			url:'gio_hang.php',
+			data:{MaHoa:MaHoa},
+			success:function(data){
+			}
+	})
+	swal("Bạn có muốn xem giỏ hàng?", {
+  buttons: {
+		cancel: "Không!",
+		catch: {
+      text: "Có!",
+      value: "catch",
+    },
+	},
+}).then((value) => {
+  switch (value) {
+    case "catch":
+      window.location="gio-hang.html";
+      break;
   }
-}
-function kiemtra(id)
-{
-	var sl="sl_"+ id;
-	var soluong=document.getElementById(sl);
-	if(soluong.value=="" || parseInt(soluong.value)<=0 || isNaN(soluong.value) || parseInt(soluong.value)!=Number(soluong.value) )
-	{
-		alert("Nhập số lượng >0");
-		soluong.focus();
-		soluong.select();
-		return false;
-	}
-	return true;
+});
+
 }

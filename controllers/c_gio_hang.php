@@ -6,10 +6,9 @@ class C_gio_hang
     {
         if (isset($_GET['MaHoa']) && isset($_POST['them'])||(isset($_GET['MaHoa']))) {
             $id=$_GET['MaHoa'];
+            $sl=1;
             if (isset($_POST['them'])) {
                 $sl=$_POST['so_luong'];
-            } else {
-                $sl=1;
             }
             if (isset($_SESSION["giohang"])) {
                 foreach ($_SESSION["giohang"] as $k=>$value) {
