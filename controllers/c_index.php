@@ -31,6 +31,6 @@ class C_index
         $smarty->assign('doc_hoa', $doc_hoa);
         $smarty->assign('tin_tuc', $tin_tuc);
         $smarty->assign('view', $view);
-        $smarty->display("layout.tpl");
+        $smarty->display("layout_trang_chu.tpl");
     }
 }

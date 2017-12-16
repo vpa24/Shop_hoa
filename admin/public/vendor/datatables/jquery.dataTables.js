@@ -1737,14 +1737,14 @@
 		 * sZeroRecords - assuming that is given.
 		 */
 		if ( ! lang.sEmptyTable && zeroRecords &&
-			defaults.sEmptyTable === "No data available in table" )
+			defaults.sEmptyTable === "Bảng không có dữ liệu" )
 		{
 			_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
 		}
 	
 		/* Likewise with loading records */
 		if ( ! lang.sLoadingRecords && zeroRecords &&
-			defaults.sLoadingRecords === "Loading..." )
+			defaults.sLoadingRecords === "Đang tải..." )
 		{
 			_fnMap( lang, lang, 'sZeroRecords', 'sLoadingRecords' );
 		}
@@ -11383,7 +11383,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Bảng không có dữ liệu",
 	
 	
 			/**
@@ -11415,7 +11415,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Hiển thị _START_ dến _END_ của _TOTAL_ mục",
+			"sInfo": "Hiển thị _START_ đến _END_ của _TOTAL_ mục",
 	
 	
 			/**
@@ -11436,7 +11436,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Không có dữ liệu để hiển thị",
 	
 	
 			/**
@@ -11600,7 +11600,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLoadingRecords": "Loading...",
+			"sLoadingRecords": "Đang tải...",
 	
 	
 			/**

@@ -2,6 +2,7 @@
 require_once("database.php");
 class M_hoa extends database
 {
+    
     function doc_tat_ca_hoa(){
         if(isset($_GET['loai_hoa'])){
             $sql = "select h.*, lh.TenLoai from hoa h INNER JOIN loai_hoa lh on lh.MaLoai = h.MaLoai where h.Maloai =".$_GET['loai_hoa'];
@@ -40,22 +41,16 @@ class M_hoa extends database
             if (isset($_FILES['hinh']))
             {
                 if($_FILES["hinh"]["size"] > 500000){
-                    echo "<script>
-                    alert('File không được quá 5MB');
-                    </script>";
+                    $_SESSION['thongBao'] = "File không được lớn hơn 5MB";
                     $uploadOk = 0;
                 }
                 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ){
-                    echo "<script>
-                    alert('Không phải file hình');
-                    </script>";
+                    $_SESSION['thongBao'] = "Không phải file hình";
                     $uploadOk = 0;
                 }
                 if ($uploadOk == 0) {
-                    echo "<script>
-                    alert('Upload ảnh bị lỗi');
-                    </script>";
+                    $_SESSION['thongBao'] = "Upload ảnh bị lỗi";
                 }else{
                     if(move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)) {
                         $hinh = $_FILES["hinh"]["name"];
@@ -63,12 +58,10 @@ class M_hoa extends database
                         $this->setQuery($sql);
                         $this->execute();
                         if($this){
-                            header('Location: hoa.php');
+                            $_SESSION['thongBaoThanhCong']="Thêm sản phẩm thành công";
                         }
                     } else{
-                            echo "<script>
-                        window.alert('Lỗi upload file')
-                        </script>";  
+                        $_SESSION['thongBao'] = "Lỗi upload file"; 
                     }
                 }
             }

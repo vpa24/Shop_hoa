@@ -2065,6 +2065,7 @@ th {
 }
 
 .produced {
+  float: right;
   text-align: right;
   margin-bottom: 30px;
 }

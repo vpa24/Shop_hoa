@@ -6,11 +6,13 @@
         <form method="POST" action="dang_nhap.php" autocomplete="off">
           <div class="form-group">
             <input class="form-control" name="tai_khoan" id="taiKhoan" type="text" 
-            data-validation="length alphanumeric" data-validation-length="6-20" data-validation-error-msg="Tối thiểu 6 ký tự và không ký tự đặc biệt"
-            placeholder="Nhập tài khoản" autocomplete="off" required>
+            min="6" max="50"
+            placeholder="Nhập tài khoản" value="{if isset($smarty.post.btn_dang_nhap)}{$smarty.post.tai_khoan}{/if}" autocomplete="off" required>
           </div>
           <div class="form-group">
-            <input class="form-control" name="mat_khau" id="matKhau" type="password" placeholder="Nhập mật khẩu" autocomplete="off" required>
+            <input class="form-control" name="mat_khau" id="matKhau" type="password" 
+            min="6" max="50"
+            placeholder="Nhập mật khẩu" autocomplete="off" required>
           </div>
           <button type="submit" class="btn btn-primary btn-block" name="btn_dang_nhap">Đăng nhập</button>
         </form>
@@ -20,11 +22,6 @@
       </div>
     </div>
   </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script>
-	$.validate({
-		modules : 'location, date, security, file',
-	});
-	// Restrict presentation length
-	$('#presentation').restrictLength( $('#pres-max-length') );
-</script>
+  {if isset($smarty.session.thongBao)}
+    <script>swal("{$smarty.session.thongBao}");</script>
+  {/if}

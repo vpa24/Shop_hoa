@@ -16,6 +16,6 @@ class C_tin_tuc
         $smarty->assign('title', $title);
         $smarty->assign('tin_tuc', $tin_tuc);
         $smarty->assign('view', $view);
-        $smarty->display("chi_tiet_tin_tuc/layout.tpl");
+        $smarty->display("layout.tpl");
     }
 }

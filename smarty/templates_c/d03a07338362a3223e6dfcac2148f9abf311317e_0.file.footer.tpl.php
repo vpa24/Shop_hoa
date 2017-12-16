@@ -1,0 +1,168 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-12-16 01:38:15
+  from "C:\wamp64\www\shop_hoa-master_01\smarty\templates\layouts\footer.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a3479078cfd29_32960113',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd03a07338362a3223e6dfcac2148f9abf311317e' => 
+    array (
+      0 => 'C:\\wamp64\\www\\shop_hoa-master_01\\smarty\\templates\\layouts\\footer.tpl',
+      1 => 1513290424,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a3479078cfd29_32960113 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<footer>
+    <div class="container">
+        <div class="col-sm-5 text-left">
+            © Bản quyền thuộc về Shop Hoa Online
+        </div>
+        <div class="col-sm-7 text-right">
+            Điện hoa hiện đại 137 Nguyễn Chí Thanh | Email: nct@gmail.com | Hotline: 0165.453.3100
+        </div>
+    </div>
+</footer>
+        <?php echo '<script'; ?>
+ src="public/js/jquery.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/jquery.gotop.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript">
+          $('#gotop').gotop({
+            background: '#FF3366',
+            bottom : '100px',
+            mobileOnly: false
+          });
+        <?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/bootstrap.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/chat.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/slider.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/slider/bxslider.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/slider/script.slider.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/jquery.elevatezoom.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/jquery.elevateZoom-3.0.8.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/imagezoom.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/custom.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="public/js/gio_hang.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript">
+            $(document).ready(function(){
+              $("#giam").click(function(){
+            		var sl=$(".value").val();
+                sl--;
+            		$(".value").val(sl);
+            		if(sl<=1)
+            			$(".value").val(1);
+            	});
+              $("#tang").click(function(){
+            			var sl=$(".value").val();
+            			sl++;
+            			$(".value").val(sl);
+            	});
+    });
+  <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+>
+  $("#zoom_08").elevateZoom({
+  			zoomWindowFadeIn: 800,
+  			zoomWindowFadeOut: 800,
+  			lensFadeIn: 800,
+  			lensFadeOut: 800
+  });
+  <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ type="text/javascript">
+$(document).ready(function(){
+    <?php if (isset($_smarty_tpl->tpl_vars['giohang']->value)) {?>
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['hoa']->value, 'sp');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['sp']->value) {
+?>
+        $("#tang_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").click(function(){
+          var sl=$("#qty_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").val();
+          sl++;
+          $("#qty_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").val(sl);
+      });
+      $("#giam_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").click(function(){
+        var sl=$("#qty_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").val();
+        sl--;
+        $("#qty_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").val(sl);
+        if(sl<=1)
+          $("#qty_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+").val(1);
+      });
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+    <?php }?>
+
+});
+<?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
+  jQuery(document).ready(function () {
+    jQuery(".zvwqfjykbn").magicproduct({
+      selector : ".zvwqfjykbn", // Selector product grid
+    });
+  });
+<?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
+jQuery(document).ready(function () {
+  jQuery(".vmqhdvpnqm").magicproduct({
+    selector : ".vmqhdvpnqm", // Selector product grid
+  });
+});
+<?php echo '</script'; ?>
+>
+    </body>
+</html>
+<?php }
+}

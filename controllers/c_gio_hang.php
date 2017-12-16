@@ -64,7 +64,7 @@ class C_gio_hang
         $smarty->assign('giohang', $giohang);
         $smarty->assign('hoa', $hoa);
         $smarty->assign('view', $view);
-        $smarty->display("gio_hang/layout.tpl");
+        $smarty->display("layout.tpl");
     }
     public function luu_gio_hang()
     {
@@ -83,6 +83,6 @@ class C_gio_hang
         $view = "views/v_dh_thanh_cong.tpl";
         $smarty->assign('title', 'Đặt hàng thành công');
         $smarty->assign('view', $view);
-        $smarty->display("gio_hang/layout.tpl");
+        $smarty->display("layout.tpl");
     }
 }

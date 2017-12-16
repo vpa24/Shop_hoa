@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 14:07:47
+/* Smarty version 3.1.30, created on 2017-12-14 21:55:51
   from "C:\wamp64\www\shop_hoa-master\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3285b331b157_91909561',
+  'unifunc' => 'content_5a32f3670968a7_35741296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd2c35b6cd5f260625cc9cfc30355b808cbb786c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_index.tpl',
-      1 => 1513256282,
+      1 => 1513288464,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/trang_chu/v_san_pham_re_nhat.tpl' => 1,
   ),
 ),false)) {
-function content_5a3285b331b157_91909561 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a32f3670968a7_35741296 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,6 +79,5 @@ $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_banner.tpl", $_smarty_t
   		</div>
   	</div>
   </div>
-</div>
-<?php }
+</div><?php }
 }

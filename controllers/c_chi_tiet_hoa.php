@@ -21,6 +21,6 @@ class C_chi_tiet_hoa
         $smarty->assign('hoa', $hoa);
         $smarty->assign('hoa_cung_loai', $hoa_cung_loai);
         $smarty->assign('view', $view);
-        $smarty->display("chi_tiet_hoa/layout.tpl");
+        $smarty->display("layout.tpl");
     }
 }

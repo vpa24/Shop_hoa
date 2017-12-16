@@ -21,6 +21,6 @@ class C_khach_hang
         $view = "views/v_khach_hang.tpl";
         $smarty->assign('title', "Thông tin khách hàng");
         $smarty->assign('view', $view);
-        $smarty->display("khach_hang/layout.tpl");
+        $smarty->display("layout.tpl");
     }
 }

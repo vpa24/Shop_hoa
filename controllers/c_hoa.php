@@ -31,6 +31,6 @@ class C_hoa
         $smarty->assign('doc_loai_hoa', $doc_loai_hoa);
         $smarty->assign('phan_trang', $phan_trang);
         $smarty->assign('view', $view);
-        $smarty->display("hoa/layout.tpl");
+        $smarty->display("layout.tpl");
     }
 }

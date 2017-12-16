@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 13:37:40
+/* Smarty version 3.1.30, created on 2017-12-16 10:55:58
   from "C:\wamp64\www\shop_hoa-master\views\v_xem_gio_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a312d24c404a0_07897415',
+  'unifunc' => 'content_5a34fbbe28fa85_05565346',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b33a64654f53b1fe39698b445ab7e29bf288a4b5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_xem_gio_hang.tpl',
-      1 => 1513172186,
+      1 => 1513421689,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a312d24c404a0_07897415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a34fbbe28fa85_05565346 (Smarty_Internal_Template $_smarty_tpl) {
 if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
 	<div class="canh_giua">
 			<h2 class="giohang_rong">Rất tiếc bạn chưa mua hàng....!</h2>
@@ -45,7 +45,7 @@ if (count($_smarty_tpl->tpl_vars['giohang']->value) == 0) {?>
 						<?php $_smarty_tpl->_assignInScope('tongtt', 0);
 ?>
 						  <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['giohang']->value, 'gh');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_SESSION['giohang'], 'gh');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['gh']->key => $_smarty_tpl->tpl_vars['gh']->value) {
 $__foreach_gh_0_saved = $_smarty_tpl->tpl_vars['gh'];
@@ -58,7 +58,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['sp']->value) {
 						  		<?php if ($_smarty_tpl->tpl_vars['gh']->key == $_smarty_tpl->tpl_vars['sp']->value->MaHoa) {?>
 						  			 <?php $_smarty_tpl->_assignInScope('tongtt', $_smarty_tpl->tpl_vars['tongtt']->value+$_smarty_tpl->tpl_vars['gh']->value*$_smarty_tpl->tpl_vars['sp']->value->Gia);
 ?>
-						 <tr class="cart-header">
+						 <tr class="cart-header" id="delete<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+">
                <td><h4 class="ten_sp"><a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['sp']->value->TenHoa);?>
 -<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
 .html"><?php echo $_smarty_tpl->tpl_vars['sp']->value->TenHoa;?>
@@ -78,11 +79,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['sp']->value) {
 			    					</div>
 			    				</div>
 								</td>
-								<td><?php echo number_format($_smarty_tpl->tpl_vars['sp']->value->Gia*$_smarty_tpl->tpl_vars['gh']->value);?>
+								<td id="tong_<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+"><?php echo number_format($_smarty_tpl->tpl_vars['sp']->value->Gia*$_smarty_tpl->tpl_vars['gh']->value);?>
  đ</td>
 								<td>
-									<div class="close1"><a href="xoagiohang.php?id=<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
-">x</a></div>
+									<div class="close1"><button type="button" onclick="xoagiohang(<?php echo $_smarty_tpl->tpl_vars['sp']->value->MaHoa;?>
+)" class="btn btn-danger">x</button>
+
+									</div>
 								</td>
 							</tr>
 									<?php }?>

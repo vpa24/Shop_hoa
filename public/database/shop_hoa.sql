@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2017 lúc 03:18 SA
+-- Thời gian đã tạo: Th12 14, 2017 lúc 01:05 CH
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -397,7 +397,7 @@ ALTER TABLE `tin_tuc`
 -- Các ràng buộc cho bảng `chi_tiet_hoa_don`
 --
 ALTER TABLE `chi_tiet_hoa_don`
-  ADD CONSTRAINT `_FK_chi_tiet_hoa_don_hoa` FOREIGN KEY (`MaHoa`) REFERENCES `hoa` (`MaHoa`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `_FK_chi_tiet_hoa_don_hoa` FOREIGN KEY (`MaHoa`) REFERENCES `hoa` (`MaHoa`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `_FK_chi_tiet_hoa_don_hoa_don` FOREIGN KEY (`ma_hoa_don`) REFERENCES `hoa_don` (`ma_hoa_don`) ON UPDATE CASCADE;
 
 --

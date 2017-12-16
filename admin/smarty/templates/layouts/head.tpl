@@ -28,4 +28,5 @@
   <script src="public/vendor/chart.js/Chart.min.js"></script>
   <script src="public/vendor/datatables/jquery.dataTables.js"></script>
   <script src="public/vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>

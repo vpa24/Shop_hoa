@@ -3,6 +3,8 @@ require_once("database.php");
 class M_tin_Tuc extends database
 {
     function doc_tat_ca_tin_tuc(){
+        unset($_SESSION['thongBao']);
+        unset($_SESSION['thongBaoThanhCong']);
         $sql = "select tt.*, lt.TenLoaiTin from tin_tuc tt INNER JOIN loai_tin lt ON lt.MaLoaiTin = tt.MaLoaiTin ORDER BY tt.ThoiGian DESC";
         $this->setQuery($sql);
         return $this->loadAllRows();
@@ -38,22 +40,16 @@ class M_tin_Tuc extends database
             if (isset($_FILES['hinh']))
             {
                 if($_FILES["hinh"]["size"] > 500000){
-                    echo "<script>
-                    alert('File không được quá 5MB');
-                    </script>";
+                    $_SESSION['thongBao'] = "File không được lớn hơn 5MB";
                     $uploadOk = 0;
                 }
                 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ){
-                    echo "<script>
-                    alert('Không phải file hình');
-                    </script>";
+                    $_SESSION['thongBao'] = "Không phải file hình";
                     $uploadOk = 0;
                 }
                 if ($uploadOk == 0) {
-                    echo "<script>
-                    alert('Upload ảnh bị lỗi');
-                    </script>";
+                    $_SESSION['thongBao'] = "Upload ảnh bị lỗi";
                 }else{
                     if(move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)) {
                         $hinh = $_FILES["hinh"]["name"];
@@ -61,17 +57,15 @@ class M_tin_Tuc extends database
                         $this->setQuery($sql);
                         $this->execute();
                         if($this){
-                            header('Location: tin_tuc.php');
+                            $_SESSION['thongBaoThanhCong']="Thêm tin tức mới thành công";
                         }
                     } else{
-                            echo "<script>
-                        window.alert('Lỗi upload file')
-                        </script>";  
+                        $_SESSION['thongBao'] = "Lỗi upload file"; 
                     }
                 }
             }
             else{
-                echo 'Bạn chưa chọn file upload';
+                $_SESSION['thongBao'] = "Bạn chưa chọn file để upload"; 
             }
         }
     }
