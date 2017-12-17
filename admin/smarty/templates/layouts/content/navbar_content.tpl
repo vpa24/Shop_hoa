@@ -42,6 +42,23 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-bullhorn"></i>
+            <span class="nav-link-text">Quản lý nội dung</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti3">
+            <li>
+              <a href="slider.php">Slider</a>
+            </li>
+            <li>
+              <a href="thong_tin.php">Thông tin</a>
+            </li>
+            <li>
+              <a href="quang_cao.php">Quảng cáo</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>

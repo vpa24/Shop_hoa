@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 02:13:40
+/* Smarty version 3.1.30, created on 2017-12-17 12:45:15
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_banner.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31de5447c5f1_11357681',
+  'unifunc' => 'content_5a3666db378891_27445326',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b13a7da7c8a14ae14ff2eee4a3f2703a97626ecc' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_banner.tpl',
-      1 => 1513217619,
+      1 => 1513512052,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a31de5447c5f1_11357681 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3666db378891_27445326 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container hidden-xs">
     <div class="cms-page-banner">
         <div class="row">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_thong_tin']->value, 'thong_tin');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['thong_tin']->value) {
+?>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box">
-                <div class="box-content"><a href="http://www.hoa18.com/global/"><img alt="" class="img-responsive" src="http://www.hoa18.com/media/wysiwyg/alothemes/static/demo1/3-Banner-dich-vu-1.jpg"></a><a class="btn-shop" href="http://www.hoa18.com/global/">MUA NGAY</a></div>
+                <div class="box-content"><a href="<?php echo $_smarty_tpl->tpl_vars['thong_tin']->value->DuongDan;?>
+">
+                    <img alt="" class="img-responsive" src="public/images/banner/<?php echo $_smarty_tpl->tpl_vars['thong_tin']->value->Hinh;?>
+"></a>
+                    <a class="btn-shop" href="<?php echo $_smarty_tpl->tpl_vars['thong_tin']->value->DuongDan;?>
+"><?php echo $_smarty_tpl->tpl_vars['thong_tin']->value->HanhDong;?>
+</a>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box">
-                <div class="box-content"><a href="http://www.hoa18.com/vi/"><img alt="" class="img-responsive" src="http://www.hoa18.com/media/wysiwyg/alothemes/static/demo1/3-Banner-dich-vu-2.jpg"></a><a class="btn-shop" href="http://www.hoa18.com/vi/">MUA NGAY</a></div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 box">
-                <div class="box-content"><a href="http://www.hoa18.com/vn/uu-dai-online-friday-2017"><img alt="" class="img-responsive" src="http://www.hoa18.com/media/wysiwyg/banner/3_Banner_dich_vu_3-2.jpg"></a><a class="btn-shop" href="http://www.hoa18.com/vn/uu-dai-online-friday-2017">XEM NGAY</a></div>
-            </div>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
         </div>
     </div>
 </div>

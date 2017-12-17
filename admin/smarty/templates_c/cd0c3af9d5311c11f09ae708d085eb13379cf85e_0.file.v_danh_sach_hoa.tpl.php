@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 04:38:13
+/* Smarty version 3.1.30, created on 2017-12-17 12:43:00
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a35f4b5b679d2_24545127',
+  'unifunc' => 'content_5a3666540abff7_39736057',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c3af9d5311c11f09ae708d085eb13379cf85e' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1513485490,
+      1 => 1513453820,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/hoa/v_modal_sua_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a35f4b5b679d2_24545127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3666540abff7_39736057 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

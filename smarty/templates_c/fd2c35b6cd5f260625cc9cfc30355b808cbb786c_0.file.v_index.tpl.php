@@ -1,23 +1,24 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 21:55:51
+/* Smarty version 3.1.30, created on 2017-12-17 12:45:15
   from "C:\wamp64\www\shop_hoa-master\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32f3670968a7_35741296',
+  'unifunc' => 'content_5a3666db11ae87_39746927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd2c35b6cd5f260625cc9cfc30355b808cbb786c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_index.tpl',
-      1 => 1513288464,
+      1 => 1513512089,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:views/trang_chu/v_slider.tpl' => 1,
     'file:views/trang_chu/v_banner.tpl' => 1,
     'file:views/trang_chu/v_mau_hoa_moi.tpl' => 1,
     'file:views/trang_chu/v_mau_hoa_ban_chay.tpl' => 1,
@@ -28,8 +29,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/trang_chu/v_san_pham_re_nhat.tpl' => 1,
   ),
 ),false)) {
-function content_5a32f3670968a7_35741296 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5a3666db11ae87_39746927 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="container mau_hoa">

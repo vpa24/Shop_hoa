@@ -41,5 +41,15 @@ order by sl desc limit 3";
       $this->setQuery($sql);
       return $this->loadAllRows();
     }
+    function doc_slider(){
+      $sql="SELECT * FROM `slider` ORDER BY ThoiGian LIMIT 3";
+      $this->setQuery($sql);
+      return $this->loadAllRows();
+    }
+    function doc_thong_tin(){
+      $sql="SELECT * FROM `thong_tin` ORDER BY ThoiGian LIMIT 3";
+      $this->setQuery($sql);
+      return $this->loadAllRows();
+    }
 }
 ?>

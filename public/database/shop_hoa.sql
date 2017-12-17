@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2017 lúc 01:05 CH
+-- Thời gian đã tạo: Th12 17, 2017 lúc 06:03 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -266,6 +266,73 @@ INSERT INTO `loai_tin` (`MaLoaiTin`, `TenLoaiTin`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `quang_cao`
+--
+
+CREATE TABLE `quang_cao` (
+  `id` int(11) NOT NULL,
+  `TieuDe` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Hinh` varchar(255) NOT NULL,
+  `DuongDan` varchar(255) NOT NULL,
+  `ThoiGian` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `quang_cao`
+--
+
+INSERT INTO `quang_cao` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `ThoiGian`) VALUES
+(1, 'QC1', '1.jpg', 'danh-sach-hoa', '2017-12-17 12:08:08');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `slider`
+--
+
+CREATE TABLE `slider` (
+  `id` int(11) NOT NULL,
+  `TieuDe` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Hinh` varchar(100) NOT NULL,
+  `DuongDan` varchar(255) NOT NULL,
+  `ThoiGian` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `slider`
+--
+
+INSERT INTO `slider` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `ThoiGian`) VALUES
+(1, 'Khai trương shop', '1.png', 'danh-sach-hoa', '2017-12-17 13:03:06'),
+(2, 'Khuyến mãi noel', '2.jpg', 'danh-sach-hoa', '2017-12-17 11:47:09');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `thong_tin`
+--
+
+CREATE TABLE `thong_tin` (
+  `id` int(11) NOT NULL,
+  `TieuDe` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Hinh` varchar(255) NOT NULL,
+  `DuongDan` varchar(255) NOT NULL,
+  `HanhDong` varchar(50) NOT NULL DEFAULT 'Mua Ngay',
+  `ThoiGian` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `thong_tin`
+--
+
+INSERT INTO `thong_tin` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `HanhDong`, `ThoiGian`) VALUES
+(1, 'Banner 1', '1.jpg', '/', 'Mua Ngay', '2017-12-17 11:52:21'),
+(2, 'Banner 2', '2.jpg', 'danh-sach-hoa', 'Mua Ngay', '2017-12-17 11:52:21'),
+(3, 'Banner 3', '3.jpg', 'danh-sach-hoa', 'Mua Ngay', '2017-12-17 11:52:21');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `tin_tuc`
 --
 
@@ -283,10 +350,10 @@ CREATE TABLE `tin_tuc` (
 --
 
 INSERT INTO `tin_tuc` (`MaTT`, `TenTT`, `NoiDung`, `Hinh`, `ThoiGian`, `MaLoaiTin`) VALUES
-(1, 'Hoa tươi cho ngày mới năng động', 'Giữa cuộc sống bộn bề và tấp nập này, có bao giờ bạn dừng lại suy nghĩ cho bản thân hay chỉ lao đầu vào công việc và những lo toan cuộc sống? Đừng để thời gian lấy đi những giá trị của cuộc sống, hãy dừng lại suy ngẫm và tạo niềm vui riêng cho mình.\r\nĐôi khi công việc và tình cảm khiến bạn thấy chán nản và thất vọng, đó cũng là lúc bạn nên dành thời gian suy nghĩ và tìm cách cuốn mọi chuyện ra khỏi đầu óc, tìm cách cân bằng mọi thứ xung quanh mình.|tin_tuc_1.jpg|Những lúc thế này bạn có nghĩ đến một bó hoa tươi cho riêng mình?\r\nBạn có biết màu sắc của hoa khiến ta thêm vui vẻ, hương hoa xoa dịu đi nỗi buồn, và nhìn những cánh hoa khiến ta vơi đi nỗi buồn không? Hoa không chỉ là một thực vật vô tri vô giác, nó cũng có cảm xúc và tâm trạng, ngôn ngữ của riêng nó.Vậy tại sao bạn không làm bạn với chúng?\r\nNhững lúc chúng ta có tâm sự nhưng không biết bày tỏ cùng ai, thì hoa chính là người bạn giúp ta trút bỏ những ưu phiền. Ngắm nhìn những cánh hoa tươi đẹp, hương thơm thoang thoảng, lòng ta sẽ thêm thoải mái.|tin_tuc_2.jpg|Còn gì tuyệt vời hơn khi mỗi sáng thức dậy đươc ngắm những bông hoa tươi thắm đầy sức sống đúng không nào. Vậy tại sao bạn không chọn bó hoa tươi cho riêng mình?\r\nHãy liên hệ ngay với chúng tôi để được cung cấp những sản phẩm hoa tươi đẹp được tuyển chọn từ những bông hoa được chăm sóc tốt nhất. Hotline: 0912345678', 'tin_tuc_1.jpg', '2016-06-02', 1),
-(2, 'Những phương pháp giữ hoa lâu tàn theo cách dân gian', 'Một bình hoa đẹp nếu bạn mua về chưng nhưng sau đó chỉ được 1 - 2 ngày đã biến sắc rồi tàn lụi thì thật là đáng tiếc. Nhưng làm sao để có thể giữ hoa lâu tàn hơn. Vì Không phải ai cũng biết cách để giữ chúng lâu tàn hơn.', 'tin_tuc_3.jpg', '2016-05-25', 1),
+(1, 'MÁCH NHỎ 10 MẸO GIỮ HOA TƯƠI LÂU!', '<p><strong>Cắm trong nước &acirc;́m làm tăng t&ocirc;́c đ&ocirc;̣ hút nước của hoa.</strong></p>\r\n\r\n<p>Hoa tươi lu&ocirc;n mang đến cho mọi người niềm vui v&agrave; hạnh ph&uacute;c. Tuy nhi&ecirc;n, vẻ đẹp của hoa rất nhanh ch&oacute;ng t&agrave;n phai khi bạn chưa kịp thưởng thức. Tuy kh&ocirc;ng thể lưu giữ m&atilde;i m&atilde;i nhưng lu&ocirc;n c&oacute; một số c&aacute;ch để bạn n&iacute;u giữ &quot;tuổi thanh xu&acirc;n&quot; của những đ&oacute;a hoa.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Cắm hoa trong b&igrave;nh lớn</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://3.bp.blogspot.com/-X8S0WMhkS_g/WQrdyWR7ZqI/AAAAAAAADL4/fWSqe0MLkxA5YRfOkdHCWyToBynXCc4kQCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-1.jpg" style="height:270px; width:500px" /></strong></p>\r\n\r\n<p>Lu&ocirc;n lu&ocirc;n sử dụng b&igrave;nh, lọ sạch sẽ.&nbsp;B&iacute; quyết n&agrave;y sẽ l&agrave;m giảm nguy cơ vi khuẩn v&agrave; vi sinh vật sinh s&ocirc;i&nbsp;v&agrave; l&agrave;m hỏng&nbsp;hoa.&nbsp;Để đảm bảo rằng th&acirc;n c&acirc;y của hoa kh&ocirc;ng bị th&iacute;t qu&aacute; chặt,&nbsp;h&atilde;y chọn b&igrave;nh với cổ rộng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Cắm hoa trong nước n&oacute;ng</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://4.bp.blogspot.com/-aVriRMqoOQc/WQrdyTmoifI/AAAAAAAADL8/Wh2XHsxGjhwQ_Ten0m2ja-eDtR7B5OXDgCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-2.jpg" style="height:250px; width:500px" /></strong></p>\r\n\r\n<p>Tất nhi&ecirc;n l&agrave; kh&ocirc;ng phải cắm nước s&ocirc;i. Nhiệt độ nước cắm ban đầu khoảng&nbsp;43-44 độ C.&nbsp;Đổ nước v&agrave;o b&igrave;nh v&agrave; đặt n&oacute; ở nơi tho&aacute;ng m&aacute;t trong một hoặc hai giờ.&nbsp;C&aacute;c ph&acirc;n tử nước n&oacute;ng di chuyển nhanh hơn qua th&acirc;n c&acirc;y, trong khi hoa mất &iacute;t độ ẩm v&igrave; nhiệt độ kh&ocirc;ng kh&iacute; lạnh hơn.&nbsp;Phương ph&aacute;p n&agrave;y gi&uacute;p k&eacute;o d&agrave;i tuổi thọ của hoa tươi.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>H&atilde;y sử dụng nước ấm</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://1.bp.blogspot.com/-b3eiKs3dj0w/WQrdy3ETUOI/AAAAAAAADME/12f6GjoBIMcoss8TjkzZoTkr5w1mAnGfQCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-3.jpg" style="height:396px; width:500px" /></strong></p>\r\n\r\n<p>Nếu bạn kh&ocirc;ng sử dụng phương ph&aacute;p tr&ecirc;n, chỉ cần cắm hoa của bạn trong nước ấm hoặc ở nhiệt độ ph&ograve;ng.&nbsp;Hoa h&uacute;t&nbsp;lấy nước n&oacute;ng dễ d&agrave;ng hơn so với nước&nbsp;lạnh.&nbsp;Tuy nhi&ecirc;n, c&aacute;c loại hoa c&oacute; củ như ti&ecirc;n &ocirc;ng lại th&iacute;ch nước lạnh.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Ngắt bớt l&aacute; ph&iacute;a dưới</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://4.bp.blogspot.com/-sP3FdAlI7vc/WQrdy1-ZAHI/AAAAAAAADMI/BCugCXkDl1sqm8-_3ZHWnkvg9rDAM-zcwCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-4.jpg" style="height:396px; width:500px" /></strong></p>\r\n\r\n<p>Để l&agrave;m hoa tươi hơn, trước khi cắm, mọi người phải ngắt hết l&aacute; phần dưới kh&ocirc;ng để cho nằm trong nước. L&aacute; ch&igrave;m trong nước c&oacute; thể bắt đầu thối rất nhanh, do đ&oacute; l&agrave; m&ocirc;i trường l&yacute; tưởng&nbsp;cho vi khuẩn ph&aacute;t triển.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Thay nước thường xuy&ecirc;n</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://1.bp.blogspot.com/-XDvsRKCqgHQ/WQrdy8DAj9I/AAAAAAAADMM/jJ2ZPYwhm5M0RDHm79YflNften-SHlVogCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-5.jpg" style="height:396px; width:500px" /></strong></p>\r\n\r\n<p>Để giữ hoa tươi, h&atilde;y thay nước mỗi ng&agrave;y.&nbsp;V&agrave; đừng qu&ecirc;n rửa sạch c&aacute;c mảnh l&aacute; v&agrave; c&aacute;nh hoa vụn trong b&igrave;nh. Bạn cũng c&oacute; thể th&ecirc;m một v&agrave;i vi&ecirc;n aspirin v&agrave;o b&igrave;nh nước để giữ cho nước sạch v&agrave; kh&ocirc;ng c&oacute; vi khuẩn g&acirc;y hại hoa.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Cắt c&agrave;nh&nbsp;theo một g&oacute;c ch&eacute;o</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://4.bp.blogspot.com/-kQBEld7dVLE/WQrdzBUjTZI/AAAAAAAADMU/LSwk4ucySfY6vNxlPesYxLXyqyFJa2gvgCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-6.jpg" style="height:333px; width:500px" /></strong></p>\r\n\r\n<p>Đừng qu&ecirc;n cắt bớt c&agrave;nh một ch&uacute;t mỗi ng&agrave;y. Sử dụng một con dao sắc v&agrave; cắt 1&nbsp;g&oacute;c 45 độ.&nbsp;Mẹo đơn giản n&agrave;y sẽ l&agrave;m tăng&nbsp;khả năng hấp thụ nước của hoa.&nbsp;</p>\r\n\r\n<p>Với nhiều loại hoa nhạy cảm hơn như hoa hồng,&nbsp;tốt nhất n&ecirc;n cắt c&agrave;nh dưới nước.&nbsp;Hoa hồng đặc biệt nhạy cảm với bọt kh&iacute; v&agrave; vi khuẩn, g&acirc;y cản trở sự hấp thụ nước v&agrave; l&agrave;m cho hoa h&eacute;o&nbsp;nhanh hơn.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Sử dụng chất bảo quản hoa</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://1.bp.blogspot.com/-hlVKs9d2sfw/WQrdzRamk0I/AAAAAAAADMQ/PfQXz0QdP7IVIdlrCauSHHtlX4REZSzOACLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-7.jpg" style="height:335px; width:500px" /></strong></p>\r\n\r\n<p>Bạn c&oacute; thể mua chất bảo quản&nbsp;hoa tại c&aacute;c cửa h&agrave;ng n&ocirc;ng nghiệp.&nbsp;Chất bảo quản thực vật chứa c&aacute;c th&agrave;nh phần cơ bản cần thiết để&nbsp;k&eacute;o d&agrave;i tuổi thọ của hoa tươi.&nbsp;Hơn nữa, trong số c&aacute;c th&agrave;nh phần của ch&uacute;ng c&oacute;&nbsp;c&aacute;c chất diệt khuẩn ngăn kh&ocirc;ng cho vi khuẩn l&acirc;y lan v&agrave; l&acirc;y nhiễm .</p>\r\n\r\n<p>Một c&aacute;ch đơn giản để tự chế chất bảo quản l&agrave; pha nước c&oacute; ga với nước rửa b&aacute;t v&agrave;o trong b&igrave;nh nước cắm. Sử dụng một phần soda v&agrave; ba phần nước, sau đ&oacute; th&ecirc;m một v&agrave;i giọt thuốc tẩy (kh&ocirc;ng nhiều) để diệt c&aacute;c vi sinh vật g&acirc;y hại.&nbsp;Tr&ecirc;n thực tế, hỗn hợp n&agrave;y c&oacute; thể hiệu quả hơn nhiều so với một số chất bảo quản hoa được b&agrave;y b&aacute;n.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Giữ hoa c&aacute;ch xa &aacute;nh nắng mặt trời trực tiếp, l&ograve; sưởi v&agrave; tr&aacute;i c&acirc;y.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://3.bp.blogspot.com/-ftCP402_RWI/WQrdzXh40PI/AAAAAAAADMY/L_s_6y31gVMeB5b217RmqH-D1BpEIJLGwCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-8.jpg" style="height:250px; width:500px" /></strong></p>\r\n\r\n<p>T&igrave;m một nơi để&nbsp;hoa kh&ocirc;ng bị &aacute;nh s&aacute;ng mặt trời trực tiếp hoặc gần c&aacute;c nguồn nhiệt.&nbsp;Bạn cũng n&ecirc;n tr&aacute;nh đặt hoa cắt gần&nbsp;b&aacute;t với tr&aacute;i c&acirc;y,&nbsp;v&igrave; ch&uacute;ng to&aacute;t&nbsp;ra một lượng nhỏ ethylene, một loại kh&iacute; c&oacute; thể khiến hoa h&eacute;o&nbsp;đi nhanh ch&oacute;ng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Vứt bỏ hoa h&eacute;o c&agrave;ng sớm c&agrave;ng tốt.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://3.bp.blogspot.com/-KZiiszPbk48/WQrdzlz5W0I/AAAAAAAADMc/t2pTxs9WOvYRMpYAPqYZ7NJuXWvJP0hVgCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-9.jpg" style="height:396px; width:500px" /></strong></p>\r\n\r\n<p>Bỏ bất kỳ b&ocirc;ng hoa n&agrave;o đang h&eacute;o dần ra khỏi b&igrave;nh. Nếu kh&ocirc;ng, kh&iacute; ethylene to&aacute;t ra từ những b&ocirc;ng hoa đang h&eacute;o rũ sẽ nhanh ch&oacute;ng l&agrave;m những b&ocirc;ng hoa tươi yếu dần.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Cắm&nbsp;hoa đ&uacute;ng c&aacute;ch</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><img alt="" src="https://1.bp.blogspot.com/-SkqjELk79WY/WQrdycj1KtI/AAAAAAAADMA/Xvt_Y9wiSP4LGg4GJT0U84bQPfQgsR7RQCLcB/s1600/ma%25CC%2581ch-nho%25CC%2589-chi%25CC%25A3-em-10-me%25CC%25A3o-giu%25CC%2583-hoa-tuoi-lau-ai-cu%25CC%2583ng-nen-bie%25CC%2581t-10.jpg" style="height:396px; width:500px" /></strong></p>\r\n\r\n<p>Kh&ocirc;ng phải tất cả c&aacute;c loại hoa đều c&oacute; thể cắm chung với nhau.&nbsp;Hoa thủy ti&ecirc;n v&agrave; hoa ti&ecirc;n &ocirc;ng rất dễ l&agrave;m h&eacute;o c&aacute;c hoa kh&aacute;c, v&igrave; vậy tốt nhất n&ecirc;n để ch&uacute;ng trong b&igrave;nh ri&ecirc;ng.</p>\r\n\r\n<p><strong>Shop hoa tươi&nbsp;sưu t&acirc;̀m</strong></p>\r\n', 'tin_tuc_1.jpg', '2017-12-17', 1),
+(2, 'NÊN TẶNG GÌ TRONG NGÀY CỦA MẸ?', '<p>Nếu bạn chưa nghĩ ra được th&igrave; <strong>shop hoa tươi</strong>&nbsp;sẽ gợi &yacute; để&nbsp;bạn tham khảo nh&eacute;&nbsp;nh&eacute;:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>1. L&agrave;m một album h&igrave;nh kỷ niệm:</strong></p>\r\n\r\n<p>C&aacute;c tấm ảnh, khung h&igrave;nh của những ph&uacute;t gi&acirc;y vui vẻ, hạnh ph&uacute;c đ&atilde; qua của ba mẹ, con c&aacute;i, anh em sẽ l&agrave; chất keo gắn kết c&aacute;c th&agrave;nh vi&ecirc;n gia đ&igrave;nh lại với nhau hơn v&agrave; l&agrave; điều m&agrave; người mẹ n&agrave;o cũng mong muốn cho gia đ&igrave;nh m&igrave;nh. H&atilde;y cố gắng t&igrave;m v&agrave; sưu tập những h&igrave;nh ảnh m&agrave; mẹ chưa từng xem hay đ&atilde; l&acirc;u rồi chưa xem, đảm bảo mẹ m&igrave;nh sẽ bất ngờ v&agrave; cảm động lắm đấy.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2. Đồ handmade</strong></p>\r\n\r\n<p>C&aacute;c mẹ sẽ rất hạnh ph&uacute;c khi được nhận một m&oacute;n qu&agrave; do ch&iacute;nh tay bạn l&agrave;m ra đấy. Nếu kh&eacute;o tay, bạn c&oacute; thể lựa chọn l&agrave;m tặng mẹ một lẵng hoa giấy k&egrave;m theo một tấm&nbsp;thiệp thật độc đ&aacute;o, c&ugrave;ng lời đề tặng y&ecirc;u thương d&agrave;nh cho mẹ. Bạn cũng c&oacute; thể tự thiết kế ri&ecirc;ng một khung h&igrave;nh bằng gỗ rồi đặt ảnh chụp gia đ&igrave;nh, ảnh của mẹ v&agrave; bạn hoặc ảnh của ri&ecirc;ng mẹ v&agrave;o đ&oacute;. Chắc chắn mẹ sẽ rất ngạc nhi&ecirc;n với những m&oacute;n qu&agrave; độc đ&aacute;o do ch&iacute;nh tay bạn l&agrave;m n&ecirc;n đ&oacute;.</p>\r\n\r\n<p>Nguy&ecirc;n liệu cho những m&oacute;n qu&agrave; độc n&agrave;y rất dễ t&igrave;m. Bạn c&oacute; thể tận dụng những đồ vật cũ hoặc mua tại c&aacute;c cửa h&agrave;ng b&aacute;n qu&agrave; tặng, văn ph&ograve;ng phẩm với chi ph&iacute; kh&ocirc;ng vượt qu&aacute;&nbsp;200,000 đồng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3. Hoa tươi</strong></p>\r\n\r\n<p>Hoa tươi dường như l&agrave; m&oacute;n qu&agrave; th&ocirc;ng dụng nhất d&agrave;nh tặng cho c&aacute;c mẹ v&agrave;o những ng&agrave;y lễ lớn như 8/3, 20/10, đương nhi&ecirc;n l&agrave; kh&ocirc;ng c&oacute; ngoại lệ cho Ng&agrave;y Của Mẹ &ndash; Mother&rsquo;s Day. Thay v&igrave; mua hoa hồng, bạn c&oacute; thể chọn mua một b&oacute; hoa ly để về nh&agrave; cắm, một b&oacute; cẩm chướng hay một lẵng&nbsp;<a href="http://diendanrao.com/tang-qua-gi-trong-ngay-cua-me-mothers-day/%20http://diendanrao.com/hoa-lan" target="_blank">hoa lan</a>&nbsp;t&ugrave;y v&agrave;o sở th&iacute;ch của mẹ v&agrave; bạn.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4. L&agrave;m một DVD d&agrave;nh cho gia đ&igrave;nh v&agrave; mẹ:</strong></p>\r\n\r\n<p>Tối h&ocirc;m đ&oacute; h&atilde;y tập hợp gia đ&igrave;nh lại để xem một đĩa DVD ngắn được sản xuất bởi ch&iacute;nh bạn. DVD đ&oacute; c&oacute; nội dung g&igrave; đ&acirc;y ? H&atilde;y&nbsp;&ldquo;Be Creative&rdquo;&nbsp;n&agrave;o: chỉnh sửa tập hợp một v&agrave;i tấm ảnh để tạo slide, quay clip cha con n&oacute;i về mẹ, lồng v&agrave;o một v&agrave;i đoạn nhạc m&agrave; mẹ ưa th&iacute;ch, tạo hiệu ứng h&igrave;nh ảnh k&egrave;m những lời ch&uacute;c d&agrave;nh cho mẹ,&hellip;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>5. Một buổi ăn tối v&agrave; vui chơi c&ugrave;ng mẹ :</strong></p>\r\n\r\n<p>Mọi th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh h&atilde;y d&agrave;nh trọn một buổi tối để rủ mẹ đi ăn ngo&agrave;i một bữa. Sau đ&oacute; cả nh&agrave; c&ugrave;ng l&agrave;m v&agrave;i mini liveshow ca nhạc như h&aacute;t Karaoke chẳng hạn. Đ&acirc;y sẽ l&agrave; dịp để mẹ tho&aacute;t khỏi nhịp điệu nội trợ nh&agrave;m ch&aacute;n h&agrave;ng ng&agrave;y v&agrave; nạp năng lượng đấy.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>6. Nếu kh&ocirc;ng ăn ngo&agrave;i th&igrave; tự tay bạn l&agrave;m buổi tối cho mẹ vậy:</strong></p>\r\n\r\n<p>Tự tay bạn l&agrave;m những m&oacute;n m&agrave; mẹ th&iacute;ch. H&atilde;y để b&agrave; ngồi relax v&agrave; xem bạn tự tay dọn b&agrave;n ăn chi&ecirc;u đ&atilde;i v&agrave; phục vụ cả nh&agrave;. Chắn chắn l&agrave; mẹ bạn sẽ ăn rất ngon.</p>\r\n\r\n<p>&Agrave; c&ograve;n một c&aacute;i m&igrave;nh qu&ecirc;n l&agrave; sau khi ăn th&igrave; bạn h&atilde;y nhớ tự tay rửa ch&eacute;n v&agrave; dọn dẹp nh&eacute; v&agrave; nhớ l&agrave; phải l&agrave;m sao cho sạch b&oacute;ng đấy.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>7. Phụ mẹ l&agrave;m c&aacute;c việc thường ng&agrave;y trong gia đ&igrave;nh:</strong></p>\r\n\r\n<p>Đ&acirc;y c&oacute; thể xem l&agrave; c&aacute;ch cổ điển v&agrave; &iacute;t tốn k&eacute;m nhất nhưng m&agrave; kh&ocirc;ng bao giờ l&agrave; lỗi thời đ&acirc;u. H&atilde;y lau nh&agrave;, qu&eacute;t nh&agrave;, tưới c&acirc;y, dọn dẹp nh&agrave; cửa, rửa xe, giặt đồ, ủi đồ,&hellip; n&oacute;i chung l&agrave; mẹ l&agrave;m c&aacute;i g&igrave; th&igrave; m&igrave;nh nhảy v&agrave;o phụ th&ocirc;i.</p>\r\n\r\n<p>Mẹ thường rất đơn giản chỉ cần m&igrave;nh biết quan t&acirc;m mẹ, y&ecirc;u thương mẹ nhiều khi đ&oacute; cũng l&agrave; m&oacute;n qu&aacute; tuyệt vời kh&ocirc;ng k&eacute;m đối với mẹ đ&oacute; c&aacute;c bạn ạ!</p>\r\n', 'tin_tuc_3.jpg', '2017-12-17', 1),
 (3, 'Lung linh những chiếc váy hoa tí hon dễ thương', 'Với đôi tay khéo léo nghệ sĩ đã sắp xếp những cánh hoa, bông hoa và vẽ nên những bức tranh thật ấn tượng và trông rất thực về chiếc váy của người phụ nữ.\r\nHoa và thời trang là hai niềm đam mê của phái đẹp. Kết hợp giữa 2 yếu tố này tạo nên vẻ đẹp khó tả. Và đây cũng chính là nguồn cảm hứng giúp nghệ sĩ thi giác người Malaysia, Limzy tạo nên những bản phác thảo thời trang từ rất nhiều loại hoa khác nhau như hồng, cẩm chướng, hoa lan, hướng dương.', 'tin_tuc_4.jpg', '2016-06-13', 1),
-(4, 'Những cách tặng hoa bất ngờ cho ngày 20/10', 'Tặng hoa là một nghĩa cử đẹp của phái nam dành cho phái đẹp, nó không chỉ là một hành động đẹp đơn thuần mà ẩn sâu bên trong nghĩa cử hành động đó là một sự sâu sắc về tình cảm mà qua đó nói lên được tâm tư suy nghĩ của con người đối với nhau và cũng thay cho một lời bày tỏ tình cảm yêu thương. Ngày 20/10 là dịp để chúng ta biết ơn và tri ân những người đã thầm lặng dõi theo cuộc sống của gia đình, những bóng hồng luôn làm tươi đẹp gia đình và tạo bước thành công cho những thành viên khác, là bàn đạp tiến lên xây dựng hạnh phúc vững bền. Đó là những người phụ nữ của gia đình của xã hội là vợ, là bà, là mẹ, là vợ, là em gái, là người yêu thương.', 'tin_tuc_5.jpg', '2016-01-01', 1);
+(4, 'Những cách tặng hoa bất ngờ cho ngày 20/10', '<p><strong>1.Hoa tươi:</strong></p>\r\n\r\n<p><a href="http://www.dienhoadanang.com/danh-muc/16-hoa-tuoi-tang-dip-20-11" target="_blank">Hoa tươi</a>&nbsp;lu&ocirc;n l&agrave; sự lựa chọn h&agrave;ng đầu trong danh mục c&aacute;c m&oacute;n qu&agrave; tặng &yacute; nghĩa nhất để trao gửi y&ecirc;u thương v&agrave; thể hiện tấm l&ograve;ng. Trong c&aacute;c ng&agrave;y đặc biệt trong năm, mỗi nh&agrave; lại kh&ocirc;ng thể vắng b&oacute;ng những giỏ hoa, b&oacute; hoa tươi sắc v&agrave; trong ng&agrave;y 20/11 hoa tươi lại c&agrave;ng được ưa chuộng.&nbsp;</p>\r\n\r\n<p>C&aacute;c Thầy, c&aacute;c C&ocirc; nhận được b&oacute; hoa tươi của học tr&ograve; c&ugrave;ng những d&ograve;ng chữ ngay ngắn tr&ecirc;n tấm thiệp viết tay chắc hẳn trong t&acirc;m khảm sẽ rất vui mừng bời c&ocirc;, cậu học tr&ograve; nhỏ của m&igrave;nh nay đ&atilde; lớn kh&ocirc;n, đ&atilde; biết tới c&ocirc;ng lao dưỡng dục của m&igrave;nh suốt những th&aacute;ng ng&agrave;y đ&egrave;n s&aacute;ch.</p>\r\n\r\n<p>Hoa tươi ng&agrave;y nay c&oacute; thật nhiều kiểu d&aacute;ng để bạn lựa chọn, vừa&nbsp;<a href="http://www.dienhoadanang.com/danh-muc/20-hoa-tuoi-bo-" target="_blank">b&oacute; tr&ograve;n, b&oacute; d&agrave;i</a>, vừa cắm giỏ, cắm hộp rồi cắm b&igrave;nh,... Bạn tha hồ lựa chọn kiểu c&aacute;ch h&ograve;a trộn m&agrave;u sắc bắt mắt để d&agrave;nh tặng C&ocirc;, Thầy. Nếu bạn muốn th&ecirc;m phần &yacute; nghĩa, bạn ho&agrave;n to&agrave;n c&oacute; thể mua hoa tươi về v&agrave; tự tạo cho m&igrave;nh m&oacute;n qu&agrave; tặng nh&acirc;n ng&agrave;y 20/11. C&ograve;n nếu kh&ocirc;ng bạn c&oacute; thể tới c&aacute;c&nbsp;<a href="http://www.dienhoadanang.com/" target="_blank" title="Điện hoa Đà Nẵng">shop hoa uy t&iacute;n</a>&nbsp;để dặt hoa theo &yacute; m&igrave;nh mong muốn, c&aacute;c&nbsp;<a href="http://www.dienhoadanang.com/" target="_blank" title="Hoa tươi Đà Nẵng">dịch vụ giao hoa tận tay</a>&nbsp;lu&ocirc;n sẵn s&agrave;ng gi&uacute;p đỡ bạn.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-yrhBrpLcRY4/WBFsf0wI_6I/AAAAAAAABYw/ib-Qb_agd2kEwMwJMM6R8-QjxhfV4AdnACLcB/s1600/tang_qua_20-11_y_nghia_nhat1.jpg" style="height:690px; width:500px" /></p>\r\n\r\n<p><em>Hoa tươi lu&ocirc;n l&agrave; lựa chọn số 1 trong truyền tải th&ocirc;ng điệp y&ecirc;u thương</em></p>\r\n\r\n<p><strong>2.&nbsp;Nước hoa:</strong></p>\r\n\r\n<p>Một chai nước hoa dung t&iacute;ch nhỏ vừa hợp t&uacute;i tiền của bạn lại cực k&igrave; xinh xắn với hương thơm nồng n&agrave;n sẽ rất ph&ugrave; hợp để d&agrave;nh tặng cho những Thầy, C&ocirc; gi&aacute;o y&ecirc;u l&agrave;m đẹp v&agrave; chỉn chu.</p>\r\n\r\n<p>Tất nhi&ecirc;n rồi, ai chẳng muốn được tặng những m&oacute;n qu&agrave; y&ecirc;u th&iacute;ch chứ, vậy n&ecirc;n trước khi tặng nước hoa cho thầy c&ocirc;&nbsp;bạn n&ecirc;n t&igrave;m hiểu m&ugrave;i hương v&agrave; nh&atilde;n hiệu ưa d&ugrave;ng của thầy c&ocirc;&nbsp;trước đ&atilde; nh&eacute;.</p>\r\n\r\n<p><img alt="" src="https://2.bp.blogspot.com/-rY6ccRZskmg/WBFsfqmxGpI/AAAAAAAABYs/QbMtQLjR3ocxb2dLcM-xa-e5YA3l1YaHgCLcB/s1600/tang_qua_20-11_y_nghia_nhat2.jpg" style="height:333px; width:500px" /></p>\r\n\r\n<p><em>Nước hoa tặng Thầy, C&ocirc; cũng l&agrave; một gợi &yacute; th&uacute; vị cho ng&agrave;y 20/11</em></p>\r\n\r\n<p><strong>3.Sơ mi, c&agrave; vạt, quần t&acirc;y tặng Thầy, &aacute;o d&agrave;i tặng C&ocirc;:</strong></p>\r\n\r\n<p>M&oacute;n qu&agrave; n&agrave;y c&oacute; rất nhiều kiểu d&aacute;ng, mẫu m&atilde; với thương hiệu v&agrave; chất liệu kh&aacute;c nhau m&agrave; gi&aacute; cả th&igrave; rất phải chăng.</p>\r\n\r\n<p>Nếu bạn chọn mua &aacute;o d&agrave;i hay sơ mi&nbsp;để tặng C&ocirc;, Thầy, bạn n&ecirc;n ch&uacute; &yacute; đến thương hiệu, kiểu d&aacute;ng, m&agrave;u sắc &aacute;o m&agrave; thầy hay mặc mỗi ng&agrave;y để chọn được m&oacute;n qu&agrave; tinh tế nhất. Dịp 20/11 c&aacute;c cửa h&agrave;ng v&agrave; nh&atilde;n hiệu &aacute;o d&agrave;i c&oacute; nhiều ưu đ&atilde;i cho kh&aacute;ch h&agrave;ng đấy.</p>\r\n\r\n<p>Bạn cũng c&oacute; thể rủ chung nh&oacute;m bạn c&ugrave;ng tặng qu&agrave; Thầy&nbsp;v&agrave; mua cả set gồm &aacute;o sơ mi, c&agrave; vạt v&agrave; quần t&acirc;y. Lưu &yacute;: Trước khi mua bạn n&ecirc;n&nbsp;t&igrave;m hiểu kỹ lưỡng về chiều cao, c&acirc;n nặng v&agrave; sở th&iacute;ch của người nhận qu&agrave; nh&eacute;.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-UWYSi9nriNc/WBFsfpRrGtI/AAAAAAAABYo/-4yL3QWbx2UDzzxe_e7V8SALZEnzoz0ygCLcB/s1600/tang_qua_20-11_y_nghia_nhat3.jpg" style="height:434px; width:600px" /></p>\r\n\r\n<p><em>&Aacute;o sơ mi, &aacute;o d&agrave;i l&agrave; m&oacute;n qu&agrave; tặng c&ocirc;, thầy được nhiều người lựa chọn</em></p>\r\n\r\n<p><strong>4.B&uacute;t viết:</strong></p>\r\n\r\n<p>B&uacute;t viết ch&iacute;nh l&agrave; vật bất ly th&acirc;n của c&ocirc; thầy, tất nhi&ecirc;n bạn kh&ocirc;ng thể mua c&aacute;c loại b&uacute;t viết th&ocirc;ng thường rồi,&nbsp;c&oacute; rất nhiều thương hiệu b&uacute;t k&yacute; cao cấp th&iacute;ch hợp l&agrave;m qu&agrave; tặng như b&uacute;t Parker, Water Man, Pilot... với đủ kiểu d&aacute;ng v&agrave; gi&aacute; cả. Bạn n&ecirc;n chọn c&aacute;c loại b&uacute;t&nbsp;bi thay v&igrave; b&uacute;t mực để tiện hơn cho c&ocirc;ng việc của c&aacute;c thầy c&ocirc;.</p>\r\n\r\n<p>Đặc biệt, một c&acirc;y b&uacute;t tốt c&oacute; khắc t&ecirc;n của thầy c&ocirc; chắc chắn sẽ l&agrave; m&oacute;n qu&agrave; &yacute; nghĩa m&agrave; bất cứ thầy c&ocirc; n&agrave;o cũng sẽ n&acirc;ng niu.</p>\r\n\r\n<p><img alt="" src="https://1.bp.blogspot.com/-5PGLNyMuL_w/WBFsgBKs5YI/AAAAAAAABY0/GWUcU887YEgac2wwGu9yUxchaqcg3huzQCLcB/s1600/tang_qua_20-11_y_nghia_nhat4.jpg" style="height:255px; width:500px" /></p>\r\n\r\n<p><em>B&uacute;t bi c&aacute;c d&ograve;ng cao cấp</em></p>\r\n\r\n<p><strong>5.Tranh thư ph&aacute;p:</strong></p>\r\n\r\n<p>Một bức tranh thư ph&aacute;p kh&ocirc;ng qu&aacute; mắc tiền nhưng lại l&agrave; m&oacute;n qu&agrave; tặng &yacute; nghĩa khi đ&oacute; l&agrave; những chữ để b&agrave;y tỏ l&ograve;ng biết ơn tới những thầy c&ocirc;. Bạn cũng c&oacute; thể mua tranh hoặc tự tạo bức tranh l&agrave;m m&oacute;n qu&agrave; th&ecirc;m &yacute; nghĩa.</p>\r\n\r\n<p>B&ecirc;n dưới bức tranh, bạn c&oacute; thể để một h&agrave;ng chữ b&eacute; x&iacute;u về th&ocirc;ng tin người tặng. Mỗi lần xem tranh chắc chắn thầy c&ocirc; sẽ nhớ về người đ&atilde; tặng m&igrave;nh d&ugrave; thời gian đ&atilde; qua đi nhiều năm.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-VlvCDXQojxI/WBFsgt661aI/AAAAAAAABY8/dSUqOD-JxiMPf7EcsUK45nnfMAMcn4uWQCLcB/s1600/tang_qua_20-11_y_nghia_nhat5.jpg" style="height:387px; width:600px" /></p>\r\n\r\n<p><em>Tranh thư ph&aacute;p &yacute; nghĩa</em></p>\r\n\r\n<p><strong>6.Bộ mỹ&nbsp;phẩm dưỡng da:</strong></p>\r\n\r\n<p>Phụ nữ lu&ocirc;n lu&ocirc;n th&iacute;ch l&agrave;m đẹp, c&aacute;c c&ocirc; gi&aacute;o cũng kh&ocirc;ng ngoại lệ. Những m&oacute;n đồ trang điểm như phấn, kem b&ocirc;i l&ecirc;n mặt... th&igrave;&nbsp;c&ograve;n phải c&acirc;n nhắc xem c&oacute; ph&ugrave; hợp với da mặt hay kh&ocirc;ng, song những loại mỹ phẩm như son m&ocirc;i, bộ dưỡng thể, kem dưỡng da tay... th&igrave; kh&ocirc;ng g&acirc;y k&iacute;ch ứng v&igrave; vậy bạn ho&agrave;n to&agrave;n c&oacute; thể &#39;&#39;đầu tư&#39;&#39; để tặng c&ocirc; gi&aacute;o của m&igrave;nh.&nbsp;</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-kaoSlFmuXIE/WBFsgZAvGCI/AAAAAAAABY4/ibOIpgy4mlcc25F00TmZGhxvLELmj93QQCLcB/s1600/tang_qua_20-11_y_nghia_nhat6.jpg" style="height:273px; width:600px" /></p>\r\n\r\n<p><em>20/11 v&agrave;o dịp tiết trời sang đ&ocirc;ng, se lạnh v&agrave; kh&ocirc; th&iacute;ch hợp&nbsp;tặng mỹ phẩm dưỡng da</em></p>\r\n\r\n<p><strong>7. Trang sức, đồng hồ:</strong></p>\r\n\r\n<p>Bạn kh&ocirc;ng cần phải chọn những m&oacute;n qu&aacute; đắt tiền khiến thầy c&ocirc; ngại ng&ugrave;ng v&agrave; kh&ocirc;ng d&aacute;m nhận,&nbsp;tốt nhất l&agrave; n&ecirc;n chọn những sản phầm đẹp, bền v&agrave; ph&ugrave; hợp với t&uacute;i tiền của m&igrave;nh.&nbsp;C&aacute;c thương hiệu như nữ trang PNJ, SJC, Doji... l&agrave; những gợi &yacute; cho bạn.</p>\r\n\r\n<p><img alt="" src="https://3.bp.blogspot.com/-tiiEsm-9EVs/WBFsgnLGB6I/AAAAAAAABZA/BoCCE6hNwqEdRbvHXqB3GDGr5-byuMvCwCLcB/s1600/tang_qua_20-11_y_nghia_nhat7.jpg" style="height:413px; width:600px" /></p>\r\n\r\n<p><em>Nữ trang cho C&ocirc; gi&aacute;o v&agrave; đồng hồ cho thầy</em></p>\r\n\r\n<p><strong>8.Voucher mua sắm:</strong></p>\r\n\r\n<p>Tuy c&oacute; vẻ thực dụng nhưng n&oacute; l&agrave; m&oacute;n qu&agrave; rất thiết thực d&agrave;nh tặng c&aacute;c Thầy, C&ocirc; được nhiều người nghĩ đến. Sẽ &yacute; nghĩa hơn khi n&oacute; được đ&iacute;nh k&egrave;m tấm thiệp viết tay từ ch&iacute;nh người tặng</p>\r\n\r\n<p>Nếu nắm được sở th&iacute;ch, th&oacute;i quen của thầy c&ocirc; th&igrave; chắc chắn đ&acirc;y sẽ l&agrave; m&oacute;n qu&agrave; khiến thầy c&ocirc; vui mừng hết mức.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-8BNRS0x_kyM/WBFsg7krtpI/AAAAAAAABZE/FwJc3rkKgic5BqBQy1b6Y3O4hvQOAtoTgCLcB/s1600/tang_qua_20-11_y_nghia_nhat8.jpg" style="height:375px; width:500px" /></p>\r\n\r\n<p><em>Những chiếc voucher cũng l&agrave; qu&agrave; tặng bạn n&ecirc;n chọn để tặng thầy c&ocirc;</em></p>\r\n\r\n<p><strong>Shop hoa tươi</strong>&nbsp;ch&uacute;c bạn chọn được m&oacute;n qu&agrave; ưng &yacute; nhất d&agrave;nh tặng C&ocirc;, Thầy nh&acirc;n ng&agrave;y&nbsp;<a href="http://www.dienhoadanang.com/danh-muc/16-hoa-tuoi-tang-dip-20-11" target="_blank">20/11</a>&nbsp;nh&eacute;!</p>\r\n', 'tin_tuc_5.jpg', '2017-12-17', 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -340,6 +407,24 @@ ALTER TABLE `loai_tin`
   ADD PRIMARY KEY (`MaLoaiTin`);
 
 --
+-- Chỉ mục cho bảng `quang_cao`
+--
+ALTER TABLE `quang_cao`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `slider`
+--
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `thong_tin`
+--
+ALTER TABLE `thong_tin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
@@ -353,7 +438,7 @@ ALTER TABLE `tin_tuc`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `chi_tiet_hoa_don`
 --
@@ -385,10 +470,25 @@ ALTER TABLE `loai_hoa`
 ALTER TABLE `loai_tin`
   MODIFY `MaLoaiTin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT cho bảng `quang_cao`
+--
+ALTER TABLE `quang_cao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT cho bảng `slider`
+--
+ALTER TABLE `slider`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT cho bảng `thong_tin`
+--
+ALTER TABLE `thong_tin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT cho bảng `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
-  MODIFY `MaTT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `MaTT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Các ràng buộc cho các bảng đã đổ
 --

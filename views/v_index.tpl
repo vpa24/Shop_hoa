@@ -1,3 +1,4 @@
+{include file="views/trang_chu/v_slider.tpl" }
 {include file="views/trang_chu/v_banner.tpl" }
 <div class="container mau_hoa">
     <div class="magic-category clearfix">

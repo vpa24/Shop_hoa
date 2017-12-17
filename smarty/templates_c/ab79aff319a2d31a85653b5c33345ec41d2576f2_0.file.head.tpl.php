@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 21:55:51
+/* Smarty version 3.1.30, created on 2017-12-17 12:45:15
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32f36700c221_54265897',
+  'unifunc' => 'content_5a3666db046f90_46490137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab79aff319a2d31a85653b5c33345ec41d2576f2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1513288411,
+      1 => 1513512462,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a32f36700c221_54265897 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3666db046f90_46490137 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

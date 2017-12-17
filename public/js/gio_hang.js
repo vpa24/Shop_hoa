@@ -6,11 +6,11 @@ function chuyen_huong_gio_hang(MaHoa) {
 			success:function(data){
 			}
 	})
-	swal("Bạn có muốn xem giỏ hàng?", {
+	swal("Bạn đã đặt hàng thành công", {
   buttons: {
-		cancel: "Không!",
+		cancel: "Đặt hàng tiếp",
 		catch: {
-      text: "Có!",
+      text: "Xem giỏ hàng",
       value: "catch",
     },
 	},

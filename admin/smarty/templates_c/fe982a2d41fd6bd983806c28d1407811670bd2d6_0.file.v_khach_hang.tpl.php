@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 10:53:08
+/* Smarty version 3.1.30, created on 2017-12-17 13:01:24
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_khach_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32581413f792_23196577',
+  'unifunc' => 'content_5a366aa4cb8490_55400154',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe982a2d41fd6bd983806c28d1407811670bd2d6' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_khach_hang.tpl',
-      1 => 1513161974,
+      1 => 1513515679,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a32581413f792_23196577 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a366aa4cb8490_55400154 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Danh sách hoa</div>
+          <i class="fa fa-table"></i> Danh sách khách hàng</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -72,6 +72,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      
 <?php }
 }

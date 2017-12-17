@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 09:47:50
+/* Smarty version 3.1.30, created on 2017-12-17 12:45:14
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layout_trang_chu.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a34ebc65d69e3_00412345',
+  'unifunc' => 'content_5a3666dae77988_05433794',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d28491d36c50f1a36138eeab6f0f12527a5bf10' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layout_trang_chu.tpl',
-      1 => 1513417614,
+      1 => 1513512211,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:layouts/head.tpl' => 1,
     'file:layouts/header.tpl' => 1,
-    'file:layouts/body/slider.tpl' => 1,
     'file:layouts/body.tpl' => 1,
     'file:layouts/body/contact.tpl' => 1,
     'file:layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a34ebc65d69e3_00412345 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3666dae77988_05433794 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 $_smarty_tpl->_subTemplateRender("file:layouts/head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -35,15 +34,11 @@ $_smarty_tpl->_subTemplateRender("file:layouts/head.tpl", $_smarty_tpl->cache_id
 <?php $_smarty_tpl->_subTemplateRender("file:layouts/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-        <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_39515a34ebc65bf7e1_62430555', "slider");
-?>
-
         <?php $_smarty_tpl->_subTemplateRender("file:layouts/body.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_52445a34ebc65d19f3_84455312', "contact");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_221605a3666dae70477_11087554', "contact");
 ?>
 
         <div id="gotop"></div>
@@ -51,16 +46,8 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_52445a34ebc65d19f3
 ?>
 
 <?php }
-/* {block "slider"} */
-class Block_39515a34ebc65bf7e1_62430555 extends Smarty_Internal_Block
-{
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender("file:layouts/body/slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
-}
-/* {/block "slider"} */
 /* {block "contact"} */
-class Block_52445a34ebc65d19f3_84455312 extends Smarty_Internal_Block
+class Block_221605a3666dae70477_11087554 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:layouts/body/contact.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
