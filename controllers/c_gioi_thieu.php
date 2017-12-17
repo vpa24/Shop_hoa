@@ -1,4 +1,5 @@
 <?php
+session_start();
 class C_gioi_thieu
 {
     public function hien_thi_trang_gioi_thieu()

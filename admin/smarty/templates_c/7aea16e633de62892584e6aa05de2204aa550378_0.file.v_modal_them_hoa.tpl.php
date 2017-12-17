@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 03:15:38
+/* Smarty version 3.1.30, created on 2017-12-17 03:57:09
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_modal_them_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a348fda2df201_21179051',
+  'unifunc' => 'content_5a35eb1565bb52_88374628',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7aea16e633de62892584e6aa05de2204aa550378' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_modal_them_hoa.tpl',
-      1 => 1513393901,
+      1 => 1513483026,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a348fda2df201_21179051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a35eb1565bb52_88374628 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

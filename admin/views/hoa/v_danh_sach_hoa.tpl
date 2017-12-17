@@ -16,7 +16,7 @@
       <td>{$hoa->TenHoa}</td>
       <td><a href="hoa.php?loai_hoa={$hoa->MaLoai}">{$hoa->TenLoai}</a></td>
       <td>{number_format($hoa->Gia)} đ</td>
-      <td>{$hoa->ThoiGian}</td>
+      <td>{$hoa->ThoiGian|date_format:'%d-%m-%Y'}</td>
       <td>
           <button type="button" class="btn btn-primary" onclick="getId({$hoa->MaHoa})" id="update{$hoa->MaHoa}" data-toggle="modal" data-target="#edit{$hoa->MaHoa}" >Sửa</button>
           <button type="button" onclick="deleteAjax({$hoa->MaHoa})" class="btn btn-danger">Xóa</button>

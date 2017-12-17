@@ -1,4 +1,6 @@
+
 <?php
+session_start();
 class C_lien_he
 {
     public function hien_thi_trang_lien_he()

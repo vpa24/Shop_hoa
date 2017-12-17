@@ -4158,7 +4158,7 @@ button.button {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: #27c24c;
+  background-color: #43b668;
   position: absolute;
   right: 60px;
   top: 3px;
@@ -4167,17 +4167,14 @@ button.button {
 
 .tong_sl {
   font-family: monospace;
-  display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
+  margin-left: -3px;
+  padding-top:6px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
   color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 10px;
+  position: absolute;
+
 }
 
 .hinh_gio_hang {

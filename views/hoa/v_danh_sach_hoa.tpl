@@ -31,5 +31,6 @@
             {/foreach}
         </ul>
     </div>
-    <div class="bsm_products_pagination">
+    <div class="bsm_products_pagination" >
    {$phan_trang}
+</div>

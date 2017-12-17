@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 08:16:08
+/* Smarty version 3.1.30, created on 2017-12-17 10:09:12
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3233485aa320_65260043',
+  'unifunc' => 'content_5a364248265fe7_75459535',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a41c8b14d4c7e841842427fcbb6fc8bd0a90c2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1513239363,
+      1 => 1513505350,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3233485aa320_65260043 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a364248265fe7_75459535 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +42,7 @@ function content_5a3233485aa320_65260043 (Smarty_Internal_Template $_smarty_tpl)
   <link href="public/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="public/css/sb-admin.css" rel="stylesheet">
+  <link href="public/css/style.css" rel="stylesheet">
   <?php echo '<script'; ?>
  type="text/javascript" src="public/ckeditor/ckeditor.js"><?php echo '</script'; ?>
 >
@@ -70,5 +71,6 @@ function content_5a3233485aa320_65260043 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
 >
-</head><?php }
+</head>
+<?php }
 }

@@ -17,6 +17,7 @@
   <link href="public/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="public/css/sb-admin.css" rel="stylesheet">
+  <link href="public/css/style.css" rel="stylesheet">
   <script type="text/javascript" src="public/ckeditor/ckeditor.js"></script>
 
     <!-- Bootstrap core JavaScript-->

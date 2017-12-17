@@ -1,13 +1,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="public/js/jquery.js"></script>
 <script src="public/js/jquery.gotop.js"></script>
-<script type="text/javascript">
-  $('#gotop').gotop({
-    background: '#FF3366',
-    bottom : '100px',
-    mobileOnly: false
-  });
-</script>
 <script src="public/js/ajax/xoa_gio_hang.js"></script>
 <script src="public/js/bootstrap.js"></script>
 <script src="public/js/chat.js"></script>
@@ -35,20 +28,27 @@
       });
 </script>
 <script type="text/javascript">
-{if isset($giohang)}
-{foreach $hoa as $sp}
-$("#tang_{$sp->MaHoa}").click(function(){
-  var sl=$("#qty_{$sp->MaHoa}").val();
-  sl++;
-  $("#qty_{$sp->MaHoa}").val(sl);
-});
-$("#giam_{$sp->MaHoa}").click(function(){
-var sl=$("#qty_{$sp->MaHoa}").val();
-sl--;
-$("#qty_{$sp->MaHoa}").val(sl);
-if(sl<=1)
-  $("#qty_{$sp->MaHoa}").val(1);
-});
-{/foreach}
-{/if}
+  {if isset($giohang)}
+    {foreach $hoa as $sp}
+      $("#tang_{$sp->MaHoa}").click(function(){
+        var sl=$("#qty_{$sp->MaHoa}").val();
+        sl++;
+        $("#qty_{$sp->MaHoa}").val(sl);
+      });
+    $("#giam_{$sp->MaHoa}").click(function(){
+      var sl=$("#qty_{$sp->MaHoa}").val();
+      sl--;
+      $("#qty_{$sp->MaHoa}").val(sl);
+      if(sl<=1)
+        $("#qty_{$sp->MaHoa}").val(1);
+      });
+    {/foreach}
+  {/if}
+</script>
+<script type="text/javascript">
+  $('#gotop').gotop({
+    background: '#FF3366',
+    bottom : '100px',
+    mobileOnly: false
+  });
 </script>
