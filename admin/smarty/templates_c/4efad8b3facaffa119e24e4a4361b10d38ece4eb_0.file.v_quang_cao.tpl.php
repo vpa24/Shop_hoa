@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 13:02:03
+/* Smarty version 3.1.30, created on 2017-12-17 13:09:14
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_quang_cao.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a366acb6ac4f2_49563765',
+  'unifunc' => 'content_5a366c7a6b8359_53597375',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4efad8b3facaffa119e24e4a4361b10d38ece4eb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_quang_cao.tpl',
-      1 => 1513515720,
+      1 => 1513516145,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/quang_cao/v_modal_them_quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a366acb6ac4f2_49563765 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a366c7a6b8359_53597375 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
       <div class="card mb-3">
         <div class="card-header">
@@ -31,7 +31,7 @@ function content_5a366acb6ac4f2_49563765 (Smarty_Internal_Template $_smarty_tpl)
               <i class="fa fa-table"></i> Danh sách quảng cáo
             </div>
             <div class="col col-6">
-              <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add" >Thêm thông tin mới</button>
+              <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add" >Thêm quảng cáo mới</button>
             </div>
           </div>
         </div>

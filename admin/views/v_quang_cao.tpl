@@ -5,7 +5,7 @@
               <i class="fa fa-table"></i> Danh sách quảng cáo
             </div>
             <div class="col col-6">
-              <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add" >Thêm thông tin mới</button>
+              <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add" >Thêm quảng cáo mới</button>
             </div>
           </div>
         </div>
