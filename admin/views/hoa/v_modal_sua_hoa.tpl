@@ -25,8 +25,16 @@
             <input type="text" class="form-control" name="ten_hoa" value="{$hoa->TenHoa}" autocomplete="off">
           </div>
           <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Tên URL:</label>
+            <input type="text" class="form-control" name="ten_hoa_url" value="{$hoa->TenHoa_URL}" autocomplete="off">
+          </div>
+          <div class="form-group">
             <label for="recipient-name" class="form-control-label">Giá:</label>
             <input type="number" class="form-control" name="gia" value="{$hoa->Gia}" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Giá khuyến mãi:</label>
+            <input type="number" class="form-control" name="gia_khuyen_mai" value="{$hoa->GiaKhuyenMai}" autocomplete="off">
           </div>
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Thành phần:</label>

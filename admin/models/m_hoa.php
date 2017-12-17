@@ -13,10 +13,12 @@ class M_hoa extends database
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
-    function update_hoa($tenHoa,$gia,$thanhPhan,$noiDung,$hinh,$maLoai,$maHoa){
-        $sql = "UPDATE hoa SET TenHoa=?,Gia=?,ThanhPhan=?,NoiDung=?,Hinh=?,MaLoai=?,ThoiGian=now() WHERE MaHoa=?";
+    function update_hoa($tenHoa,$tenHoaURL,$gia,$giakm,$thanhPhan,$noiDung,$hinh,$maLoai,$maHoa){
+        $sql = "UPDATE shop_hoa.hoa SET TenHoa='$tenHoa', TenHoa_URL='$tenHoaURL',
+         Gia='$gia',GiaKhuyenMai='$giakm', ThanhPhan='$thanhPhan', NoiDung='$noiDung',
+         Hinh='$hinh', MaLoai='$maLoai',ThoiGian=now() WHERE MaHoa='$maHoa'";
         $this->setQuery($sql);
-        return $this->execute(array($tenHoa,$gia,$thanhPhan,$noiDung,$hinh,$maLoai,$maHoa));
+        return $this->execute();
     }
     function doc_hoa_theo_ma($maHoa){
         $sql = "SELECT * FROM hoa WHERE MaHoa=?";

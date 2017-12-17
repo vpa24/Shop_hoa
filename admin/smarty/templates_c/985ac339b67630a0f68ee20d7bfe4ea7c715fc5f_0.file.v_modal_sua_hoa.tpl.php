@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 12:43:00
+/* Smarty version 3.1.30, created on 2017-12-17 14:10:42
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_modal_sua_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3666543e2764_43321221',
+  'unifunc' => 'content_5a367ae293f715_76285270',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '985ac339b67630a0f68ee20d7bfe4ea7c715fc5f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_modal_sua_hoa.tpl',
-      1 => 1513453820,
+      1 => 1513519837,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3666543e2764_43321221 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a367ae293f715_76285270 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="modal fade" id="edit<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
@@ -67,8 +67,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 " autocomplete="off">
           </div>
           <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Tên URL:</label>
+            <input type="text" class="form-control" name="ten_hoa_url" value="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa_URL;?>
+" autocomplete="off">
+          </div>
+          <div class="form-group">
             <label for="recipient-name" class="form-control-label">Giá:</label>
             <input type="number" class="form-control" name="gia" value="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->Gia;?>
+" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Giá khuyến mãi:</label>
+            <input type="number" class="form-control" name="gia_khuyen_mai" value="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->GiaKhuyenMai;?>
 " autocomplete="off">
           </div>
           <div class="form-group">

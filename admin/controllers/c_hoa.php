@@ -38,7 +38,9 @@ class C_hoa
           $noiDung = $_POST['noi_dung'];
           $maLoai = $_POST['loai_hoa'];
           $hinh=$this->UploadFile("");
-          $them = $m_hoa->them_hoa($tenHoa, $gia, $thanhPhan, $noiDung, $hinh, $maLoai);
+          include("URL.php");
+          $tenHoa_URL=makeURL($tenHoa);
+          $them = $m_hoa->them_hoa($tenHoa,$tenHoa_URL, $gia, $thanhPhan, $noiDung, $hinh, $maLoai);
           if ($them) {
               $_SESSION['thongBaoThanhCong']="Cập nhật sản phẩm thành công";
           }
@@ -49,14 +51,16 @@ class C_hoa
           $m_hoa = new M_hoa();
           $maHoa = $_POST['ma_hoa'];
           $tenHoa = $_POST['ten_hoa'];
+          $tenHoa_URL = $_POST['ten_hoa_url'];
           $gia = $_POST['gia'];
+          $gia_km = $_POST['gia_khuyen_mai'];
           $thanhPhan = $_POST['thanh_phan'];
           $noiDung = $_POST['noi_dung'];
           $maLoai = $_POST['loai_hoa'];
           $hoa = $m_hoa->doc_hoa_theo_ma($maHoa);
           //update hinh
           $hinh=$this->UploadFile($hoa->hinh);
-          $update = $m_hoa->update_hoa($tenHoa, $gia, $thanhPhan, $noiDung, $hinh, $maLoai, $maHoa);
+          $update = $m_hoa->update_hoa($tenHoa,$tenHoa_URL, $gia,$gia_km, $thanhPhan, $noiDung, $hinh, $maLoai, $maHoa);
           if ($update) {
               $_SESSION['thongBaoThanhCong']="Cập nhật sản phẩm thành công";
           }

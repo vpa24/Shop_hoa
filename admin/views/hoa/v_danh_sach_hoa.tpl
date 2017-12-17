@@ -3,6 +3,7 @@
     <tr>
       <th>Hình</th>
       <th>Tên hoa</th>
+      <th>Tên hoa URL</th>
       <th>Loại hoa</th>
       <th>Giá</th>
       <th>Thời gian</th>
@@ -14,6 +15,7 @@
     <tr id="delete{$hoa->MaHoa}">
       <td width="75px" ><img src="../public/images/hoa/{$hoa->Hinh}" class="img-fluid" alt="Responsive image"></td>
       <td>{$hoa->TenHoa}</td>
+      <td>{$hoa->TenHoa_URL}</td>
       <td><a href="hoa.php?loai_hoa={$hoa->MaLoai}">{$hoa->TenLoai}</a></td>
       <td>{number_format($hoa->Gia)} đ</td>
       <td>{$hoa->ThoiGian|date_format:'%d-%m-%Y'}</td>
