@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 13:59:20
-  from "C:\wamp64\www\shop_hoa-master\views\v_index.tpl" */
+/* Smarty version 3.1.30, created on 2017-12-18 13:54:56
+  from "C:\wamp64\www\shop_hoa-master_loi\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a37c9b8ecb7f8_19542697',
+  'unifunc' => 'content_5a37c8b00bca99_92247424',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fd2c35b6cd5f260625cc9cfc30355b808cbb786c' => 
+    'b4d4c9883f7c3bb167e16af87ec9bdeda4bac93a' => 
     array (
-      0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_index.tpl',
-      1 => 1513605558,
+      0 => 'C:\\wamp64\\www\\shop_hoa-master_loi\\views\\v_index.tpl',
+      1 => 1513586802,
       2 => 'file',
     ),
   ),
@@ -21,15 +21,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/trang_chu/v_slider.tpl' => 1,
     'file:views/trang_chu/v_banner.tpl' => 1,
     'file:views/trang_chu/v_mau_hoa_moi.tpl' => 1,
-    'file:views/trang_chu/v_hoa_ban_chay.tpl' => 1,
-    'file:views/trang_chu/v_hoa_giam_gia.tpl' => 1,
+    'file:views/trang_chu/v_mau_hoa_ban_chay.tpl' => 1,
+    'file:views/trang_chu/v_mau_hoa_giam_gia.tpl' => 1,
     'file:layouts/body/quang_cao.tpl' => 1,
     'file:views/trang_chu/v_san_pham_giam_gia.tpl' => 1,
     'file:views/trang_chu/v_san_pham_noi_bat.tpl' => 1,
     'file:views/trang_chu/v_san_pham_re_nhat.tpl' => 1,
   ),
 ),false)) {
-function content_5a37c9b8ecb7f8_19542697 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a37c8b00bca99_92247424 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_slider.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -56,10 +56,10 @@ $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_slider.tpl", $_smarty_t
         <?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_mau_hoa_moi.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-        <?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_hoa_ban_chay.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+        <?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_mau_hoa_ban_chay.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-        <?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_hoa_giam_gia.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+        <?php $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_mau_hoa_giam_gia.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
     </div>
@@ -83,6 +83,5 @@ $_smarty_tpl->_subTemplateRender("file:views/trang_chu/v_slider.tpl", $_smarty_t
   		</div>
   	</div>
   </div>
-</div>
-<?php }
+</div><?php }
 }

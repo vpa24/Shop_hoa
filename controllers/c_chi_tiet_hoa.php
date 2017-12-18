@@ -16,6 +16,7 @@ class C_chi_tiet_hoa
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_chi_tiet_hoa.tpl";
         $title = $hoa->TenHoa;
+          include("URL.php");
         $smarty->assign('title', $title);
         $smarty->assign('hoa', $hoa);
         $smarty->assign('hoa_cung_loai', $hoa_cung_loai);

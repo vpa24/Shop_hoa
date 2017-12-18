@@ -2,10 +2,10 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 17, 2017 lúc 06:03 SA
--- Phiên bản máy phục vụ: 5.7.14
--- Phiên bản PHP: 5.6.25
+-- Host: 127.0.0.1
+-- Generation Time: Dec 18, 2017 at 02:00 PM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `shop_hoa`
+-- Database: `shop_hoa`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,7 +34,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`ID`, `HoTen`, `TaiKhoan`, `MatKhau`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `admin` (`ID`, `HoTen`, `TaiKhoan`, `MatKhau`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chi_tiet_hoa_don`
+-- Table structure for table `chi_tiet_hoa_don`
 --
 
 CREATE TABLE `chi_tiet_hoa_don` (
@@ -54,7 +54,7 @@ CREATE TABLE `chi_tiet_hoa_don` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='chi_tiet_hoa_don';
 
 --
--- Đang đổ dữ liệu cho bảng `chi_tiet_hoa_don`
+-- Dumping data for table `chi_tiet_hoa_don`
 --
 
 INSERT INTO `chi_tiet_hoa_don` (`id`, `MaHoa`, `so_luong`, `ma_hoa_don`) VALUES
@@ -74,12 +74,13 @@ INSERT INTO `chi_tiet_hoa_don` (`id`, `MaHoa`, `so_luong`, `ma_hoa_don`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoa`
+-- Table structure for table `hoa`
 --
 
 CREATE TABLE `hoa` (
   `MaHoa` int(11) NOT NULL,
   `TenHoa` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `TenHoa_URL` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `Gia` double NOT NULL,
   `GiaKhuyenMai` double NOT NULL DEFAULT '200000',
   `ThanhPhan` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -87,83 +88,86 @@ CREATE TABLE `hoa` (
   `Hinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `MaLoai` int(11) NOT NULL,
   `ThoiGian` date DEFAULT NULL,
-  `KhuyenMai` tinyint(1) NOT NULL DEFAULT '0'
+  `KhuyenMai` tinyint(1) NOT NULL DEFAULT '0',
+  `SoLuongSP` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoa`
+-- Dumping data for table `hoa`
 --
 
-INSERT INTO `hoa` (`MaHoa`, `TenHoa`, `Gia`, `GiaKhuyenMai`, `ThanhPhan`, `NoiDung`, `Hinh`, `MaLoai`, `ThoiGian`, `KhuyenMai`) VALUES
-(13, 'Thanh khiết', 650000, 550000, 'Hoa hồng Ecuador màu xanh bơ, Thạch thảo trắng, Hoa cẩm chướng Nhật (Green Wicky), Lá phụ', 'Màu xanh lá chính là màu tự nhiên nên luôn gợi cho người ta cảm giác gần gũi, tự nhiên. Nó cho tượng trưng cho sự phát triển, hòa thuận, tươi mát màu mỡ. Màu xanh còn thể hiện sự hi vọng, chống chọi mọi khó khăn.', 'hoa_hop_1.jpg', 2, '2016-07-27', 0),
-(14, 'Tuổi thanh xuân', 350000, 250000, 'Hoa hồng đỏ, Hoa hồng cam, Hoa phi yến, Hoa lá phụ', 'Được thiết kế từ hoa hồng, phi yến, mẫu hoa gợi lên nét ngọt ngào và dịu dàng của người con gái. "Tuổi thanh xuân" sẽ là món quà tuyệt vời cùng thông điệp an lành, hạnh phúc cho những người bạn gái của bạn', 'hoa_hop_2.jpg', 2, '2016-06-16', 1),
-(15, 'Lúc mới yêu', 310000, 270000, 'Hoa hồng đỏ', 'Đơn giản, tinh tế và cổ điển là những gì có thể nhận xét về mẫu hoa này. Hoa hồng đỏ và hộp gỗ thông chính là sự kết hợp hoàn hảo, không bao giờ lỗi mốt. Nếu bạn đang tìm một món quà bất ngờ dành tặng cho những người thân yêu của mình, chọn ngay "Lúc mới yêu" nhé!', 'hoa_hop_3.jpg', 2, '2016-07-27', 0),
-(16, 'Thầm mong', 270000, 150000, 'Hoa hồng kem, Hoa hồng đỏ, Hoa Salem tím', 'Nhẹ nhàng và tao nhã, "Thầm mong" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_4.jpg', 2, '2016-06-03', 1),
-(17, 'Đong đầy', 450000, 350000, 'Hoa hồng đỏ, Hoa hồng kem, Hoa tú cầu', 'Với sự kết hợp tinh tế của hoa hồng và tú cầu, hộp hoa mang thông điệp sum họp, đong đầy, vươn lên tầm cao mới, thích hợp để tạng dịp chúc mừng, tặng người thân..', 'hoa_hop_5.jpg', 2, '2016-07-27', 0),
-(18, 'Đại dương xanh', 400000, 300000, 'Hoa hồng đỏ, Hoa tú cầu, Hoa cẩm chướng, Hoa cúc trắng, Các loại hoa phụ khác', 'Mang theo nguồn cảm hứng từ đại dương xanh thẳm, mẫu hoa "Đại dương xanh" là sự kết hợp độc đáo giữa tú cầu và hoa cẩm chướng Nhật xanh mướt cùng hoa hồng và cúc trắng tinh khôi. Tông màu xanh trắng này gợi lên sự thanh lịch, tươi mát và chắc chắn sẽ mang lại nhiều niềm vui cho người nhận.', 'hoa_hop_6.jpg', 2, '2016-07-27', 0),
-(19, 'Mùa yêu đầu', 260000, 140000, 'Hoa hồng đỏ, Hoa hồng da', 'Hộp hoa với sự kết hợp khéo léo của hai màu hoa hồng mang đến hình ảnh của một bản tình ca lãng mạn, ngọt ngào. Mẫu hoa như món quà bất ngờ cùng thông điệp "Anh nhớ em rất nhiều".', 'hoa_hop_7.jpg', 2, '2016-07-27', 0),
-(20, 'May mắn', 400000, 200000, 'Sen đá, Hoa hướng dương, Hoa hồng, Các loại hoa phụ', 'Được thiết kế với tông kết hợp, mẫu hoa gồm hoa hướng dương và sen đá mang đến thông điệp về một tình yêu bền vững, trọn đời. Ngoài ra còn có ý nghĩa mang lại tài lộc, may mắn cho gia đình. Đây sẽ là món quà tuyệt vời dành tặng những người thân yêu của bạn.', 'hoa_hop_8.jpg', 2, '2016-07-27', 0),
-(21, 'Giọt nắng hồng', 300000, 200000, 'Hoa hồng, Hoa phi yến, Cẩm chướng Nhật (Green Wicky), Các loại hoa phụ', 'Nhẹ nhàng và ngọt ngào như một giọt nắng ban mai, mẫu hoa mang đến một cảm giác yên bình, đáng yêu và dịu mắt đến không ngờ. Thiết kế đơn giản chỉ với 2 loại hoa nhưng "Giọt nắng hồng" vẫn nổi bật và dễ dàng chiều lòng những người yêu hoa.', 'hoa_hop_9.jpg', 2, '2016-06-19', 1),
-(22, 'Thầm mong', 350000, 200000, 'Hoa hồng các loại, Hoa baby trắng, Lá phụ', 'Nhẹ nhàng và tao nhã, "Thầm mong" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_10.jpg', 2, '2016-07-27', 0),
-(23, 'Giấc mơ hoa', 400000, 200000, 'Hoa hồng, Hoa ly mini, Hoa cúc tím, Hoa cúc Calimero, Hoa phụ khác', 'Với sự kết hợp tinh tế nhiều loại hoa mang sắc màu thanh nhã mang lại một cảm gác bình yên. "Giấc mơ hoa" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_11.jpg', 2, '2016-07-27', 0),
-(24, 'Season\'s love', 380000, 250000, 'Hoa hồng, Hoa tú cầu, Hoa thạch thảo tím, Hoa cúc tím', 'Hộp hoa "Season\'s love" được thiết kế với hoa hồng đỏ chủ đạo và mang màu sắc tươi sáng, ngọt ngào. Đúng như tên gọi, mẫu hoa tựa như lời yêu thương gửi đến người thân, gia đình và bạn bè. Khởi đầu một mùa xuân mới với thông điệp yêu thương này bạn nhé!', 'hoa_hop_12.jpg', 2, '2016-07-27', 0),
-(25, 'Hương mùa xuân', 550000, 350000, 'Hoa phi yến, Hoa cẩm chướng, Hoa thược dược', 'Giỏ hoa mang một vẻ đẹp rạng rỡ, tươi mới qua sự kết hợp đa dạng của các loại hoa như hoa phi yến, cẩm chướng, cúc hồng. Sự sắp xếp tự nhiên và hài hòa của giỏ hoa mang lại cảm giác như mùa xuân đã về đến. Hãy để "Hương mùa xuân" thổi một làn gió mới đến cho những người thân yêu quanh bạn nhé.', 'hoa_gio_1.jpg', 3, '2016-07-27', 0),
-(26, 'Chốn mộng mơ', 400000, 230000, 'Hoa hồng leo, Giỏ tre', 'Người ấy của bạn chắc chắn sẽ không khỏi động lòng khi nhìn thấy giỏ hoa xinh đẹp này trước cửa nhà! Được thiết kế trên nền hoa hồng da cùng hồng đỏ rực rỡ, chắc hẳn đây là cách tuyệt vời nhất để bày tỏ thành ý của bạn đến người đặc biệt rồ', 'hoa_gio_2.jpg', 3, '2016-07-27', 0),
-(27, 'Sáng tinh mơ', 450000, 320000, 'Hoa hồng trắng, Hoa tú cầu', 'Lẵng hoa Sáng Tinh Mơ với tổng màu trắng tinh khiết, xen lẫn hoa baby. Một món quà nhẹ nhàng, lãng mạn và ngọt ngào.', 'hoa_gio_3.jpg', 3, '2016-07-27', 0),
-(28, 'Qua miền lãng du', 450000, 310000, 'Hoa hồng, Hoa cẩm chướng, Hoa cúc mini, Các loại hoa lá phụ khác', 'Rong ruổi giữa đất trời, tìm đến những vùng đất mới, khám phá vạn vật chắc hẳn là mơ ước của rất nhiều người. “Qua miền lãng du” là một mẫu hoa gồm nhiều loại hoa khác nhau, lối sắp xếp tạo nên một tổng thể đa dạng nhưng cũng thật tự nhiên. Có lẽ vì thế, “Qua miền lãng du” chính là món quà dành tặng ý nghĩa dành cho những tâm hồn yêu tự do, tha thiết được tung hoàng khắp chốn nhân gian. ', 'hoa_gio_4.jpg', 3, '2016-07-27', 0),
-(29, 'Classic', 500000, 240000, '50 đóa hoa hồng đỏ, Hoa baby', 'Giỏ hoa The Classic, hay còn gọi là Cổ điển, được thiết kế từ 50 bông hồng đỏ kết hợp hoa baby trong giỏ mây sang trọng đem đến một vẻ đẹp của sự đơn giản, hoải cổ và quý phái.', 'hoa_gio_5.jpg', 3, '2016-07-27', 0),
-(30, 'Tinh tế', 550000, 430000, 'Hoa hồng đỏ, Hoa ly, Hoa baby', 'Sự kết hợp của hoa hồng, hoa ly với một chút nhẹ nhàng của hoa baby rất hài hoa tinh tế. Giỏ hoa thích hợp tặng thầy cô, người thân, các dịp lễ..', 'hoa_gio_6.jpg', 3, '2016-07-27', 0),
-(31, 'Nhiệt huyết 1', 800000, 610000, 'Hoa địa lan, Hoa hồng môn, Hoa cúc, Hoa hồng, Hoa lan mokara, Hoa cát tường, Các loại hoa phụ', 'Giỏ hoa "Nhiệt huyết" được thiết kế với nhiều màu sắc. Như một lời chúc ngày mới tràn đầy năng lượng và sáng tạo. "Nhiệt huyết" khoác thêm trên mình một hi vọng về sự thành công. Hãy dành tặng "Nhiệt huyết 2" cho bạn bè, người thân, đồng nghiệp, đối tác ... ', 'hoa_gio_7.jpg', 3, '2016-06-15', 1),
-(32, 'Nhiệt huyết 2', 850000, 750000, 'Hoa ly, Hoa lan hồ điệp, Hoa địa lan, Hoa hồng môn, Hoa tú cầu, Hoa cát tường', 'Giỏ hoa "Nhiệt huyết" được thiết kế với nhiều màu sắc. Như một lời chúc ngày mới tràn đầy năng lượng và sáng tạo. "Nhiệt huyết" khoác thêm trên mình một hi vọng về sự thành công. Hãy dành tặng "Nhiệt huyết 2" cho bạn bè, người thân, đồng nghiệp, đối tác ... ', 'hoa_gio_8.jpg', 3, '2016-07-27', 0),
-(33, 'Nắng ban mai', 450000, 240000, 'Hoa cúc đại, Hoa đồng tiền, Hoa cúc mini', 'Như tia nắng ban mai mai rọi vào phòng lúc sáng sớm, giỏ hoa mang nét đẹp rất duyên, rất ngọt ngào. "Nắng ban mai" thích hợp để dành tăng sinh nhật, kỉ niệm.. cho những cô gái dịu dàng và vẫn thường mơ mộng.', 'hoa_gio_9.jpg', 3, '2016-07-27', 0),
-(34, 'My Dear', 500000, 390000, 'Hoa cát tường nhiều màu, Hoa tú cầu', 'My Dear là giỏ hoa cát tường nhiều màu kết hợp với hoa tú cầu nhẹ nhàng, tươi mát. "My dear" là mẫu hoa thích hợp để bạn gửi đến mẹ, chị gái bởi vẻ đẹp mộc mạc, bình dị.', 'hoa_gio_10.jpg', 3, '2016-07-27', 0),
-(35, 'Đón xuân', 550000, 370000, 'Hoa hồng, Hoa cúc,Hoa thạch thảo tím,Hoa cẩm chướng, Các loại hoa phụ khác', 'Giỏ hoa với nhiều loại hoa có tông màu tươi sáng như thể "Mùa xuân đến trăm hoa đua nhau khoe sắc". "Đón xuân" mang đến sự vui tươi, sôi nổi... đó chính là nụ cười và có lẽ chỉ có nụ cười mới mang nhiều vẻ đẹp như vậy. Thích hợp tặng sinh nhật, bạn bè, người yêu...', 'hoa_gio_11.jpg', 3, '2016-07-27', 0),
-(36, 'Đắm say', 600000, 520000, 'Hoa hồng đỏ, Hoa hồng trắng, Hoa salem trắng', 'Sắc đỏ nồng nàn và quyến rũ của những bông hồng sasa này chắc chắn sẽ đem đến cho người nhận cảm giác về một tình yêu đầy lãng mạn, ngọt ngào. Còn chần chờ gì nữa mà không cùng "Đắm say" thể hiện tình yêu của bạn. Hãy chọn "Đắm say" trong những dịp như sinh nhật, chúc mừng, giáng sinh, cầu hôn hay thậm chí chẳng vì một ngày đặc biệt nào cả. Chỉ đơn giản là thể hiện tình yêu mà thôi.', 'hoa_gio_12.jpg', 3, '2016-06-12', 1),
-(37, 'Luxury queen', 1000000, 800000, 'Hoa lan hồ điệp trắng, hồng', 'Sự kết hợp giữa những cành lan hồ điệp sẽ mang đến cho cô dâu nét đẹp dịu dàng mà quý phái.', 'hoa_cuoi_1.jpg', 6, '2016-06-08', 1),
-(38, 'Love Paradise', 450000, 320000, 'Hoa hồng trắng, Hoa chuỗi ngọc', 'Không quá rực rỡ nhưng cũng đủ để làm cô dâu trở nên nổi bật và rạng rỡ biết bao. Sắc trắng tinh khôi của hoa hồng trắng kết hợp với màu đỏ của chuỗi ngọc như thể hiện một tình yêu đầy lãng mạn, tinh khôi những và cũng tràn đầy nồng nhiệt.', 'hoa_cuoi_2.jpg', 6, '2016-07-27', 0),
-(39, 'Dáng ngọc', 450000, 240000, 'Hoa đồng tiền, Hoa baby, Hoa cẩm chướng', '"Dáng ngọc" dành cho những cô dâu thích sự nhẹ nhàng trong sáng nhưng tràn vị ngọt ngào trong tình yêu', 'hoa_cuoi_3.jpg', 6, '2016-06-09', 1),
-(40, 'Love is color', 500000, 260000, 'Hoa hồng nhiều màu', 'Bó hoa cưới kết hợp nhiều màu sắc của hoa hồng theo gam màu pastel làm cho cô dâu thêm phần sang trọng và rạng rỡ trong ngày cưới.', 'hoa_cuoi_4.jpg', 6, '2016-07-27', 0),
-(41, 'Fresh girl', 450000, 270000, 'Hoa hoàng anh, Hoa hồng, Hoa địa lan', 'Bó hoa mang đến vẻ đẹp trong lành thuần khiết như chính tên gọi của nó. "Fresh girl" sẽ mang đến cảm giác tự tin cho cô dâu trong ngày trọng đại.', 'hoa_cuoi_5.jpg', 6, '2016-07-27', 0),
-(42, 'Purple Tulip', 500000, 280000, '30 đóa hoa Tulip tím', 'Bó hoa tuy đơn giản nhưng khoác lên mình sự sang trọng quý phái. Bó hoa cưới này chắc chắn là sự lựa chọn tuyệt vời cho các cô dâu nhân ngày trọng đại.', 'hoa_cuoi_6.jpg', 6, '2016-07-27', 0),
-(43, 'Tinh khôi', 600000, 390000, 'Hoa hồng trắng, Hoa hồng môn trắng, Hoa cẩm chướng Nhật (Green Wicky)', '"Tinh khôi" là mẫu hoa độc đáo, khác lạ dành cho cô dâu. Với tông màu trắng thuần khiết sẽ làm cho cô dâu y hệt như nàng công chúa bước ra từ cổ tích bên chàng hoàng tử ngọt ngào, say đắm.', 'hoa_cuoi_7.jpg', 6, '2016-07-27', 0),
-(44, 'Đẳng cấp', 700000, 580000, 'Hoa mẫu đơn nhiều màu', 'Sắc rực rỡ của hoa mẫu đơn chắc chắn làm cho cô dâu thêm phần nổi bật trong ngày cưới. Hoa mẫu đơn mang sức hấp dẫn nồng nàn, thể hiện vẻ đẹp, sức quyến rũ của tình yêu. Ngoài ra bó hoa mẫu đơn còn làm cho cô dâu trở nên đẳng cấp và sang trọng.', 'hoa_cuoi_8.jpg', 6, '2016-07-27', 0),
-(45, 'Fresh love', 700000, 540000, 'Hoa hồng trắng, Hoa hồng xanh, Sen đá, Các loại hoa lá phụ khác', 'Một bó hoa cưới thể hiện chính tình yêu ngọt ngào nhưng cũng đầy màu sắc của những cung bậc tình cảm giữa cô dâu- chú rể. Và cả niềm hi vọng về một tương lai phía trước đầy hạnh phúc.', 'hoa_cuoi_9.jpg', 6, '2016-07-27', 0),
-(46, 'My love', 600000, 350000, 'Hoa hồng, Hoa lan, Các loại hoa phụ', 'Bó hoa cưới đơn giản nhưng cũng không kém phần sang trọng với tông màu trắng- tím. Như chính tình yêu lãng mạn và đầy thủy chung của cô dâu - chú rể.', 'hoa_cuoi_10.jpg', 6, '2016-07-27', 0),
-(47, 'I\'m your', 600000, 520000, 'Hoa hồng, Hoa mẫu đơn, Hoa baby', '"I\'m your" là mẫu hoa độc đáo, khác lạ dành cho cô dâu. Với thông điệp đơn giản, chân thành "Em luôn đặc biệt, em là chính em và em là của anh", "I\'m your" dành cho những bạn yêu thích sự mới lạ, độc đáo nhưng vẫn đơn giản và đẹp.', 'hoa_cuoi_11.jpg', 6, '2016-07-27', 0),
-(48, 'Lavender - Rose', 650000, 420000, 'Hoa lavender, Hoa hồng, Các loại hoa lá phụ', 'Bó hoa cưới mang sắc tím như chính tình yêu lãng mạn, thủy chung của cô dâu chú rể. Cùng với hoa lavender với vẻ đẹp hoang sơ mới mẻ, mang đến hương thơm nhẹ nhàng phảng phất tạo một cảm giác khó quên.', 'hoa_cuoi_12.jpg', 6, '2016-07-27', 0),
-(49, 'Giã biệt', 1200000, 1000000, 'Hoa ly trắng, Hoa cúc trắng, Hoa hồng, Hoa cẩm chướng Nhật (Green Wicky)', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Giã Biệt được kết từ hoa Cúc, hoa ly và các phụ liệu khác. Chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẽ cùng gia đình họ.', 'hoa_chia_buon_1.jpg', 4, '2016-05-31', 1),
-(50, 'Thương nhớ', 1100000, 1000000, 'Hoa ly, Hoa cúc nhiều màu, Hoa tú cầu xanh, Các loại hoa lá phụ khác', 'Bạn bè, người thân ra đi luôn để lại nỗi buồn và nhung nhớ khôn nguôi trong tâm trí mỗi người. Trong giây phút chia cách đau thương, từng kỷ niệm được hồi tưởng như một cuốn phim chiếu chậm, tràn ngập những niềm vui, nỗi buồn cũng như tiếc nuối. Kệ hoa “Thương nhớ” chất chứa nỗi niềm riêng của người ở lại giành cho người đã khuất, những nỗi niềm giờ đây đã không biết tỏ cùng ai.', 'hoa_chia_buon_2.jpg', 4, '2016-07-27', 0),
-(51, 'Miền an lạc', 1200000, 1000000, 'Hoa ly, Hoa cúc tím, Hoa cúc trắng, Hoa tú cầu', 'Rũ bỏ những muộn phiền, trần ai của cuộc sống, để lòng thanh thản tiến vào hư vô là ý nghĩa của kệ hoa chia buồn “Miền An Lạc”. “Miền An Lạc” thể hiện lòng thành kính của những người ở lại đối với người đã ra đi, nguyện cầu ai rồi cũng đến được bến bờ bình yên.', 'hoa_chia_buon_3.jpg', 4, '2016-07-27', 0),
-(52, 'Thành kính phân ưu', 900000, 750000, 'Hoa cúc trắng, Hoa ly trắng, Hoa tú cầu, Hoa mini trắng, Các loại lá phụ', 'Thành Kính Phân Ưu 1 gồm có hoa Cúc Trắng, hoa Ly Trắng, môn xanh và cẩm tú cầu. Thích hợp để tặng chia buồn.', 'hoa_chia_buon_4.jpg', 4, '2016-07-27', 0),
-(53, 'Hạ trắng', 950000, 800000, 'Hoa ly trắng, Hoa hồng môn, Hoa cúc trắng, Hoa hồng, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn "Hạ trắng" chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_5.jpg', 4, '2016-07-27', 0),
-(54, 'Nốt trầm', 1100000, 1000000, 'Hoa ly trắng, Hoa cúc trắng, lan hồ điệp trắng, Hoa cúc tím', 'Có người từng ví mỗi cuộc đời tựa như một bản nhạc với đầy đủ cung bậc thăng trầm. Ứng với những khoảnh khắc tươi vui là những giai điệu rộn ràng và ngược lại, đối với những đớn đau, mất mát thì người ta chỉ có thể cảm nhận sự buồn bã, trầm mặc. Kệ hoa “Nốt trầm” gửi gắm niềm tiếc thương của người ở lại đối với người đã đi xa, cảm tạ vì đã xuất hiện và là một phần cuộc sống của nhau, cùng nhau tạo nên bản nhạc ý nghĩa của cuộc đời.', 'hoa_chia_buon_6.jpg', 4, '2016-07-27', 0),
-(55, 'Tôn kính', 650000, 500000, 'Hoa lan tím, Hoa ly, Các loại lá phụ khác ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Tôn Kính được kết từ hoa Ly Hồng, hoa Lan Tím và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_7.jpg', 4, '2016-07-27', 0),
-(56, 'Luyến tiếc', 800000, 540000, 'Hoa hồng môn, Hoa ly trắng, Hoa cúc trắng, Hoa hồng xanh, Hoa tú cầu, Các loại hoa lá phụ khác', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Luyến Tiếc được kết từ hoa ly trắng, cúc trắng, hồng môn xanh và các phụ liệu khác. chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẽ cùng gia đình họ.', 'hoa_chia_buon_8.jpg', 4, '2016-07-27', 0),
-(57, 'Cõi mơ', 1000000, 800000, 'Hoa hồng vàng, Hoa hồng trắng, Hoa cúc tím, Hoa hồng tím, Các loại hoa lá phụ khác', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Cõi Mơ được kết từ hoa Hồng, hoa Cúc nhiều màu, và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_9.jpg', 4, '2016-06-17', 1),
-(58, 'Vĩnh biệt', 1100000, 1000000, 'Hoa lan hồ điệp trắng, Hoa hồng trắng, Hoa cúc trắng', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Vĩnh biệt 1 được kết từ hoa Cúc Trắng, Lan hồ điệp Trắng, Hồng Trắng và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_10.jpg', 4, '2016-07-27', 0),
-(59, 'Hạc trắng', 700000, 620000, 'Hoa hồng trắng, Hoa lan trắng, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với kệ hoa chia buồn Hạc Trắng được kết từ hoa Lan, Hồng trắng trên kệ gỗ và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_11.jpg', 4, '2016-07-27', 0),
-(60, 'Vĩnh cửu', 750000, 660000, 'Hoa lan trắng, Hoa lan tím, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với kệ hoa chia buồn Vĩnh cửu được kết từ hoa lan trắng, lan tím, và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_12.jpg', 4, '2016-07-27', 0),
-(61, 'Bách chiến bách thắng', 2100000, 2000000, 'Hoa địa lan, Hoa lan hồ điệp, Hoa lan vũ nữ, Các loại hoa lá phụ khác', 'Kệ hoa khai trương kết hợp hài hòa giữa các loại hoa lan với màu sắc thanh lịch. Kệ hoa mang ý nghĩa tốt đẹp bới sắc màu ấy là biểu tượng của thành công, hợp tác thuận lợi. Thích hợp tặng dịp khai trương công ty, cửa hàng, văn phòng..', 'hoa_chuc_mung_1.jpg', 4, '2016-07-27', 0),
-(62, 'Phát triển bền vững', 2100000, 2000000, 'Hoa tú cầu, Hoa hồng, Hoa cúc mini, Hoa thủy tiên Nhật, Các loại hoa phụ khác', 'Kệ hoa kết hợp nhiều màu sắc rất bắt mắt và không kém phần sang trọng. Kệ hoa là lời chúc mừng tốt đẹp nhất gửi đến đối tác, khách hàng, bạn bè nhân ngày kỉ niệm thành lập, khai trương công ti, văn phòng, nhà hàng...', 'hoa_chuc_mung_2.jpg', 4, '2016-07-27', 0),
-(63, 'Thịnh vượng', 1300000, 1200000, 'Hoa lan mokara 3 tầng, Các loại lá phụ', 'Chọn tông vàng làm màu sắc chủ đạo, kệ hoa sử dụng hoa lan mokara mang đến vẻ đẹp thanh nhã. Màu sắc ôn hòa của kệ hoa kết hợp thiết kế 3 tầng sẽ khiến không gian của bạn thêm phần sang trọng. Kệ hoa thích hợp tặng bạn bè, khách hàng, đối tác nhân dịp khai trương', 'hoa_chuc_mung_3.jpg', 4, '2016-05-30', 1),
-(64, 'Phát tài - Phát lộc', 800000, 570000, 'Hoa hồng môn đỏ, Hoa ly, Hoa lan mokara, Hoa hồng đỏ, Hoa thiên điểu, Các loại lá phụ', 'Những đóa hoa tươi màu đỏ bắt mắt được cắm theo phong cách sóng đôi sẽ trở thành món quà nổi bật của bạn. Lẵng hoa được thiết kế với hoa hồng đỏ, hồng môn đỏ kết hợp hoa ly, hoa lan vàng biểu trưng cho sự phát tài, phát lộc. Hoa dành cho khai trương nhà hàng, công ti với thông điệp chúc đối tác ngày càng vươn xa.', 'hoa_chuc_mung_4.jpg', 4, '2016-07-27', 0),
-(65, 'Niềm tin', 600000, 470000, 'Hoa thiên điểu, Hoa hồng, Hoa tú cầu, Hoa hoàng anh, Các loại lá phụ', 'Trong những dịp khai trương, chúc mừng, giỏ hoa này sẽ là lựa chọn dành cho bạn. Mang vẻ đẹp tươi sáng và nét lịch sự, giỏ hoa là sự kết hợp giữa hoa tú cầu, hoa hồng xanh và hoa thiên điểu.', 'hoa_binh_1.jpg', 5, '2016-06-10', 1),
-(66, 'Rạng rỡ', 650000, 560000, 'Hoa hồng vàng, Hoa hướng dương, Hoa baby, Hoa cẩm chướng Nhật, Các loại lá phụ', '"Rạng rỡ" là một món quà thích hợp tặng người thân, những người mà bạn quí trọng. Bình hoa là sự kết hợp những bông hoa hướng dương vàng rực, hoa hồng duyên dáng trên nền hoa baby mỏng manh. Bình hoa thể hiện sự trân trọng, niềm tự hào mà bạn muốn gửi tới người nhận.', 'hoa_binh_2.jpg', 5, '2016-06-03', 1),
-(67, 'Gắn kết yêu thương', 650000, 570000, 'Hoa hồng da, Hoa hồng đỏ, Hoa tú cầu, Hoa baby', 'Gắn Kết Yêu Thương gồm hoa hoa hồng nhiều màu kết hơp cùng các loại lá phụ cao cấp. Những sắc màu tươi tắn, trẻ trung, đáng yêu và đầy cá tính của hai trái tim trẻ nguyện sánh bước và gắn kết cùng nhau trên con đường đời. Thích hợp để tặng chúc sức khỏe, kỉ niệm,..', 'hoa_binh_3.jpg', 5, '2016-06-10', 1),
-(68, 'Dịu dàng', 680000, 540000, 'Hoa hồng, Hoa cát tường tím, Hoa cúc tím, Hoa baby, Các loại hoa lá phụ', 'Được thiết kế với tông màu hồng tím, bình hoa Dịu dàng mang lại một vẻ đẹp dịu dàng, ngọt ngào và không kém phần lãng mạn. Những hoa cát tường tím điểm xuyết trên nền hoa hồng kết hợp đồng cúc, baby. Một bình hoa thế này sẽ là món quà tuyệt vời để chúc người luôn hạnh phúc và ngập tràn tình yêu', 'hoa_binh_4.jpg', 5, '2016-06-05', 1),
-(69, 'Sum họp', 700000, 530000, 'Hoa hồng đỏ, Hoa cát tường tím, Hoa sen đá, Các loai hoa phụ khác', '"Một chiều thênh thang,về nơi con sóng tràn Nơi đây bình yên một màu xanh gió trong lành...". Bình hoa như nhắn gửi yêu thương đến hạnh phúc gia đình, sự sum họp quây quần bên nhau.', 'hoa_binh_5.jpg', 5, '2016-05-28', 1),
-(70, 'Tia nắng ban mai', 450000, 240000, 'Hoa thiên điểu, Hoa lan mokara, Hoa hướng dương, Hoa hồng, Hoa cúc xanh', 'Rực rỡ và ấm áp như những tia nắng ban mai, mẫu hoa được thiết kế theo tông màu vàng này chắc chắn sẽ mang đến cho người nhận niềm hạnh phúc và may mắn. Mẫu hoa thích hợp tặng các dịp chúc mừng, cảm ơn v.v...', 'hoa_binh_6.jpg', 5, '2016-06-08', 1),
-(71, 'Tình yêu ngọt ngào', 750000, 560000, 'Hoa hồng, Hoa tú cầu hồng, Hoa cát tường, Các loại hoa lá phụ khác', '"Tình yêu ngọt ngào" là sự kết hợp dễ thương của các loại hoa màu hồng và bình sứ cao cấp. Những đóa hoa đang nở rộ khoe sắc tươi tắn chứa đựng một tình yêu mãnh liệt, nồng cháy của một trái tim sôi nổi. Thích hợp để tặng người yêu, kỉ niệm, sinh nhật,...', 'hoa_binh_7.jpg', 5, '2016-07-27', 0),
-(72, 'An nhiên', 400000, 230000, 'Hoa hồng trắng, Hoa tú cầu, Hoa hồng da, Lá khuynh diệp', 'Sắc trắng kết hợp cùng một chút màu xanh mát rượi của tú cầu luôn mang lại một cảm giác bình yên, trong trẻo đến lạ. "An nhiên" sẽ mang đến cho người nhận lời chúc an lành, bình yên trong tâm hồn và nhiều niềm vui trong cuộc sống.', 'hoa_binh_8.jpg', 5, '2016-06-06', 1),
-(73, 'Thắng lợi', 800000, 670000, 'Hoa thiên điểu, Hoa hướng dương, Hoa lan vũ nữ, Hoa phi yến, Các loại lá', 'Kệ hoa được kết hợp từ nhiều loại hoa với tông màu vàng chủ đạo. Màu sắc tươi tắn sẽ là kệ hoa nổi bật trong ngày khai trương văn phòng của bạn.', 'hoa_binh_9.jpg', 5, '2016-07-27', 0),
-(74, 'Sắc vàng', 800000, 680000, 'Hoa lan vữ nữ, Hoa hồng vàng,Các loại hoa lá phụ', 'Bình hoa với tông màu vàng là chủ đạo, mang đến cảm giác tươi mới cho người nhận. Ngoài ra với sự kết hợp tinh tế của các loại hoa làm cho "Sắc vàng" mang vẻ đẹp sang trọng. Thích hợp để trưng bày, hoặc giành tặng cho bạn bè, người thân, đối tác…', 'hoa_binh_10.jpg', 5, '2016-07-27', 0),
-(75, 'Give love', 380000, 200000, 'Hoa hồng, Hoa cúc tím, Hoa baby', 'Chọn tông hồng - trắng làm màu sắc chủ đạo, “Give love” tạo nên một tổng thể nhẹ nhàng, khơi gợi cảm giác thư thái, vui tươi khi ngắm nhìn. Tên gọi “Give love” gửi gắm thông điệp: Tình yêu vốn dĩ không phải là điều ta nhận đuợc mà là những gì ta cho đi. Hãy chia sẻ yêu thương khi ta còn có thể vì chính tình yêu sẽ làm cuộc sống thêm tươi vui, hạnh phúc! Tách hoa “Give love” phù hợp tặng cho bạn bè, người thân và cả người ấy. Đặc biệt, với kích thước nhỏ gọn, “Give love” phù hợp trưng bày ở nhiều không gian khác nhau.', 'hoa_binh_11.jpg', 5, '2016-06-04', 1),
-(76, 'Ngày cuối tuần', 450000, 230000, 'Hoa hồng, Hoa tú cầu, Hoa hoàng anh', 'Sau một tuần làm việc mệt nhoài, chúng ta đều có quyền tự thưởng cho mình những ngày nghỉ để phục hồi năng lượng. Những ngày cuối tuần có thể trôi qua nhẹ nhàng và tùy ý, miễn sao chúng khiến bản thân cảm thấy thoải mái, dễ chịu. Dựa trên ý tưởng đó, “Ngày cuối tuần” ra đời với sự tập hợp của nhiều loại hoa có điểm chung là dịu nhẹ, tinh khiết. Hy vọng rằng món quà này sẽ đem đến cho khách hàng “một làn gió mát”, giảm bớt áp lực giữa cuộc sống bộn bề lo toan, tiếp sức cho những ngày dài phía trước.', 'hoa_binh_12.jpg', 5, '2016-06-16', 1);
+INSERT INTO `hoa` (`MaHoa`, `TenHoa`, `TenHoa_URL`, `Gia`, `GiaKhuyenMai`, `ThanhPhan`, `NoiDung`, `Hinh`, `MaLoai`, `ThoiGian`, `KhuyenMai`, `SoLuongSP`) VALUES
+(13, 'Thanh khiết', 'thanh-khiet', 650000, 550000, 'Hoa hồng Ecuador màu xanh bơ, Thạch thảo trắng, Hoa cẩm chướng Nhật (Green Wicky), Lá phụ', 'Màu xanh lá chính là màu tự nhiên nên luôn gợi cho người ta cảm giác gần gũi, tự nhiên. Nó cho tượng trưng cho sự phát triển, hòa thuận, tươi mát màu mỡ. Màu xanh còn thể hiện sự hi vọng, chống chọi mọi khó khăn.', 'hoa_hop_1.jpg', 2, '2016-07-27', 0, 0),
+(14, 'Tuổi thanh xuân', 'tuoi-thanh-xuan', 350000, 250000, 'Hoa hồng đỏ, Hoa hồng cam, Hoa phi yến, Hoa lá phụ', 'Được thiết kế từ hoa hồng, phi yến, mẫu hoa gợi lên nét ngọt ngào và dịu dàng của người con gái. "Tuổi thanh xuân" sẽ là món quà tuyệt vời cùng thông điệp an lành, hạnh phúc cho những người bạn gái của bạn', 'hoa_hop_2.jpg', 2, '2016-06-16', 1, 0),
+(15, 'Lúc mới yêu', 'luc-moi-yeu', 310000, 270000, 'Hoa hồng đỏ', 'Đơn giản, tinh tế và cổ điển là những gì có thể nhận xét về mẫu hoa này. Hoa hồng đỏ và hộp gỗ thông chính là sự kết hợp hoàn hảo, không bao giờ lỗi mốt. Nếu bạn đang tìm một món quà bất ngờ dành tặng cho những người thân yêu của mình, chọn ngay "Lúc mới yêu" nhé!', 'hoa_hop_3.jpg', 2, '2016-07-27', 0, 0),
+(16, 'Thầm mong', 'tham-mong', 270000, 150000, 'Hoa hồng kem, Hoa hồng đỏ, Hoa Salem tím', 'Nhẹ nhàng và tao nhã, "Thầm mong" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_4.jpg', 2, '2016-06-03', 1, 0),
+(17, 'Đong đầy', 'dong-day', 450000, 350000, 'Hoa hồng đỏ, Hoa hồng kem, Hoa tú cầu', 'Với sự kết hợp tinh tế của hoa hồng và tú cầu, hộp hoa mang thông điệp sum họp, đong đầy, vươn lên tầm cao mới, thích hợp để tạng dịp chúc mừng, tặng người thân..', 'hoa_hop_5.jpg', 2, '2016-07-27', 0, 0),
+(18, 'Đại dương xanh', 'dai-duong-xanh', 400000, 300000, 'Hoa hồng đỏ, Hoa tú cầu, Hoa cẩm chướng, Hoa cúc trắng, Các loại hoa phụ khác', 'Mang theo nguồn cảm hứng từ đại dương xanh thẳm, mẫu hoa "Đại dương xanh" là sự kết hợp độc đáo giữa tú cầu và hoa cẩm chướng Nhật xanh mướt cùng hoa hồng và cúc trắng tinh khôi. Tông màu xanh trắng này gợi lên sự thanh lịch, tươi mát và chắc chắn sẽ mang lại nhiều niềm vui cho người nhận.', 'hoa_hop_6.jpg', 2, '2016-07-27', 0, 0),
+(19, 'Mùa yêu đầu', 'mua-yeu-dau', 260000, 140000, 'Hoa hồng đỏ, Hoa hồng da', 'Hộp hoa với sự kết hợp khéo léo của hai màu hoa hồng mang đến hình ảnh của một bản tình ca lãng mạn, ngọt ngào. Mẫu hoa như món quà bất ngờ cùng thông điệp "Anh nhớ em rất nhiều".', 'hoa_hop_7.jpg', 2, '2016-07-27', 0, 0),
+(20, 'May mắn', 'may-man', 400000, 200000, 'Sen đá, Hoa hướng dương, Hoa hồng, Các loại hoa phụ', 'Được thiết kế với tông kết hợp, mẫu hoa gồm hoa hướng dương và sen đá mang đến thông điệp về một tình yêu bền vững, trọn đời. Ngoài ra còn có ý nghĩa mang lại tài lộc, may mắn cho gia đình. Đây sẽ là món quà tuyệt vời dành tặng những người thân yêu của bạn.', 'hoa_hop_8.jpg', 2, '2016-07-27', 0, 0),
+(21, 'Giọt nắng hồng', 'giot-nang-hong', 300000, 200000, 'Hoa hồng, Hoa phi yến, Cẩm chướng Nhật (Green Wicky), Các loại hoa phụ', 'Nhẹ nhàng và ngọt ngào như một giọt nắng ban mai, mẫu hoa mang đến một cảm giác yên bình, đáng yêu và dịu mắt đến không ngờ. Thiết kế đơn giản chỉ với 2 loại hoa nhưng "Giọt nắng hồng" vẫn nổi bật và dễ dàng chiều lòng những người yêu hoa.', 'hoa_hop_9.jpg', 2, '2016-06-19', 1, 0),
+(22, 'Thầm mong', 'tham-mong', 350000, 200000, 'Hoa hồng các loại, Hoa baby trắng, Lá phụ', 'Nhẹ nhàng và tao nhã, "Thầm mong" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_10.jpg', 2, '2016-07-27', 0, 0),
+(23, 'Giấc mơ hoa', 'giac-mo-hoa', 400000, 200000, 'Hoa hồng, Hoa ly mini, Hoa cúc tím, Hoa cúc Calimero, Hoa phụ khác', 'Với sự kết hợp tinh tế nhiều loại hoa mang sắc màu thanh nhã mang lại một cảm gác bình yên. "Giấc mơ hoa" như một điều ước cho những điều an lành, hạnh phúc và may mắn cho người nhận. ', 'hoa_hop_11.jpg', 2, '2016-07-27', 0, 0),
+(24, 'Season\'s love', 'season\'s-love', 380000, 250000, 'Hoa hồng, Hoa tú cầu, Hoa thạch thảo tím, Hoa cúc tím', 'Hộp hoa "Season\'s love" được thiết kế với hoa hồng đỏ chủ đạo và mang màu sắc tươi sáng, ngọt ngào. Đúng như tên gọi, mẫu hoa tựa như lời yêu thương gửi đến người thân, gia đình và bạn bè. Khởi đầu một mùa xuân mới với thông điệp yêu thương này bạn nhé!', 'hoa_hop_12.jpg', 2, '2016-07-27', 0, 0),
+(25, 'Hương mùa xuân', 'huong-mua-xuan', 550000, 350000, 'Hoa phi yến, Hoa cẩm chướng, Hoa thược dược', 'Giỏ hoa mang một vẻ đẹp rạng rỡ, tươi mới qua sự kết hợp đa dạng của các loại hoa như hoa phi yến, cẩm chướng, cúc hồng. Sự sắp xếp tự nhiên và hài hòa của giỏ hoa mang lại cảm giác như mùa xuân đã về đến. Hãy để "Hương mùa xuân" thổi một làn gió mới đến cho những người thân yêu quanh bạn nhé.', 'hoa_gio_1.jpg', 3, '2016-07-27', 0, 0),
+(26, 'Chốn mộng mơ', 'chon-mong-mo', 400000, 230000, 'Hoa hồng leo, Giỏ tre', 'Người ấy của bạn chắc chắn sẽ không khỏi động lòng khi nhìn thấy giỏ hoa xinh đẹp này trước cửa nhà! Được thiết kế trên nền hoa hồng da cùng hồng đỏ rực rỡ, chắc hẳn đây là cách tuyệt vời nhất để bày tỏ thành ý của bạn đến người đặc biệt rồ', 'hoa_gio_2.jpg', 3, '2016-07-27', 0, 0),
+(27, 'Sáng tinh mơ', 'sang-tinh-mo', 450000, 320000, 'Hoa hồng trắng, Hoa tú cầu', 'Lẵng hoa Sáng Tinh Mơ với tổng màu trắng tinh khiết, xen lẫn hoa baby. Một món quà nhẹ nhàng, lãng mạn và ngọt ngào.', 'hoa_gio_3.jpg', 3, '2016-07-27', 0, 0),
+(28, 'Qua miền lãng du', 'qua-mien-lang-du', 450000, 310000, 'Hoa hồng, Hoa cẩm chướng, Hoa cúc mini, Các loại hoa lá phụ khác', 'Rong ruổi giữa đất trời, tìm đến những vùng đất mới, khám phá vạn vật chắc hẳn là mơ ước của rất nhiều người. “Qua miền lãng du” là một mẫu hoa gồm nhiều loại hoa khác nhau, lối sắp xếp tạo nên một tổng thể đa dạng nhưng cũng thật tự nhiên. Có lẽ vì thế, “Qua miền lãng du” chính là món quà dành tặng ý nghĩa dành cho những tâm hồn yêu tự do, tha thiết được tung hoàng khắp chốn nhân gian. ', 'hoa_gio_4.jpg', 3, '2016-07-27', 0, 0),
+(29, 'Classic', 'classic', 500000, 240000, '50 đóa hoa hồng đỏ, Hoa baby', 'Giỏ hoa The Classic, hay còn gọi là Cổ điển, được thiết kế từ 50 bông hồng đỏ kết hợp hoa baby trong giỏ mây sang trọng đem đến một vẻ đẹp của sự đơn giản, hoải cổ và quý phái.', 'hoa_gio_5.jpg', 3, '2016-07-27', 0, 0),
+(30, 'Tinh tế', 'tinh-te', 550000, 430000, 'Hoa hồng đỏ, Hoa ly, Hoa baby', 'Sự kết hợp của hoa hồng, hoa ly với một chút nhẹ nhàng của hoa baby rất hài hoa tinh tế. Giỏ hoa thích hợp tặng thầy cô, người thân, các dịp lễ..', 'hoa_gio_6.jpg', 3, '2016-07-27', 0, 0),
+(31, 'Nhiệt huyết 1', 'nhiet-huyet', 800000, 610000, 'Hoa địa lan, Hoa hồng môn, Hoa cúc, Hoa hồng, Hoa lan mokara, Hoa cát tường, Các loại hoa phụ', 'Giỏ hoa "Nhiệt huyết" được thiết kế với nhiều màu sắc. Như một lời chúc ngày mới tràn đầy năng lượng và sáng tạo. "Nhiệt huyết" khoác thêm trên mình một hi vọng về sự thành công. Hãy dành tặng "Nhiệt huyết 2" cho bạn bè, người thân, đồng nghiệp, đối tác ... ', 'hoa_gio_7.jpg', 3, '2016-06-15', 1, 0),
+(32, 'Nhiệt huyết 2', 'nhiet-huyet-2', 850000, 750000, 'Hoa ly, Hoa lan hồ điệp, Hoa địa lan, Hoa hồng môn, Hoa tú cầu, Hoa cát tường', 'Giỏ hoa "Nhiệt huyết" được thiết kế với nhiều màu sắc. Như một lời chúc ngày mới tràn đầy năng lượng và sáng tạo. "Nhiệt huyết" khoác thêm trên mình một hi vọng về sự thành công. Hãy dành tặng "Nhiệt huyết 2" cho bạn bè, người thân, đồng nghiệp, đối tác ... ', 'hoa_gio_8.jpg', 3, '2016-07-27', 0, 0),
+(33, 'Nắng ban mai', 'nang-ban-mai', 450000, 240000, 'Hoa cúc đại, Hoa đồng tiền, Hoa cúc mini', 'Như tia nắng ban mai mai rọi vào phòng lúc sáng sớm, giỏ hoa mang nét đẹp rất duyên, rất ngọt ngào. "Nắng ban mai" thích hợp để dành tăng sinh nhật, kỉ niệm.. cho những cô gái dịu dàng và vẫn thường mơ mộng.', 'hoa_gio_9.jpg', 3, '2016-07-27', 0, 0),
+(34, 'My Dear', 'my-dear', 500000, 390000, 'Hoa cát tường nhiều màu, Hoa tú cầu', 'My Dear là giỏ hoa cát tường nhiều màu kết hợp với hoa tú cầu nhẹ nhàng, tươi mát. "My dear" là mẫu hoa thích hợp để bạn gửi đến mẹ, chị gái bởi vẻ đẹp mộc mạc, bình dị.', 'hoa_gio_10.jpg', 3, '2016-07-27', 0, 0),
+(35, 'Đón xuân', 'don-xuan', 550000, 370000, 'Hoa hồng, Hoa cúc,Hoa thạch thảo tím,Hoa cẩm chướng, Các loại hoa phụ khác', 'Giỏ hoa với nhiều loại hoa có tông màu tươi sáng như thể "Mùa xuân đến trăm hoa đua nhau khoe sắc". "Đón xuân" mang đến sự vui tươi, sôi nổi... đó chính là nụ cười và có lẽ chỉ có nụ cười mới mang nhiều vẻ đẹp như vậy. Thích hợp tặng sinh nhật, bạn bè, người yêu...', 'hoa_gio_11.jpg', 3, '2016-07-27', 0, 0),
+(36, 'Đắm say', 'dam-say', 600000, 520000, 'Hoa hồng đỏ, Hoa hồng trắng, Hoa salem trắng', 'Sắc đỏ nồng nàn và quyến rũ của những bông hồng sasa này chắc chắn sẽ đem đến cho người nhận cảm giác về một tình yêu đầy lãng mạn, ngọt ngào. Còn chần chờ gì nữa mà không cùng "Đắm say" thể hiện tình yêu của bạn. Hãy chọn "Đắm say" trong những dịp như sinh nhật, chúc mừng, giáng sinh, cầu hôn hay thậm chí chẳng vì một ngày đặc biệt nào cả. Chỉ đơn giản là thể hiện tình yêu mà thôi.', 'hoa_gio_12.jpg', 3, '2016-06-12', 1, 0),
+(37, 'Luxury queen', 'luxury-queen', 1000000, 800000, 'Hoa lan hồ điệp trắng, hồng', 'Sự kết hợp giữa những cành lan hồ điệp sẽ mang đến cho cô dâu nét đẹp dịu dàng mà quý phái.', 'hoa_cuoi_1.jpg', 6, '2016-06-08', 1, 0),
+(38, 'Love Paradise', 'love-paradise', 450000, 320000, 'Hoa hồng trắng, Hoa chuỗi ngọc', 'Không quá rực rỡ nhưng cũng đủ để làm cô dâu trở nên nổi bật và rạng rỡ biết bao. Sắc trắng tinh khôi của hoa hồng trắng kết hợp với màu đỏ của chuỗi ngọc như thể hiện một tình yêu đầy lãng mạn, tinh khôi những và cũng tràn đầy nồng nhiệt.', 'hoa_cuoi_2.jpg', 6, '2016-07-27', 0, 0),
+(39, 'Dáng ngọc', 'dang-ngoc', 450000, 240000, 'Hoa đồng tiền, Hoa baby, Hoa cẩm chướng', '"Dáng ngọc" dành cho những cô dâu thích sự nhẹ nhàng trong sáng nhưng tràn vị ngọt ngào trong tình yêu', 'hoa_cuoi_3.jpg', 6, '2016-06-09', 1, 0),
+(40, 'Love is color', 'love-is-color', 500000, 260000, 'Hoa hồng nhiều màu', 'Bó hoa cưới kết hợp nhiều màu sắc của hoa hồng theo gam màu pastel làm cho cô dâu thêm phần sang trọng và rạng rỡ trong ngày cưới.', 'hoa_cuoi_4.jpg', 6, '2016-07-27', 0, 0),
+(41, 'Fresh girl', 'fresh-girl', 450000, 270000, 'Hoa hoàng anh, Hoa hồng, Hoa địa lan', 'Bó hoa mang đến vẻ đẹp trong lành thuần khiết như chính tên gọi của nó. "Fresh girl" sẽ mang đến cảm giác tự tin cho cô dâu trong ngày trọng đại.', 'hoa_cuoi_5.jpg', 6, '2016-07-27', 0, 0),
+(42, 'Purple Tulip', 'purple-tulip', 500000, 280000, '30 đóa hoa Tulip tím', 'Bó hoa tuy đơn giản nhưng khoác lên mình sự sang trọng quý phái. Bó hoa cưới này chắc chắn là sự lựa chọn tuyệt vời cho các cô dâu nhân ngày trọng đại.', 'hoa_cuoi_6.jpg', 6, '2016-07-27', 0, 0),
+(43, 'Tinh khôi', 'tinh-khoi', 600000, 390000, 'Hoa hồng trắng, Hoa hồng môn trắng, Hoa cẩm chướng Nhật (Green Wicky)', '"Tinh khôi" là mẫu hoa độc đáo, khác lạ dành cho cô dâu. Với tông màu trắng thuần khiết sẽ làm cho cô dâu y hệt như nàng công chúa bước ra từ cổ tích bên chàng hoàng tử ngọt ngào, say đắm.', 'hoa_cuoi_7.jpg', 6, '2016-07-27', 0, 0),
+(44, 'Đẳng cấp', 'dang-cap', 700000, 580000, 'Hoa mẫu đơn nhiều màu', 'Sắc rực rỡ của hoa mẫu đơn chắc chắn làm cho cô dâu thêm phần nổi bật trong ngày cưới. Hoa mẫu đơn mang sức hấp dẫn nồng nàn, thể hiện vẻ đẹp, sức quyến rũ của tình yêu. Ngoài ra bó hoa mẫu đơn còn làm cho cô dâu trở nên đẳng cấp và sang trọng.', 'hoa_cuoi_8.jpg', 6, '2016-07-27', 0, 0),
+(45, 'Fresh love', 'fresh-love', 700000, 540000, 'Hoa hồng trắng, Hoa hồng xanh, Sen đá, Các loại hoa lá phụ khác', 'Một bó hoa cưới thể hiện chính tình yêu ngọt ngào nhưng cũng đầy màu sắc của những cung bậc tình cảm giữa cô dâu- chú rể. Và cả niềm hi vọng về một tương lai phía trước đầy hạnh phúc.', 'hoa_cuoi_9.jpg', 6, '2016-07-27', 0, 0),
+(46, 'My love', 'my-love', 600000, 350000, 'Hoa hồng, Hoa lan, Các loại hoa phụ', 'Bó hoa cưới đơn giản nhưng cũng không kém phần sang trọng với tông màu trắng- tím. Như chính tình yêu lãng mạn và đầy thủy chung của cô dâu - chú rể.', 'hoa_cuoi_10.jpg', 6, '2016-07-27', 0, 0),
+(47, 'I\'m your', 'i\'m-your', 600000, 520000, 'Hoa hồng, Hoa mẫu đơn, Hoa baby', '"I\'m your" là mẫu hoa độc đáo, khác lạ dành cho cô dâu. Với thông điệp đơn giản, chân thành "Em luôn đặc biệt, em là chính em và em là của anh", "I\'m your" dành cho những bạn yêu thích sự mới lạ, độc đáo nhưng vẫn đơn giản và đẹp.', 'hoa_cuoi_11.jpg', 6, '2016-07-27', 0, 0),
+(48, 'Lavender - Rose', 'lavender- rose', 650000, 420000, 'Hoa lavender, Hoa hồng, Các loại hoa lá phụ', 'Bó hoa cưới mang sắc tím như chính tình yêu lãng mạn, thủy chung của cô dâu chú rể. Cùng với hoa lavender với vẻ đẹp hoang sơ mới mẻ, mang đến hương thơm nhẹ nhàng phảng phất tạo một cảm giác khó quên.', 'hoa_cuoi_12.jpg', 6, '2016-07-27', 0, 0),
+(49, 'Giã biệt', 'gia-biet', 1200000, 1000000, 'Hoa ly trắng, Hoa cúc trắng, Hoa hồng, Hoa cẩm chướng Nhật (Green Wicky)', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Giã Biệt được kết từ hoa Cúc, hoa ly và các phụ liệu khác. Chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẽ cùng gia đình họ.', 'hoa_chia_buon_1.jpg', 4, '2016-05-31', 1, 0),
+(50, 'Thương nhớ', 'thuong-nho', 1100000, 1000000, 'Hoa ly, Hoa cúc nhiều màu, Hoa tú cầu xanh, Các loại hoa lá phụ khác', 'Bạn bè, người thân ra đi luôn để lại nỗi buồn và nhung nhớ khôn nguôi trong tâm trí mỗi người. Trong giây phút chia cách đau thương, từng kỷ niệm được hồi tưởng như một cuốn phim chiếu chậm, tràn ngập những niềm vui, nỗi buồn cũng như tiếc nuối. Kệ hoa “Thương nhớ” chất chứa nỗi niềm riêng của người ở lại giành cho người đã khuất, những nỗi niềm giờ đây đã không biết tỏ cùng ai.', 'hoa_chia_buon_2.jpg', 4, '2016-07-27', 0, 0),
+(51, 'Miền an lạc', 'niem-an-lac', 1200000, 1000000, 'Hoa ly, Hoa cúc tím, Hoa cúc trắng, Hoa tú cầu', 'Rũ bỏ những muộn phiền, trần ai của cuộc sống, để lòng thanh thản tiến vào hư vô là ý nghĩa của kệ hoa chia buồn “Miền An Lạc”. “Miền An Lạc” thể hiện lòng thành kính của những người ở lại đối với người đã ra đi, nguyện cầu ai rồi cũng đến được bến bờ bình yên.', 'hoa_chia_buon_3.jpg', 4, '2016-07-27', 0, 0),
+(52, 'Thành kính phân ưu', 'thanh-kinh-phan-uu', 900000, 750000, 'Hoa cúc trắng, Hoa ly trắng, Hoa tú cầu, Hoa mini trắng, Các loại lá phụ', 'Thành Kính Phân Ưu 1 gồm có hoa Cúc Trắng, hoa Ly Trắng, môn xanh và cẩm tú cầu. Thích hợp để tặng chia buồn.', 'hoa_chia_buon_4.jpg', 4, '2016-07-27', 0, 0),
+(53, 'Hạ trắng', 'ha-trang', 950000, 800000, 'Hoa ly trắng, Hoa hồng môn, Hoa cúc trắng, Hoa hồng, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn "Hạ trắng" chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_5.jpg', 4, '2016-07-27', 0, 0),
+(54, 'Nốt trầm', 'not-tram', 1100000, 1000000, 'Hoa ly trắng, Hoa cúc trắng, lan hồ điệp trắng, Hoa cúc tím', 'Có người từng ví mỗi cuộc đời tựa như một bản nhạc với đầy đủ cung bậc thăng trầm. Ứng với những khoảnh khắc tươi vui là những giai điệu rộn ràng và ngược lại, đối với những đớn đau, mất mát thì người ta chỉ có thể cảm nhận sự buồn bã, trầm mặc. Kệ hoa “Nốt trầm” gửi gắm niềm tiếc thương của người ở lại đối với người đã đi xa, cảm tạ vì đã xuất hiện và là một phần cuộc sống của nhau, cùng nhau tạo nên bản nhạc ý nghĩa của cuộc đời.', 'hoa_chia_buon_6.jpg', 4, '2016-07-27', 0, 0),
+(55, 'Tôn kính', 'ton-kinh', 650000, 500000, 'Hoa lan tím, Hoa ly, Các loại lá phụ khác ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Tôn Kính được kết từ hoa Ly Hồng, hoa Lan Tím và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_7.jpg', 4, '2016-07-27', 0, 0),
+(56, 'Luyến tiếc', 'luyen-tiec', 800000, 540000, 'Hoa hồng môn, Hoa ly trắng, Hoa cúc trắng, Hoa hồng xanh, Hoa tú cầu, Các loại hoa lá phụ khác', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Luyến Tiếc được kết từ hoa ly trắng, cúc trắng, hồng môn xanh và các phụ liệu khác. chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẽ cùng gia đình họ.', 'hoa_chia_buon_8.jpg', 4, '2016-07-27', 0, 0),
+(57, 'Cõi mơ', 'coi-mo', 1000000, 800000, 'Hoa hồng vàng, Hoa hồng trắng, Hoa cúc tím, Hoa hồng tím, Các loại hoa lá phụ khác', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Cõi Mơ được kết từ hoa Hồng, hoa Cúc nhiều màu, và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_9.jpg', 4, '2016-06-17', 1, 0),
+(58, 'Vĩnh biệt', 'vinh-biet', 1100000, 1000000, 'Hoa lan hồ điệp trắng, Hoa hồng trắng, Hoa cúc trắng', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được , nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với vòng hoa chia buồn Vĩnh biệt 1 được kết từ hoa Cúc Trắng, Lan hồ điệp Trắng, Hồng Trắng và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_10.jpg', 4, '2016-07-27', 0, 0),
+(59, 'Hạc trắng', 'hac-trang', 700000, 620000, 'Hoa hồng trắng, Hoa lan trắng, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với kệ hoa chia buồn Hạc Trắng được kết từ hoa Lan, Hồng trắng trên kệ gỗ và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_11.jpg', 4, '2016-07-27', 0, 0),
+(60, 'Vĩnh cửu', 'vinh-cuu', 750000, 660000, 'Hoa lan trắng, Hoa lan tím, Các loại lá phụ', 'Trong cuộc sống chúng ta mất bất cứ thứ gì chúng ta cũng có thể có lại được, nhưng khi chúng ta mất vĩnh viễn một người thân hay một người bạn chúng ta không bao giờ tìm lại được. Với kệ hoa chia buồn Vĩnh cửu được kết từ hoa lan trắng, lan tím, và các phụ liệu khác chúng tôi sẽ thay mặt bạn đưa tiễn họ và chia sẻ cùng gia đình họ.', 'hoa_chia_buon_12.jpg', 4, '2016-07-27', 0, 0),
+(61, 'Bách chiến bách thắng', 'bach-chien-bach-thang', 2100000, 2000000, 'Hoa địa lan, Hoa lan hồ điệp, Hoa lan vũ nữ, Các loại hoa lá phụ khác', 'Kệ hoa khai trương kết hợp hài hòa giữa các loại hoa lan với màu sắc thanh lịch. Kệ hoa mang ý nghĩa tốt đẹp bới sắc màu ấy là biểu tượng của thành công, hợp tác thuận lợi. Thích hợp tặng dịp khai trương công ty, cửa hàng, văn phòng..', 'hoa_chuc_mung_1.jpg', 4, '2016-07-27', 0, 0),
+(62, 'Phát triển bền vững', 'phat-trien-ben-vung', 2100000, 2000000, 'Hoa tú cầu, Hoa hồng, Hoa cúc mini, Hoa thủy tiên Nhật, Các loại hoa phụ khác', 'Kệ hoa kết hợp nhiều màu sắc rất bắt mắt và không kém phần sang trọng. Kệ hoa là lời chúc mừng tốt đẹp nhất gửi đến đối tác, khách hàng, bạn bè nhân ngày kỉ niệm thành lập, khai trương công ti, văn phòng, nhà hàng...', 'hoa_chuc_mung_2.jpg', 4, '2016-07-27', 0, 0),
+(63, 'Thịnh vượng', 'thinh-vuong', 1300000, 1200000, 'Hoa lan mokara 3 tầng, Các loại lá phụ', 'Chọn tông vàng làm màu sắc chủ đạo, kệ hoa sử dụng hoa lan mokara mang đến vẻ đẹp thanh nhã. Màu sắc ôn hòa của kệ hoa kết hợp thiết kế 3 tầng sẽ khiến không gian của bạn thêm phần sang trọng. Kệ hoa thích hợp tặng bạn bè, khách hàng, đối tác nhân dịp khai trương', 'hoa_chuc_mung_3.jpg', 4, '2016-05-30', 1, 0),
+(64, 'Phát tài - Phát lộc', 'phat-tai-phat-loc', 800000, 570000, 'Hoa hồng môn đỏ, Hoa ly, Hoa lan mokara, Hoa hồng đỏ, Hoa thiên điểu, Các loại lá phụ', 'Những đóa hoa tươi màu đỏ bắt mắt được cắm theo phong cách sóng đôi sẽ trở thành món quà nổi bật của bạn. Lẵng hoa được thiết kế với hoa hồng đỏ, hồng môn đỏ kết hợp hoa ly, hoa lan vàng biểu trưng cho sự phát tài, phát lộc. Hoa dành cho khai trương nhà hàng, công ti với thông điệp chúc đối tác ngày càng vươn xa.', 'hoa_chuc_mung_4.jpg', 4, '2016-07-27', 0, 0),
+(65, 'Niềm tin', 'niem-tin', 600000, 470000, 'Hoa thiên điểu, Hoa hồng, Hoa tú cầu, Hoa hoàng anh, Các loại lá phụ', 'Trong những dịp khai trương, chúc mừng, giỏ hoa này sẽ là lựa chọn dành cho bạn. Mang vẻ đẹp tươi sáng và nét lịch sự, giỏ hoa là sự kết hợp giữa hoa tú cầu, hoa hồng xanh và hoa thiên điểu.', 'hoa_binh_1.jpg', 5, '2016-06-10', 1, 0),
+(66, 'Rạng rỡ', 'rang-ro', 650000, 560000, 'Hoa hồng vàng, Hoa hướng dương, Hoa baby, Hoa cẩm chướng Nhật, Các loại lá phụ', '"Rạng rỡ" là một món quà thích hợp tặng người thân, những người mà bạn quí trọng. Bình hoa là sự kết hợp những bông hoa hướng dương vàng rực, hoa hồng duyên dáng trên nền hoa baby mỏng manh. Bình hoa thể hiện sự trân trọng, niềm tự hào mà bạn muốn gửi tới người nhận.', 'hoa_binh_2.jpg', 5, '2016-06-03', 1, 0),
+(67, 'Gắn kết yêu thương', 'gan-ket-yeu-thuong', 650000, 570000, 'Hoa hồng da, Hoa hồng đỏ, Hoa tú cầu, Hoa baby', 'Gắn Kết Yêu Thương gồm hoa hoa hồng nhiều màu kết hơp cùng các loại lá phụ cao cấp. Những sắc màu tươi tắn, trẻ trung, đáng yêu và đầy cá tính của hai trái tim trẻ nguyện sánh bước và gắn kết cùng nhau trên con đường đời. Thích hợp để tặng chúc sức khỏe, kỉ niệm,..', 'hoa_binh_3.jpg', 5, '2016-06-10', 1, 0),
+(68, 'Dịu dàng', 'diu-dang', 680000, 540000, 'Hoa hồng, Hoa cát tường tím, Hoa cúc tím, Hoa baby, Các loại hoa lá phụ', 'Được thiết kế với tông màu hồng tím, bình hoa Dịu dàng mang lại một vẻ đẹp dịu dàng, ngọt ngào và không kém phần lãng mạn. Những hoa cát tường tím điểm xuyết trên nền hoa hồng kết hợp đồng cúc, baby. Một bình hoa thế này sẽ là món quà tuyệt vời để chúc người luôn hạnh phúc và ngập tràn tình yêu', 'hoa_binh_4.jpg', 5, '2016-06-05', 1, 0),
+(69, 'Sum họp', 'sum-hop', 700000, 530000, 'Hoa hồng đỏ, Hoa cát tường tím, Hoa sen đá, Các loai hoa phụ khác', '"Một chiều thênh thang,về nơi con sóng tràn Nơi đây bình yên một màu xanh gió trong lành...". Bình hoa như nhắn gửi yêu thương đến hạnh phúc gia đình, sự sum họp quây quần bên nhau.', 'hoa_binh_5.jpg', 5, '2016-05-28', 1, 0),
+(70, 'Tia nắng ban mai', 'tia-nang-ban-mai', 450000, 240000, 'Hoa thiên điểu, Hoa lan mokara, Hoa hướng dương, Hoa hồng, Hoa cúc xanh', 'Rực rỡ và ấm áp như những tia nắng ban mai, mẫu hoa được thiết kế theo tông màu vàng này chắc chắn sẽ mang đến cho người nhận niềm hạnh phúc và may mắn. Mẫu hoa thích hợp tặng các dịp chúc mừng, cảm ơn v.v...', 'hoa_binh_6.jpg', 5, '2016-06-08', 1, 0),
+(71, 'Tình yêu ngọt ngào', 'tinh-yeu-ngot-ngao', 750000, 560000, 'Hoa hồng, Hoa tú cầu hồng, Hoa cát tường, Các loại hoa lá phụ khác', '"Tình yêu ngọt ngào" là sự kết hợp dễ thương của các loại hoa màu hồng và bình sứ cao cấp. Những đóa hoa đang nở rộ khoe sắc tươi tắn chứa đựng một tình yêu mãnh liệt, nồng cháy của một trái tim sôi nổi. Thích hợp để tặng người yêu, kỉ niệm, sinh nhật,...', 'hoa_binh_7.jpg', 5, '2016-07-27', 0, 0),
+(72, 'An nhiên', 'an-nhien', 400000, 230000, 'Hoa hồng trắng, Hoa tú cầu, Hoa hồng da, Lá khuynh diệp', 'Sắc trắng kết hợp cùng một chút màu xanh mát rượi của tú cầu luôn mang lại một cảm giác bình yên, trong trẻo đến lạ. "An nhiên" sẽ mang đến cho người nhận lời chúc an lành, bình yên trong tâm hồn và nhiều niềm vui trong cuộc sống.', 'hoa_binh_8.jpg', 5, '2016-06-06', 1, 0),
+(73, 'Thắng lợi', 'thang-loi', 800000, 670000, 'Hoa thiên điểu, Hoa hướng dương, Hoa lan vũ nữ, Hoa phi yến, Các loại lá', 'Kệ hoa được kết hợp từ nhiều loại hoa với tông màu vàng chủ đạo. Màu sắc tươi tắn sẽ là kệ hoa nổi bật trong ngày khai trương văn phòng của bạn.', 'hoa_binh_9.jpg', 5, '2016-07-27', 0, 0),
+(74, 'Sắc vàng', 'sac-vang', 800000, 680000, 'Hoa lan vữ nữ, Hoa hồng vàng,Các loại hoa lá phụ', 'Bình hoa với tông màu vàng là chủ đạo, mang đến cảm giác tươi mới cho người nhận. Ngoài ra với sự kết hợp tinh tế của các loại hoa làm cho "Sắc vàng" mang vẻ đẹp sang trọng. Thích hợp để trưng bày, hoặc giành tặng cho bạn bè, người thân, đối tác…', 'hoa_binh_10.jpg', 5, '2016-07-27', 0, 0),
+(75, 'Give love', 'give-love', 380000, 200000, 'Hoa hồng, Hoa cúc tím, Hoa baby', 'Chọn tông hồng - trắng làm màu sắc chủ đạo, “Give love” tạo nên một tổng thể nhẹ nhàng, khơi gợi cảm giác thư thái, vui tươi khi ngắm nhìn. Tên gọi “Give love” gửi gắm thông điệp: Tình yêu vốn dĩ không phải là điều ta nhận đuợc mà là những gì ta cho đi. Hãy chia sẻ yêu thương khi ta còn có thể vì chính tình yêu sẽ làm cuộc sống thêm tươi vui, hạnh phúc! Tách hoa “Give love” phù hợp tặng cho bạn bè, người thân và cả người ấy. Đặc biệt, với kích thước nhỏ gọn, “Give love” phù hợp trưng bày ở nhiều không gian khác nhau.', 'hoa_binh_11.jpg', 5, '2016-06-04', 1, 0),
+(76, 'Ngày cuối tuần', 'ngay-cuoi-tuan', 450000, 230000, 'Hoa hồng, Hoa tú cầu, Hoa hoàng anh', 'Sau một tuần làm việc mệt nhoài, chúng ta đều có quyền tự thưởng cho mình những ngày nghỉ để phục hồi năng lượng. Những ngày cuối tuần có thể trôi qua nhẹ nhàng và tùy ý, miễn sao chúng khiến bản thân cảm thấy thoải mái, dễ chịu. Dựa trên ý tưởng đó, “Ngày cuối tuần” ra đời với sự tập hợp của nhiều loại hoa có điểm chung là dịu nhẹ, tinh khiết. Hy vọng rằng món quà này sẽ đem đến cho khách hàng “một làn gió mát”, giảm bớt áp lực giữa cuộc sống bộn bề lo toan, tiếp sức cho những ngày dài phía trước.', 'hoa_binh_12.jpg', 5, '2016-06-16', 1, 0),
+(77, 'Hoa Héo', 'hoa-heo', 500000, 450000, 'asdas', 'hoa héo', 'bsm_small_bottom.png', 3, '2017-12-18', 0, 0),
+(80, 'asdasd', 'asdasd', 342324, 23423, 'dffsdf', 'sfdsdf', 'bsm_small_bottom.png', 7, '2017-12-18', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoa_don`
+-- Table structure for table `hoa_don`
 --
 
 CREATE TABLE `hoa_don` (
@@ -175,7 +179,7 @@ CREATE TABLE `hoa_don` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoa_don`
+-- Dumping data for table `hoa_don`
 --
 
 INSERT INTO `hoa_don` (`ma_hoa_don`, `ma_khach_hang`, `ngay_dat`, `trang_thai`, `tong_thanh_tien`) VALUES
@@ -190,7 +194,7 @@ INSERT INTO `hoa_don` (`ma_hoa_don`, `ma_khach_hang`, `ngay_dat`, `trang_thai`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khach_hang`
+-- Table structure for table `khach_hang`
 --
 
 CREATE TABLE `khach_hang` (
@@ -203,7 +207,7 @@ CREATE TABLE `khach_hang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khach_hang`
+-- Dumping data for table `khach_hang`
 --
 
 INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_khach_hang`, `phai`, `email`, `dia_chi`, `dien_thoai`) VALUES
@@ -224,7 +228,7 @@ INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_khach_hang`, `phai`, `email`, `d
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai_hoa`
+-- Table structure for table `loai_hoa`
 --
 
 CREATE TABLE `loai_hoa` (
@@ -233,7 +237,7 @@ CREATE TABLE `loai_hoa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loai_hoa`
+-- Dumping data for table `loai_hoa`
 --
 
 INSERT INTO `loai_hoa` (`MaLoai`, `TenLoai`) VALUES
@@ -241,12 +245,13 @@ INSERT INTO `loai_hoa` (`MaLoai`, `TenLoai`) VALUES
 (3, 'Hoa cắm giỏ'),
 (4, 'Hoa đại sảnh'),
 (5, 'Hoa cắm bình'),
-(6, 'Hoa cầm tay');
+(6, 'Hoa cầm tay'),
+(7, 'Hoa tàn');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai_tin`
+-- Table structure for table `loai_tin`
 --
 
 CREATE TABLE `loai_tin` (
@@ -255,7 +260,7 @@ CREATE TABLE `loai_tin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `loai_tin`
+-- Dumping data for table `loai_tin`
 --
 
 INSERT INTO `loai_tin` (`MaLoaiTin`, `TenLoaiTin`) VALUES
@@ -266,7 +271,7 @@ INSERT INTO `loai_tin` (`MaLoaiTin`, `TenLoaiTin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quang_cao`
+-- Table structure for table `quang_cao`
 --
 
 CREATE TABLE `quang_cao` (
@@ -278,16 +283,16 @@ CREATE TABLE `quang_cao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `quang_cao`
+-- Dumping data for table `quang_cao`
 --
 
 INSERT INTO `quang_cao` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `ThoiGian`) VALUES
-(1, 'QC1', '1.jpg', 'danh-sach-hoa', '2017-12-17 12:08:08');
+(1, 'QC1 Hoa', 'Banner-cuoi-trang-1.jpg', 'danh-sach-hoa', '2017-12-18 09:54:16');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `slider`
+-- Table structure for table `slider`
 --
 
 CREATE TABLE `slider` (
@@ -299,7 +304,7 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `slider`
+-- Dumping data for table `slider`
 --
 
 INSERT INTO `slider` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `ThoiGian`) VALUES
@@ -309,7 +314,7 @@ INSERT INTO `slider` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `ThoiGian`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thong_tin`
+-- Table structure for table `thong_tin`
 --
 
 CREATE TABLE `thong_tin` (
@@ -322,7 +327,7 @@ CREATE TABLE `thong_tin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `thong_tin`
+-- Dumping data for table `thong_tin`
 --
 
 INSERT INTO `thong_tin` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `HanhDong`, `ThoiGian`) VALUES
@@ -333,7 +338,7 @@ INSERT INTO `thong_tin` (`id`, `TieuDe`, `Hinh`, `DuongDan`, `HanhDong`, `ThoiGi
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tin_tuc`
+-- Table structure for table `tin_tuc`
 --
 
 CREATE TABLE `tin_tuc` (
@@ -346,7 +351,7 @@ CREATE TABLE `tin_tuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tin_tuc`
+-- Dumping data for table `tin_tuc`
 --
 
 INSERT INTO `tin_tuc` (`MaTT`, `TenTT`, `NoiDung`, `Hinh`, `ThoiGian`, `MaLoaiTin`) VALUES
@@ -356,17 +361,17 @@ INSERT INTO `tin_tuc` (`MaTT`, `TenTT`, `NoiDung`, `Hinh`, `ThoiGian`, `MaLoaiTi
 (4, 'Những cách tặng hoa bất ngờ cho ngày 20/10', '<p><strong>1.Hoa tươi:</strong></p>\r\n\r\n<p><a href="http://www.dienhoadanang.com/danh-muc/16-hoa-tuoi-tang-dip-20-11" target="_blank">Hoa tươi</a>&nbsp;lu&ocirc;n l&agrave; sự lựa chọn h&agrave;ng đầu trong danh mục c&aacute;c m&oacute;n qu&agrave; tặng &yacute; nghĩa nhất để trao gửi y&ecirc;u thương v&agrave; thể hiện tấm l&ograve;ng. Trong c&aacute;c ng&agrave;y đặc biệt trong năm, mỗi nh&agrave; lại kh&ocirc;ng thể vắng b&oacute;ng những giỏ hoa, b&oacute; hoa tươi sắc v&agrave; trong ng&agrave;y 20/11 hoa tươi lại c&agrave;ng được ưa chuộng.&nbsp;</p>\r\n\r\n<p>C&aacute;c Thầy, c&aacute;c C&ocirc; nhận được b&oacute; hoa tươi của học tr&ograve; c&ugrave;ng những d&ograve;ng chữ ngay ngắn tr&ecirc;n tấm thiệp viết tay chắc hẳn trong t&acirc;m khảm sẽ rất vui mừng bời c&ocirc;, cậu học tr&ograve; nhỏ của m&igrave;nh nay đ&atilde; lớn kh&ocirc;n, đ&atilde; biết tới c&ocirc;ng lao dưỡng dục của m&igrave;nh suốt những th&aacute;ng ng&agrave;y đ&egrave;n s&aacute;ch.</p>\r\n\r\n<p>Hoa tươi ng&agrave;y nay c&oacute; thật nhiều kiểu d&aacute;ng để bạn lựa chọn, vừa&nbsp;<a href="http://www.dienhoadanang.com/danh-muc/20-hoa-tuoi-bo-" target="_blank">b&oacute; tr&ograve;n, b&oacute; d&agrave;i</a>, vừa cắm giỏ, cắm hộp rồi cắm b&igrave;nh,... Bạn tha hồ lựa chọn kiểu c&aacute;ch h&ograve;a trộn m&agrave;u sắc bắt mắt để d&agrave;nh tặng C&ocirc;, Thầy. Nếu bạn muốn th&ecirc;m phần &yacute; nghĩa, bạn ho&agrave;n to&agrave;n c&oacute; thể mua hoa tươi về v&agrave; tự tạo cho m&igrave;nh m&oacute;n qu&agrave; tặng nh&acirc;n ng&agrave;y 20/11. C&ograve;n nếu kh&ocirc;ng bạn c&oacute; thể tới c&aacute;c&nbsp;<a href="http://www.dienhoadanang.com/" target="_blank" title="Điện hoa Đà Nẵng">shop hoa uy t&iacute;n</a>&nbsp;để dặt hoa theo &yacute; m&igrave;nh mong muốn, c&aacute;c&nbsp;<a href="http://www.dienhoadanang.com/" target="_blank" title="Hoa tươi Đà Nẵng">dịch vụ giao hoa tận tay</a>&nbsp;lu&ocirc;n sẵn s&agrave;ng gi&uacute;p đỡ bạn.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-yrhBrpLcRY4/WBFsf0wI_6I/AAAAAAAABYw/ib-Qb_agd2kEwMwJMM6R8-QjxhfV4AdnACLcB/s1600/tang_qua_20-11_y_nghia_nhat1.jpg" style="height:690px; width:500px" /></p>\r\n\r\n<p><em>Hoa tươi lu&ocirc;n l&agrave; lựa chọn số 1 trong truyền tải th&ocirc;ng điệp y&ecirc;u thương</em></p>\r\n\r\n<p><strong>2.&nbsp;Nước hoa:</strong></p>\r\n\r\n<p>Một chai nước hoa dung t&iacute;ch nhỏ vừa hợp t&uacute;i tiền của bạn lại cực k&igrave; xinh xắn với hương thơm nồng n&agrave;n sẽ rất ph&ugrave; hợp để d&agrave;nh tặng cho những Thầy, C&ocirc; gi&aacute;o y&ecirc;u l&agrave;m đẹp v&agrave; chỉn chu.</p>\r\n\r\n<p>Tất nhi&ecirc;n rồi, ai chẳng muốn được tặng những m&oacute;n qu&agrave; y&ecirc;u th&iacute;ch chứ, vậy n&ecirc;n trước khi tặng nước hoa cho thầy c&ocirc;&nbsp;bạn n&ecirc;n t&igrave;m hiểu m&ugrave;i hương v&agrave; nh&atilde;n hiệu ưa d&ugrave;ng của thầy c&ocirc;&nbsp;trước đ&atilde; nh&eacute;.</p>\r\n\r\n<p><img alt="" src="https://2.bp.blogspot.com/-rY6ccRZskmg/WBFsfqmxGpI/AAAAAAAABYs/QbMtQLjR3ocxb2dLcM-xa-e5YA3l1YaHgCLcB/s1600/tang_qua_20-11_y_nghia_nhat2.jpg" style="height:333px; width:500px" /></p>\r\n\r\n<p><em>Nước hoa tặng Thầy, C&ocirc; cũng l&agrave; một gợi &yacute; th&uacute; vị cho ng&agrave;y 20/11</em></p>\r\n\r\n<p><strong>3.Sơ mi, c&agrave; vạt, quần t&acirc;y tặng Thầy, &aacute;o d&agrave;i tặng C&ocirc;:</strong></p>\r\n\r\n<p>M&oacute;n qu&agrave; n&agrave;y c&oacute; rất nhiều kiểu d&aacute;ng, mẫu m&atilde; với thương hiệu v&agrave; chất liệu kh&aacute;c nhau m&agrave; gi&aacute; cả th&igrave; rất phải chăng.</p>\r\n\r\n<p>Nếu bạn chọn mua &aacute;o d&agrave;i hay sơ mi&nbsp;để tặng C&ocirc;, Thầy, bạn n&ecirc;n ch&uacute; &yacute; đến thương hiệu, kiểu d&aacute;ng, m&agrave;u sắc &aacute;o m&agrave; thầy hay mặc mỗi ng&agrave;y để chọn được m&oacute;n qu&agrave; tinh tế nhất. Dịp 20/11 c&aacute;c cửa h&agrave;ng v&agrave; nh&atilde;n hiệu &aacute;o d&agrave;i c&oacute; nhiều ưu đ&atilde;i cho kh&aacute;ch h&agrave;ng đấy.</p>\r\n\r\n<p>Bạn cũng c&oacute; thể rủ chung nh&oacute;m bạn c&ugrave;ng tặng qu&agrave; Thầy&nbsp;v&agrave; mua cả set gồm &aacute;o sơ mi, c&agrave; vạt v&agrave; quần t&acirc;y. Lưu &yacute;: Trước khi mua bạn n&ecirc;n&nbsp;t&igrave;m hiểu kỹ lưỡng về chiều cao, c&acirc;n nặng v&agrave; sở th&iacute;ch của người nhận qu&agrave; nh&eacute;.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-UWYSi9nriNc/WBFsfpRrGtI/AAAAAAAABYo/-4yL3QWbx2UDzzxe_e7V8SALZEnzoz0ygCLcB/s1600/tang_qua_20-11_y_nghia_nhat3.jpg" style="height:434px; width:600px" /></p>\r\n\r\n<p><em>&Aacute;o sơ mi, &aacute;o d&agrave;i l&agrave; m&oacute;n qu&agrave; tặng c&ocirc;, thầy được nhiều người lựa chọn</em></p>\r\n\r\n<p><strong>4.B&uacute;t viết:</strong></p>\r\n\r\n<p>B&uacute;t viết ch&iacute;nh l&agrave; vật bất ly th&acirc;n của c&ocirc; thầy, tất nhi&ecirc;n bạn kh&ocirc;ng thể mua c&aacute;c loại b&uacute;t viết th&ocirc;ng thường rồi,&nbsp;c&oacute; rất nhiều thương hiệu b&uacute;t k&yacute; cao cấp th&iacute;ch hợp l&agrave;m qu&agrave; tặng như b&uacute;t Parker, Water Man, Pilot... với đủ kiểu d&aacute;ng v&agrave; gi&aacute; cả. Bạn n&ecirc;n chọn c&aacute;c loại b&uacute;t&nbsp;bi thay v&igrave; b&uacute;t mực để tiện hơn cho c&ocirc;ng việc của c&aacute;c thầy c&ocirc;.</p>\r\n\r\n<p>Đặc biệt, một c&acirc;y b&uacute;t tốt c&oacute; khắc t&ecirc;n của thầy c&ocirc; chắc chắn sẽ l&agrave; m&oacute;n qu&agrave; &yacute; nghĩa m&agrave; bất cứ thầy c&ocirc; n&agrave;o cũng sẽ n&acirc;ng niu.</p>\r\n\r\n<p><img alt="" src="https://1.bp.blogspot.com/-5PGLNyMuL_w/WBFsgBKs5YI/AAAAAAAABY0/GWUcU887YEgac2wwGu9yUxchaqcg3huzQCLcB/s1600/tang_qua_20-11_y_nghia_nhat4.jpg" style="height:255px; width:500px" /></p>\r\n\r\n<p><em>B&uacute;t bi c&aacute;c d&ograve;ng cao cấp</em></p>\r\n\r\n<p><strong>5.Tranh thư ph&aacute;p:</strong></p>\r\n\r\n<p>Một bức tranh thư ph&aacute;p kh&ocirc;ng qu&aacute; mắc tiền nhưng lại l&agrave; m&oacute;n qu&agrave; tặng &yacute; nghĩa khi đ&oacute; l&agrave; những chữ để b&agrave;y tỏ l&ograve;ng biết ơn tới những thầy c&ocirc;. Bạn cũng c&oacute; thể mua tranh hoặc tự tạo bức tranh l&agrave;m m&oacute;n qu&agrave; th&ecirc;m &yacute; nghĩa.</p>\r\n\r\n<p>B&ecirc;n dưới bức tranh, bạn c&oacute; thể để một h&agrave;ng chữ b&eacute; x&iacute;u về th&ocirc;ng tin người tặng. Mỗi lần xem tranh chắc chắn thầy c&ocirc; sẽ nhớ về người đ&atilde; tặng m&igrave;nh d&ugrave; thời gian đ&atilde; qua đi nhiều năm.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-VlvCDXQojxI/WBFsgt661aI/AAAAAAAABY8/dSUqOD-JxiMPf7EcsUK45nnfMAMcn4uWQCLcB/s1600/tang_qua_20-11_y_nghia_nhat5.jpg" style="height:387px; width:600px" /></p>\r\n\r\n<p><em>Tranh thư ph&aacute;p &yacute; nghĩa</em></p>\r\n\r\n<p><strong>6.Bộ mỹ&nbsp;phẩm dưỡng da:</strong></p>\r\n\r\n<p>Phụ nữ lu&ocirc;n lu&ocirc;n th&iacute;ch l&agrave;m đẹp, c&aacute;c c&ocirc; gi&aacute;o cũng kh&ocirc;ng ngoại lệ. Những m&oacute;n đồ trang điểm như phấn, kem b&ocirc;i l&ecirc;n mặt... th&igrave;&nbsp;c&ograve;n phải c&acirc;n nhắc xem c&oacute; ph&ugrave; hợp với da mặt hay kh&ocirc;ng, song những loại mỹ phẩm như son m&ocirc;i, bộ dưỡng thể, kem dưỡng da tay... th&igrave; kh&ocirc;ng g&acirc;y k&iacute;ch ứng v&igrave; vậy bạn ho&agrave;n to&agrave;n c&oacute; thể &#39;&#39;đầu tư&#39;&#39; để tặng c&ocirc; gi&aacute;o của m&igrave;nh.&nbsp;</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-kaoSlFmuXIE/WBFsgZAvGCI/AAAAAAAABY4/ibOIpgy4mlcc25F00TmZGhxvLELmj93QQCLcB/s1600/tang_qua_20-11_y_nghia_nhat6.jpg" style="height:273px; width:600px" /></p>\r\n\r\n<p><em>20/11 v&agrave;o dịp tiết trời sang đ&ocirc;ng, se lạnh v&agrave; kh&ocirc; th&iacute;ch hợp&nbsp;tặng mỹ phẩm dưỡng da</em></p>\r\n\r\n<p><strong>7. Trang sức, đồng hồ:</strong></p>\r\n\r\n<p>Bạn kh&ocirc;ng cần phải chọn những m&oacute;n qu&aacute; đắt tiền khiến thầy c&ocirc; ngại ng&ugrave;ng v&agrave; kh&ocirc;ng d&aacute;m nhận,&nbsp;tốt nhất l&agrave; n&ecirc;n chọn những sản phầm đẹp, bền v&agrave; ph&ugrave; hợp với t&uacute;i tiền của m&igrave;nh.&nbsp;C&aacute;c thương hiệu như nữ trang PNJ, SJC, Doji... l&agrave; những gợi &yacute; cho bạn.</p>\r\n\r\n<p><img alt="" src="https://3.bp.blogspot.com/-tiiEsm-9EVs/WBFsgnLGB6I/AAAAAAAABZA/BoCCE6hNwqEdRbvHXqB3GDGr5-byuMvCwCLcB/s1600/tang_qua_20-11_y_nghia_nhat7.jpg" style="height:413px; width:600px" /></p>\r\n\r\n<p><em>Nữ trang cho C&ocirc; gi&aacute;o v&agrave; đồng hồ cho thầy</em></p>\r\n\r\n<p><strong>8.Voucher mua sắm:</strong></p>\r\n\r\n<p>Tuy c&oacute; vẻ thực dụng nhưng n&oacute; l&agrave; m&oacute;n qu&agrave; rất thiết thực d&agrave;nh tặng c&aacute;c Thầy, C&ocirc; được nhiều người nghĩ đến. Sẽ &yacute; nghĩa hơn khi n&oacute; được đ&iacute;nh k&egrave;m tấm thiệp viết tay từ ch&iacute;nh người tặng</p>\r\n\r\n<p>Nếu nắm được sở th&iacute;ch, th&oacute;i quen của thầy c&ocirc; th&igrave; chắc chắn đ&acirc;y sẽ l&agrave; m&oacute;n qu&agrave; khiến thầy c&ocirc; vui mừng hết mức.</p>\r\n\r\n<p><img alt="" src="https://4.bp.blogspot.com/-8BNRS0x_kyM/WBFsg7krtpI/AAAAAAAABZE/FwJc3rkKgic5BqBQy1b6Y3O4hvQOAtoTgCLcB/s1600/tang_qua_20-11_y_nghia_nhat8.jpg" style="height:375px; width:500px" /></p>\r\n\r\n<p><em>Những chiếc voucher cũng l&agrave; qu&agrave; tặng bạn n&ecirc;n chọn để tặng thầy c&ocirc;</em></p>\r\n\r\n<p><strong>Shop hoa tươi</strong>&nbsp;ch&uacute;c bạn chọn được m&oacute;n qu&agrave; ưng &yacute; nhất d&agrave;nh tặng C&ocirc;, Thầy nh&acirc;n ng&agrave;y&nbsp;<a href="http://www.dienhoadanang.com/danh-muc/16-hoa-tuoi-tang-dip-20-11" target="_blank">20/11</a>&nbsp;nh&eacute;!</p>\r\n', 'tin_tuc_5.jpg', '2017-12-17', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Chỉ mục cho bảng `chi_tiet_hoa_don`
+-- Indexes for table `chi_tiet_hoa_don`
 --
 ALTER TABLE `chi_tiet_hoa_don`
   ADD PRIMARY KEY (`id`),
@@ -374,7 +379,7 @@ ALTER TABLE `chi_tiet_hoa_don`
   ADD KEY `ma_don_hang` (`ma_hoa_don`);
 
 --
--- Chỉ mục cho bảng `hoa`
+-- Indexes for table `hoa`
 --
 ALTER TABLE `hoa`
   ADD PRIMARY KEY (`MaHoa`),
@@ -382,132 +387,132 @@ ALTER TABLE `hoa`
   ADD KEY `MaHoa` (`MaHoa`);
 
 --
--- Chỉ mục cho bảng `hoa_don`
+-- Indexes for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
   ADD PRIMARY KEY (`ma_hoa_don`),
   ADD KEY `ma_khach_hang` (`ma_khach_hang`);
 
 --
--- Chỉ mục cho bảng `khach_hang`
+-- Indexes for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
   ADD PRIMARY KEY (`ma_khach_hang`);
 
 --
--- Chỉ mục cho bảng `loai_hoa`
+-- Indexes for table `loai_hoa`
 --
 ALTER TABLE `loai_hoa`
   ADD PRIMARY KEY (`MaLoai`);
 
 --
--- Chỉ mục cho bảng `loai_tin`
+-- Indexes for table `loai_tin`
 --
 ALTER TABLE `loai_tin`
   ADD PRIMARY KEY (`MaLoaiTin`);
 
 --
--- Chỉ mục cho bảng `quang_cao`
+-- Indexes for table `quang_cao`
 --
 ALTER TABLE `quang_cao`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `slider`
+-- Indexes for table `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `thong_tin`
+-- Indexes for table `thong_tin`
 --
 ALTER TABLE `thong_tin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tin_tuc`
+-- Indexes for table `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
   ADD PRIMARY KEY (`MaTT`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT cho bảng `chi_tiet_hoa_don`
+-- AUTO_INCREMENT for table `chi_tiet_hoa_don`
 --
 ALTER TABLE `chi_tiet_hoa_don`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT cho bảng `hoa`
+-- AUTO_INCREMENT for table `hoa`
 --
 ALTER TABLE `hoa`
-  MODIFY `MaHoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `MaHoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
--- AUTO_INCREMENT cho bảng `hoa_don`
+-- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
   MODIFY `ma_hoa_don` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
--- AUTO_INCREMENT cho bảng `khach_hang`
+-- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
   MODIFY `ma_khach_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
--- AUTO_INCREMENT cho bảng `loai_hoa`
+-- AUTO_INCREMENT for table `loai_hoa`
 --
 ALTER TABLE `loai_hoa`
-  MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT cho bảng `loai_tin`
+-- AUTO_INCREMENT for table `loai_tin`
 --
 ALTER TABLE `loai_tin`
   MODIFY `MaLoaiTin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT cho bảng `quang_cao`
+-- AUTO_INCREMENT for table `quang_cao`
 --
 ALTER TABLE `quang_cao`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT cho bảng `slider`
+-- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT cho bảng `thong_tin`
+-- AUTO_INCREMENT for table `thong_tin`
 --
 ALTER TABLE `thong_tin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT cho bảng `tin_tuc`
+-- AUTO_INCREMENT for table `tin_tuc`
 --
 ALTER TABLE `tin_tuc`
   MODIFY `MaTT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chi_tiet_hoa_don`
+-- Constraints for table `chi_tiet_hoa_don`
 --
 ALTER TABLE `chi_tiet_hoa_don`
   ADD CONSTRAINT `_FK_chi_tiet_hoa_don_hoa` FOREIGN KEY (`MaHoa`) REFERENCES `hoa` (`MaHoa`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `_FK_chi_tiet_hoa_don_hoa_don` FOREIGN KEY (`ma_hoa_don`) REFERENCES `hoa_don` (`ma_hoa_don`) ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `hoa`
+-- Constraints for table `hoa`
 --
 ALTER TABLE `hoa`
   ADD CONSTRAINT `FK_H_LH` FOREIGN KEY (`MaLoai`) REFERENCES `loai_hoa` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `hoa_don`
+-- Constraints for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
   ADD CONSTRAINT `_FK_hoa_don_khach_hang` FOREIGN KEY (`ma_khach_hang`) REFERENCES `khach_hang` (`ma_khach_hang`) ON UPDATE CASCADE;
