@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 06:31:33
+/* Smarty version 3.1.30, created on 2017-12-18 09:28:47
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3760c5113940_05527264',
+  'unifunc' => 'content_5a378a4f629e03_13575430',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7a148474e07f64f67ee085f0019d055518c242' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_index.tpl',
-      1 => 1513578645,
+      1 => 1513589320,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3760c5113940_05527264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a378a4f629e03_13575430 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Icon Cards-->
@@ -92,9 +92,7 @@ function content_5a3760c5113940_05527264 (Smarty_Internal_Template $_smarty_tpl)
           </div>
         </div>
       </div>
-      <!-- Area Chart Example-->
-<!-- Area Chart Example-->
-          
+
 <canvas id="myCanvas" width="100%" height="30" ></canvas>
 
     <?php echo '<script'; ?>

@@ -5,6 +5,7 @@
   <script src="public/js/sb-admin-datatables.min.js"></script>
   <script src="public/js/Chart.min.js"></script>
     <script src="public/js/app.js"></script>
+    <script src="public/js/randomColor.js"></script>
   <script>
     $('#price').number(true);
     $('#gia_khuyen_mai').number(true);

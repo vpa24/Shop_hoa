@@ -66,35 +66,7 @@
           </div>
         </div>
       </div>
-      <!-- Area Chart Example-->
-<!-- Area Chart Example-->
-          {* <canvas id="myAreaChart" width="100%" height="30" style="display:none"></canvas>
-      <div class="row">
-        <div class="col-lg-8">
-          <!-- Example Bar Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Thống kê sản phẩm</div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-12 my-auto">
-                  <canvas id="myBarChart" width="100" height="45"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <!-- Example Pie Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-pie-chart"></i> Thống kê đơn hàng</div>
-            <div class="card-body">
-              <canvas id="myPieChart" width="100%" height="100"></canvas>
-            </div>
-          </div>
-          <!-- Example Notifications Card-->
-        </div> *}
+
 <canvas id="myCanvas" width="100%" height="30" ></canvas>
 
     <script>
