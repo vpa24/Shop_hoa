@@ -15,14 +15,14 @@
             <div class="per-product clearfix">
               <div class="images-container">
                 <div class="product-hover">
-                  <a href="san-pham/{makeURL($noi_bat->TenHoa)}-{$noi_bat->MaHoa}.html" title="{$noi_bat->TenHoa}" class="product-image">
+                  <a href="san-pham/{$noi_bat->TenHoa_URL}-{$noi_bat->MaHoa}.html" title="{$noi_bat->TenHoa}" class="product-image">
                     <img class="img-responsive hinh_san_pham" src="public/images/hoa/{$noi_bat->Hinh}" alt="{$noi_bat->TenHoa}" />
                   </a>
                 </div>
               </div>
               <div class="products-textlink product-featured-custom clearfix">
                 <h2 class="product-name">
-                  <a href="san-pham/{makeURL($noi_bat->TenHoa)}-{$noi_bat->MaHoa}.html" title="{$noi_bat->TenHoa}">{$noi_bat->TenHoa}</a>
+                  <a href="san-pham/{$noi_bat->TenHoa_URL}-{$noi_bat->MaHoa}.html" title="{$noi_bat->TenHoa}">{$noi_bat->TenHoa}</a>
                 </h2>
                 <div class="price-box">
                   <p class="old-price">
@@ -30,7 +30,7 @@
                     <span class="price" id="product-price-2107">
               {number_format($noi_bat->Gia)}  đ</span>
                   </p>
-                  <a href="san-pham/{makeURL($noi_bat>TenHoa)}-{$noi_bat>MaHoa}.html" class="minimal-price-link">
+                  <a href="san-pham/{$noi_bat->TenHoa_URL}-{$noi_bat>MaHoa}.html" class="minimal-price-link">
                     <span class="label">Mua online:</span>
                     <span class="price" id="product-minimal-price-2107">
         {number_format($noi_bat->GiaKhuyenMai)}   đ   </span>

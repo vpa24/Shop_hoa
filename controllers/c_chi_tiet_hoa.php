@@ -12,7 +12,6 @@ class C_chi_tiet_hoa
         $hoa = $m_chi_tiet_hoa->doc_theo_ma_hoa($id);
         $maLoai = $hoa->MaLoai;
         $hoa_cung_loai = $m_chi_tiet_hoa->doc_hoa_cung_loai($maLoai, $id);
-        include("URL.php");
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_chi_tiet_hoa.tpl";

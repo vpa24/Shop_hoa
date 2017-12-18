@@ -50,7 +50,6 @@ class C_gio_hang
             }
             $_SESSION['tong_gio_hang']=count($_SESSION['giohang']);
             $_SESSION['tongtt']=$tongtt;
-            include("URL.php");
             $giohang=$_SESSION["giohang"];
         } else {
             $giohang=[];

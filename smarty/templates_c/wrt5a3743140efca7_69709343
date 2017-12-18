@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 04:24:51
-  from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_moi.tpl" */
+/* Smarty version 3.1.30, created on 2017-12-18 04:24:52
+  from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a374313ec94a3_43767363',
+  'unifunc' => 'content_5a3743140ee852_13718319',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'dc1702e3b19531b1d6d7ae19f98bbc7472175e5b' => 
+    '37256ad4d4e40279289ecba03b6d2b7db587fbf9' => 
     array (
-      0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_moi.tpl',
-      1 => 1513571007,
+      0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_ban_chay.tpl',
+      1 => 1513570966,
       2 => 'file',
     ),
   ),
@@ -20,34 +20,34 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a374313ec94a3_43767363 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3743140ee852_13718319 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div id="menu1" class="tab-pane fade in active">
+<div id="menu2" class="tab-pane fade in">
     <div class="category-products">
         <ul class="products-grid row">
         <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_hoa_moi']->value, 'hoa_moi');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_hoa_ban_chay']->value, 'hoa_ban_chay');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['hoa_moi']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
 ?>
             <li class="item mau_hoa_moi">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
-                            <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa_URL;?>
--<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
-.html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa;?>
+                            <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa_URL;?>
+-<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
+.html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
 " class="product-image">
-                                <img class="img-responsive hinh_hoa" src="public/images/hoa/<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->Hinh;?>
-"  alt="<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa;?>
+                                <img class="img-responsive hinh_hoa" src="public/images/hoa/<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->Hinh;?>
+"  alt="<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
 ">
                             </a>
                         </div>
                         <h2 class="product-name">
-                        <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa_URL;?>
--<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
-.html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa;?>
-"><?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->TenHoa;?>
+                        <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa_URL;?>
+-<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
+.html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
+"><?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
 </a>
                         </h2>
                         <div class="actions-no hover-box">
@@ -56,22 +56,22 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_moi']->value) {
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
-echo $_smarty_tpl->tpl_vars['hoa_moi']->value->Gia;
-$_prefixVariable1=ob_get_clean();
-echo number_format($_prefixVariable1);?>
+echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->Gia;
+$_prefixVariable2=ob_get_clean();
+echo number_format($_prefixVariable2);?>
  ₫</span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="actions-cart" >
-                                <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
+                            <div class="actions-cart">
+                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-    <?php
+        <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);

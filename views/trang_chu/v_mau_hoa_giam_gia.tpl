@@ -6,12 +6,12 @@
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
-                            <a href="san-pham/{makeURL($hoa_km->TenHoa)}-{$hoa_km->MaHoa}.html" title="{$hoa_km->TenHoa}" class="product-image">
+                            <a href="san-pham/{$hoa_km->TenHoa_URL}-{$hoa_km->MaHoa}.html" title="{$hoa_km->TenHoa}" class="product-image">
                                 <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa_km->Hinh}"  alt="{$hoa_km->TenHoa}">
                             </a>
                         </div>
                         <h2 class="product-name">
-                        <a href="san-pham/{makeURL($hoa_km->TenHoa)}-{$hoa_km->MaHoa}.html" title="{$hoa_km->TenHoa}">{$hoa_km->TenHoa}</a>
+                        <a href="san-pham/{$hoa_km->TenHoa_URL}-{$hoa_km->MaHoa}.html" title="{$hoa_km->TenHoa}">{$hoa_km->TenHoa}</a>
                         </h2>
                         <div class="actions-no hover-box">
                             <div class="actions">

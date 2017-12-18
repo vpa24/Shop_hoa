@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 01:16:18
+/* Smarty version 3.1.30, created on 2017-12-18 04:24:54
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_san_pham_noi_bat.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31d0e284d813_89010210',
+  'unifunc' => 'content_5a374316ed6a21_15846909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf9577703ac1cbe71faecf215ca5c7970cd520f4' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_san_pham_noi_bat.tpl',
-      1 => 1513214175,
+      1 => 1513571064,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a31d0e284d813_89010210 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a374316ed6a21_15846909 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 custom-product custom2">
   <div class= "bmqodnfrgh magicproduct mage-custom">
@@ -43,7 +43,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['noi_bat']->value) {
             <div class="per-product clearfix">
               <div class="images-container">
                 <div class="product-hover">
-                  <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa);?>
+                  <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa;?>
 " class="product-image">
@@ -55,7 +55,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['noi_bat']->value) {
               </div>
               <div class="products-textlink product-featured-custom clearfix">
                 <h2 class="product-name">
-                  <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa);?>
+                  <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa;?>
 "><?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa;?>
@@ -68,7 +68,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['noi_bat']->value) {
               <?php echo number_format($_smarty_tpl->tpl_vars['noi_bat']->value->Gia);?>
   đ</span>
                   </p>
-                  <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['noi_bat']->value > 'TenHoa');?>
+                  <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['noi_bat']->value > 'MaHoa';?>
 .html" class="minimal-price-link">
                     <span class="label">Mua online:</span>
