@@ -68,7 +68,7 @@
       </div>
       <!-- Area Chart Example-->
 <!-- Area Chart Example-->
-          <canvas id="myAreaChart" width="100%" height="30" style="display:none"></canvas>
+          {* <canvas id="myAreaChart" width="100%" height="30" style="display:none"></canvas>
       <div class="row">
         <div class="col-lg-8">
           <!-- Example Bar Chart Card-->
@@ -94,7 +94,8 @@
             </div>
           </div>
           <!-- Example Notifications Card-->
-        </div>
+        </div> *}
+<canvas id="myCanvas" width="100%" height="30" ></canvas>
 
     <script>
     // Chart.js scripts

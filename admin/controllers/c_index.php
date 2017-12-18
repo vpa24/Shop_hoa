@@ -19,5 +19,11 @@ class C_index {
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");
     }
+    function json(){
+      include("models/m_index.php");
+      $m_index = new M_index();
+      $so_luong_loai_hoa=$m_index->So_luong_loai_hoa();
+      print json_encode($so_luong_loai_hoa, JSON_UNESCAPED_UNICODE);
+    }
 }
 ?>

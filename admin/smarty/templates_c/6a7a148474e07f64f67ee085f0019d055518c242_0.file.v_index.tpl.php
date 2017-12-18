@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 09:03:38
+/* Smarty version 3.1.30, created on 2017-12-18 06:31:33
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30ecea80c818_27867384',
+  'unifunc' => 'content_5a3760c5113940_05527264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7a148474e07f64f67ee085f0019d055518c242' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_index.tpl',
-      1 => 1513090550,
+      1 => 1513578645,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a30ecea80c818_27867384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3760c5113940_05527264 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Icon Cards-->
@@ -94,33 +94,8 @@ function content_5a30ecea80c818_27867384 (Smarty_Internal_Template $_smarty_tpl)
       </div>
       <!-- Area Chart Example-->
 <!-- Area Chart Example-->
-          <canvas id="myAreaChart" width="100%" height="30" style="display:none"></canvas>
-      <div class="row">
-        <div class="col-lg-8">
-          <!-- Example Bar Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Thống kê sản phẩm</div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-12 my-auto">
-                  <canvas id="myBarChart" width="100" height="45"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <!-- Example Pie Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-pie-chart"></i> Thống kê đơn hàng</div>
-            <div class="card-body">
-              <canvas id="myPieChart" width="100%" height="100"></canvas>
-            </div>
-          </div>
-          <!-- Example Notifications Card-->
-        </div>
+          
+<canvas id="myCanvas" width="100%" height="30" ></canvas>
 
     <?php echo '<script'; ?>
 >
@@ -184,5 +159,6 @@ function content_5a30ecea80c818_27867384 (Smarty_Internal_Template $_smarty_tpl)
     });
 
     <?php echo '</script'; ?>
-><?php }
+>
+<?php }
 }
