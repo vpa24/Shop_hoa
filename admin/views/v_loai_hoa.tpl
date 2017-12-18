@@ -18,7 +18,7 @@
               swal({
                 title: "Thành công!",
                 text: "{$smarty.session.thongBaoThanhCong}!",
-                type: "success"
+                icon: "success"
                 }).then(function() {
                   $.ajax({
                     success: function() {

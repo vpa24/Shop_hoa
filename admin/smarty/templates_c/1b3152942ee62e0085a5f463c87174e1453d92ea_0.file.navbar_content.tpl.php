@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 05:23:50
+/* Smarty version 3.1.30, created on 2017-12-18 04:12:47
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a35ff66949393_09965700',
+  'unifunc' => 'content_5a37403fa66c90_82973756',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1513487649,
+      1 => 1513570365,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a35ff66949393_09965700 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a37403fa66c90_82973756 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -46,9 +46,6 @@ function content_5a35ff66949393_09965700 (Smarty_Internal_Template $_smarty_tpl)
             </li>
             <li>
               <a href="loai_hoa.php">Loại hoa</a>
-            </li>
-            <li>
-              <a href="tin_tuc.php">Tin tức</a>
             </li>
           </ul>
         </li>
@@ -81,6 +78,9 @@ function content_5a35ff66949393_09965700 (Smarty_Internal_Template $_smarty_tpl)
             <li>
               <a href="quang_cao.php">Quảng cáo</a>
             </li>
+            <li>
+              <a href="tin_tuc.php">Tin tức</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -107,7 +107,7 @@ function content_5a35ff66949393_09965700 (Smarty_Internal_Template $_smarty_tpl)
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Xin chào 
+          <a class="nav-link">Xin chào
           <?php if (isset($_SESSION['hoTen'])) {?>
             <?php echo $_SESSION['hoTen'];?>
 
@@ -120,5 +120,6 @@ function content_5a35ff66949393_09965700 (Smarty_Internal_Template $_smarty_tpl)
         </li>
       </ul>
     </div>
-  </nav><?php }
+  </nav>
+<?php }
 }

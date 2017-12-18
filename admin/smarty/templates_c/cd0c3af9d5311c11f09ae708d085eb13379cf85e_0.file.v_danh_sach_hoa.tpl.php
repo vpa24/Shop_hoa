@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 13:52:03
+/* Smarty version 3.1.30, created on 2017-12-18 01:17:41
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3676833bdb49_88351602',
+  'unifunc' => 'content_5a371735e706b7_22300616',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c3af9d5311c11f09ae708d085eb13379cf85e' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1513518720,
+      1 => 1513559860,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/hoa/v_modal_sua_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a3676833bdb49_88351602 (Smarty_Internal_Template $_smarty_tpl) {
-if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
+function content_5a371735e706b7_22300616 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
@@ -32,7 +31,7 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\
       <th>Tên hoa URL</th>
       <th>Loại hoa</th>
       <th>Giá</th>
-      <th>Thời gian</th>
+      <th>Giá khuyến mãi</th>
       <th>Hành động</th>
     </tr>
   </thead>
@@ -55,8 +54,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 </a></td>
       <td><?php echo number_format($_smarty_tpl->tpl_vars['hoa']->value->Gia);?>
  đ</td>
-      <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['hoa']->value->ThoiGian,'%d-%m-%Y');?>
-</td>
+      <td><?php echo number_format($_smarty_tpl->tpl_vars['hoa']->value->GiaKhuyenMai);?>
+ đ</td>
       <td>
           <button type="button" class="btn btn-primary" onclick="getId(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 )" id="update<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>

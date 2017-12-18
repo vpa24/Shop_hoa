@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 13:02:03
+/* Smarty version 3.1.30, created on 2017-12-18 02:47:49
   from "C:\wamp64\www\shop_hoa-master\admin\views\quang_cao\v_modal_sua_quang_cao.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a366acb9b57f2_48406028',
+  'unifunc' => 'content_5a372c5599f575_86632245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6273d73f8036fabce2a8a74af6fcf15d4bf1822' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\quang_cao\\v_modal_sua_quang_cao.tpl',
-      1 => 1513515535,
+      1 => 1513564862,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a366acb9b57f2_48406028 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a372c5599f575_86632245 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="modal fade" id="edit<?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->id;?>
@@ -68,7 +68,7 @@ function content_5a366acb9b57f2_48406028 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-            <button type="submit" class="btn btn-success" name="btn_update" id="checkUpdate<?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->id;?>
+            <button type="submit" class="btn btn-success" name="btn_update_quang_cao" id="checkUpdate<?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->id;?>
 ">Cập nhật</button>
           </div>
         </form>

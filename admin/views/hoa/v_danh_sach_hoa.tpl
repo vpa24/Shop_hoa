@@ -6,7 +6,7 @@
       <th>Tên hoa URL</th>
       <th>Loại hoa</th>
       <th>Giá</th>
-      <th>Thời gian</th>
+      <th>Giá khuyến mãi</th>
       <th>Hành động</th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
       <td>{$hoa->TenHoa_URL}</td>
       <td><a href="hoa.php?loai_hoa={$hoa->MaLoai}">{$hoa->TenLoai}</a></td>
       <td>{number_format($hoa->Gia)} đ</td>
-      <td>{$hoa->ThoiGian|date_format:'%d-%m-%Y'}</td>
+      <td>{number_format($hoa->GiaKhuyenMai)} đ</td>
       <td>
           <button type="button" class="btn btn-primary" onclick="getId({$hoa->MaHoa})" id="update{$hoa->MaHoa}" data-toggle="modal" data-target="#edit{$hoa->MaHoa}" >Sửa</button>
           <button type="button" onclick="deleteAjax({$hoa->MaHoa})" class="btn btn-danger">Xóa</button>

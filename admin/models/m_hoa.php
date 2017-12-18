@@ -25,8 +25,8 @@ class M_hoa extends database
         $this->setQuery($sql);
         return $this->loadRow(array($maHoa));
     }
-    public function them_hoa($tenHoa, $gia, $thanhPhan, $noiDung, $hinh, $maLoai){
-      $sql = "INSERT INTO hoa(TenHoa,Gia,ThanhPhan,NoiDung,Hinh,MaLoai,ThoiGian) VALUES ('$tenHoa', '$gia', '$thanhPhan', '$noiDung', '$hinh', '$maLoai', now())";
+    public function them_hoa($tenHoa,$tenHoa_URL, $gia,$gia_khuyen_mai, $thanhPhan, $noiDung, $hinh, $maLoai){
+      $sql = "INSERT INTO hoa(TenHoa,TenHoa_URL,Gia,GiaKhuyenMai,ThanhPhan,NoiDung,Hinh,MaLoai,ThoiGian) VALUES ('$tenHoa','$tenHoa_URL','$gia','$gia_khuyen_mai', '$thanhPhan', '$noiDung', '$hinh', '$maLoai', now())";
       $this->setQuery($sql);
       return $this->execute();
     }

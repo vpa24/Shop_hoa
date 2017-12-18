@@ -8,7 +8,6 @@ class C_hoa
     {
         unset($_SESSION['thongBao']);
         unset($_SESSION['thongBaoThanhCong']);
-        //Model
         include("models/m_hoa.php");
         $m_hoa = new M_hoa();
         $doc_hoa = $m_hoa->doc_tat_ca_hoa();
@@ -17,7 +16,6 @@ class C_hoa
         $doc_loai_hoa = $m_loai_hoa->doc_tat_ca_loai_hoa();
         $this->ThemHoa();
         $this->SuaHoa();
-        //Controller
         include("Smarty_admin.php");
         $smarty = new  Smarty_Admin();
         $view = "views/v_hoa.tpl";
@@ -33,16 +31,18 @@ class C_hoa
       {
           $m_hoa = new M_hoa();
           $tenHoa = $_POST['ten_hoa'];
-          $gia = $_POST['gia'];
+          $gia=str_replace(",","",$_POST['gia']);
+          $gia_khuyen_mai=str_replace(",","", $_POST['GiaKhuyenMai']);
           $thanhPhan = $_POST['thanh_phan'];
           $noiDung = $_POST['noi_dung'];
           $maLoai = $_POST['loai_hoa'];
-          $hinh=$this->UploadFile("");
+          include("UploadFile.php");
+          $hinh=UploadFile("",'hoa');
           include("URL.php");
           $tenHoa_URL=makeURL($tenHoa);
-          $them = $m_hoa->them_hoa($tenHoa,$tenHoa_URL, $gia, $thanhPhan, $noiDung, $hinh, $maLoai);
+          $them = $m_hoa->them_hoa($tenHoa,$tenHoa_URL, $gia,$gia_khuyen_mai, $thanhPhan, $noiDung, $hinh, $maLoai);
           if ($them) {
-              $_SESSION['thongBaoThanhCong']="Cập nhật sản phẩm thành công";
+              $_SESSION['thongBaoThanhCong']="Thêm sản phẩm thành công";
           }
       }
     }
@@ -57,40 +57,13 @@ class C_hoa
           $thanhPhan = $_POST['thanh_phan'];
           $noiDung = $_POST['noi_dung'];
           $maLoai = $_POST['loai_hoa'];
-          $hoa = $m_hoa->doc_hoa_theo_ma($maHoa);
-          //update hinh
-          $hinh=$this->UploadFile($hoa->hinh);
+          include("UploadFile.php");
+          $hinh=UploadFile($m_hoa->doc_hoa_theo_ma($maHoa)->Hinh,'hoa');
           $update = $m_hoa->update_hoa($tenHoa,$tenHoa_URL, $gia,$gia_km, $thanhPhan, $noiDung, $hinh, $maLoai, $maHoa);
           if ($update) {
               $_SESSION['thongBaoThanhCong']="Cập nhật sản phẩm thành công";
           }
         }
-        //header('Location:hoa.php');
     }
-    public function UploadFile($hinh_sua){
-      $target_dir = "../public/images/hoa/";
-      $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-      $hinh = $_FILES["hinh"]["error"]==0?$_FILES["hinh"]["name"]:$hinh_sua;
-      $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-      if (!empty($hinh))
-      {
-          if ($_FILES["hinh"]["size"] > 500000)
-          {
-              $_SESSION['thongBao'] = "File không được lớn hơn 5MB";
-          }
-          if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-          && $imageFileType != "gif")
-          {
-              $_SESSION['thongBao'] = "Không phải file hình";
-          }
-          else
-          {
-              move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
-          }
-      }
-      else {
-         $_SESSION['thongBao'] = "Lỗi upload file";
-      }
-      return $hinh;
-    }
+
 }

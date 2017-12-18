@@ -35,7 +35,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-            <button type="submit" class="btn btn-success" name="btn_update" id="checkUpdate{$quang_cao->id}">Cập nhật</button>
+            <button type="submit" class="btn btn-success" name="btn_update_quang_cao" id="checkUpdate{$quang_cao->id}">Cập nhật</button>
           </div>
         </form>
       </div>

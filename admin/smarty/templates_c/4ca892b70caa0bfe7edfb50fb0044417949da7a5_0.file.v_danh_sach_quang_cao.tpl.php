@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 13:02:03
+/* Smarty version 3.1.30, created on 2017-12-18 02:49:28
   from "C:\wamp64\www\shop_hoa-master\admin\views\quang_cao\v_danh_sach_quang_cao.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a366acb80ab25_98283538',
+  'unifunc' => 'content_5a372cb83a1207_05184159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ca892b70caa0bfe7edfb50fb0044417949da7a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\quang_cao\\v_danh_sach_quang_cao.tpl',
-      1 => 1513515582,
+      1 => 1513565365,
       2 => 'file',
     ),
   ),
@@ -21,13 +21,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/quang_cao/v_modal_sua_quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a366acb80ab25_98283538 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a372cb83a1207_05184159 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
       <th>Hình</th>
       <th>Tên quảng cáo</th>
+      <th>Đường dẫn</th>
       <th>Thời gian</th>
       <th>Hành động</th>
     </tr>
@@ -43,6 +44,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['quang_cao']->value) {
       <td width="175px" style="max-height: 200px;"><img src="../public/images/quang_cao/<?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->Hinh;?>
 " class="img-fluid" alt="Responsive image"></td>
       <td><?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->TieuDe;?>
+</td>
+      <td><?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->DuongDan;?>
 </td>
       <td><?php echo $_smarty_tpl->tpl_vars['quang_cao']->value->ThoiGian;?>
 </td>

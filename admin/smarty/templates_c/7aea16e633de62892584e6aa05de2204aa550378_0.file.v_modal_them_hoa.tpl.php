@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 12:43:00
+/* Smarty version 3.1.30, created on 2017-12-18 01:39:47
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_modal_them_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a36665475b5a5_25317507',
+  'unifunc' => 'content_5a371c63cd46a0_32702951',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7aea16e633de62892584e6aa05de2204aa550378' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_modal_them_hoa.tpl',
-      1 => 1513453820,
+      1 => 1513561108,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a36665475b5a5_25317507 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a371c63cd46a0_32702951 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -37,7 +37,6 @@ function content_5a36665475b5a5_25317507 (Smarty_Internal_Template $_smarty_tpl)
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Loại hoa:</label>
             <select class="form-control" name="loai_hoa">
-                <option value="" disabled>Chọn loại tin tức</option>
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_loai_hoa']->value, 'loai_hoa');
 if ($_from !== null) {
@@ -56,15 +55,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
           </div>
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Tên hoa:</label>
-            <input type="text" class="form-control" name="ten_hoa" value="" autocomplete="off" maxlength="50" required>
+            <input type="text" class="form-control" name="ten_hoa" autocomplete="off" maxlength="50" required>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Giá:</label>
-            <input type="number" class="form-control" name="gia" value="" autocomplete="off" required>
+            <input type="text" class="form-control" id="price" name="gia" autocomplete="off" required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Giá Khuyến Mãi:</label>
+            <input type="text" class="form-control" id="gia_khuyen_mai" name="GiaKhuyenMai" autocomplete="off" required>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Thành phần:</label>
-            <textarea class="form-control" type="text" name="thanh_phan" maxlength="50"></textarea>
+            <textarea class="form-control" type="text" name="thanh_phan" ></textarea>
           </div>
           <div class="form-group">
             <label for="recipient-name" class="form-control-label">Nội dung:</label>

@@ -23,9 +23,6 @@
             <li>
               <a href="loai_hoa.php">Loại hoa</a>
             </li>
-            <li>
-              <a href="tin_tuc.php">Tin tức</a>
-            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
@@ -57,6 +54,9 @@
             <li>
               <a href="quang_cao.php">Quảng cáo</a>
             </li>
+            <li>
+              <a href="tin_tuc.php">Tin tức</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -83,7 +83,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Xin chào 
+          <a class="nav-link">Xin chào
           {if isset($smarty.session.hoTen)}
             {$smarty.session.hoTen}
           {/if}

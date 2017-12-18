@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 12:42:59
+/* Smarty version 3.1.30, created on 2017-12-18 02:02:15
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a366653eaf9c1_28832044',
+  'unifunc' => 'content_5a3721a792b9e9_95848148',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f33619f653542c713fb6b9a3a28ec4e243a46ed1' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_hoa.tpl',
-      1 => 1513453820,
+      1 => 1513562526,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/hoa/v_modal_them_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a366653eaf9c1_28832044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3721a792b9e9_95848148 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
@@ -72,7 +72,7 @@ function content_5a366653eaf9c1_28832044 (Smarty_Internal_Template $_smarty_tpl)
             title: "Thành công!",
             text: "<?php echo $_SESSION['thongBaoThanhCong'];?>
 !",
-            type: "success"
+            icon: "success"
             }).then(function() {
                 window.location = "hoa.php";
             });
