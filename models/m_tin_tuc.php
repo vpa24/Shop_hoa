@@ -4,7 +4,7 @@ class M_tin_tuc extends database
 {
     public function doc_tat_ca_su_kien()
     {
-        $sql = "select * from tin_tuc limit 0,4";
+        $sql = "select * from tin_tuc";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }

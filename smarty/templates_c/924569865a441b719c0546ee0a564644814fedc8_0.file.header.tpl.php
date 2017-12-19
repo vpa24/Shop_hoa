@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 03:18:49
+/* Smarty version 3.1.30, created on 2017-12-19 15:13:28
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a31ed99d07722_90191144',
+  'unifunc' => 'content_5a392c98bea983_50128280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1513221527,
+      1 => 1513695989,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a31ed99d07722_90191144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a392c98bea983_50128280 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
         <!-- BEGIN HEADER -->
         <header class="row">
@@ -41,6 +41,7 @@ function content_5a31ed99d07722_90191144 (Smarty_Internal_Template $_smarty_tpl)
                 <ul class="bsm_header_nav_left">
                     <li><a href="danh-sach-hoa">Hoa tươi</a></li>
                     <li><a href="lien_he.php">Liên hệ</a></li>
+                    <li><a href="tin_tuc.php">Tin Tức</a></li>
                 </ul>
             </nav>
             <div id="bsm_header_mobile_search">
@@ -127,6 +128,7 @@ function content_5a31ed99d07722_90191144 (Smarty_Internal_Template $_smarty_tpl)
                         <ul class="bsm_header_nav_left">
                             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
                             <li><a href="lien-he.html">Liên hệ</a></li>
+                            <li><a href="tin_tuc.php">Tin Tức</a></li>
                         </ul>
                     </nav>
                 </div>

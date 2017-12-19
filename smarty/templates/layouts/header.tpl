@@ -17,6 +17,7 @@
                 <ul class="bsm_header_nav_left">
                     <li><a href="danh-sach-hoa">Hoa tươi</a></li>
                     <li><a href="lien_he.php">Liên hệ</a></li>
+                    <li><a href="tin_tuc.php">Tin Tức</a></li>
                 </ul>
             </nav>
             <div id="bsm_header_mobile_search">
@@ -101,6 +102,7 @@
                         <ul class="bsm_header_nav_left">
                             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
                             <li><a href="lien-he.html">Liên hệ</a></li>
+                            <li><a href="tin_tuc.php">Tin Tức</a></li>
                         </ul>
                     </nav>
                 </div>
