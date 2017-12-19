@@ -23,7 +23,6 @@
       $("#tang").click(function(){
           var sl=$(".value").val();
           sl++;
-          if(sl>=10)
           $(".value").val(sl);
       });
 </script>

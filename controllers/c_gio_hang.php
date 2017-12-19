@@ -1,5 +1,7 @@
 <?php
 @session_start();
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 class C_gio_hang
 {
     public function them_gio_hang()
@@ -35,6 +37,7 @@ class C_gio_hang
             $hoa=$m_hoa->doc_tat_ca_hoa();
             include("models/m_chi_tiet_hoa.php");
             $m_chi_tiet_hoa=new M_chi_tiet_hoa();
+            $tongtt=0;
             if (isset($_POST["btnCapnhat"])) {
                 $sl=$_POST["sl"];
                 $i=0;
@@ -43,10 +46,9 @@ class C_gio_hang
                     $i++;
                 }
             }
-            $tongtt=0;
             foreach ($_SESSION["giohang"] as $k=>$value) {
-                $ct_hoa=$m_chi_tiet_hoa->doc_theo_ma_hoa($k);
-                $tongtt+=$value*$ct_hoa->Gia;
+              $ct_hoa=$m_chi_tiet_hoa->doc_theo_ma_hoa($k);
+              $tongtt+=$value*$ct_hoa->Gia;
             }
             $_SESSION['tong_gio_hang']=count($_SESSION['giohang']);
             $_SESSION['tongtt']=$tongtt;
@@ -64,17 +66,11 @@ class C_gio_hang
         $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
-    public function luu_gio_hang()
-    {
-        $MaKH= $_SESSION['ma_kh'];
-        $ngay_dat = date('Y-m-d');
-        include("models/m_hoa_don.php");
-        $m_hoa_don=new M_hoa_don();
-        $ma_hoa_don=$m_hoa_don->luu_hoa_don($MaKH, $ngay_dat, $_SESSION['tongtt']);
-        foreach ($_SESSION["giohang"] as $k=>$value) {
-            $kq=$m_hoa_don->luu_chi_tiet_hoa_don($k, $value, $ma_hoa_don);
-        }
-        $_SESSION['tong_gio_hang']=0;
+
+
+
+      public function DatHangThanhCong()
+      {
         session_destroy();
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
@@ -82,5 +78,5 @@ class C_gio_hang
         $smarty->assign('title', 'Đặt hàng thành công');
         $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
-    }
+      }
 }

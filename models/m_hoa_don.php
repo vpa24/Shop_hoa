@@ -2,11 +2,11 @@
 require_once("database.php");
 class M_hoa_don extends database
 {
-    public function luu_hoa_don($maKH, $ngaydat, $tongtt)
+    public function luu_hoa_don($maKH, $tongtt)
     {
-        $sql="INSERT INTO  hoa_don values(?,?,?,?,?)";
+        $sql="INSERT INTO  hoa_don values(?,?,now(),'0',?)";
         $this->setQuery($sql);
-        $param=array(null,$maKH,$ngaydat,'chưa xử lý',$tongtt);
+        $param=array(null,$maKH,$tongtt);
         $result = $this->execute($param);
         if ($result) {
             return $this->getLastId();

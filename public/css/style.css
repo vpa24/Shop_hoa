@@ -2020,10 +2020,6 @@ SS SHARE */
   position: relative;
 }
 
-.check-out {
-  padding: 4em 0em 0;
-}
-
 .table-responsive {
   border: 1px soild #111;
 }
@@ -2128,7 +2124,7 @@ th {
   margin-bottom: 50px;
 }
 
-.giohang_rong {
+.chu {
   font-size: 4.2rem;
   margin-bottom: 15px;
   text-align: center;
@@ -3484,6 +3480,11 @@ a.detail_links {
   border: 1px solid #5d84c3;
   padding: 15px;
 }
+.product-right-block {
+  border-radius: 5px;
+  border: 1px solid #5d84c3;
+  padding: 15px;
+}
 
 .product-view .product-shop .product-right-block:last-child {
   margin-top: 15px;
@@ -4254,6 +4255,7 @@ button.button {
   padding: 0 0 10px 0;
   font-size: 18px;
   font-weight: normal;
+  width: 250px;
 }
 
 .form-style-1 input[type=text], .form-style-1 input[type=date], .form-style-1 input[type=datetime], .form-style-1 input[type=number], .form-style-1 input[type=search], .form-style-1 input[type=time], .form-style-1 input[type=url], .form-style-1 input[type=email], textarea, select {
@@ -4265,7 +4267,52 @@ button.button {
   margin: 0px;
   outline: none;
   background-color: #FBFAF9;
+  width: 250px;
 }
 .khach_hang{
   margin-bottom: 50px;
+}
+.thong_tin{
+  font-weight: 400;
+  color:#00B6F0;
+}
+.border_bottom{
+  padding: 10px;
+  border-bottom: 1px solid #999;
+}
+.border_bottom_1px{
+  border-bottom: 1px dotted #999;
+}
+.canh_phai{
+  text-align: right;
+  margin-right: 25px;
+  margin-top: -18px;
+}
+.san_pham{
+  padding: 10px 0 20px 10px;
+}
+.ten_hoa_kh{
+  font-size: 14px;
+  margin-right: 10px;
+}
+.sl_kh{
+  font-size: 14px;
+}
+.tong_kh{
+  text-align: right;
+}
+.thanh_tien{
+  padding-top: 10px;
+}
+.chu_in{
+  font-weight: bold;
+}
+.tong_thanh_tien{
+  font-size: 18px;
+  float: right;
+  margin-top: -5px;
+  color: #009900;
+}
+.bang_don_hang{
+  height: 30px;
 }
