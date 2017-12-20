@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 02:44:06
+/* Smarty version 3.1.30, created on 2017-12-20 05:09:48
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_moi.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39ce76a823f5_05321139',
+  'unifunc' => 'content_5a39f09c366eb6_85063331',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dc1702e3b19531b1d6d7ae19f98bbc7472175e5b' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_moi.tpl',
-      1 => 1513737825,
+      1 => 1513746516,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39ce76a823f5_05321139 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39f09c366eb6_85063331 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu1" class="tab-pane fade in active">
     <div class="category-products">
@@ -64,9 +64,16 @@ echo number_format($_prefixVariable1);?>
                                 </div>
                             </div>
                             <div class="actions-cart" >
+                              <?php if (isset($_SESSION['tong_gio_hang'])) {?>
                                 <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
 ,<?php echo $_SESSION['tong_gio_hang'];?>
+,<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->SoLuongSP;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <?php } else { ?>
+                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
+,0,<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->SoLuongSP;?>
+)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <?php }?>
                             </div>
                         </div>
                     </div>

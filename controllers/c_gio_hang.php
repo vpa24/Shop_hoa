@@ -66,12 +66,8 @@ class C_gio_hang
         $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
-
-
-
       public function DatHangThanhCong()
       {
-        session_destroy();
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_dh_thanh_cong.tpl";

@@ -1,22 +1,28 @@
-function chuyen_huong_gio_hang(MaHoa,sl_gio_hang) {
-	$.ajax({
-			type:'get',
-			url:'gio_hang.php',
-			data:{MaHoa:MaHoa},
-			success:function(data){
-					swal_dat_hang(sl_gio_hang);
-			}
-	})
+function chuyen_huong_gio_hang(MaHoa,sl_gio_hang,sl_db) {
+	if(sl_db==0){
+		swal_het_hang();
+	}
+	else{
+		$.ajax({
+				type:'get',
+				url:'gio_hang.php',
+				data:{MaHoa:MaHoa},
+				success:function(data){
+						swal_dat_hang(sl_gio_hang);
+				}
+		})
+	}
 }
-function kt_sl_mua(MaHoa,sl_gio_hang){
+function kt_sl_mua(MaHoa,sl_gio_hang,sl_db){
 		var sl=document.getElementById("sl_"+MaHoa).value;
 		if(sl>=10){
-			swal({
-			  title: "Rất tiếc!!!",
-			  text: "Số lượng đặt hàng lớn hơn qui định",
-			  icon: "warning",
-			  dangerMode: true,
-			})
+			swal_sl_lon_hon_10();
+		}
+		if(sl_gio_hang<sl_db){
+			swal_sl_khong_đu(sl_db);
+		}
+		if(sl_db==0){
+			swal_het_hang();
 		}
 		else{
 			$.ajax({
@@ -28,8 +34,6 @@ function kt_sl_mua(MaHoa,sl_gio_hang){
 					}
 			});
 		}
-
-
 }
 function swal_dat_hang(sl_gio_hang){
 	sl_gio_hang++;
@@ -49,4 +53,28 @@ function swal_dat_hang(sl_gio_hang){
       break;
   }
 });
+}
+function swal_het_hang(){
+	swal({
+		title: "Rất tiếc!!!",
+		text: "Sản phẩm đã hết hàng",
+		icon: "warning",
+		dangerMode: true,
+	})
+}
+function swal_sl_khong_đu(sl_db){
+	swal({
+		title: "Rất tiếc!!!",
+		text: "Chỉ còn "+sl_db+" sản phẩm",
+		icon: "warning",
+		dangerMode: true,
+	})
+}
+function swal_sl_lon_hon_10(){
+	swal({
+		title: "Rất tiếc!!!",
+		text: "Số lượng đặt hàng lớn hơn qui định",
+		icon: "warning",
+		dangerMode: true,
+	})
 }

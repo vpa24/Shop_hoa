@@ -42,6 +42,15 @@ class C_khach_hang
             $m_hoa_don->luu_chi_tiet_hoa_don($k, $value,$_SESSION['mahoadon']);
         }
     }
+    public function CapNhapSoLuongGioHang(){
+      include("models/m_hoa.php");
+      $m_hoa=new M_hoa();
+      foreach ($_SESSION["giohang"] as $k=>$value) {
+          $sl_hoa_db=$m_hoa->doc_hoa_theo_ma($k)->SoLuongSP;
+          $sl=$sl_hoa_db-$value;
+          $m_hoa->CapNhapSoLuongHoa($sl,$k);
+      }
+    }
     public function GuiMail(){
 
       //Server settings
@@ -68,9 +77,12 @@ class C_khach_hang
 
     }
     public function luu_du_lieu(){
-      //$ma_kh=$this->luu_khach_hang();
-      //$this->luu_gio_hang($ma_kh);
-      $this->GuiMail();
+      $ma_kh=$this->luu_khach_hang();
+      $this->luu_gio_hang($ma_kh);
+      $this->CapNhapSoLuongGioHang();
+      //$this->GuiMail();
+      session_destroy();
+      header('Location: dh_thanh_cong.php');
 
     }
 }

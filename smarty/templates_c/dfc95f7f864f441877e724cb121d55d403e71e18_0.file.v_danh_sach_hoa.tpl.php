@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 02:39:54
+/* Smarty version 3.1.30, created on 2017-12-20 05:09:43
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39cd7a869d56_88535838',
+  'unifunc' => 'content_5a39f097989bf3_98406289',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1513737592,
+      1 => 1513746565,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39cd7a869d56_88535838 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39f097989bf3_98406289 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right">
     <div class="category-products">
@@ -64,9 +64,16 @@ echo number_format($_prefixVariable1);?>
                                 </div>
                             </div>
                             <div class="actions-cart">
+                              <?php if (isset($_SESSION['tong_gio_hang'])) {?>
                                 <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 ,<?php echo $_SESSION['tong_gio_hang'];?>
+,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <?php } else { ?>
+                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
+,0,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
+)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <?php }?>
                         </div>
                     </div>
                 </div>

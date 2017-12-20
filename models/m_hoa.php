@@ -25,5 +25,15 @@ class M_hoa extends database
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
+    function doc_hoa_theo_ma($maHoa){
+        $sql = "SELECT * FROM hoa WHERE MaHoa=?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($maHoa));
+    }
+    function CapNhapSoLuongHoa($sl,$mahoa){
+      $sql = "UPDATE hoa SET SoLuongSP='$sl' WHERE MaHoa='$mahoa'";
+      $this->setQuery($sql);
+      return $this->execute();
+    }
 }
 ?>

@@ -5,10 +5,9 @@ function xoagiohang(id){
               data:{id:id},
               success:function(data){
                   $('#delete'+id).hide('slow');
+                  swal("Sản phẩm đã xóa thành công", {
+                      icon: "success",
+                  })
               }
           })
-          swal("Sản phẩm đã xóa thành công", {
-              icon: "success",
-          })
-          //window.location="gio-hang.html";
 }
