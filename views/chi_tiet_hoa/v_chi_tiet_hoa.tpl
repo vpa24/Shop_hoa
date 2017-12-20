@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="add-to-cart" style="margin: 0px 0px 10px 0px">
-          <button type="submit" title="Mua ngay" name="them" class="button btn-cart">
+          <button type="button" title="Mua ngay" name="them" class="button btn-cart" onclick="kt_sl_mua({$hoa->MaHoa},{$smarty.session.tong_gio_hang})">
               <span>
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                   <span class="view-cart"> Mua ngay</span>

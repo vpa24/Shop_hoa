@@ -34,7 +34,7 @@
                 <div class="bsm_virtual_cart">
                     <a href="gio-hang.html" class="bsm_virtual_cart_content">
                         <img src="public/images/shopping-circle-blue-512.png"/>
-                        <p>
+                        <p id="sl_gio_hang">
                         {if isset($smarty.session.tong_gio_hang)}
                           {$smarty.session.tong_gio_hang}
                           {else}
@@ -74,7 +74,8 @@
                             <a href="gio-hang.html" class="bsm_virtual_cart_content">
                                 <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
                                 <p class="sl_gio_hang">{if isset($smarty.session.tong_gio_hang)>0}
-                                  <span class="tong_sl">{$smarty.session.tong_gio_hang}</span>
+                                  <span class="tong_sl" id="session">
+                                  {$smarty.session.tong_gio_hang}</span>
                                   {else}
                                   <span class="tong_sl">0</span>
                                 {/if}</p>

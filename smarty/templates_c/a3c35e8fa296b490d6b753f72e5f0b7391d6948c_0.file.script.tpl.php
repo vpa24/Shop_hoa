@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-19 09:21:19
+/* Smarty version 3.1.30, created on 2017-12-20 00:43:09
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a38da0fee1656_02540137',
+  'unifunc' => 'content_5a39b21d273428_25203062',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1513675278,
+      1 => 1513730587,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a38da0fee1656_02540137 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39b21d273428_25203062 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
 >
@@ -76,6 +76,9 @@ echo '<script'; ?>
           var sl=$(".value").val();
           sl++;
           $(".value").val(sl);
+          if(sl>=10)
+            $(".value").val(10);
+
       });
 <?php echo '</script'; ?>
 >

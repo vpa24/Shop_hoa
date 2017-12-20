@@ -27,7 +27,7 @@
                                 </a>
                             </div>
                             <div class="actions-cart">
-                                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                                  <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},{$smarty.session.tong_gio_hang})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

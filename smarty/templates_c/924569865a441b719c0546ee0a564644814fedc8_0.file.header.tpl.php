@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-19 15:13:28
+/* Smarty version 3.1.30, created on 2017-12-20 02:15:10
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a392c98bea983_50128280',
+  'unifunc' => 'content_5a39c7ae288cd6_92267516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1513695989,
+      1 => 1513736102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a392c98bea983_50128280 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39c7ae288cd6_92267516 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
         <!-- BEGIN HEADER -->
         <header class="row">
@@ -58,7 +58,7 @@ function content_5a392c98bea983_50128280 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="bsm_virtual_cart">
                     <a href="gio-hang.html" class="bsm_virtual_cart_content">
                         <img src="public/images/shopping-circle-blue-512.png"/>
-                        <p>
+                        <p id="sl_gio_hang">
                         <?php if (isset($_SESSION['tong_gio_hang'])) {?>
                           <?php echo $_SESSION['tong_gio_hang'];?>
 
@@ -99,7 +99,8 @@ function content_5a392c98bea983_50128280 (Smarty_Internal_Template $_smarty_tpl)
                             <a href="gio-hang.html" class="bsm_virtual_cart_content">
                                 <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
                                 <p class="sl_gio_hang"><?php if (isset($_SESSION['tong_gio_hang']) > 0) {?>
-                                  <span class="tong_sl"><?php echo $_SESSION['tong_gio_hang'];?>
+                                  <span class="tong_sl" id="session">
+                                  <?php echo $_SESSION['tong_gio_hang'];?>
 </span>
                                   <?php } else { ?>
                                   <span class="tong_sl">0</span>

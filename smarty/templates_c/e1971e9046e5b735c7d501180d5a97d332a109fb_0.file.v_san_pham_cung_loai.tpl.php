@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 09:17:06
+/* Smarty version 3.1.30, created on 2017-12-20 02:42:03
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_san_pham_cung_loai.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30f01220b987_91102967',
+  'unifunc' => 'content_5a39cdfb01efc3_44143050',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e1971e9046e5b735c7d501180d5a97d332a109fb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_san_pham_cung_loai.tpl',
-      1 => 1513156394,
+      1 => 1513737716,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a30f01220b987_91102967 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39cdfb01efc3_44143050 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
   <ul class="magictabs">
@@ -39,7 +39,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
             <div class="category-products-grid">
                 <div class="images-container">
                     <div class="product-hover">
-                        <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['hoa']->value->TenHoa);?>
+                        <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
 " class="product-image">
@@ -49,7 +49,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
                         </a>
                     </div>
                     <h2 class="product-name">
-                      <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['hoa']->value->TenHoa);?>
+                      <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
 "><?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
@@ -68,7 +68,9 @@ echo number_format($_prefixVariable1);?>
                                 </a>
                             </div>
                             <div class="actions-cart">
-                                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
+,<?php echo $_SESSION['tong_gio_hang'];?>
+)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

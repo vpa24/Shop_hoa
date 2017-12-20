@@ -6,11 +6,11 @@ class C_gio_hang
 {
     public function them_gio_hang()
     {
-        if (isset($_GET['MaHoa']) && isset($_POST['them'])||(isset($_GET['MaHoa']))) {
+        if (isset($_GET['MaHoa']) && isset($_GET['sl'])||(isset($_GET['MaHoa']))) {
             $id=$_GET['MaHoa'];
             $sl=1;
-            if (isset($_POST['them'])) {
-                $sl=$_POST['so_luong'];
+            if (isset($_GET['sl'])) {
+                $sl=$_GET['sl'];
             }
             if (isset($_SESSION["giohang"])) {
                 foreach ($_SESSION["giohang"] as $k=>$value) {
@@ -26,7 +26,7 @@ class C_gio_hang
                 $_SESSION["giohang"][$id]=$sl;
             }
             $_SESSION['tong_gio_hang']=count($_SESSION['giohang']);
-            header('Location: ' . $_SERVER['HTTP_REFERER']);
+            //header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
     }
     public function xem_gio_hang()
