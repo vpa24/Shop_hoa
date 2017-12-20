@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 05:23:21
+/* Smarty version 3.1.30, created on 2017-12-20 11:54:59
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39f3c93964e7_45301904',
+  'unifunc' => 'content_5a3a4f93794778_79606941',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1513746954,
+      1 => 1513770896,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39f3c93964e7_45301904 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3a4f93794778_79606941 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -83,6 +83,20 @@ function content_5a39f3c93964e7_45301904 (Smarty_Internal_Template $_smarty_tpl)
             </li>
             <li>
               <a href="logo.php">Logo</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <span class="nav-link-text">Thống kê</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+            <li>
+              <a href="thong_ke_san_pham.php">Sản Phẩm</a>
+            </li>
+            <li>
+              <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
           </ul>
         </li>
