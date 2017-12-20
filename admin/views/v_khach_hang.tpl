@@ -1,5 +1,3 @@
-
-      <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Danh sách khách hàng</div>
@@ -35,4 +33,3 @@
             </table>
           </div>
         </div>
-      

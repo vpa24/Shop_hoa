@@ -6,10 +6,6 @@
         $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
         if (!empty($hinh))
         {
-            if ($_FILES["hinh"]["size"] > 500000)
-            {
-                $_SESSION['thongBao'] = "File không được lớn hơn 5MB";
-            }
             if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif")
             {

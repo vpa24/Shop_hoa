@@ -57,6 +57,9 @@
             <li>
               <a href="tin_tuc.php">Tin tức</a>
             </li>
+            <li>
+              <a href="logo.php">Logo</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">

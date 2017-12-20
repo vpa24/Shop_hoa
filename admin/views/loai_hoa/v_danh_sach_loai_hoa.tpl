@@ -8,7 +8,7 @@
   <tbody>
   {foreach $doc_loai_hoa as $loai_hoa}
     <tr id="delete{$loai_hoa->MaLoai}">
-      <td><a href="hoa.php?loai_hoa={$loai_hoa->MaLoai}">{$loai_hoa->TenLoai}</a></td>
+      <td>{$loai_hoa->TenLoai}</td>
       <td>
         <button type="button" class="btn btn-primary" onclick="getId({$loai_hoa->MaLoai})" id="update{$loai_hoa->MaLoai}" data-toggle="modal" data-target="#edit{$loai_hoa->MaLoai}" >Sửa</button>
         <button type="button" onclick="deleteAjax({$loai_hoa->MaLoai})" class="btn btn-danger">Xóa</button>

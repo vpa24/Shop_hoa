@@ -2,7 +2,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Danh sách hoa</div>
+          <i class="fa fa-table"></i> Danh sách loại hoa</div>
         <div class="card-body">
           <div class="table-responsive">
           {include file="views/loai_hoa/v_danh_sach_loai_hoa.tpl"}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 03:10:13
+/* Smarty version 3.1.30, created on 2017-12-20 11:26:09
   from "C:\wamp64\www\shop_hoa-master\admin\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39d4952d3701_20618159',
+  'unifunc' => 'content_5a3a48d1bc9016_75684012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd0c3af9d5311c11f09ae708d085eb13379cf85e' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1513739412,
+      1 => 1513766958,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/hoa/v_modal_sua_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a39d4952d3701_20618159 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3a48d1bc9016_75684012 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
@@ -54,7 +54,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
  đ</td>
       <td><?php echo number_format($_smarty_tpl->tpl_vars['hoa']->value->GiaKhuyenMai);?>
  đ</td>
-      <td><?php echo number_format($_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP);?>
+      <td><?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 </td>
       <td>
           <button type="button" class="btn btn-primary" onclick="getId(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>

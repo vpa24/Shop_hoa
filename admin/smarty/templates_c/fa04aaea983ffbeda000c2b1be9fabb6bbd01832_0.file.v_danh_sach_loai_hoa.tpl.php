@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 14:43:15
+/* Smarty version 3.1.30, created on 2017-12-20 05:23:54
   from "C:\wamp64\www\shop_hoa-master\admin\views\loai_hoa\v_danh_sach_loai_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a36828333f8e5_75654146',
+  'unifunc' => 'content_5a39f3ea418611_62063027',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fa04aaea983ffbeda000c2b1be9fabb6bbd01832' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\loai_hoa\\v_danh_sach_loai_hoa.tpl',
-      1 => 1513453820,
+      1 => 1513747431,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/loai_hoa/v_modal_sua_loai_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a36828333f8e5_75654146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39f3ea418611_62063027 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
@@ -38,9 +38,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['loai_hoa']->value) {
 ?>
     <tr id="delete<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 ">
-      <td><a href="hoa.php?loai_hoa=<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
-"><?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
-</a></td>
+      <td><?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
+</td>
       <td>
         <button type="button" class="btn btn-primary" onclick="getId(<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
 )" id="update<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>

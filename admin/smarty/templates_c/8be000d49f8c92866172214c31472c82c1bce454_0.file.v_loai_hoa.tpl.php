@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 14:43:15
+/* Smarty version 3.1.30, created on 2017-12-20 05:23:21
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_loai_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3682832409b8_12331334',
+  'unifunc' => 'content_5a39f3c95ca6b0_22720549',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8be000d49f8c92866172214c31472c82c1bce454' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_loai_hoa.tpl',
-      1 => 1513453820,
+      1 => 1513747221,
       2 => 'file',
     ),
   ),
@@ -21,13 +21,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/loai_hoa/v_danh_sach_loai_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a3682832409b8_12331334 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39f3c95ca6b0_22720549 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Danh sách hoa</div>
+          <i class="fa fa-table"></i> Danh sách loại hoa</div>
         <div class="card-body">
           <div class="table-responsive">
           <?php $_smarty_tpl->_subTemplateRender("file:views/loai_hoa/v_danh_sach_loai_hoa.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -54,7 +54,7 @@ function content_5a3682832409b8_12331334 (Smarty_Internal_Template $_smarty_tpl)
                 title: "Thành công!",
                 text: "<?php echo $_SESSION['thongBaoThanhCong'];?>
 !",
-                type: "success"
+                icon: "success"
                 }).then(function() {
                   $.ajax({
                     success: function() {
