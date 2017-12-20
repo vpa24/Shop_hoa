@@ -66,5 +66,17 @@
           </div>
         </div>
       </div>
-
-<canvas id="myCanvas" width="100%" height="30" ></canvas>
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i>Số lượng bán theo ngày</div>
+        <div class="card-body">
+          <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+      </div>
+      <div class="card col-5">
+        <div class="card-header">
+          <i class="fa fa-pie-chart"></i>Số lượng loại hoa</div>
+        <div class="card-body">
+          <canvas id="myCanvas" width="50%" height="50" ></canvas>
+        </div>
+      </div>

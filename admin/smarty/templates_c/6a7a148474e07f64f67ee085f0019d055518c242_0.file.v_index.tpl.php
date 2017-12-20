@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 13:24:22
+/* Smarty version 3.1.30, created on 2017-12-20 14:21:06
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3a6486b58da5_07533092',
+  'unifunc' => 'content_5a3a71d242e6e7_37849655',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7a148474e07f64f67ee085f0019d055518c242' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_index.tpl',
-      1 => 1513776259,
+      1 => 1513779664,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3a6486b58da5_07533092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3a71d242e6e7_37849655 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Icon Cards-->
@@ -92,7 +92,19 @@ function content_5a3a6486b58da5_07533092 (Smarty_Internal_Template $_smarty_tpl)
           </div>
         </div>
       </div>
-
-<canvas id="myCanvas" width="100%" height="30" ></canvas>
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i>Số lượng bán theo ngày</div>
+        <div class="card-body">
+          <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+      </div>
+      <div class="card col-5">
+        <div class="card-header">
+          <i class="fa fa-pie-chart"></i>Số lượng loại hoa</div>
+        <div class="card-body">
+          <canvas id="myCanvas" width="50%" height="50" ></canvas>
+        </div>
+      </div>
 <?php }
 }

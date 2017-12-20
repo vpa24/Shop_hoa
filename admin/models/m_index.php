@@ -18,7 +18,7 @@ class M_index extends database
       return $this->loadAllRows();
     }
     function so_luong_hoa_ban(){
-      $sql="SELECT sum(so_luong) as so_luong_ban FROM shop_hoa.chi_tiet_hoa_don inner join hoa_don group by ngay_dat";
+      $sql="SELECT ngay_dat as ngay_dat,sum(so_luong) as so_luong_ban FROM shop_hoa.chi_tiet_hoa_don inner join hoa_don group by ngay_dat";
       $this->setQuery($sql);
       return $this->loadAllRows();
     }
