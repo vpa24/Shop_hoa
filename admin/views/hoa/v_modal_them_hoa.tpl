@@ -31,6 +31,10 @@
             <input type="text" class="form-control" id="gia_khuyen_mai" name="GiaKhuyenMai" autocomplete="off" required>
           </div>
           <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Số lượng:</label>
+            <input type="text" class="form-control" id="soluong" name="sl" autocomplete="off" required>
+          </div>
+          <div class="form-group">
             <label for="recipient-name" class="form-control-label">Thành phần:</label>
             <textarea class="form-control" type="text" name="thanh_phan" ></textarea>
           </div>

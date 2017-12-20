@@ -33,6 +33,10 @@
             <input type="number" class="form-control" name="gia" value="{$hoa->Gia}" autocomplete="off">
           </div>
           <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Số lượng:</label>
+            <input type="number" class="form-control" name="sl" value="{$hoa->SoLuongSP}" autocomplete="off">
+          </div>
+          <div class="form-group">
             <label for="recipient-name" class="form-control-label">Giá khuyến mãi:</label>
             <input type="number" class="form-control" name="gia_khuyen_mai" value="{$hoa->GiaKhuyenMai}" autocomplete="off">
           </div>
