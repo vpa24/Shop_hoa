@@ -1,5 +1,5 @@
 <div class="card mb-3">
-  <div class="card-header">
+  <div class="card-header print">
     <i class="fa fa-table"></i> Chi tiết hóa đơn</div>
     <div class="card-body">
       <fieldset class="chi_tiet_hoa_don">
@@ -18,6 +18,7 @@
               <label><span style="margin-left:20px">Điện thoại:</span></label> {$chi_tiet_hoa_don->dien_thoai}
               <label><span style="margin-left:20px">Email: </span></label> {$chi_tiet_hoa_don->email}
             </p>
+            <p><input class="button print" type="button" value="In đơn hàng" name="btnIn" onclick="window.print()" /></p>
         </fieldset>
         <div class="clear"></div>
         <div class="tieu_de">

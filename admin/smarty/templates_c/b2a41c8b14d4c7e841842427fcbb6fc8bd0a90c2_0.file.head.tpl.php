@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 12:45:35
+/* Smarty version 3.1.30, created on 2017-12-21 14:33:11
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bacef53ae77_01896011',
+  'unifunc' => 'content_5a3bc6277e5237_67944938',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a41c8b14d4c7e841842427fcbb6fc8bd0a90c2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1513860214,
+      1 => 1513866787,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bacef53ae77_01896011 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bc6277e5237_67944938 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +40,7 @@ function content_5a3bacef53ae77_01896011 (Smarty_Internal_Template $_smarty_tpl)
   <link href="public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="public/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="public/css/print.css" rel="stylesheet" media="print">
 
   <!-- Custom styles for this template-->
   <link href="public/css/sb-admin.css" rel="stylesheet">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 09:03:38
+/* Smarty version 3.1.30, created on 2017-12-21 14:35:51
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\logout_modal.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30ecea9dd031_22798644',
+  'unifunc' => 'content_5a3bc6c7ea3a10_98349323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'da276dc44b36f3d14fd31c41c8c74a8682d82a9f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\logout_modal.tpl',
-      1 => 1513090550,
+      1 => 1513866940,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a30ecea9dd031_22798644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bc6c7ea3a10_98349323 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade print" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -38,5 +38,6 @@ function content_5a30ecea9dd031_22798644 (Smarty_Internal_Template $_smarty_tpl)
           </div>
         </div>
       </div>
-    </div><?php }
+    </div>
+<?php }
 }
