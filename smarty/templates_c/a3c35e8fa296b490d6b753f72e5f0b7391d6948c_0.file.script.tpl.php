@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 00:43:09
+/* Smarty version 3.1.30, created on 2017-12-21 13:07:01
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39b21d273428_25203062',
+  'unifunc' => 'content_5a3bb1f5127990_08081097',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1513730587,
+      1 => 1513861342,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39b21d273428_25203062 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bb1f5127990_08081097 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
 >
@@ -126,6 +126,22 @@ echo '</script'; ?>
     mobileOnly: false
   });
 <?php echo '</script'; ?>
+>
+
+	<?php echo '<script'; ?>
+>
+  <?php if (isset($_SESSION['success'])) {?>
+	swal({
+	title: "Đặt hàng thành công!",
+	text: "<?php echo $_SESSION['success'];?>
+!",
+	type: "success"
+	}).then(function() {
+		window.location="check_hoa_don.php?dien_thoai=<?php echo $_SESSION['dien_thoai'];?>
+";
+	});
+  <?php }?>
+	<?php echo '</script'; ?>
 >
 <?php }
 }

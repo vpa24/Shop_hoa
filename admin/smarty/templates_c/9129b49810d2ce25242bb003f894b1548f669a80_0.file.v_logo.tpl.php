@@ -1,57 +1,69 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 10:50:18
+/* Smarty version 3.1.30, created on 2017-12-21 13:31:35
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_logo.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3a406a603573_77437904',
+  'unifunc' => 'content_5a3bb7b789e737_65281608',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9129b49810d2ce25242bb003f894b1548f669a80' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_logo.tpl',
-      1 => 1513747650,
+      1 => 1513863052,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:views/logo/v_hien_thi_logo.tpl' => 1,
   ),
 ),false)) {
-function content_5a3a406a603573_77437904 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bb7b789e737_65281608 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="card mb-3">
-  <div class="card-header">
-    <i class="fa fa-table"></i>Logo</div>
-  <div class="card-body">
-    <div class="table-responsive">
-    <?php $_smarty_tpl->_subTemplateRender("file:views/logo/v_hien_thi_logo.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" style="margin-bottom: 20px;">
+    <div class="form-group">
+        <div class="row">
+            <div class="col col-4">
+            <div class="input-file-container">
+                <input class="input-file" type="file" name="hinh" id="file"/>
+                <label tabindex="0" for="my-file" class="input-file-trigger">Tải lên ảnh mới</label>
+            </div>
+            <p class="file-return"></p>
+            </div>
+            <div class="col col-3">
+                <img id="hienThi" class="img-fluid" src="../public/images/logo/<?php echo $_smarty_tpl->tpl_vars['hinh']->value;?>
+"/>
+            </div>
+        </div>
     </div>
-  </div>
-  <?php if (isset($_SESSION['thongBao'])) {?>
+    <button type="submit" class="btn btn-primary" name="btn_update">Cập nhật logo</button>
+    </form>
+</div>
     <?php echo '<script'; ?>
->swal("<?php echo $_SESSION['thongBao'];?>
-");<?php echo '</script'; ?>
+ src="public/js/input_file.js"><?php echo '</script'; ?>
 >
-  <?php }?>
-  <?php if (isset($_SESSION['thongBaoThanhCong'])) {?>
     <?php echo '<script'; ?>
+ src="public/js/script_hien_thi_anh_add.js"><?php echo '</script'; ?>
 >
-        swal({
-          title: "Thành công!",
-          text: "<?php echo $_SESSION['thongBaoThanhCong'];?>
+    <?php echo '<script'; ?>
+ src="public/js/script_hien_thi_anh_about.js"><?php echo '</script'; ?>
+>
+    <?php if (isset($_SESSION['success'])) {?>
+        <?php echo '<script'; ?>
+>
+            swal({
+            title: "Cập nhật logo thành công!",
+            text: "<?php echo $_SESSION['success'];?>
 !",
-          icon: "success"
-          }).then(function() {
-              window.location = "logo.php";
-          });
-    <?php echo '</script'; ?>
+            type: "success"
+            }).then(function() {
+                window.location = "logo.php";
+            });
+        <?php echo '</script'; ?>
 >
-  <?php }
+    <?php }
 }
 }

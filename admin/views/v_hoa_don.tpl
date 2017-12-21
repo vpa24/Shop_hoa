@@ -13,34 +13,24 @@
                   <th>Ngày đặt</th>
                   <th>Tổng tiền</th>
                   <th>Trạng thái</th>
+                  <th>Hành động</th>
                 </tr>
               </thead>
               <tbody>
                 {foreach $doc_hoa_don as $hoa_don}
-                <tr>
+                <tr id="delete{$hoa_don->ma_hoa_don}">
                   <td>
-                     <a href="chi_tiet_hoa_don.php?ma_hoa_don={$hoa_don->ma_hoa_don}" title="Xem chi tiết đơn hàng">
+                     <a href="chi_tiet_hoa_don.php?ma_hoa_don={$hoa_don->ma_hoa_don}" title="Xem chi tiết đơn hàng"target="_blank">
                        {$hoa_don->ma_hoa_don}
                      </a>
                    </td>
                   <td>{$hoa_don->ten_khach_hang}</td>
                   <td>{$hoa_don->ngay_dat|date_format:'%d-%m-%Y'}</td>
                   <td>{number_format($hoa_don->tong_thanh_tien)} đ</td>
+                  <td>{$hoa_don->trang_thai}</td>
                   <td>
-                    <select name="ds[]">
-                      <option value="1"
-                            {if $hoa_don->trang_thai==1}
-                                selected
-                            {/if}>Chưa thanh toán</option>
-                      <option value="2"
-                            {if $hoa_don->trang_thai==2}
-                              selected
-                            {/if}>Đã thanh toán</option>
-                      <option value="3"
-                            {if $hoa_don->trang_thai==3}
-                              selected
-                            {/if}>Hủy đơn hàng</option>
-                    </select>
+                      <button type="button" onclick="updateAjax({$hoa_don->ma_hoa_don})" class="btn btn-success">Xử lý</button>
+                      <button type="button" onclick="deleteAjax({$hoa_don->ma_hoa_don})" class="btn btn-danger">Xóa</button>
                   </td>
                 </tr>
                 {/foreach}
@@ -49,3 +39,5 @@
             </table>
           </div>
         </div>
+        <script src="public/js/ajax/ajax_update_hoa_don.js"></script>
+        <script src="public/js/ajax/ajax_delete_hoa_don.js"></script>

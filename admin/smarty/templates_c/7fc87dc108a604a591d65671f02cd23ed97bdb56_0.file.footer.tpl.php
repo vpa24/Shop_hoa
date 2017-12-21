@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 12:35:49
+/* Smarty version 3.1.30, created on 2017-12-21 12:47:54
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3baaa5465062_27248106',
+  'unifunc' => 'content_5a3bad7ad174c2_47455716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7fc87dc108a604a591d65671f02cd23ed97bdb56' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\footer.tpl',
-      1 => 1513859747,
+      1 => 1513860471,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3baaa5465062_27248106 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3bad7ad174c2_47455716 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.number.min.js"><?php echo '</script'; ?>
 >
@@ -55,6 +55,31 @@ echo '<script'; ?>
 >
     $('#price').number(true);
     $('#gia_khuyen_mai').number(true);
+  <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+>
+  $(document).ready(function () {
+
+    $("#dt1").datepicker({
+        dateFormat: "dd-M-yy",
+        minDate: 0,
+        onSelect: function (date) {
+            var dt2 = $('#dt2');
+            var startDate = $(this).datepicker('getDate');
+            var minDate = $(this).datepicker('getDate');
+            dt2.datepicker('setDate', minDate);
+            startDate.setDate(startDate.getDate() + 30);
+            //sets dt2 maxDate to the last day of 30 days window
+            dt2.datepicker('option', 'maxDate', startDate);
+            dt2.datepicker('option', 'minDate', minDate);
+            $(this).datepicker('option', 'minDate', minDate);
+        }
+    });
+    $('#dt2').datepicker({
+        dateFormat: "dd-M-yy"
+    });
+});
   <?php echo '</script'; ?>
 >
   </div>

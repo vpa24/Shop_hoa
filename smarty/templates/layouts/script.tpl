@@ -54,3 +54,15 @@
     mobileOnly: false
   });
 </script>
+
+	<script>
+  {if isset($smarty.session.success)}
+	swal({
+	title: "Đặt hàng thành công!",
+	text: "{$smarty.session.success}!",
+	type: "success"
+	}).then(function() {
+		window.location="check_hoa_don.php?dien_thoai={$smarty.session.dien_thoai}";
+	});
+  {/if}
+	</script>

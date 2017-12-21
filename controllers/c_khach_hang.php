@@ -28,8 +28,8 @@ class C_khach_hang
             $phai=$_POST['phai'];
             $_SESSION['email']=$_POST['email'];
             $dia_chi=$_POST['dia_chi'];
-            $dien_thoai=$_POST['dien_thoai'];
-            $ma_kh=$m_khach_hang->Them_khach_hang($_SESSION['ten'], $phai,$_SESSION['email'], $dia_chi, $dien_thoai);
+            $_SESSION['dien_thoai']=$_POST['dien_thoai'];
+            $ma_kh=$m_khach_hang->Them_khach_hang($_SESSION['ten'], $phai,$_SESSION['email'], $dia_chi, $_SESSION['dien_thoai']);
             return $ma_kh;
           }
     }
@@ -81,8 +81,8 @@ class C_khach_hang
       $this->luu_gio_hang($ma_kh);
       $this->CapNhapSoLuongGioHang();
       //$this->GuiMail();
-      session_destroy();
-      header('Location: dh_thanh_cong.php');
+      //session_destroy();
+      //header('Location: dh_thanh_cong.php');
 
     }
 }

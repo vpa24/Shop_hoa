@@ -6,10 +6,10 @@
       	<thead>
       		<tr>
       			<th>Ngày bắt đầu&nbsp;
-              <input type="text" class="span2" value="{$smarty.now|date_format:"%m-%d-%Y"}" data-date-format="mm/dd/yyyy" id="dp2">
+              <input type="text" id="dt1">
       			</th>
       			<th>Ngày kết thúc&nbsp;
-      			 <input type="text" class="span2" value="{$smarty.now|date_format:"%m-%d-%Y"}" data-date-format="mm/dd/yyyy" id="dp3">
+      			  <input type="text" id="dt2">
       			</th>
       		</tr>
       	</thead>
