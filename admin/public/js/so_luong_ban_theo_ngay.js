@@ -35,7 +35,9 @@ $(document).ready(function(){
       var barGraph=new Chart(ctx,{
         type:'line',
         data:chardata,
-
+        options: {
+            legend:{display:!1}
+        }
       });
     },
     error:function(data){

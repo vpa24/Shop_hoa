@@ -40,5 +40,11 @@ class C_index {
       $so_luong_hoa_ban=$m_index->so_luong_hoa_ban();
       print json_encode($so_luong_hoa_ban, JSON_UNESCAPED_UNICODE);
     }
+    function json_doanh_thu_theo_tuan(){
+      include("models/m_index.php");
+      $m_index = new M_index();
+      $doanh_thu_theo_tuan=$m_index->doanh_thu_theo_tuan();
+      print json_encode($doanh_thu_theo_tuan, JSON_UNESCAPED_UNICODE);
+    }
 }
 ?>
