@@ -17,7 +17,7 @@ class C_thong_ke_san_pham
     function json_sl_theo_tuan(){
       include("models/m_thong_ke_san_pham.php");
       $m_thong_ke_san_pham = new M_thong_ke_san_pham();
-      $sl_theo_tuan=$m_thong_ke_san_pham->theo_tuan();
+      $sl_theo_tuan=$m_thong_ke_san_pham->theo_ngay();
       print json_encode($sl_theo_tuan, JSON_UNESCAPED_UNICODE);
     }
 }

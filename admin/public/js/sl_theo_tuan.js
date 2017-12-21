@@ -4,15 +4,15 @@ $(document).ready(function(){
     method:"GET",
     success:function(data){
       console.log(data);
-      var tuan=[];
+      var ngay_dat=[];
       var so_luong_ban=[];
       var obj=jQuery.parseJSON(data);
       for(var i in obj){
-        tuan.push('Tuần '+ obj[i].tuan);
+        ngay_dat.push(obj[i].ngay_dat);
         so_luong_ban.push(obj[i].so_luong_ban);
       };
       var chardata={
-        labels:tuan,
+        labels:ngay_dat,
         datasets:[
           {
             label:"số lượng",
