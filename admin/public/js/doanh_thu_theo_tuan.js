@@ -8,7 +8,7 @@ $(document).ready(function(){
       var tong_tt=[];
       var obj=jQuery.parseJSON(data);
       for(var i in obj){
-        tuan.push(obj[i].tuan);
+        tuan.push('Tuần '+obj[i].tuan);
         tong_tt.push(obj[i].tong_tt);
       };
       var chardata={
@@ -28,6 +28,14 @@ $(document).ready(function(){
         type:'bar',
         data:chardata,
         options: {
+          tooltips: {
+           mode: 'label',
+           label: 'mylabel',
+           callbacks: {
+               label: function(tooltipItem, data) {
+                   return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }, },
+        },
+
             scales: {
                 yAxes: [{
                     ticks: {
