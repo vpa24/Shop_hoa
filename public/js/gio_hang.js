@@ -8,9 +8,9 @@ function chuyen_huong_gio_hang(MaHoa,sl_gio_hang,sl_db) {
 				url:'gio_hang.php',
 				data:{MaHoa:MaHoa},
 				success:function(data){
-						swal_dat_hang(sl_gio_hang);
 				}
 		})
+		swal_dat_hang(sl_gio_hang);
 	}
 }
 function kt_sl_mua(MaHoa,sl_gio_hang,sl_db){
@@ -30,9 +30,10 @@ function kt_sl_mua(MaHoa,sl_gio_hang,sl_db){
 					url:'gio_hang.php',
 					data:{MaHoa:MaHoa,sl:sl},
 					success:function(data){
-						swal_dat_hang(sl_gio_hang);
+
 					}
 			});
+				swal_dat_hang(sl_gio_hang);
 		}
 }
 function swal_dat_hang(sl_gio_hang){
