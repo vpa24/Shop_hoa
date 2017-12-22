@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 14:35:51
+/* Smarty version 3.1.30, created on 2017-12-22 10:25:38
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bc6c7d64ce2_13265330',
+  'unifunc' => 'content_5a3cdda2d10262_51700638',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1513866949,
+      1 => 1513938300,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bc6c7d64ce2_13265330 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3cdda2d10262_51700638 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -92,9 +92,6 @@ function content_5a3bc6c7d64ce2_13265330 (Smarty_Internal_Template $_smarty_tpl)
             <span class="nav-link-text">Thống kê</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti4">
-            <li>
-              <a href="thong_ke_san_pham.php">Sản Phẩm</a>
-            </li>
             <li>
               <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
