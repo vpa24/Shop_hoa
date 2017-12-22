@@ -3,7 +3,6 @@ $(document).ready(function(){
     url:"so_luong_ban_theo_ngay_dat.php",
     method:"GET",
     success:function(data){
-      console.log(data);
       var soluong_ban=[];
       var ngaydat=[];
       var obj=jQuery.parseJSON(data);

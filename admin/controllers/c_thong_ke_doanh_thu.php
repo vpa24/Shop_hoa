@@ -17,9 +17,11 @@ class C_thong_ke_doanh_thu
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");
     }
-    function json_doanh_theo_theo_san_pham(){
-
-      print json_encode($theo_sp, JSON_UNESCAPED_UNICODE);
+    function json_doanh_theo_theo_thang(){
+      include("models/m_thong_ke_doanh_thu.php");
+      $m_thong_ke_doanh_thu = new M_thong_ke_doanh_thu();
+      $theo_thang=$m_thong_ke_doanh_thu->theo_thang();
+      print json_encode($theo_thang, JSON_UNESCAPED_UNICODE);
     }
 }
 ?>

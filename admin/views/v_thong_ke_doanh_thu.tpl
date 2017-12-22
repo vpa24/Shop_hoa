@@ -11,7 +11,7 @@
 					</nav>
 					<div class="content-wrap">
 						{include file="views/thong_ke_theo_doanh_thu/v_theo_san_pham.tpl"}
-						<section id="section-fillup-2"><p>2</p></section>
+            {include file="views/thong_ke_theo_doanh_thu/v_theo_thang.tpl"}
 						<section id="section-fillup-3"><p>3</p></section>
 						<section id="section-fillup-4"><p>4</p></section>
 						<section id="section-fillup-5"><p>5</p></section>
