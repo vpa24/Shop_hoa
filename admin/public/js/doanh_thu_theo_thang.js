@@ -5,18 +5,18 @@ $(document).ready(function(){
     success:function(data){
       console.log(data);
       var thang=[];
-      var so_luong_ban=[];
+      var tong_tt=[];
       var obj=jQuery.parseJSON(data);
       for(var i in obj){
         thang.push('Tháng '+obj[i].thang);
-        so_luong_ban.push(obj[i].so_luong_ban);
+        tong_tt.push(obj[i].tong_tt);
       };
       var chardata={
         labels:thang,
         datasets:[
           {
-            label:"số lượng bán",
-            data:so_luong_ban,
+            label:"tổng thành tiền",
+            data:tong_tt,
             backgroundColor:"rgba(2,117,216,1)",
             borderColor:"rgba(2,117,216,1)"
           }
@@ -28,8 +28,24 @@ $(document).ready(function(){
         type:'bar',
         data:chardata,
         options: {
-        legend:{display:!1}
-        }
+          tooltips: {
+           mode: 'label',
+           label: 'mylabel',
+           callbacks: {
+               label: function(tooltipItem, data) {
+                   return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }, },
+        },
+
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function (tong_tt) {
+                            return accounting.formatNumber(tong_tt);
+                        }
+                    }
+                }]
+            },
+          }
       });
     },
     error:function(data){
