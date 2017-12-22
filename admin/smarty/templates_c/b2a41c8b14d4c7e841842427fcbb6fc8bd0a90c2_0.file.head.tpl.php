@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 14:33:11
+/* Smarty version 3.1.30, created on 2017-12-22 00:01:52
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bc6277e5237_67944938',
+  'unifunc' => 'content_5a3c4b70424dc7_53597883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a41c8b14d4c7e841842427fcbb6fc8bd0a90c2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1513866787,
+      1 => 1513900791,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bc6277e5237_67944938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3c4b70424dc7_53597883 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,13 @@ function content_5a3bc6277e5237_67944938 (Smarty_Internal_Template $_smarty_tpl)
   <!-- Custom styles for this template-->
   <link href="public/css/sb-admin.css" rel="stylesheet">
   <link href="public/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="public/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
+  <?php echo '<script'; ?>
+ src="public/js/modernizr.custom.js"><?php echo '</script'; ?>
+>
   <?php echo '<script'; ?>
  type="text/javascript" src="public/ckeditor/ckeditor.js"><?php echo '</script'; ?>
 >

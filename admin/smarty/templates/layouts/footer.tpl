@@ -9,7 +9,16 @@
   <script src="public/js/doanh_thu_theo_tuan.js"></script>
   <script src="public/js/sl_theo_tuan.js"></script>
   <script src="public/js/accounting.min.js"></script>
+  <script src="public/js/cbpFWTabs.js"></script>
+  <script>
+    (function() {
 
+      [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+        new CBPFWTabs( el );
+      });
+
+    })();
+  </script>
   <script>
     $('#price').number(true);
     $('#gia_khuyen_mai').number(true);

@@ -20,6 +20,11 @@
   <!-- Custom styles for this template-->
   <link href="public/css/sb-admin.css" rel="stylesheet">
   <link href="public/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="public/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
+  <script src="public/js/modernizr.custom.js"></script>
   <script type="text/javascript" src="public/ckeditor/ckeditor.js"></script>
 
     <!-- Bootstrap core JavaScript-->
