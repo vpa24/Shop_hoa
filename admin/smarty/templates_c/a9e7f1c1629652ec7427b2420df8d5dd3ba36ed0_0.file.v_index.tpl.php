@@ -1,3 +1,28 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-12-22 12:35:24
+  from "C:\wamp\www\shop_hoa-master\admin\views\v_index.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a3cedfc19fa60_13458961',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a9e7f1c1629652ec7427b2420df8d5dd3ba36ed0' => 
+    array (
+      0 => 'C:\\wamp\\www\\shop_hoa-master\\admin\\views\\v_index.tpl',
+      1 => 1513942260,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a3cedfc19fa60_13458961 (Smarty_Internal_Template $_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
+?>
 <div class="row">
     <div class="col-xl-3 col-sm-6 mb-3">
       <div class="card text-white bg-primary o-hidden h-100">
@@ -5,7 +30,8 @@
           <div class="card-body-icon">
             <i class="fa fa-fw fa-comments"></i>
           </div>
-          <div class="mr-5">{$dem_tin_tuc->dem} tin tức</div>
+          <div class="mr-5"><?php echo $_smarty_tpl->tpl_vars['dem_tin_tuc']->value->dem;?>
+ tin tức</div>
         </div>
         <a class="card-footer text-white clearfix small z-1" href="tin_tuc.php">
           <span class="float-left">Xem chi tiết</span>
@@ -21,7 +47,8 @@
           <div class="card-body-icon">
             <i class="fa fa-fw fa-list"></i>
           </div>
-          <div class="mr-5">{$dem_hoa->dem} sản phẩm đang bán</div>
+          <div class="mr-5"><?php echo $_smarty_tpl->tpl_vars['dem_hoa']->value->dem;?>
+ sản phẩm đang bán</div>
         </div>
         <a class="card-footer text-white clearfix small z-1" href="hoa.php">
           <span class="float-left">Xem chi tiết</span>
@@ -53,7 +80,9 @@
           <div class="card-body-icon">
             <i class="fa fa-fw fa-shopping-cart"></i>
           </div>
-          <div class="mr-5">{$so_hoa_don_trong_ngay->count} hóa đơn ngày {$day}</div>
+          <div class="mr-5"><?php echo $_smarty_tpl->tpl_vars['so_hoa_don_trong_ngay']->value->count;?>
+ hóa đơn ngày <?php echo $_smarty_tpl->tpl_vars['day']->value;?>
+</div>
         </div>
       </div>
     </div>
@@ -83,23 +112,41 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {foreach $doc_hoa_don as $hoa_don}
-                  <tr id="delete{$hoa_don->ma_hoa_don}">
+                  <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_hoa_don']->value, 'hoa_don');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['hoa_don']->value) {
+?>
+                  <tr id="delete<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
+">
                     <td>
-                      <a href="chi_tiet_hoa_don.php?ma_hoa_don={$hoa_don->ma_hoa_don}" title="Xem chi tiết đơn hàng" target="_blank">
-                        {$hoa_don->ma_hoa_don}
+                      <a href="chi_tiet_hoa_don.php?ma_hoa_don=<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
+" title="Xem chi tiết đơn hàng" target="_blank">
+                        <?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
+
                       </a>
                     </td>
-                    <td>{$hoa_don->ten_khach_hang}</td>
-                    <td>{$hoa_don->ngay_dat|date_format:'%d-%m-%Y'}</td>
-                    <td>{number_format($hoa_don->tong_thanh_tien)} đ</td>
-                    <td>{$hoa_don->trang_thai}</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ten_khach_hang;?>
+</td>
+                    <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['hoa_don']->value->ngay_dat,'%d-%m-%Y');?>
+</td>
+                    <td><?php echo number_format($_smarty_tpl->tpl_vars['hoa_don']->value->tong_thanh_tien);?>
+ đ</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->trang_thai;?>
+</td>
                     <td>
-                        <button type="button" onclick="updateAjax({$hoa_don->ma_hoa_don})" class="btn btn-success">Xử lý</button>
-                        <button type="button" onclick="deleteAjax({$hoa_don->ma_hoa_don})" class="btn btn-danger">Xóa</button>
+                        <button type="button" onclick="updateAjax(<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
+)" class="btn btn-success">Xử lý</button>
+                        <button type="button" onclick="deleteAjax(<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
+)" class="btn btn-danger">Xóa</button>
                     </td>
                   </tr>
-                  {/foreach}
+                  <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                 </tbody>
               </table>
@@ -123,6 +170,13 @@
         </div>
       </div>
     </div>
-	<script src="public/js/ajax/ajax_update_hoa_don.js"></script>
-    <script src="public/js/ajax/ajax_delete_hoa_don.js"></script>
-  <script src="public/js/Chart.min.js"></script>
+	<?php echo '<script'; ?>
+ src="public/js/ajax/ajax_update_hoa_don.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/js/ajax/ajax_delete_hoa_don.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="public/js/Chart.min.js"><?php echo '</script'; ?>
+><?php }
+}

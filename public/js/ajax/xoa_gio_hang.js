@@ -7,7 +7,9 @@ function xoagiohang(id){
                   $('#delete'+id).hide('slow');
                   swal("Sản phẩm đã xóa thành công", {
                       icon: "success",
-                  })
+                  }).then(function() {
+                        window.location="hoa-don.html";
+                    });
               }
           })
 }

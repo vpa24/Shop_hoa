@@ -18,6 +18,7 @@ class C_index
         include("models/m_tin_tuc.php");
         $m_tin_tuc=new M_tin_tuc();
         $tin_tuc=$m_tin_tuc->doc_tat_ca_su_kien();
+
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_index.tpl";
