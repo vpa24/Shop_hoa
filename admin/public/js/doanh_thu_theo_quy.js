@@ -1,18 +1,18 @@
 $(document).ready(function(){
   $.ajax({
-    url:"doanh_thu_theo_thang.php",
+    url:"doanh_thu_theo_quy.php",
     method:"GET",
     success:function(data){
       console.log(data);
-      var thang=[];
+      var quy=[];
       var tong_tt=[];
       var obj=jQuery.parseJSON(data);
       for(var i in obj){
-        thang.push('Tháng '+obj[i].thang);
+        quy.push('Quý '+obj[i].quy);
         tong_tt.push(obj[i].tong_tt);
       };
       var chardata={
-        labels:thang,
+        labels:quy,
         datasets:[
           {
             label:"tổng thành tiền",
@@ -23,7 +23,7 @@ $(document).ready(function(){
         ]
       };
 
-      var ctx=$('#myBarChartTheoThang');
+      var ctx=$('#myBarChartTheoQuy');
       var barGraph=new Chart(ctx,{
         type:'bar',
         data:chardata,

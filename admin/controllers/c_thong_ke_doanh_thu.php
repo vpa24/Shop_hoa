@@ -23,5 +23,20 @@ class C_thong_ke_doanh_thu
       $theo_thang=$m_thong_ke_doanh_thu->theo_thang();
       print json_encode($theo_thang, JSON_UNESCAPED_UNICODE);
     }
+    public function json_theo_quy()
+      {
+        include("models/m_thong_ke_doanh_thu.php");
+        $m_thong_ke_doanh_thu = new M_thong_ke_doanh_thu();
+        $quy1=$m_thong_ke_doanh_thu->theo_quy_1();
+        $quy2=$m_thong_ke_doanh_thu->theo_quy_2();
+        $quy3=$m_thong_ke_doanh_thu->theo_quy_3();
+        $quy4=$m_thong_ke_doanh_thu->theo_quy_4();
+
+        $mang[0] = array('quy' => 1,'tong_tt'=>$quy1->tong_tt );
+        $mang[1] = array('quy' => 2,'tong_tt'=>$quy2->tong_tt );
+        $mang[2] = array('quy' => 3,'tong_tt'=>$quy3->tong_tt );
+        $mang[3] = array('quy' => 4,'tong_tt'=>$quy4->tong_tt );
+        print json_encode($mang, JSON_UNESCAPED_UNICODE);
+      }
 }
 ?>

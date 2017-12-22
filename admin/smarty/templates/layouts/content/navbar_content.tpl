@@ -69,9 +69,6 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti4">
             <li>
-              <a href="thong_ke_san_pham.php">Sản Phẩm</a>
-            </li>
-            <li>
               <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
           </ul>
