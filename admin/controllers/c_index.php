@@ -50,11 +50,30 @@ class C_index {
       $so_luong_hoa_ban=$m_index->so_luong_hoa_ban();
       print json_encode($so_luong_hoa_ban, JSON_UNESCAPED_UNICODE);
     }
+    function getStartAndEndDate($week, $year)
+    {
+        $time = strtotime("1 January $year", time());
+        $day = date('w', $time);
+        $time += ((7*$week)+1-$day)*24*3600;
+        $return[0] = date('Y-n-j', $time);
+        $return[0]=date("d/m", strtotime($return[0]));
+        $time += 6*24*3600;
+        $return[1] = date('Y-n-j', $time);
+        $return[1]=date("d/m", strtotime($return[1]));
+        return $return;
+    }
     function json_doanh_thu_theo_tuan(){
       include("models/m_index.php");
       $m_index = new M_index();
       $doanh_thu_theo_tuan=$m_index->doanh_thu_theo_tuan();
-      print json_encode($doanh_thu_theo_tuan, JSON_UNESCAPED_UNICODE);
+      $i=0;
+      foreach ($doanh_thu_theo_tuan as $doanh_thu) {
+        $ngaybd=$this->getStartAndEndDate($doanh_thu->tuan,date('Y'))[0];
+        $ngaykt=$this->getStartAndEndDate($doanh_thu->tuan,date('Y'))[1];
+        $mang[$i] = array('tongtt'=>$doanh_thu->tong_tt,'ngay_trong_tuan'=>"$ngaybd - $ngaykt");
+        $i++;
+      }
+      print json_encode($mang, JSON_UNESCAPED_UNICODE);
     }
 }
 ?>

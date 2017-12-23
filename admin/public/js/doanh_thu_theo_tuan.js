@@ -3,15 +3,15 @@ $(document).ready(function(){
     url:"doanh_thu_theo_tuan.php",
     method:"GET",
     success:function(data){
-      var tuan=[];
+      var ngay_trong_tuan=[];
       var tong_tt=[];
       var obj=jQuery.parseJSON(data);
       for(var i in obj){
-        tuan.push('Tuần '+obj[i].tuan);
-        tong_tt.push(obj[i].tong_tt);
+        ngay_trong_tuan.push(obj[i].ngay_trong_tuan);
+        tong_tt.push(obj[i].tongtt);
       };
       var chardata={
-        labels:tuan,
+        labels:ngay_trong_tuan,
         datasets:[
           {
             label:"tổng số tiền",
