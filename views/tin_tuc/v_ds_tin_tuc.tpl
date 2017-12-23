@@ -1,4 +1,4 @@
-<div class="col-main col-lg-10 col-md-10 col-sm-12 col-xs-12 content-color color f-right">
+<div class="col-main col-md-12 content-color color f-right">
     <div class="category-products">
         <ul class="products-grid row">
             {foreach $tin_tuc as $tin}
@@ -18,7 +18,7 @@
                                 <div class="price-box">
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Ngày đăng:</span>
-                                        <span class="price" id="product-minimal-price-2678">{$tin->ThoiGian} </span>
+                                        <span class="price" id="product-minimal-price-2678">{$tin->ThoiGian|date_format:'%d-%m-%Y'} </span>
                                     </a>
                                 </div>
                             </div>

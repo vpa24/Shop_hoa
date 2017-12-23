@@ -3160,7 +3160,7 @@ a.detail_links {
 
 .products-grid .item, .products-grid .item .category-products-grid {
   background-color: #fff;
-  transition: all 0.3s
+  transition: all 0.3s;
 }
 
 .images-container {
@@ -3169,7 +3169,7 @@ a.detail_links {
 }
 
 .products-grid {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .link-view {
@@ -4330,14 +4330,33 @@ button.button {
   margin-bottom:10%; /* Don't copy this */
 }
 .stylish-input-group .input-group-addon{
-  background: white !important; 
+  background: white !important;
 }
 .stylish-input-group .form-control{
-border-right:0; 
-box-shadow:0 0 0; 
+border-right:0;
+box-shadow:0 0 0;
 border-color:#ccc;
 }
 .stylish-input-group button{
   border:0;
   background:transparent;
+}
+.tt-name{
+  line-height: 20px;
+  height: 40px;
+}
+.tt{
+  width: 312px;
+  height: 350px;
+  margin: 5px;
+}
+.chi_tiet_tt{
+  padding-left: 30px;
+}
+.ten_tt{
+  padding: 20px 20px 0 30px;
+  color:#FF30B3;
+}
+.ngay_dang{
+  padding: 0 0 20px 30px;
 }

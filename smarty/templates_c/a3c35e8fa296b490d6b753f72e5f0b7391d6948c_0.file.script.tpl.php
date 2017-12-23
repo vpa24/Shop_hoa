@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 13:07:01
+/* Smarty version 3.1.30, created on 2017-12-23 01:52:51
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bb1f5127990_08081097',
+  'unifunc' => 'content_5a3db6f3a7f572_45082800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1513861342,
+      1 => 1513941449,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bb1f5127990_08081097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3db6f3a7f572_45082800 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
- src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
+ src="public/js/jquery.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="public/js/jquery.js"><?php echo '</script'; ?>
+ src="public/js/gio_hang.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/jquery.gotop.js"><?php echo '</script'; ?>
@@ -40,28 +40,10 @@ echo '<script'; ?>
  src="public/js/chat.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="public/js/slider.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
  src="public/js/slider/bxslider.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/slider/script.slider.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/jquery.elevatezoom.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/jquery.elevateZoom-3.0.8.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/imagezoom.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/custom.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/gio_hang.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  type="text/javascript">

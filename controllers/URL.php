@@ -40,6 +40,18 @@
 
      }
       $string=trim($string);
+      $string=str_replace('?','',$string);
+      $string = str_replace(" / ","",$string);
+      $string = str_replace("/","",$string);
+      $string = str_replace(" - ","-",$string);
+      $string = str_replace("_","-",$string);
+      $string = str_replace(" ","-",$string);
+      $string = str_replace( "ß", "ss", $string);
+      $string = str_replace( "&", "", $string);
+      $string = str_replace( "%", "", $string);
+      $string = str_replace("----","",$string);
+      $string = str_replace("---","",$string);
+      $string = str_replace("--","",$string);
       $string=str_replace(' ','-',$string);
       $string=strtolower($string);
       return $string;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-19 15:13:31
+/* Smarty version 3.1.30, created on 2017-12-23 15:48:31
   from "C:\wamp64\www\shop_hoa-master\views\v_chi_tiet_tin_tuc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a392c9b99e514_18330140',
+  'unifunc' => 'content_5a3e7acfbad1f9_61865014',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ce69a693d507ab3a9542319d92092bc302539ff' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_chi_tiet_tin_tuc.tpl',
-      1 => 1513586802,
+      1 => 1514044090,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layouts/body/quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a392c9b99e514_18330140 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3e7acfbad1f9_61865014 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="container">
@@ -85,10 +85,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 </div>
                 
                 
-                <div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right">
-                    <h3 style="padding: 10px 0px 10px 0px"><?php echo $_smarty_tpl->tpl_vars['tin_tuc']->value->TenTT;?>
-</h3>
-                    <h5 style="padding: 10px 0px 10px 0px">Ngày đăng: <?php echo $_smarty_tpl->tpl_vars['tin_tuc']->value->ThoiGian;?>
+                <div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right chi_tiet_tt">
+                    <h1 class="ten_tt"><?php echo $_smarty_tpl->tpl_vars['tin_tuc']->value->TenTT;?>
+</h1>
+                    <h5 class="ngay_dang"><b>Ngày đăng:</b> <?php echo $_smarty_tpl->tpl_vars['tin_tuc']->value->ThoiGian;?>
 </h5>
                     <p><?php echo $_smarty_tpl->tpl_vars['tin_tuc']->value->NoiDung;?>
 </p>

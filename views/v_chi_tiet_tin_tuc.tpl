@@ -45,9 +45,9 @@
                 </div>
                 {* end left *}
                 {* right *}
-                <div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right">
-                    <h3 style="padding: 10px 0px 10px 0px">{$tin_tuc->TenTT}</h3>
-                    <h5 style="padding: 10px 0px 10px 0px">Ngày đăng: {$tin_tuc->ThoiGian}</h5>
+                <div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right chi_tiet_tt">
+                    <h1 class="ten_tt">{$tin_tuc->TenTT}</h1>
+                    <h5 class="ngay_dang"><b>Ngày đăng:</b> {$tin_tuc->ThoiGian}</h5>
                     <p>{$tin_tuc->NoiDung}</p>
                 </div>
                 {* end right *}
