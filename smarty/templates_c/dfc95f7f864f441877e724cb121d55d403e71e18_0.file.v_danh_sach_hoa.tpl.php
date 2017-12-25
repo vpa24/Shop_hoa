@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-25 10:28:23
+/* Smarty version 3.1.30, created on 2017-12-25 13:21:35
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a40d2c7030837_39166364',
+  'unifunc' => 'content_5a40fb5fc29d37_28604167',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1514197412,
+      1 => 1514208090,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a40d2c7030837_39166364 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a40fb5fc29d37_28604167 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row">
@@ -55,7 +55,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
-echo $_smarty_tpl->tpl_vars['hoa']->value->Gia;
+echo $_smarty_tpl->tpl_vars['hoa']->value->GiaKhuyenMai;
 $_prefixVariable1=ob_get_clean();
 echo number_format($_prefixVariable1);?>
  ₫</span>

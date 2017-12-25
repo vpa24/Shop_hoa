@@ -17,7 +17,7 @@
                                 <div class="price-box">
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
-                                        <span class="price" id="product-minimal-price-2678">{number_format({$hoa->Gia})} ₫</span>
+                                        <span class="price" id="product-minimal-price-2678">{number_format({$hoa->GiaKhuyenMai})} ₫</span>
                                     </a>
                                 </div>
                             </div>

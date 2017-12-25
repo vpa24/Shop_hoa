@@ -30,19 +30,13 @@
                             <dt class="toggle-tab mobile even" style="display:none"></dt>
                             <dd class="Giá bán toggle-content odd">
                                 <ol>
-                                    <li class="tim_theo_gia">
-                                        <a href="http://www.hoa18.com/vn/shop-hoa-tp-ho-chi-minh-ha-noi/hoa-tuoi-chuc-mung-khai-truong?price=-1000000">
-                                            <span class="price">0&nbsp;₫</span> -
+                                    <li class="tim_theo_gia" id="0-500000">
+                                            <span class="price">0&nbsp;₫ - </span>
                                             <span class="price">{number_format(500000)}&nbsp;₫</span>
-                                            <span class="count">(25)</span>
-                                        </a>
                                     </li>
-                                    <li class="tim_theo_gia">
-                                        <a href="http://www.hoa18.com/vn/shop-hoa-tp-ho-chi-minh-ha-noi/hoa-tuoi-chuc-mung-khai-truong?price=-1000000">
-                                            <span class="price">{number_format(500000)}&nbsp;₫</span> -
+                                    <li class="tim_theo_gia" id="500000-1000000">
+                                            <span class="price">{number_format(500000)}&nbsp;₫ - </span> 
                                             <span class="price">{number_format(1000000)}&nbsp;₫</span>
-                                            <span class="count">(25)</span>
-                                        </a>
                                     </li>
                                 </ol>
                             </dd>

@@ -13,11 +13,19 @@ class C_ajax_danh_sach_hoa
         $ma_loai=$_POST['maloai'];
         $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai);
       }
+      if(isset($_POST['gia_1']) && isset($_POST['gia_2'])){
+        $gia_1=$_POST['gia_1'];
+        $gia_2=$_POST['gia_2'];
+        $doc_hoa=$m_hoa->doc_theo_gia($gia_1,$gia_2);
+      }
       $limit=9;
       $tong=count($doc_hoa);
       $vt=($page-1)*$limit;
         if(isset($_POST['maloai'])){
             $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai,$vt,$limit);
+        }
+        if(isset($_POST['gia_1']) && isset($_POST['gia_2'])){
+          $doc_hoa=$m_hoa->doc_theo_gia($gia_1,$gia_2,$vt,$limit);
         }
         else{
           $doc_hoa = $m_hoa->doc_tat_ca_hoa($vt,$limit);

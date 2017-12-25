@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-25 10:40:59
+/* Smarty version 3.1.30, created on 2017-12-25 13:37:24
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_tim_theo_loai_don_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a40d5bb7eefa9_85226749',
+  'unifunc' => 'content_5a40ff14cbae40_38478086',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f7e614bb474af1939261be3900f42f957388338' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_tim_theo_loai_don_gia.tpl',
-      1 => 1514198437,
+      1 => 1514208988,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a40d5bb7eefa9_85226749 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a40ff14cbae40_38478086 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-left sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12 left-color color f-left">
     <div class="anav-container">
@@ -65,22 +65,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                             <dt class="toggle-tab mobile even" style="display:none"></dt>
                             <dd class="Giá bán toggle-content odd">
                                 <ol>
-                                    <li class="tim_theo_gia">
-                                        <a href="http://www.hoa18.com/vn/shop-hoa-tp-ho-chi-minh-ha-noi/hoa-tuoi-chuc-mung-khai-truong?price=-1000000">
-                                            <span class="price">0&nbsp;₫</span> -
+                                    <li class="tim_theo_gia" id="0-500000">
+                                            <span class="price">0&nbsp;₫ - </span>
                                             <span class="price"><?php echo number_format(500000);?>
 &nbsp;₫</span>
-                                            <span class="count">(25)</span>
-                                        </a>
                                     </li>
-                                    <li class="tim_theo_gia">
-                                        <a href="http://www.hoa18.com/vn/shop-hoa-tp-ho-chi-minh-ha-noi/hoa-tuoi-chuc-mung-khai-truong?price=-1000000">
+                                    <li class="tim_theo_gia" id="500000-1000000">
                                             <span class="price"><?php echo number_format(500000);?>
-&nbsp;₫</span> -
+&nbsp;₫ - </span> 
                                             <span class="price"><?php echo number_format(1000000);?>
 &nbsp;₫</span>
-                                            <span class="count">(25)</span>
-                                        </a>
                                     </li>
                                 </ol>
                             </dd>

@@ -4409,3 +4409,9 @@ border-color:#ccc;
 .chon{
   color: #FF3366 !important;
 }
+.price{
+  color: #4B85C5;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
