@@ -4372,9 +4372,9 @@ border-color:#ccc;
   position: relative;
 }
 .hien-thi-tim-kiem, .hien-thi-tim-kiem0mobile{
-  position: absolute; 
+  position: absolute;
   width: 100%;
-  top: 100%; 
+  top: 100%;
   z-index: 100;
 }
 
@@ -4397,4 +4397,15 @@ border-color:#ccc;
 
 .ketQuaHoa a:hover{
   color:#ff30b3 !important;
+}
+.maLoai{
+  font-weight: 600;
+  color: #F57F17;
+  padding-left: 30px;
+}
+.maLoai:hover{
+  cursor: pointer;
+}
+.chon{
+  color: #FF3366 !important;
 }

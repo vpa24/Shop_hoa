@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 04:33:17
+/* Smarty version 3.1.30, created on 2017-12-25 10:40:59
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_tim_theo_loai_don_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a37450df3e052_15686062',
+  'unifunc' => 'content_5a40d5bb7eefa9_85226749',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f7e614bb474af1939261be3900f42f957388338' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_tim_theo_loai_don_gia.tpl',
-      1 => 1513571594,
+      1 => 1514198437,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a37450df3e052_15686062 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a40d5bb7eefa9_85226749 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-left sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12 left-color color f-left">
     <div class="anav-container">
@@ -38,12 +38,9 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['loai_hoa']->value) {
 ?>
                     <li>
-                        <a href="loai-hoa/<?php echo makeURL($_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai);?>
--<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
-">
-                            <span><?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
+                        <span class="maLoai" id="maloai_<?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->MaLoai;?>
+"><?php echo $_smarty_tpl->tpl_vars['loai_hoa']->value->TenLoai;?>
 </span>
-                        </a>
                     </li>
                     <?php
 }

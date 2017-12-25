@@ -10,9 +10,7 @@
                 <ul class="level0" style="display: block;">
                     {foreach $doc_loai_hoa as $loai_hoa}
                     <li>
-                        <a href="loai-hoa/{makeURL($loai_hoa->TenLoai)}-{$loai_hoa->MaLoai}">
-                            <span>{$loai_hoa->TenLoai}</span>
-                        </a>
+                        <span class="maLoai" id="maloai_{$loai_hoa->MaLoai}">{$loai_hoa->TenLoai}</span>
                     </li>
                     {/foreach}
                 </ul>
