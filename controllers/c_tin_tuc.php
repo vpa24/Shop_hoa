@@ -2,21 +2,22 @@
 class C_tin_tuc
 {
   public function hien_thi_tin_tuc(){
+    include("c_data_contact.php");
     include("models/m_tin_tuc.php");
     $m_tin_tuc = new M_tin_tuc();
     $tin_tuc = $m_tin_tuc->doc_tat_ca_su_kien();
     include("Smarty_shop_hoa.php");
     include("URL.php");
     $smarty = new Smarty_Shop_Hoa();
-    $view = "views/v_tin_tuc.tpl";
     $title = "Trang tin tức";
-    $smarty->assign('title', $title);
+    $view = "views/v_tin_tuc.tpl";
+    include("c_smarty_info.php");
     $smarty->assign('tin_tuc', $tin_tuc);
-    $smarty->assign('view', $view);
     $smarty->display("layout.tpl");
   }
     public function hien_thi_ct_tin_tuc()
     {
+        include("c_data_contact.php");
         if (isset($_GET['ma_tin'])) {
             $ma_tin = $_GET['ma_tin'];
         }
@@ -29,10 +30,9 @@ class C_tin_tuc
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_chi_tiet_tin_tuc.tpl";
         $title = $tin_tuc->TenTT;
-        $smarty->assign('title', $title);
+        include("c_smarty_info.php");
         $smarty->assign('tin_tuc', $tin_tuc);
         $smarty->assign('tin_cung_loai', $tin_cung_loai);
-        $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
 }

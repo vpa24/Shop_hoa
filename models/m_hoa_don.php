@@ -4,7 +4,7 @@ class M_hoa_don extends database
 {
     public function luu_hoa_don($maKH, $tongtt)
     {
-        $sql="INSERT INTO  hoa_don values(?,?,now(),'0',?)";
+        $sql="INSERT INTO  hoa_don values(?,?,now(),'chưa xử lý',?)";
         $this->setQuery($sql);
         $param=array(null,$maKH,$tongtt);
         $result = $this->execute($param);

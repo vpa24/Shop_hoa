@@ -9,15 +9,16 @@ class C_khach_hang
 {
     public function khach_hang()
     {
+        include("c_data_contact.php");
         include("models/m_hoa.php");
         $m_hoa=new M_hoa();
         $hoa=$m_hoa->doc_tat_ca_hoa();
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
+        $title = "Thông tin khách hàng";
         $view = "views/v_khach_hang.tpl";
-        $smarty->assign('title', "Thông tin khách hàng");
+        include("c_smarty_info.php");
         $smarty->assign('hoa', $hoa);
-        $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
     public function luu_khach_hang(){

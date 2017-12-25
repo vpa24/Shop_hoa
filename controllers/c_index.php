@@ -4,6 +4,8 @@ class C_index
 {
     public function hien_thi_trang_index()
     {
+        include("c_data_contact.php");
+        //Model
         include("models/m_index.php");
         $m_index = new M_index();
         $doc_hoa = $m_index->doc_tat_ca_hoa();
@@ -23,7 +25,7 @@ class C_index
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_index.tpl";
         $title = "Trang chủ";
-        $smarty->assign('title', $title);
+        include("c_smarty_info.php");
         $smarty->assign('doc_hoa_moi', $doc_hoa_moi);
         $smarty->assign('doc_hoa_ban_chay', $doc_hoa_ban_chay);
         $smarty->assign('doc_hoa_khuyen_mai', $doc_hoa_khuyen_mai);
@@ -34,7 +36,6 @@ class C_index
         $smarty->assign('tin_tuc', $tin_tuc);
         $smarty->assign('doc_slider', $doc_slider);
         $smarty->assign('doc_thong_tin', $doc_thong_tin);
-        $smarty->assign('view', $view);
         $smarty->display("layout_trang_chu.tpl");
     }
 }

@@ -3,14 +3,18 @@
     <head>
       <base href="http://localhost/shop_hoa-master/" />
         <meta charset="UTF-8">
-        <meta name="author" content="BusinessMobile">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <!-- WEBSITE TITLE & DESCRIPTION -->
-        <title>{$title} | Shop hoa tươi</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <link href="public/images/fav.png" rel="shortcut icon" type="image/x-icon" />
+        <link rel="icon" href="public/images/{$favicon}" type="image/x-icon">
+        <link rel="shortcut icon" href="public/images/{$favicon}" type="image/x-icon" />
+        <title>{$title} | {$title_website}</title>
+        <meta name="description" content="{$description_website}" />
+        <meta name="keywords" content="{$keywords_website}">
+        <meta itemprop="image" content="{$image_seo}" />
+        <meta property="og:url" itemprop="url" content="{$url_seo}" />
+        <meta property="og:title" content="{$title} | {$title_website}" />
+        <meta property="og:description" content="{$description_website}" />
+        <meta property="og:image" content="public/images/{$image_seo}" />
         <!-- STYLE CSS -->
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="public/css/bootstrap.min.css">
@@ -26,7 +30,7 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
+        <!-- JS alert -->
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     </head>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-22 10:25:38
+/* Smarty version 3.1.30, created on 2017-12-24 00:00:34
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3cdda2d10262_51700638',
+  'unifunc' => 'content_5a3eee22537480_03539600',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1513938300,
+      1 => 1514073583,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3cdda2d10262_51700638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3eee22537480_03539600 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -97,17 +97,31 @@ function content_5a3cdda2d10262_51700638 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
+            <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
+            <span class="nav-link-text">Cài đặt thông tin</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti5">
+            <li>
+              <a href="seo.php">Seo</a>
+            </li>
+            <li>
+              <a href="contact.php">Liên hệ</a>
+            </li>
+            <li>
+              <a href="favicon.php">Favicon</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Cài đặt</span>
+            <span class="nav-link-text">Cài đặt tài khoản</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
               <a href="doi_mat_khau.php">Đổi mật khẩu</a>
-            </li>
-            <li>
-              <a href=".">SEO</a>
             </li>
           </ul>
         </li>

@@ -29,6 +29,11 @@ AND YEAR(ngay_dat) = YEAR(CURRENT_DATE()) group by week(ngay_dat)";
       $this->setQuery($sql);
       return $this->loadAllRows();
     }
+    function so_hoa_don_chua_duyet($day){
+        $sql = "select  COUNT(*) as count from hoa_don WHERE trang_thai = 'Chưa xử lý'";
+        $this->setQuery($sql);
+        return $this->loadRow(array($day));
+    }
     function so_hoa_don_trong_ngay($day){
         $sql = "select  COUNT(*) as count from hoa_don WHERE day(ngay_dat) = ?";
         $this->setQuery($sql);

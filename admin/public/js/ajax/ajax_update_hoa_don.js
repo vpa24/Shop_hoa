@@ -1,6 +1,6 @@
 function updateAjax(id){
     swal({
-        title: "Bạn đã xác nhận đơn hàng?",
+        title: "Bạn đã muốn xác nhận đơn hàng?",
         text: "Bạn đã xem thông tin và quyết định xác nhận đơn đặt hàng!",
         icon: "warning",
         buttons: true,

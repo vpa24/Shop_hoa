@@ -73,17 +73,31 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
+            <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
+            <span class="nav-link-text">Cài đặt thông tin</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti5">
+            <li>
+              <a href="seo.php">Seo</a>
+            </li>
+            <li>
+              <a href="contact.php">Liên hệ</a>
+            </li>
+            <li>
+              <a href="favicon.php">Favicon</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Cài đặt</span>
+            <span class="nav-link-text">Cài đặt tài khoản</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
               <a href="doi_mat_khau.php">Đổi mật khẩu</a>
-            </li>
-            <li>
-              <a href=".">SEO</a>
             </li>
           </ul>
         </li>

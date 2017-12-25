@@ -4,6 +4,8 @@ class C_chi_tiet_hoa
 {
     public function hien_thi_trang_chi_tiet_hoa()
     {
+        include("c_data_contact.php");
+        //model
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         }
@@ -12,15 +14,16 @@ class C_chi_tiet_hoa
         $hoa = $m_chi_tiet_hoa->doc_theo_ma_hoa($id);
         $maLoai = $hoa->MaLoai;
         $hoa_cung_loai = $m_chi_tiet_hoa->doc_hoa_cung_loai($maLoai, $id);
+
+        //view
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_chi_tiet_hoa.tpl";
         $title = $hoa->TenHoa;
-          include("URL.php");
-        $smarty->assign('title', $title);
+        include("URL.php");
+        include("c_smarty_info.php");
         $smarty->assign('hoa', $hoa);
         $smarty->assign('hoa_cung_loai', $hoa_cung_loai);
-        $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
 }

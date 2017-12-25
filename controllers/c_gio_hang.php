@@ -31,6 +31,7 @@ class C_gio_hang
     }
     public function xem_gio_hang()
     {
+        include("c_data_contact.php");
         if (isset($_SESSION['giohang'])) {
             include("models/m_hoa.php");
             $m_hoa=new M_hoa();
@@ -60,19 +61,20 @@ class C_gio_hang
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
         $view = "views/v_xem_gio_hang.tpl";
-        $smarty->assign('title', 'Giỏ hàng của bạn');
+        $title ="Giỏ hàng của bạn";
+        include("c_smarty_info.php");
         $smarty->assign('giohang', $giohang);
         $smarty->assign('hoa', $hoa);
-        $smarty->assign('view', $view);
         $smarty->display("layout.tpl");
     }
       public function DatHangThanhCong()
       {
+        include("c_data_contact.php");
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
+        $title ="Đặt hàng thành công";
         $view = "views/v_dh_thanh_cong.tpl";
-        $smarty->assign('title', 'Đặt hàng thành công');
-        $smarty->assign('view', $view);
+        include("c_smarty_info.php");
         $smarty->display("layout.tpl");
       }
 }

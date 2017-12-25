@@ -356,7 +356,6 @@ p {
   -moz-clip-path: url(#bsm_cart_shape);
   -o-clip-path: url(#bsm_cart_shape);
   clip-path: url(#bsm_cart_shape);
-  background-image: url(img/cart/background.png);
   background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -389,7 +388,6 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url(img/cart/background_hover.png);
   background-size: 100%;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -943,7 +941,10 @@ p {
 #bsm_contact_and_map .col-md-6 .bsm_contact_and_map_form div ul li {
   margin-left: 5px;
 }
-
+#bsm_contact_and_map iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
 /*------------------------------------------------------------------
 [ 20. Footer
 -------------------------------------------------------------------*/
@@ -4359,4 +4360,41 @@ border-color:#ccc;
 }
 .ngay_dang{
   padding: 0 0 20px 30px;
+}
+/*tim_kiem*/
+#search, #search-mobile{
+  width: 100%;
+  margin: 0 auto !important;
+  display: block;
+  padding: 10px;
+}
+.khung-tim-kiem, .khung-tim-kiem-mobile{
+  position: relative;
+}
+.hien-thi-tim-kiem, .hien-thi-tim-kiem0mobile{
+  position: absolute; 
+  width: 100%;
+  top: 100%; 
+  z-index: 100;
+}
+
+#result-tenHoa, #result-tenHoa-mobile{
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-left: 1px solid silver;
+  display: none;
+  background: white;
+}
+.ketQuaHoa{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0px 5px 0px 5px;
+}
+
+.ketQuaHoa a:hover{
+  color:#ff30b3 !important;
 }

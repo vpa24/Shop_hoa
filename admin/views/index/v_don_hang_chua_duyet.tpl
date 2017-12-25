@@ -4,7 +4,7 @@
       <div class="card-body-icon">
         <i class="fa fa-fw fa-support"></i>
       </div>
-      <div class="mr-5" style="font-size: 14px">12 đơn hàng chưa duyệt</div>
+      <div class="mr-5" style="font-size: 14px">{$so_hoa_don_chua_duyet->count} đơn hàng chưa duyệt</div>
     </div>
     <a class="card-footer text-white clearfix small z-1" href="#chua_duyet">
       <span class="float-left">Xem chi tiết</span>

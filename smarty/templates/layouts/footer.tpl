@@ -1,10 +1,10 @@
 <footer>
     <div class="container">
         <div class="col-sm-5 text-left">
-            © Bản quyền thuộc về Shop Hoa Online
+            © Bản quyền thuộc về {$title_website}
         </div>
         <div class="col-sm-7 text-right">
-            Điện hoa hiện đại 137 Nguyễn Chí Thanh | Email: nct@gmail.com | Hotline: 0165.453.3100
+            {$address} | Email: {$email} | Hotline: {$phone_number}
         </div>
     </div>
 </footer>
