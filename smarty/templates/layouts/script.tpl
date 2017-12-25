@@ -6,6 +6,7 @@
 <script src="public/js/ajax/ajax_tim_kiem-mobile.js"></script>
 <script src="public/js/gio_hang.js"></script>
 <script src="public/js/ajax/xoa_gio_hang.js"></script>
+<script src="public/js/ajax/ajax_phan_trang.js"></script>
 <script src="public/js/jquery.gotop.js"></script>
 <script src="public/js/slider/bxslider.min.js"></script>
 <script src="public/js/slider/script.slider.js"></script>

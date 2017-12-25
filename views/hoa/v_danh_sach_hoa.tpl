@@ -1,4 +1,3 @@
-<div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right">
     <div class="category-products">
         <ul class="products-grid row">
             {foreach $doc_hoa as $hoa}
@@ -36,5 +35,8 @@
         </ul>
     </div>
     <div class="bsm_products_pagination" >
-   {$phan_trang}
+      {for $i=1;$i<=$phan_trang;$i++}
+      <span class="pagination_link" id="{$i}">  {$i}</span>
+      {/for}
+</div>
 </div>

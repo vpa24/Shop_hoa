@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 23:27:30
+/* Smarty version 3.1.30, created on 2017-12-25 03:50:15
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3ee6629d6378_23359892',
+  'unifunc' => 'content_5a4075777c4ad0_51640099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1514071626,
+      1 => 1514173812,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3ee6629d6378_23359892 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4075777c4ad0_51640099 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -44,6 +44,9 @@ echo '<script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/ajax/xoa_gio_hang.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/js/ajax/ajax_phan_trang.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/jquery.gotop.js"><?php echo '</script'; ?>

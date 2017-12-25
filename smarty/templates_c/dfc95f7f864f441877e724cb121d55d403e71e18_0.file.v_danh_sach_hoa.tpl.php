@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 05:09:43
+/* Smarty version 3.1.30, created on 2017-12-25 05:14:34
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39f097989bf3_98406289',
+  'unifunc' => 'content_5a40893a38be83_00632196',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1513746565,
+      1 => 1514178635,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39f097989bf3_98406289 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a40893a38be83_00632196 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="col-main col-lg-9 col-md-9 col-sm-9 col-xs-12 content-color color f-right">
     <div class="category-products">
         <ul class="products-grid row">
             <?php
@@ -87,8 +86,20 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
         </ul>
     </div>
     <div class="bsm_products_pagination" >
-   <?php echo $_smarty_tpl->tpl_vars['phan_trang']->value;?>
+      <?php
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);
+$_smarty_tpl->tpl_vars['i']->value = 1;
+if ($_smarty_tpl->tpl_vars['i']->value <= $_smarty_tpl->tpl_vars['phan_trang']->value) {
+for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value <= $_smarty_tpl->tpl_vars['phan_trang']->value; $_smarty_tpl->tpl_vars['i']->value++) {
+?>
+      <span class="pagination_link" id="<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+">  <?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</span>
+      <?php }
+}
+?>
 
+</div>
 </div>
 <?php }
 }
