@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-25 13:21:35
+/* Smarty version 3.1.30, created on 2017-12-26 02:29:33
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a40fb5fc29d37_28604167',
+  'unifunc' => 'content_5a41b40d3d1d52_92925108',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1514208090,
+      1 => 1514255332,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a40fb5fc29d37_28604167 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a41b40d3d1d52_92925108 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row">
@@ -69,7 +69,7 @@ echo number_format($_prefixVariable1);?>
 ,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                               <?php } else { ?>
-                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
+                                <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 ,0,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                               <?php }?>

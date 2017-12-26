@@ -18,6 +18,14 @@ class M_hoa extends database
       $this->setQuery($sql);
       return $this->loadAllRows();
     }
+    function doc_theo_ma_loai_gia($maloai,$gia_1,$gia_2,$vt=-1,$limit=-1){
+      $sql = "select * from hoa where GiaKhuyenMai>=".$gia_1." and GiaKhuyenMai<=".$gia_2." and Maloai =".$maloai;
+      if($vt>=0 && $limit>0){
+           $sql.=" limit $vt,$limit";
+      }
+      $this->setQuery($sql);
+      return $this->loadAllRows();
+    }
     function doc_theo_gia($gia_1,$gia_2,$vt=-1,$limit=-1){
       $sql = "SELECT * FROM shop_hoa.hoa where GiaKhuyenMai>=".$gia_1." and GiaKhuyenMai<=".$gia_2;
       if($vt>=0 && $limit>0){

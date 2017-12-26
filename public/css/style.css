@@ -941,10 +941,12 @@ p {
 #bsm_contact_and_map .col-md-6 .bsm_contact_and_map_form div ul li {
   margin-left: 5px;
 }
+
 #bsm_contact_and_map iframe {
   width: 100% !important;
   height: 100% !important;
 }
+
 /*------------------------------------------------------------------
 [ 20. Footer
 -------------------------------------------------------------------*/
@@ -2859,7 +2861,8 @@ th {
   font-weight: 600;
   color: #FF3366;
 }
-.products-grid .tt-name a{
+
+.products-grid .tt-name a {
   font-size: 15px;
   line-height: normal;
   outline: 0 none;
@@ -2867,6 +2870,7 @@ th {
   font-weight: 600;
   color: #FF3366;
 }
+
 .ten_hoa {
   line-height: normal;
   outline: 0 none;
@@ -3488,6 +3492,7 @@ a.detail_links {
   border: 1px solid #5d84c3;
   padding: 15px;
 }
+
 .product-right-block {
   border-radius: 5px;
   border: 1px solid #5d84c3;
@@ -4177,13 +4182,12 @@ button.button {
 .tong_sl {
   font-family: monospace;
   margin-left: -3px;
-  padding-top:6px;
+  padding-top: 6px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
   color: #fff;
   position: absolute;
-
 }
 
 .hinh_gio_hang {
@@ -4277,108 +4281,136 @@ button.button {
   background-color: #FBFAF9;
   width: 250px;
 }
-.khach_hang{
+
+.khach_hang {
   margin-bottom: 50px;
 }
-.thong_tin{
+
+.thong_tin {
   font-weight: 400;
-  color:#00B6F0;
+  color: #00B6F0;
 }
-.border_bottom{
+
+.border_bottom {
   padding: 10px;
   border-bottom: 1px solid #999;
 }
-.border_bottom_1px{
+
+.border_bottom_1px {
   border-bottom: 1px dotted #999;
 }
-.canh_phai{
+
+.canh_phai {
   text-align: right;
   margin-right: 25px;
   margin-top: -18px;
 }
-.san_pham{
+
+.san_pham {
   padding: 10px 0 20px 10px;
 }
-.ten_hoa_kh{
+
+.ten_hoa_kh {
   font-size: 14px;
   margin-right: 10px;
 }
-.sl_kh{
+
+.sl_kh {
   font-size: 14px;
 }
-.tong_kh{
+
+.tong_kh {
   text-align: right;
 }
-.thanh_tien{
+
+.thanh_tien {
   padding-top: 10px;
 }
-.chu_in{
+
+.chu_in {
   font-weight: bold;
 }
-.tong_thanh_tien{
+
+.tong_thanh_tien {
   font-size: 18px;
   float: right;
   margin-top: -5px;
   color: #009900;
 }
-.bang_don_hang{
+
+.bang_don_hang {
   height: 30px;
 }
-.tt{
+
+.tt {
   margin: 5px;
 }
-#imaginary_container{
-  margin-bottom:10%; /* Don't copy this */
+
+#imaginary_container {
+  margin-bottom: 10%;
+  /* Don't copy this */
 }
-.stylish-input-group .input-group-addon{
+
+.stylish-input-group .input-group-addon {
   background: white !important;
 }
-.stylish-input-group .form-control{
-border-right:0;
-box-shadow:0 0 0;
-border-color:#ccc;
+
+.stylish-input-group .form-control {
+  border-right: 0;
+  box-shadow: 0 0 0;
+  border-color: #ccc;
 }
-.stylish-input-group button{
-  border:0;
-  background:transparent;
+
+.stylish-input-group button {
+  border: 0;
+  background: transparent;
 }
-.tt-name{
+
+.tt-name {
   line-height: 20px;
   height: 40px;
 }
-.tt{
+
+.tt {
   width: 312px;
   height: 350px;
   margin: 5px;
 }
-.chi_tiet_tt{
+
+.chi_tiet_tt {
   padding-left: 30px;
 }
-.ten_tt{
+
+.ten_tt {
   padding: 20px 20px 0 30px;
-  color:#FF30B3;
+  color: #FF30B3;
 }
-.ngay_dang{
+
+.ngay_dang {
   padding: 0 0 20px 30px;
 }
+
 /*tim_kiem*/
-#search, #search-mobile{
+
+#search, #search-mobile {
   width: 100%;
   margin: 0 auto !important;
   display: block;
   padding: 10px;
 }
-.khung-tim-kiem, .khung-tim-kiem-mobile{
+
+.khung-tim-kiem, .khung-tim-kiem-mobile {
   position: relative;
 }
-.hien-thi-tim-kiem, .hien-thi-tim-kiem0mobile{
+
+.hien-thi-tim-kiem, .hien-thi-tim-kiem0mobile {
   position: absolute;
   width: 100%;
   top: 100%;
   z-index: 100;
 }
 
-#result-tenHoa, #result-tenHoa-mobile{
+#result-tenHoa, #result-tenHoa-mobile {
   padding: 10px;
   width: 100%;
   margin: 0 auto;
@@ -4388,28 +4420,33 @@ border-color:#ccc;
   display: none;
   background: white;
 }
-.ketQuaHoa{
+
+.ketQuaHoa {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 0px 5px 0px 5px;
 }
 
-.ketQuaHoa a:hover{
-  color:#ff30b3 !important;
+.ketQuaHoa a:hover {
+  color: #ff30b3 !important;
 }
-.maLoai{
+
+.maLoai {
   font-weight: 600;
   color: #F57F17;
   padding-left: 30px;
 }
-.maLoai:hover{
+
+.maLoai:hover {
   cursor: pointer;
 }
-.chon{
+
+.chon {
   color: #FF3366 !important;
 }
-.price{
+
+.price {
   color: #4B85C5;
   cursor: pointer;
   font-size: 14px;

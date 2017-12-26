@@ -6,26 +6,34 @@ class C_ajax_danh_sach_hoa
       include("models/m_hoa.php");
       $m_hoa = new M_hoa();
       $doc_hoa = $m_hoa->doc_tat_ca_hoa();
-      if(isset($_POST['page'])){
-        $page=$_POST['page'];
-      }
+      $page=$_POST['page'];
       if(isset($_POST['maloai'])){
         $ma_loai=$_POST['maloai'];
         $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai);
       }
-      if(isset($_POST['gia_1']) && isset($_POST['gia_2'])){
-        $gia_1=$_POST['gia_1'];
-        $gia_2=$_POST['gia_2'];
+      elseif(isset($_POST['gia1']) && isset($_POST['gia2'])){
+        $gia_1=$_POST['gia1'];
+        $gia_2=$_POST['gia2'];
         $doc_hoa=$m_hoa->doc_theo_gia($gia_1,$gia_2);
+      }
+      elseif(isset($_POST['maloaigia']) && isset($_POST['loaigia1']) && isset($_POST['loaigia2'])){
+        $ma_loai=$_POST['maloaigia'];
+        $gia_1=$_POST['loaigia1'];
+        $gia_2=$_POST['loaigia2'];
+        $doc_hoa=$m_hoa->doc_theo_ma_loai_gia($ma_loai,$gia_1,$gia_2);
       }
       $limit=9;
       $tong=count($doc_hoa);
       $vt=($page-1)*$limit;
         if(isset($_POST['maloai'])){
-            $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai,$vt,$limit);
+          $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai,$vt,$limit);
+
         }
-        if(isset($_POST['gia_1']) && isset($_POST['gia_2'])){
+        elseif(isset($_POST['gia1']) && isset($_POST['gia2'])){
           $doc_hoa=$m_hoa->doc_theo_gia($gia_1,$gia_2,$vt,$limit);
+        }
+        elseif(isset($_POST['maloaigia']) && isset($_POST['loaigia1']) && isset($_POST['loaigia2'])){
+          $doc_hoa=$m_hoa->doc_theo_ma_loai_gia($ma_loai,$gia_1,$gia_2,$vt,$limit);
         }
         else{
           $doc_hoa = $m_hoa->doc_tat_ca_hoa($vt,$limit);

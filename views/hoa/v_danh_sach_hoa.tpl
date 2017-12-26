@@ -25,7 +25,7 @@
                               {if isset($smarty.session.tong_gio_hang)}
                                 <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},{$smarty.session.tong_gio_hang},{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                               {else}
-                                  <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},0,{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                                <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},0,{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                               {/if}
                         </div>
                     </div>
