@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-25 10:22:49
+/* Smarty version 3.1.30, created on 2017-12-27 13:30:59
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a40d1797729a3_36353747',
+  'unifunc' => 'content_5a43a0931807c7_57794807',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1514197365,
+      1 => 1514381446,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a40d1797729a3_36353747 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a43a0931807c7_57794807 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -38,6 +38,9 @@ echo '<script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/ajax/ajax_tim_kiem-mobile.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/js/ajax/ajax_gio_hang.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/gio_hang.js"><?php echo '</script'; ?>

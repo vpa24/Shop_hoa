@@ -6,7 +6,6 @@
     </div>
     <div class="col-md-2 bsm_logo">
         <a href=".">
-
             <img src="public/images/logo/{$logo}" alt="" style="width: 160px;height: 68px;">
         </a>
     </div>
@@ -69,15 +68,14 @@
             </div>
             <div class="col-md-6 col-sm-4">
                 <div class="bsm_virtual_cart">
-                    <a href="gio-hang.html" class="bsm_virtual_cart_content">
-                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
-                        <p class="sl_gio_hang">{if isset($smarty.session.tong_gio_hang)>0}
-                          <span class="tong_sl" id="session">
-                          {$smarty.session.tong_gio_hang}</span>
-                          {else}
-                          <span class="tong_sl">0</span>
-                        {/if}</p>
-                    </a>
+                    <div class="bsm_virtual_cart_content">
+                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang" onclick="show_cart()"/>
+                        <p class="sl_gio_hang">
+                          <span class="tong_sl" id="tong_sl_hoa">0</span>
+                        </p>
+                    </div>
+                    <div id="mycart"></div>
+                    <div class="cap_status"></div>
                 </div>
             </div>
         </div>
@@ -94,7 +92,6 @@
         </div>
         <div class="col-md-2">
             <a href=".">
-              
             <img src="public/images/logo/{$logo}" alt="" style="width: 165px;height: 130px;">
         </a>
         </div>

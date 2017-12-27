@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   phantrang(1);
   var maloai = 0;
   var gia1 = -1;
@@ -11,7 +11,7 @@ $(document).ready(function() {
       data: {
         page: page,
       },
-      success: function(data) {
+      success: function (data) {
         $('#ds_hoa').html(data);
         $('#' + page).addClass('active');
       },
@@ -26,7 +26,7 @@ $(document).ready(function() {
         maloai: maloai,
         page: page,
       },
-      success: function(data) {
+      success: function (data) {
         $('#ds_hoa').html(data);
         $('#' + page).addClass('active');
       },
@@ -42,7 +42,7 @@ $(document).ready(function() {
         gia2: gia2,
         page: page,
       },
-      success: function(data) {
+      success: function (data) {
         $('#ds_hoa').html(data);
         $('#' + page).addClass('active');
       },
@@ -59,33 +59,32 @@ $(document).ready(function() {
         loaigia2: gia2,
         page: page,
       },
-      success: function(data) {
+      success: function (data) {
         $('#ds_hoa').html(data);
         $('#' + page).addClass('active');
       },
     });
   }
+
   //click vao link phan trang
-  $(document).on('click', '.pagination_link', function() {
+  $(document).on('click', '.pagination_link', function () {
     var page = $(this).attr('id');
     phantrang(page);
-    if(maloai != 0 && gia1 != -1 && gia2 != -1){
-      //console.log('phantrang');
-        doctheoMaLoaiGia(maloai, gia1, gia2, page);
-    }
-    else if (maloai != 0) {
+    if (maloai != 0 && gia1 != -1 && gia2 != -1) {
+      doctheoMaLoaiGia(maloai, gia1, gia2, page);
+    } else if (maloai != 0) {
       doctheoMaLoai(maloai, page);
-    }
-    else if (gia1 != -1 && gia2 != -1) {
+    } else if (gia1 != -1 && gia2 != -1) {
       doctheoGia(gia1, gia2, page);
     }
+
     $('html, body').animate({
       scrollTop: 250,
     }, 'fast');
   });
 
   //ma loai
-  $(document).on('click', '.maLoai', function() {
+  $(document).on('click', '.maLoai', function () {
     var chuoiMaLoai = $(this).attr('id');
     maloai = chuoiMaLoai.replace('maloai_', '');
     if (gia1 != -1 && gia2 != -1) {
@@ -93,23 +92,24 @@ $(document).ready(function() {
     } else {
       doctheoMaLoai(maloai, 1);
     }
+
     $('html, body').animate({
       scrollTop: 250,
     }, 'fast');
   });
 
   //Giá
-  $(document).on('click', '.tim_theo_gia', function() {
+  $(document).on('click', '.tim_theo_gia', function () {
     var chuoiGia = $(this).attr('id');
     var mangGia = chuoiGia.split('-');
     gia1 = mangGia[0];
     gia2 = mangGia[1];
-    if(maloai != 0){
+    if (maloai != 0) {
       doctheoMaLoaiGia(maloai, gia1, gia2, 1);
-    }
-    else{
+    } else {
       doctheoGia(gia1, gia2, 1);
     }
+
     $('html, body').animate({
       scrollTop: 250,
     }, 'fast');

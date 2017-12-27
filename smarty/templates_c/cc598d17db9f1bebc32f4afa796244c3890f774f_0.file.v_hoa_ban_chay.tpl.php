@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 05:09:48
+/* Smarty version 3.1.30, created on 2017-12-26 12:32:07
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39f09c70f682_02668194',
+  'unifunc' => 'content_5a424147504683_66194613',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc598d17db9f1bebc32f4afa796244c3890f774f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_hoa_ban_chay.tpl',
-      1 => 1513746471,
+      1 => 1514291063,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39f09c70f682_02668194 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a424147504683_66194613 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu2" class="tab-pane fade in">
     <div class="category-products">
@@ -57,23 +57,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->Gia;
-$_prefixVariable2=ob_get_clean();
-echo number_format($_prefixVariable2);?>
+$_prefixVariable1=ob_get_clean();
+echo number_format($_prefixVariable1);?>
  ₫</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="actions-cart">
-                              <?php if (isset($_SESSION['tong_gio_hang'])) {?>
-                                <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
-,<?php echo $_SESSION['tong_gio_hang'];?>
-,<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->SoLuongSP;?>
-)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              <?php } else { ?>
                                   <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
 ,0,<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->SoLuongSP;?>
 )" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              <?php }?>
                             </div>
                         </div>
                     </div>

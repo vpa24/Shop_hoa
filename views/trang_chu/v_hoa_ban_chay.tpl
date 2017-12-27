@@ -23,11 +23,7 @@
                                 </div>
                             </div>
                             <div class="actions-cart">
-                              {if isset($smarty.session.tong_gio_hang)}
-                                <a  onclick="chuyen_huong_gio_hang({$hoa_ban_chay->MaHoa},{$smarty.session.tong_gio_hang},{$hoa_ban_chay->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {else}
                                   <a  onclick="chuyen_huong_gio_hang({$hoa_ban_chay->MaHoa},0,{$hoa_ban_chay->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {/if}
                             </div>
                         </div>
                     </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 23:27:30
+/* Smarty version 3.1.30, created on 2017-12-27 14:57:10
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3ee662805cb2_21753066',
+  'unifunc' => 'content_5a43b4c6b4c614_28069306',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1514071597,
+      1 => 1514386493,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3ee662805cb2_21753066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a43b4c6b4c614_28069306 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header class="row">
     <div id="bsm_header_mobile">
@@ -30,7 +30,6 @@ function content_5a3ee662805cb2_21753066 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="col-md-2 bsm_logo">
         <a href=".">
-
             <img src="public/images/logo/<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="" style="width: 160px;height: 68px;">
         </a>
@@ -97,16 +96,14 @@ function content_5a3ee662805cb2_21753066 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-md-6 col-sm-4">
                 <div class="bsm_virtual_cart">
-                    <a href="gio-hang.html" class="bsm_virtual_cart_content">
-                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
-                        <p class="sl_gio_hang"><?php if (isset($_SESSION['tong_gio_hang']) > 0) {?>
-                          <span class="tong_sl" id="session">
-                          <?php echo $_SESSION['tong_gio_hang'];?>
-</span>
-                          <?php } else { ?>
-                          <span class="tong_sl">0</span>
-                        <?php }?></p>
-                    </a>
+                    <div class="bsm_virtual_cart_content">
+                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang" onclick="show_cart()"/>
+                        <p class="sl_gio_hang">
+                          <span class="tong_sl" id="tong_sl_hoa">0</span>
+                        </p>
+                    </div>
+                    <div id="mycart"></div>
+                    <div class="cap_status"></div>
                 </div>
             </div>
         </div>
@@ -123,7 +120,6 @@ function content_5a3ee662805cb2_21753066 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-md-2">
             <a href=".">
-              
             <img src="public/images/logo/<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="" style="width: 165px;height: 130px;">
         </a>

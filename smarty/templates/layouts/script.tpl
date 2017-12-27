@@ -4,6 +4,7 @@
 <script src="public/js/custom.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem-mobile.js"></script>
+<script src="public/js/ajax/ajax_gio_hang.js"></script>
 <script src="public/js/gio_hang.js"></script>
 <script src="public/js/ajax/xoa_gio_hang.js"></script>
 <script src="public/js/ajax/ajax_phan_trang.js"></script>

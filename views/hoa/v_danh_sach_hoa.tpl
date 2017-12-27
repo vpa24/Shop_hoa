@@ -6,7 +6,7 @@
                     <div class="images-container">
                         <div class="product-hover">
                             <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}" class="product-image">
-                                <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}"  alt="{$hoa->TenHoa}">
+                                <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}" alt="{$hoa->TenHoa}">
                             </a>
                         </div>
                         <h2 class="product-name">
@@ -22,11 +22,7 @@
                                 </div>
                             </div>
                             <div class="actions-cart">
-                              {if isset($smarty.session.tong_gio_hang)}
-                                <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},{$smarty.session.tong_gio_hang},{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {else}
-                                <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},0,{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {/if}
+                                <a  onclick="cart({$hoa->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 15:25:42
+/* Smarty version 3.1.30, created on 2017-12-26 12:28:41
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_chi_tiet_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3e7576e83864_34227192',
+  'unifunc' => 'content_5a4240791ecd63_80149610',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '05b8861e81c4779be3154b9ede444433988e77bc' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_chi_tiet_hoa.tpl',
-      1 => 1513956545,
+      1 => 1514291296,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3e7576e83864_34227192 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4240791ecd63_80149610 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-md-5 product-left-block">
     <div class="product-name"><h1><?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
@@ -49,26 +49,14 @@ echo number_format($_prefixVariable1);?>
           </div>
         </div>
         <div class="add-to-cart" style="margin: 0px 0px 10px 0px">
-          <?php if (isset($_SESSION['tong_gio_hang'])) {?>
-            <button type="button" title="Mua ngay" name="them" class="button btn-cart" onclick="kt_sl_mua(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
-,<?php echo $_SESSION['tong_gio_hang'];?>
-,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
-)">
-                <span>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <span class="view-cart"> Mua ngay</span>
-                </span>
-            </button>
-          <?php } else { ?>
           <button type="button" title="Mua ngay" name="them" class="button btn-cart" onclick="kt_sl_mua(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
-,0,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
+,<?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 )">
               <span>
                   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                   <span class="view-cart"> Mua ngay</span>
               </span>
           </button>
-          <?php }?>
         </div>
     </div>
 </div>
