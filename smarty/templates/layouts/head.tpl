@@ -22,9 +22,8 @@
         <link rel="stylesheet" href="public/css/animate.css">
         <link rel="stylesheet" type="text/css" href="public/css/css-font.css" media="all" />
         <link rel="stylesheet" href="public/css/danh-muc-css.css">
-        <link rel="stylesheet" href="public/css/style.css">
-        <link rel="stylesheet" href="public/css/responsive.css">
-
+        <link rel="stylesheet" href="public/css/style.css" />
+        <link rel="stylesheet" href="public/css/cart.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>

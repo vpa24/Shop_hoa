@@ -18,8 +18,8 @@
     </div>
     <div class="tab-content">
         {include file="views/trang_chu/v_mau_hoa_moi.tpl" }
-        {include file="views/trang_chu/v_hoa_ban_chay.tpl" }
-        {include file="views/trang_chu/v_hoa_giam_gia.tpl" }
+        {include file="views/trang_chu/v_mau_hoa_ban_chay.tpl" }
+        {include file="views/trang_chu/v_mau_hoa_giam_gia.tpl" }
     </div>
 </div>
 {include file="layouts/body/quang_cao.tpl"}
@@ -34,3 +34,4 @@
   	</div>
   </div>
 </div>
+{include file="views/v_gio_hang_ajax.tpl"}

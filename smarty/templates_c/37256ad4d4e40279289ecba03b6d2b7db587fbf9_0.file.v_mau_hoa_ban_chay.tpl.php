@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 12:36:24
+/* Smarty version 3.1.30, created on 2017-12-30 08:11:11
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a35134825c350_52485223',
+  'unifunc' => 'content_5a474a1f8c1e10_50786530',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37256ad4d4e40279289ecba03b6d2b7db587fbf9' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_ban_chay.tpl',
-      1 => 1513427778,
+      1 => 1514621469,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a35134825c350_52485223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a474a1f8c1e10_50786530 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu2" class="tab-pane fade in">
     <div class="category-products">
@@ -34,7 +34,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
-                            <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa);?>
+                            <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
 " class="product-image">
@@ -44,7 +44,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                             </a>
                         </div>
                         <h2 class="product-name">
-                        <a href="san-pham/<?php echo makeURL($_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa);?>
+                        <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
 "><?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->TenHoa;?>
@@ -56,7 +56,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
-echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->Gia;
+echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->GiaKhuyenMai;
 $_prefixVariable1=ob_get_clean();
 echo number_format($_prefixVariable1);?>
  ₫</span>
@@ -64,9 +64,8 @@ echo number_format($_prefixVariable1);?>
                                 </div>
                             </div>
                             <div class="actions-cart">
-                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
-)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                            </div>
+                                  <a  onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
+,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>

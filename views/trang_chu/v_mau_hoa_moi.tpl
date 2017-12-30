@@ -18,16 +18,12 @@
                                 <div class="price-box">
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
-                                        <span class="price" id="product-minimal-price-2678">{number_format({$hoa_moi->Gia})} ₫</span>
+                                        <span class="price" id="product-minimal-price-2678">{number_format({$hoa_moi->GiaKhuyenMai})} ₫</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="actions-cart" >
-                              {if isset($smarty.session.tong_gio_hang)}
-                                <a  onclick="chuyen_huong_gio_hang({$hoa_moi->MaHoa},{$smarty.session.tong_gio_hang},{$hoa_moi->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {else}
-                                  <a  onclick="chuyen_huong_gio_hang({$hoa_moi->MaHoa},0,{$hoa_moi->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {/if}
+                                  <a  onclick="addToCart({$hoa_moi->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

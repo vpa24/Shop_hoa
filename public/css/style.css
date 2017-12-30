@@ -347,10 +347,6 @@ p {
 /* 4.2 Virtual Cart */
 
 .bsm_virtual_cart {
-  width: 170px;
-  overflow: hidden;
-  height: 67px;
-  float: left;
   position: relative;
   -webkit-clip-path: url(#bsm_cart_shape);
   -moz-clip-path: url(#bsm_cart_shape);
@@ -360,13 +356,11 @@ p {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 0;
-  margin-top: 0;
+  margin-top: 30px;
   float: right;
 }
 
 .bsm_virtual_cart .bsm_virtual_cart_content {
-  width: 170px;
-  height: 67px;
   text-align: center;
   display: -webkit-box;
   display: -moz-box;
@@ -402,14 +396,6 @@ p {
 
 .bsm_virtual_cart .bsm_virtual_cart_content svg {
   fill: #C9D35D;
-}
-
-.bsm_virtual_cart .bsm_virtual_cart_content p {
-  color: #725754;
-  font-family: MuseoSans;
-  text-transform: uppercase;
-  line-height: 30px;
-  margin-bottom: -10px;
 }
 
 /* 4.3 Navigation Bar */
@@ -4174,8 +4160,8 @@ button.button {
   height: 20px;
   background-color: #43b668;
   position: absolute;
-  right: 60px;
-  top: 3px;
+  right: -12px;
+  top: -25px;
   z-index: 100;
 }
 
@@ -4453,7 +4439,7 @@ button.button {
   font-weight: 400;
 }
 
-#mycart
+/* #mycart
 {
 	display:none;
 	background:white;
@@ -4474,12 +4460,7 @@ button.button {
 	height:50px;
 	float:left;
 }
-#mycart .cart_items p
-{
-	margin:0px;
-	font-size:17px;
-	color:green;
-}
+
 
 #item_div{
 	width:86%;
@@ -4529,4 +4510,29 @@ button.button {
 {
 	color: green;
 }
-.cap_status{color:#fff; font-size:20px; float:right; margin-right:30px;  }
+.cap_status{color:#fff; font-size:20px; float:right; margin-right:30px;  } */
+#mycart
+{
+  width: 200px;
+  right:36px;
+  top:-20px;
+  position: absolute;
+}
+#mycart .cart_items
+{
+ border-bottom:1px dashed silver;
+ padding:20px;
+ padding-left:10px;
+}
+#mycart .cart_items p
+{
+	margin:0px;
+	font-size:17px;
+	color:green;
+}
+#mycart .cart_items img
+{
+ width:70px;
+ height:50px;
+ float:left;
+}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 23:27:30
+/* Smarty version 3.1.30, created on 2017-12-29 11:05:20
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3ee66291aa33_34970270',
+  'unifunc' => 'content_5a46217076e257_06727516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f9a0ae2224e9f396604497c8052d85613dcd18b' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\footer.tpl',
-      1 => 1514071553,
+      1 => 1514545441,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layouts/script.tpl' => 1,
   ),
 ),false)) {
-function content_5a3ee66291aa33_34970270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a46217076e257_06727516 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <footer>
     <div class="container">

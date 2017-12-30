@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-20 05:09:48
+/* Smarty version 3.1.30, created on 2017-12-29 13:15:47
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_moi.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39f09c366eb6_85063331',
+  'unifunc' => 'content_5a4640031d3b32_83688488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dc1702e3b19531b1d6d7ae19f98bbc7472175e5b' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_moi.tpl',
-      1 => 1513746516,
+      1 => 1514553283,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a39f09c366eb6_85063331 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4640031d3b32_83688488 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu1" class="tab-pane fade in active">
     <div class="category-products">
@@ -56,7 +56,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_moi']->value) {
                                     <a class="minimal-price-link">
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
-echo $_smarty_tpl->tpl_vars['hoa_moi']->value->Gia;
+echo $_smarty_tpl->tpl_vars['hoa_moi']->value->GiaKhuyenMai;
 $_prefixVariable1=ob_get_clean();
 echo number_format($_prefixVariable1);?>
  ₫</span>
@@ -64,16 +64,8 @@ echo number_format($_prefixVariable1);?>
                                 </div>
                             </div>
                             <div class="actions-cart" >
-                              <?php if (isset($_SESSION['tong_gio_hang'])) {?>
-                                <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
-,<?php echo $_SESSION['tong_gio_hang'];?>
-,<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->SoLuongSP;?>
-)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              <?php } else { ?>
-                                  <a  onclick="chuyen_huong_gio_hang(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
-,0,<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->SoLuongSP;?>
-)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              <?php }?>
+                                  <a  onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_moi']->value->MaHoa;?>
+,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

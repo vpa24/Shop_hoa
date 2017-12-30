@@ -11,12 +11,12 @@
     </div>
     <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
             <li ><a href=".">Trang chủ</a></li>
-            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
         </ul>
         <ul class="bsm_header_nav_left">
-            <li><a href="tin_tuc.php">Tin Tức</a></li>
-            <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
+            <li><a href="tin-tuc.html">Tin Tức</a></li>
+            <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
             <li><a href="lien-he.html">Liên hệ</a></li>
         </ul>
     </nav>
@@ -66,18 +66,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 col-sm-4">
-                <div class="bsm_virtual_cart">
-                    <div class="bsm_virtual_cart_content">
-                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang" onclick="show_cart()"/>
-                        <p class="sl_gio_hang">
-                          <span class="tong_sl" id="tong_sl_hoa">0</span>
-                        </p>
-                    </div>
-                    <div id="mycart"></div>
-                    <div class="cap_status"></div>
-                </div>
-            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -98,8 +86,8 @@
         <div class="col-md-5">
             <nav>
                 <ul class="bsm_header_nav_left">
-                    <li><a href="tin_tuc.php">Tin Tức</a></li>
-                    <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
+                    <li><a href="tin-tuc.html">Tin Tức</a></li>
+                    <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
                     <li><a href="lien-he.html">Liên hệ</a></li>
                 </ul>
             </nav>

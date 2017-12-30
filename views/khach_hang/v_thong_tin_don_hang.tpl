@@ -32,7 +32,7 @@
     </div>
     <div class="thanh_tien">
       <span class="chu_in">Thành tiền:</span>
-      <span class="tong_thanh_tien">{number_format($smarty.session.tongtt)} đ</span>
+      <span class="tong_thanh_tien">{number_format($smarty.session.tong_tt)} đ</span>
     </div>
   </div>
 </div>

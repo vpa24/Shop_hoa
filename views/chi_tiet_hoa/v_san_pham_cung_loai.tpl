@@ -26,12 +26,7 @@
                                     <span class="price" id="product-minimal-price-2678">{number_format({$hoa->Gia})} ₫</span>
                                 </a>
                             </div>
-                            <div class="actions-cart">
-                              {if isset($smarty.session.tong_gio_hang)}
-                                <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},{$smarty.session.tong_gio_hang},{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {else}
-                                  <a  onclick="chuyen_huong_gio_hang({$hoa->MaHoa},0,{$hoa->SoLuongSP})" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                              {/if}
+                            <div class="actions-cart">  <a  onclick="addToCart({$hoa->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </div>
               </div>

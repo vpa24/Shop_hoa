@@ -34,8 +34,8 @@ class M_hoa extends database
       $this->setQuery($sql);
       return $this->loadAllRows();
     }
-    function doc_ten_loai_hoa($ma_loai){
-      $sql="select * from loai_hoa where MaLoai=".$ma_loai;
+    function doc_hoa_theo_ma($ma_hoa){
+      $sql="select * from hoa where MaHoa=".$ma_hoa;
       $this->setQuery($sql);
       return $this->loadRow();
     }

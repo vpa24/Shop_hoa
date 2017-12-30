@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-27 14:57:10
+/* Smarty version 3.1.30, created on 2017-12-30 08:07:15
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a43b4c6b4c614_28069306',
+  'unifunc' => 'content_5a4749337c3649_64105278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1514386493,
+      1 => 1514621195,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a43b4c6b4c614_28069306 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header class="row">
     <div id="bsm_header_mobile">
@@ -36,12 +36,12 @@ function content_5a43b4c6b4c614_28069306 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
             <li ><a href=".">Trang chủ</a></li>
-            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
         </ul>
         <ul class="bsm_header_nav_left">
-            <li><a href="tin_tuc.php">Tin Tức</a></li>
-            <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
+            <li><a href="tin-tuc.html">Tin Tức</a></li>
+            <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
             <li><a href="lien-he.html">Liên hệ</a></li>
         </ul>
     </nav>
@@ -94,18 +94,6 @@ function content_5a43b4c6b4c614_28069306 (Smarty_Internal_Template $_smarty_tpl)
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 col-sm-4">
-                <div class="bsm_virtual_cart">
-                    <div class="bsm_virtual_cart_content">
-                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang" onclick="show_cart()"/>
-                        <p class="sl_gio_hang">
-                          <span class="tong_sl" id="tong_sl_hoa">0</span>
-                        </p>
-                    </div>
-                    <div id="mycart"></div>
-                    <div class="cap_status"></div>
-                </div>
-            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -127,8 +115,8 @@ function content_5a43b4c6b4c614_28069306 (Smarty_Internal_Template $_smarty_tpl)
         <div class="col-md-5">
             <nav>
                 <ul class="bsm_header_nav_left">
-                    <li><a href="tin_tuc.php">Tin Tức</a></li>
-                    <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
+                    <li><a href="tin-tuc.html">Tin Tức</a></li>
+                    <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
                     <li><a href="lien-he.html">Liên hệ</a></li>
                 </ul>
             </nav>

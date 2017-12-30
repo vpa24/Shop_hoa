@@ -6,4 +6,7 @@ RewriteRule ^loai-hoa/([a-zA-Z_-]+)-([0-9]+)$ hoa.php?ten_loai=$1&loai_hoa=$2
 RewriteRule ^tin-tuc/([a-zA-Z0-9_-]+)-([0-9]+).html$ ct_tin_tuc.php?ten_tin=$1&ma_tin=$2
 RewriteRule ^loai-hoa/([a-zA-Z_-]+)-([0-9]+)/page/([0-9+])$ hoa.php?ten_loai=$1&loai_hoa=$2&page=$3
 RewriteRule ^gio-hang.html$ xem_gio_hang.php
-RewriteRule ^xoa/([0-9]+)$ xoagiohang.php?id={$sp->MaHoa}
+RewriteRule ^khach-hang.html khach_hang.php
+RewriteRule ^tin-tuc.html tin_tuc.php
+RewriteRule ^check-hoa-don.html check_hoa_don.php
+RewriteRule ^gioi-thieu.html gioi_thieu.php

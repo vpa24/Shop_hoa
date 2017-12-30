@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-24 13:37:15
+/* Smarty version 3.1.30, created on 2017-12-28 09:31:40
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3fad8b7c4d34_38235786',
+  'unifunc' => 'content_5a44b9fc842726_05915381',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab79aff319a2d31a85653b5c33345ec41d2576f2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1514074657,
+      1 => 1514453497,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3fad8b7c4d34_38235786 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a44b9fc842726_05915381 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,9 +58,8 @@ function content_5a3fad8b7c4d34_38235786 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="public/css/animate.css">
         <link rel="stylesheet" type="text/css" href="public/css/css-font.css" media="all" />
         <link rel="stylesheet" href="public/css/danh-muc-css.css">
-        <link rel="stylesheet" href="public/css/style.css">
-        <link rel="stylesheet" href="public/css/responsive.css">
-
+        <link rel="stylesheet" href="public/css/style.css" />
+        <link rel="stylesheet" href="public/css/cart.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>

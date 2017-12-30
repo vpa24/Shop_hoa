@@ -38,7 +38,7 @@ class C_khach_hang
     {
         include("models/m_hoa_don.php");
         $m_hoa_don=new M_hoa_don();
-        $_SESSION['mahoadon']=$m_hoa_don->luu_hoa_don($ma_kh, $_SESSION['tongtt']);
+        $_SESSION['mahoadon']=$m_hoa_don->luu_hoa_don($ma_kh, $_SESSION['tong_tt']);
         foreach ($_SESSION["giohang"] as $k=>$value) {
             $m_hoa_don->luu_chi_tiet_hoa_don($k, $value,$_SESSION['mahoadon']);
         }
