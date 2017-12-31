@@ -2,7 +2,7 @@
     <div class="category-products">
         <ul class="products-grid row">
         {foreach $doc_hoa_khuyen_mai as $hoa_km}
-            <li class="item" id="hoa">
+            <li class="item hoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

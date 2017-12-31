@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 08:30:25
+/* Smarty version 3.1.30, created on 2017-12-31 12:51:39
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a474ea19ec3f2_82906883',
+  'unifunc' => 'content_5a48dd5b7e0ea4_42839859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1514622623,
+      1 => 1514724696,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a474ea19ec3f2_82906883 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a48dd5b7e0ea4_42839859 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -32,6 +32,9 @@ echo '<script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/custom.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/js/parallax.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/ajax/ajax_tim_kiem.js"><?php echo '</script'; ?>

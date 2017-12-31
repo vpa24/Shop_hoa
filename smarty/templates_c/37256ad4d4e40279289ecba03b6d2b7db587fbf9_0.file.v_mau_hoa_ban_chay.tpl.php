@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 02:32:14
+/* Smarty version 3.1.30, created on 2017-12-31 13:20:38
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a484c2e85c8a0_51926328',
+  'unifunc' => 'content_5a48e426963f73_10766532',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37256ad4d4e40279289ecba03b6d2b7db587fbf9' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_ban_chay.tpl',
-      1 => 1514687533,
+      1 => 1514726426,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a484c2e85c8a0_51926328 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a48e426963f73_10766532 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu2" class="tab-pane fade in">
     <div class="category-products">
@@ -30,7 +30,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
 ?>
-            <li class="item" id="hoa">
+            <li class="item hoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
@@ -57,8 +57,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->GiaKhuyenMai;
-$_prefixVariable2=ob_get_clean();
-echo number_format($_prefixVariable2);?>
+$_prefixVariable1=ob_get_clean();
+echo number_format($_prefixVariable1);?>
  ₫</span>
                                     </a>
                                 </div>

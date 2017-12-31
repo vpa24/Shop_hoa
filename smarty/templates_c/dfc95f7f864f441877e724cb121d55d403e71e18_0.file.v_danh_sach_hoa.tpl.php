@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 02:32:43
+/* Smarty version 3.1.30, created on 2017-12-31 13:31:22
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a484c4b32fb71_80042076',
+  'unifunc' => 'content_5a48e6aa543993_38894856',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1514687561,
+      1 => 1514727074,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a484c4b32fb71_80042076 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a48e6aa543993_38894856 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row">
@@ -29,7 +29,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 ?>
-            <li class="item" id="hoa">
+            <li class="item dshoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

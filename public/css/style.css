@@ -4466,6 +4466,14 @@ button.button {
 .sp_cung_loai{
   margin-bottom: 10px !important;
 }
-#hoa{
+.hoa, .dshoa{
   height: 370px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in-out;
+}
+.is-showing{
+  opacity: 1;
+  transform: translateX(0px);
 }

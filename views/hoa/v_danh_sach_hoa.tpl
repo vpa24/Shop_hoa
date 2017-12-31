@@ -1,7 +1,7 @@
     <div class="category-products">
         <ul class="products-grid row">
             {foreach $doc_hoa as $hoa}
-            <li class="item" id="hoa">
+            <li class="item dshoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

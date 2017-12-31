@@ -2,7 +2,7 @@
     <div class="category-products">
         <ul class="products-grid row">
         {foreach $doc_hoa_moi as $hoa_moi}
-            <li class="item" id="hoa">
+            <li class="item hoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
@@ -29,9 +29,9 @@
                             {else}
                                 <div class="notify"><button>Đã hết hàng</button></div>
                             {/if}
-                          </div>
                         </div>
                       </div>
+                  </div>
             </li>
     {/foreach}
         </ul>

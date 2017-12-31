@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 02:31:53
+/* Smarty version 3.1.30, created on 2017-12-31 13:20:38
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_giam_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a484c19bfd8e3_03965377',
+  'unifunc' => 'content_5a48e426c8be76_13511292',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '146c00083619b6aefb55fa5c913a2d603b6fe9a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_giam_gia.tpl',
-      1 => 1514687483,
+      1 => 1514726418,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a484c19bfd8e3_03965377 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a48e426c8be76_13511292 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">
@@ -30,7 +30,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa_km']->value) {
 ?>
-            <li class="item" id="hoa">
+            <li class="item hoa">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
@@ -57,8 +57,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_km']->value) {
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['hoa_km']->value->GiaKhuyenMai;
-$_prefixVariable1=ob_get_clean();
-echo number_format($_prefixVariable1);?>
+$_prefixVariable2=ob_get_clean();
+echo number_format($_prefixVariable2);?>
  ₫</span>
                                     </a>
                                 </div>
