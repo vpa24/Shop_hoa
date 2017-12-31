@@ -77,7 +77,7 @@ class C_khach_hang
   	 }
 
     }
-    public function  (){
+    public function luu_du_lieu(){
       $ma_kh=$this->luu_khach_hang();
       $this->luu_gio_hang($ma_kh);
       $this->CapNhapSoLuongGioHang();

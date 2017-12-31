@@ -13,7 +13,7 @@ class C_gio_hang
             $tong_sl=0;
             if (isset($_SESSION["giohang"])) {
                 foreach ($_SESSION["giohang"] as $k=>$value) {
-                  $tong_sl+=$value;
+                    $tong_sl+=$value;
                     if ($k==$id) {
                         $value+=$sl;
                         $_SESSION["giohang"][$id]=$value;
@@ -55,24 +55,34 @@ class C_gio_hang
     }
     public function tong_thanh_tien()
     {
-      if(isset($_POST['tong_tt'])){
-        echo  $_SESSION['tong_tt'];
-      }
-    }
-    public function xoa_gio_hang(){
-      if(isset($_POST["id"])) // Xóa một
-      {
-      	$id=$_POST["id"];
-      	unset($_SESSION["giohang"][$id]);
-        if(count($_SESSION["giohang"])==0)
-          session_destroy();
-        else{
-          $tong_sl=0;
-          foreach ($_SESSION["giohang"] as $k=>$value) {
-            $tong_sl+=$value;
-          }
-        $_SESSION['tong_gio_hang']=$tong_sl;
+        if (isset($_POST['tong_tt'])) {
+            echo  $_SESSION['tong_tt'];
         }
-      }
+    }
+    public function xoa_gio_hang()
+    {
+        if (isset($_POST["id"])) { // Xóa một
+            include("models/m_hoa.php");
+            $m_hoa=new M_hoa();
+            $hoa=$m_hoa->doc_tat_ca_hoa();
+            $id=$_POST["id"];
+            unset($_SESSION["giohang"][$id]);
+            if (count($_SESSION["giohang"])==0) {
+                session_destroy();
+            } else {
+                $tong_tt=0;
+                $tong_sl=0;
+                foreach ($_SESSION["giohang"] as $k=>$value) {
+                    foreach ($hoa as $sp) {
+                        if ($k==$sp->MaHoa) {
+                            $tong_tt+=$value*$sp->GiaKhuyenMai;
+                            $tong_sl+=$value;
+                        }
+                    }
+                }
+                $_SESSION['tong_gio_hang']=$tong_sl;
+                $_SESSION['tong_tt']=$tong_tt;
+            }
+        }
     }
 }
