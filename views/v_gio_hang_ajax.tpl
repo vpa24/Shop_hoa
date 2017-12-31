@@ -7,7 +7,7 @@
 	<a  class="cd-cart-trigger">
 		Cart
 		<ul class="count" id="count">
-      {if isset($smarty.session.tong_gio_hang)}<!-- cart items count -->
+      {if isset($smarty.session.tong_gio_hang)}
 			  <li>{$smarty.session.tong_gio_hang}</li>
 			  <li>{$smarty.session.tong_gio_hang}</li>
       {else}

@@ -3150,12 +3150,13 @@ a.detail_links {
 }
 
 .products-grid .item, .products-grid .item .category-products-grid {
+  height: 380px;
   background-color: #fff;
   transition: all 0.3s;
 }
 
 .images-container {
-  padding: 15px 25px 20px 25px;
+  padding: 15px 25px 0 25px;
   text-align: left;
 }
 
@@ -4511,28 +4512,55 @@ button.button {
 	color: green;
 }
 .cap_status{color:#fff; font-size:20px; float:right; margin-right:30px;  } */
-#mycart
-{
+
+#mycart {
   width: 200px;
-  right:36px;
-  top:-20px;
+  right: 36px;
+  top: -20px;
   position: absolute;
 }
-#mycart .cart_items
-{
- border-bottom:1px dashed silver;
- padding:20px;
- padding-left:10px;
+
+#mycart .cart_items {
+  border-bottom: 1px dashed silver;
+  padding: 20px;
+  padding-left: 10px;
 }
-#mycart .cart_items p
-{
-	margin:0px;
-	font-size:17px;
-	color:green;
+
+#mycart .cart_items p {
+  margin: 0px;
+  font-size: 17px;
+  color: green;
 }
-#mycart .cart_items img
-{
- width:70px;
- height:50px;
- float:left;
+
+#mycart .cart_items img {
+  width: 70px;
+  height: 50px;
+  float: left;
+}
+
+.notify {
+  margin-left: auto;
+  margin-right: auto;
+  color: green;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.notify button{
+  border: 0;
+font-size: 11px;
+width: 100%;
+color: #fff;
+display: block;
+font-weight: 400;
+padding: 4px 2px;
+text-align: center;
+background: #44AC52;
+border-radius: 2px;
+}
+.het_hang{
+  color: red !important;
+}
+.sp_cung_loai{
+  margin-bottom: 10px !important;
 }

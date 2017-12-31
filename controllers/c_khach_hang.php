@@ -77,13 +77,20 @@ class C_khach_hang
   	 }
 
     }
-    public function luu_du_lieu(){
+    public function  (){
       $ma_kh=$this->luu_khach_hang();
       $this->luu_gio_hang($ma_kh);
       $this->CapNhapSoLuongGioHang();
+
       //$this->GuiMail();
-      //session_destroy();
-      //header('Location: dh_thanh_cong.php');
+      session_destroy();
+      include("c_data_contact.php");
+      include("Smarty_shop_hoa.php");
+      $smarty = new Smarty_Shop_Hoa();
+      $title ="Đặt hàng thành công";
+      $view = "views/v_dh_thanh_cong.tpl";
+      include("c_smarty_info.php");
+      $smarty->display("layout.tpl");
 
     }
 }

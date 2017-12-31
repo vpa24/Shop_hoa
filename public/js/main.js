@@ -95,10 +95,7 @@ function xoagiohang(product, sl, gia) {
 }
 
 function updateCartTotal(price) {
-  console.log(tongThanhTien);
-  console.log(price);
   tongThanhTien = parseInt(tongThanhTien) + parseInt(price);
-  console.log(tongThanhTien);
   document.getElementById('tong_thanh_tien').innerHTML = numeral(tongThanhTien).format('0,0') + ' đ';
 }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 08:54:19
+/* Smarty version 3.1.30, created on 2017-12-31 02:07:26
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_san_pham_cung_loai.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a47543beeae66_19885015',
+  'unifunc' => 'content_5a48465e4d14d9_94094506',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e1971e9046e5b735c7d501180d5a97d332a109fb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_san_pham_cung_loai.tpl',
-      1 => 1514624053,
+      1 => 1514686045,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a47543beeae66_19885015 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a48465e4d14d9_94094506 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
   <ul class="magictabs">
@@ -57,7 +57,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
                     </h2>
                     <div class="actions-no hover-box">
                         <div class="actions">
-                            <div class="price-box">
+                            <div class="price-box sp_cung_loai">
                                 <a class="minimal-price-link">
                                     <span class="mua_online">Mua online:</span>
                                     <span class="price" id="product-minimal-price-2678"><?php ob_start();
@@ -67,9 +67,13 @@ echo number_format($_prefixVariable1);?>
  ₫</span>
                                 </a>
                             </div>
+                            <?php if ($_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP > 0) {?>
                             <div class="actions-cart">  <a  onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 ,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
                         </div>
+                        <?php } else { ?>
+                        <div class="notify"><button>Đã hết hàng</button></div>
+                        <?php }?>
                     </div>
               </div>
           </div>

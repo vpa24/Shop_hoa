@@ -10,8 +10,10 @@ class C_gio_hang
         if (isset($_POST['MaHoa']) && isset($_POST['sl'])) {
             $id=$_POST['MaHoa'];
             $sl=$_POST['sl'];
+            $tong_sl=0;
             if (isset($_SESSION["giohang"])) {
                 foreach ($_SESSION["giohang"] as $k=>$value) {
+                  $tong_sl+=$value;
                     if ($k==$id) {
                         $value+=$sl;
                         $_SESSION["giohang"][$id]=$value;
@@ -22,6 +24,7 @@ class C_gio_hang
             } else {
                 $_SESSION["giohang"][$id]=$sl;
             }
+            $_SESSION['tong_gio_hang']=$tong_sl;
         }
     }
     public function hien_gio_hang()
@@ -71,15 +74,5 @@ class C_gio_hang
         $_SESSION['tong_gio_hang']=$tong_sl;
         }
       }
-    }
-    public function DatHangThanhCong()
-    {
-        include("c_data_contact.php");
-        include("Smarty_shop_hoa.php");
-        $smarty = new Smarty_Shop_Hoa();
-        $title ="Đặt hàng thành công";
-        $view = "views/v_dh_thanh_cong.tpl";
-        include("c_smarty_info.php");
-        $smarty->display("layout.tpl");
     }
 }

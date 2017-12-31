@@ -6,7 +6,7 @@
                     <div class="images-container">
                         <div class="product-hover">
                             <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}" class="product-image">
-                                <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}" alt="{$hoa->TenHoa}">
+                                <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}"  alt="{$hoa->TenHoa}">
                             </a>
                         </div>
                         <h2 class="product-name">
@@ -21,8 +21,13 @@
                                     </a>
                                 </div>
                             </div>
+                              {if $hoa->SoLuongSP > 0}
                             <div class="actions-cart">
-                                <a  onclick="addToCart({$hoa->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                                <a onclick="addToCart({$hoa->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                              {else}
+                                <p class="notify"><button>Đã hết hàng</button></p>
+                              {/if}
                         </div>
                     </div>
                 </div>

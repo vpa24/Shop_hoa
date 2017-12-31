@@ -2,7 +2,7 @@
     <div class="category-products">
         <ul class="products-grid row">
         {foreach $doc_hoa_ban_chay as $hoa_ban_chay}
-            <li class="item mau_hoa_moi">
+            <li class="item">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
@@ -22,9 +22,13 @@
                                     </a>
                                 </div>
                             </div>
+                            {if $hoa_ban_chay->SoLuongSP >0}
                             <div class="actions-cart">
-                                  <a  onclick="addToCart({$hoa_ban_chay->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
-                        </div>
+                              <a  onclick="addToCart({$hoa_ban_chay->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                            {else}
+                              <div class="notify"><button>Đã hết hàng</button></div>
+                            {/if}
                     </div>
                 </div>
             </li>
