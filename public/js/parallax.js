@@ -9,14 +9,4 @@ $(window).scroll(function() {
       });
     }
   }
-
-  if ($('.item').hasClass('dshoa')) {
-    if (wScroll > $('.dshoa').offset().top - 300) {
-      $('.dshoa').each(function(i) {
-        setTimeout(function() {
-          $('.dshoa').eq(i).addClass('is-showing');
-        }, 150 * (i + 1));
-      });
-    }
-  }
 });

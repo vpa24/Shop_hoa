@@ -4439,7 +4439,6 @@ button.button {
   font-weight: 400;
 }
 
-
 .notify {
   margin-left: auto;
   margin-right: auto;
@@ -4448,7 +4447,8 @@ button.button {
   font-size: 12px;
   margin-top: 10px;
 }
-.notify button{
+
+.notify button {
   border: 0;
   font-size: 11px;
   width: 100%;
@@ -4460,20 +4460,45 @@ button.button {
   background: #44AC52;
   border-radius: 2px;
 }
-.het_hang{
+
+.het_hang {
   color: red !important;
 }
-.sp_cung_loai{
+
+.sp_cung_loai {
   margin-bottom: 10px !important;
 }
-.hoa, .dshoa{
+
+.hoa {
   height: 370px;
   position: relative;
   opacity: 0;
   transform: translateX(-20px);
   transition: all 0.3s ease-in-out;
 }
-.is-showing{
+
+.dshoa {
+  height: 370px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.is-visible {
+  animation: Items 200ms ease-in forwards
+}
+
+.is-showing {
   opacity: 1;
   transform: translateX(0px);
+}
+
+@keyframes Items {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
