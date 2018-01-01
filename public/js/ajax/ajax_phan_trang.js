@@ -34,6 +34,11 @@ $(document).ready(function () {
       success: function (data) {
         $('.ds_hoa').html(data);
         $('#' + page).addClass('active');
+        $('.item').each(function(i) {
+          setTimeout(function() {
+            $('.item').eq(i).addClass('is-visible');
+          }, 200 * i);
+        });
       },
     });
   }
@@ -50,6 +55,11 @@ $(document).ready(function () {
       success: function (data) {
         $('.ds_hoa').html(data);
         $('#' + page).addClass('active');
+        $('.item').each(function(i) {
+          setTimeout(function() {
+            $('.item').eq(i).addClass('is-visible');
+          }, 200 * i);
+        });
       },
     });
   }
@@ -67,6 +77,11 @@ $(document).ready(function () {
       success: function (data) {
         $('.ds_hoa').html(data);
         $('#' + page).addClass('active');
+        $('.item').each(function(i) {
+          setTimeout(function() {
+            $('.item').eq(i).addClass('is-visible');
+          }, 200 * i);
+        });
       },
     });
   }
