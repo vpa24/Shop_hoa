@@ -54,7 +54,6 @@ class C_khach_hang
       }
     }
     public function GuiMail($ma_hoa_don){
-      require_once("smtpgmail/class.phpmailer.php");
       $mail = new PHPMailer();
       $mail->IsSMTP(); // Chứng thực SMTP
     	$mail->SMTPAuth=TRUE;
@@ -91,7 +90,6 @@ class C_khach_hang
       $ma_kh=$this->luu_khach_hang();
       $ma_hoa_don=$this->luu_gio_hang($ma_kh);
       $this->CapNhapSoLuongGioHang();
-
       $this->GuiMail($ma_hoa_don);
       session_destroy();
       include("c_data_contact.php");
