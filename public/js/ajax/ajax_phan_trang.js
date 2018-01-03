@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   phantrang(1);
   var maloai = 0;
   var gia1 = -1;
@@ -11,14 +11,8 @@ $(document).ready(function () {
       data: {
         page: page,
       },
-      success: function (data) {
-        $('.ds_hoa').html(data);
-        $('#' + page).addClass('active');
-        $('.item').each(function(i) {
-          setTimeout(function() {
-            $('.item').eq(i).addClass('is-visible');
-          }, 200 * i);
-        });
+      success: function(data) {
+        hienthi(data, page);
       },
     });
   }
@@ -31,14 +25,8 @@ $(document).ready(function () {
         maloai: maloai,
         page: page,
       },
-      success: function (data) {
-        $('.ds_hoa').html(data);
-        $('#' + page).addClass('active');
-        $('.item').each(function(i) {
-          setTimeout(function() {
-            $('.item').eq(i).addClass('is-visible');
-          }, 200 * i);
-        });
+      success: function(data) {
+        hienthi(data, page);
       },
     });
   }
@@ -52,14 +40,8 @@ $(document).ready(function () {
         gia2: gia2,
         page: page,
       },
-      success: function (data) {
-        $('.ds_hoa').html(data);
-        $('#' + page).addClass('active');
-        $('.item').each(function(i) {
-          setTimeout(function() {
-            $('.item').eq(i).addClass('is-visible');
-          }, 200 * i);
-        });
+      success: function(data) {
+        hienthi(data, page);
       },
     });
   }
@@ -74,20 +56,14 @@ $(document).ready(function () {
         loaigia2: gia2,
         page: page,
       },
-      success: function (data) {
-        $('.ds_hoa').html(data);
-        $('#' + page).addClass('active');
-        $('.item').each(function(i) {
-          setTimeout(function() {
-            $('.item').eq(i).addClass('is-visible');
-          }, 200 * i);
-        });
+      success: function(data) {
+        hienthi(data, page);
       },
     });
   }
 
   //click vao link phan trang
-  $(document).on('click', '.pagination_link', function () {
+  $(document).on('click', '.pagination_link', function() {
     var page = $(this).attr('id');
     phantrang(page);
     if (maloai != 0 && gia1 != -1 && gia2 != -1) {
@@ -104,7 +80,7 @@ $(document).ready(function () {
   });
 
   //ma loai
-  $(document).on('click', '.maLoai', function () {
+  $(document).on('click', '.maLoai', function() {
     var chuoiMaLoai = $(this).attr('id');
     maloai = chuoiMaLoai.replace('maloai_', '');
     if (gia1 != -1 && gia2 != -1) {
@@ -119,7 +95,7 @@ $(document).ready(function () {
   });
 
   //Giá
-  $(document).on('click', '.tim_theo_gia', function () {
+  $(document).on('click', '.tim_theo_gia', function() {
     var chuoiGia = $(this).attr('id');
     var mangGia = chuoiGia.split('-');
     gia1 = mangGia[0];
@@ -135,3 +111,15 @@ $(document).ready(function () {
     }, 'fast');
   });
 });
+
+function hienthi(data, page) {
+  $('.ds_hoa').html(data);
+  $('#' + page).addClass('active');
+  if ($('.item').hasClass('dshoa')) {
+    $('.item').each(function(i) {
+      setTimeout(function() {
+        $('.item').eq(i).addClass('is-visible');
+      }, 200 * i);
+    });
+  }
+}

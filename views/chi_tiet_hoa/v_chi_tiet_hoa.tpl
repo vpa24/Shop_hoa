@@ -9,9 +9,6 @@
         </div>
         {if $hoa->SoLuongSP >0 }
         <p class="availability in-stock">Tình trạng: <span>Còn hàng</span></p>
-        {else}
-        <p class="availability in-stock">Tình trạng: <span class="het_hang">Đã hết hàng</span></p>
-        {/if}
         <div class="product-qty" style="margin: 0px 0px 10px 0px">
           <div class="sl">Số lượng:</div>
           <div class="quantity">
@@ -22,6 +19,9 @@
             </div>
           </div>
         </div>
+        {else}
+        <p class="availability in-stock">Tình trạng: <span class="het_hang">Đã hết hàng</span></p>
+        {/if}
         {if $hoa->SoLuongSP>0}
         <div class="add-to-cart" style="margin: 0px 0px 10px 0px">
           <button type="button" title="Mua ngay" name="them" class="button btn-cart" onclick="addToCartCT({$hoa->MaHoa})">
