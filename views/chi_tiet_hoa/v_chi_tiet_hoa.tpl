@@ -4,7 +4,7 @@
         <div class="price-box">
             <p class="old-price"><span class="price-label">Giá:</span></p>
             <p class="special-price">
-                <span class="price" id="product-price-2107">{number_format({$hoa->Gia})} ₫</span>
+                <span class="price" id="product-price-2107">{number_format({$hoa->GiaKhuyenMai})} ₫</span>
             </p>
         </div>
         {if $hoa->SoLuongSP >0 }

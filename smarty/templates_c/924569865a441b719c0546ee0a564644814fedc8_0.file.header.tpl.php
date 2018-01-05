@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-05 09:03:57
+/* Smarty version 3.1.30, created on 2018-01-05 09:25:27
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4f3f7dc85e71_68005495',
+  'unifunc' => 'content_5a4f4487d279e8_67798969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1515143032,
+      1 => 1515144325,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4f3f7dc85e71_68005495 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4f4487d279e8_67798969 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header class="row">
     <div id="bsm_header_mobile">
@@ -94,20 +94,6 @@ function content_5a4f3f7dc85e71_68005495 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="col-md-6 col-sm-4">
-                <div class="bsm_virtual_cart">
-                    <a href="gio-hang.html" class="bsm_virtual_cart_content">
-                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
-                        <p class="sl_gio_hang"><?php if (isset($_SESSION['tong_gio_hang']) > 0) {?>
-                          <span class="tong_sl" id="session">
-                          <?php echo $_SESSION['tong_gio_hang'];?>
-</span>
-                          <?php } else { ?>
-                          <span class="tong_sl">0</span>
-                        <?php }?></p>
-                    </a>
-                </div>
             </div>
         </div>
     </div>

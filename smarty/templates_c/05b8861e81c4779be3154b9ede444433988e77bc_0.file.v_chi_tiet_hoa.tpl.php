@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-03 03:12:45
+/* Smarty version 3.1.30, created on 2018-01-05 09:08:00
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_chi_tiet_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4c4a2df055c9_15726638',
+  'unifunc' => 'content_5a4f40701a1538_76103793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '05b8861e81c4779be3154b9ede444433988e77bc' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_chi_tiet_hoa.tpl',
-      1 => 1514949163,
+      1 => 1515143277,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4c4a2df055c9_15726638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4f40701a1538_76103793 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-md-5 product-left-block">
     <div class="product-name"><h1><?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
@@ -30,7 +30,7 @@ function content_5a4c4a2df055c9_15726638 (Smarty_Internal_Template $_smarty_tpl)
             <p class="old-price"><span class="price-label">Giá:</span></p>
             <p class="special-price">
                 <span class="price" id="product-price-2107"><?php ob_start();
-echo $_smarty_tpl->tpl_vars['hoa']->value->Gia;
+echo $_smarty_tpl->tpl_vars['hoa']->value->GiaKhuyenMai;
 $_prefixVariable1=ob_get_clean();
 echo number_format($_prefixVariable1);?>
  ₫</span>
