@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-30 08:07:15
+/* Smarty version 3.1.30, created on 2018-01-05 09:03:57
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4749337c3649_64105278',
+  'unifunc' => 'content_5a4f3f7dc85e71_68005495',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1514621195,
+      1 => 1515143032,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4f3f7dc85e71_68005495 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header class="row">
     <div id="bsm_header_mobile">
@@ -30,18 +30,19 @@ function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="col-md-2 bsm_logo">
         <a href=".">
+
             <img src="public/images/logo/<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="" style="width: 160px;height: 68px;">
         </a>
     </div>
     <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
             <li ><a href=".">Trang chủ</a></li>
-            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
         </ul>
         <ul class="bsm_header_nav_left">
-            <li><a href="tin-tuc.html">Tin Tức</a></li>
-            <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
+            <li><a href="tin_tuc.php">Tin Tức</a></li>
+            <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
             <li><a href="lien-he.html">Liên hệ</a></li>
         </ul>
     </nav>
@@ -94,6 +95,20 @@ function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl)
                     </li>
                 </ul>
             </div>
+            <div class="col-md-6 col-sm-4">
+                <div class="bsm_virtual_cart">
+                    <a href="gio-hang.html" class="bsm_virtual_cart_content">
+                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
+                        <p class="sl_gio_hang"><?php if (isset($_SESSION['tong_gio_hang']) > 0) {?>
+                          <span class="tong_sl" id="session">
+                          <?php echo $_SESSION['tong_gio_hang'];?>
+</span>
+                          <?php } else { ?>
+                          <span class="tong_sl">0</span>
+                        <?php }?></p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -108,6 +123,7 @@ function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-md-2">
             <a href=".">
+              
             <img src="public/images/logo/<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="" style="width: 165px;height: 130px;">
         </a>
@@ -115,8 +131,8 @@ function content_5a4749337c3649_64105278 (Smarty_Internal_Template $_smarty_tpl)
         <div class="col-md-5">
             <nav>
                 <ul class="bsm_header_nav_left">
-                    <li><a href="tin-tuc.html">Tin Tức</a></li>
-                    <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
+                    <li><a href="tin_tuc.php">Tin Tức</a></li>
+                    <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
                     <li><a href="lien-he.html">Liên hệ</a></li>
                 </ul>
             </nav>

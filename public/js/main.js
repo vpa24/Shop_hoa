@@ -15,6 +15,19 @@ function addToCartCT(MaHoa) {
   updateCartCount(true, sl);
   cartWrapper.removeClass('empty');
 }
+function tong_tt(){
+  $.ajax({
+    type: 'post',
+    url: 'tong_thanh_tien.php',
+    data: {
+      tong_tt: 'tong_tt',
+    },
+    success: function (response) {
+      tongThanhTien = response;
+      document.getElementById('tong_thanh_tien').innerHTML = numeral(response).format('0,0') + ' đ';
+    },
+  });
+}
 
 if (cartWrapper.length > 0) {
   //store jQuery objects
@@ -38,18 +51,7 @@ if (cartWrapper.length > 0) {
       },
     });
 
-    $.ajax({
-      type: 'post',
-      url: 'tong_thanh_tien.php',
-      data: {
-        tong_tt: 'tong_tt',
-      },
-      success: function(response) {
-        tongThanhTien = response;
-        document.getElementById('tong_thanh_tien').innerHTML = numeral(response).format('0,0') + ' đ';
-      },
-    });
-
+    tong_tt();
     event.preventDefault();
     toggleCart();
   });
@@ -66,13 +68,11 @@ function toggleCart(bool) {
 
   if (cartIsOpen) {
     cartWrapper.removeClass('cart-open');
-    //reset undo
+    $('.footer_gio_hang').show('slow');
     clearInterval(undoTimeoutId);
     cartList.find('.deleted').remove();
-
     setTimeout(function() {
       cartBody.scrollTop(0);
-      //check if cart empty to hide it
       if (Number(cartCount.find('li').eq(0).text()) == 0) cartWrapper.addClass('empty');
     }, 500);
   } else {
@@ -96,6 +96,8 @@ function xoagiohang(product, sl, gia) {
 
 function updateCartTotal(price) {
   tongThanhTien = parseInt(tongThanhTien) + parseInt(price);
+  if (tongThanhTien == 0)
+    $('.footer_gio_hang').hide('slow');
   document.getElementById('tong_thanh_tien').innerHTML = numeral(tongThanhTien).format('0,0') + ' đ';
 }
 

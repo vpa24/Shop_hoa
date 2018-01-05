@@ -6,17 +6,18 @@
     </div>
     <div class="col-md-2 bsm_logo">
         <a href=".">
+
             <img src="public/images/logo/{$logo}" alt="" style="width: 160px;height: 68px;">
         </a>
     </div>
     <nav id="bsm_header_mobile_nav"><ul class="bsm_header_nav_left">
             <li ><a href=".">Trang chủ</a></li>
-            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
             <li><a href="danh-sach-hoa">Hoa tươi</a></li>
         </ul>
         <ul class="bsm_header_nav_left">
-            <li><a href="tin-tuc.html">Tin Tức</a></li>
-            <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
+            <li><a href="tin_tuc.php">Tin Tức</a></li>
+            <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
             <li><a href="lien-he.html">Liên hệ</a></li>
         </ul>
     </nav>
@@ -66,6 +67,19 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-md-6 col-sm-4">
+                <div class="bsm_virtual_cart">
+                    <a href="gio-hang.html" class="bsm_virtual_cart_content">
+                        <img src="public/images/shopping-circle-blue-512.png" class="hinh_gio_hang"/>
+                        <p class="sl_gio_hang">{if isset($smarty.session.tong_gio_hang)>0}
+                          <span class="tong_sl" id="session">
+                          {$smarty.session.tong_gio_hang}</span>
+                          {else}
+                          <span class="tong_sl">0</span>
+                        {/if}</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -80,14 +94,15 @@
         </div>
         <div class="col-md-2">
             <a href=".">
+              
             <img src="public/images/logo/{$logo}" alt="" style="width: 165px;height: 130px;">
         </a>
         </div>
         <div class="col-md-5">
             <nav>
                 <ul class="bsm_header_nav_left">
-                    <li><a href="tin-tuc.html">Tin Tức</a></li>
-                    <li><a href="check-hoa-don.html">Check hóa đơn</a></li>
+                    <li><a href="tin_tuc.php">Tin Tức</a></li>
+                    <li><a href="check_hoa_don.php">Check hóa đơn</a></li>
                     <li><a href="lien-he.html">Liên hệ</a></li>
                 </ul>
             </nav>

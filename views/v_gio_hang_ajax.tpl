@@ -28,10 +28,15 @@
 					<!-- products added to the cart will be inserted here using JavaScript -->
 				</ul>
 			</div>
-			<footer>
-				<a href="khach-hang.html" alt="Xem giỏ hàng" class="checkout"><em>Đặt hàng - <span id="tong_thanh_tien">
-                                                                0 đ
-                                                            </span></em></a>
+		
+			<footer class='footer_gio_hang'>
+				<a href="khach-hang.html" alt="Xem giỏ hàng" class="checkout">
+					<em>Đặt hàng - 
+						<span id="tong_thanh_tien">
+          		 0 đ
+      			</span>
+					</em>
+				</a>
 			</footer>
 		</div>
 	</div> <!-- .cd-cart -->
