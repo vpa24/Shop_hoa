@@ -15,14 +15,56 @@ function addToCartCT(MaHoa) {
   updateCartCount(true, sl);
   cartWrapper.removeClass('empty');
 }
-function tong_tt(){
+
+function tang(mahoa) {
   $.ajax({
     type: 'post',
-    url: 'tong_thanh_tien.php',
+    url: 'tang_giam_sl_gio_hang.php',
     data: {
-      tong_tt: 'tong_tt',
+      tang: 'tang',
+      mahoa: mahoa,
     },
-    success: function (response) {
+    success: function(response) {
+      cap_nhap_gia_gio_hang(response, mahoa);
+      updateCartCount(true, 1);
+    },
+  });
+}
+
+function giam(mahoa) {
+  $.ajax({
+    type: 'post',
+    url: 'tang_giam_sl_gio_hang.php',
+    data: {
+      giam: true,
+      mahoa: mahoa,
+    },
+    success: function(response) {
+      cap_nhap_gia_gio_hang(response, mahoa);
+      updateCartCount(true, -1);
+    },
+  });
+}
+
+function cap_nhap_gia_gio_hang(response, mahoa) {
+  var sl = 0;
+  var tongTienTheoMaHoa = 0;
+  var mang = jQuery.parseJSON(response);
+  sl = mang.sl;
+  tongTienTheoMaHoa = mang.tongTienTheoMaHoa;
+  if (sl == 1)
+    document.getElementById('tru_' + mahoa).setAttribute("onClick", "xoagiohang(" + mahoa + "," + sl + "," + tongTienTheoMaHoa + ");");
+  document.getElementById('tong_' + mahoa).innerHTML = numeral(tongTienTheoMaHoa).format('0,0') + ' đ';
+  document.getElementById('gio_hang' + mahoa).innerHTML = sl;
+  document.getElementById('xoa_' + mahoa).setAttribute("onClick", "xoagiohang(" + mahoa + "," + sl + "," + tongTienTheoMaHoa + ");");
+  cap_nhap_tong_tt();
+
+}
+
+function cap_nhap_tong_tt() {
+  $.ajax({
+    url: 'cap_nhap_tong_tt.php',
+    success: function(response) {
       tongThanhTien = response;
       document.getElementById('tong_thanh_tien').innerHTML = numeral(response).format('0,0') + ' đ';
     },
@@ -51,7 +93,7 @@ if (cartWrapper.length > 0) {
       },
     });
 
-    tong_tt();
+    cap_nhap_tong_tt();
     event.preventDefault();
     toggleCart();
   });
@@ -80,15 +122,15 @@ function toggleCart(bool) {
   }
 }
 
-function xoagiohang(product, sl, gia) {
+function xoagiohang(mahoa, sl, gia) {
   $.ajax({
     type: 'post',
     url: 'xoagiohang.php',
     data: {
-      id: product,
+      mahoa: mahoa,
     },
   });
-  $('#delete' + product).hide('slow');
+  $('#delete' + mahoa).hide('slow');
   cartList.find('.deleted').remove();
   updateCartTotal(-gia);
   updateCartCount(true, -sl);

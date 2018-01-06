@@ -3817,22 +3817,8 @@ button.button {
 
 /*quantity*/
 
-.quantity {
-  margin: 0 25px;
-  float: left;
-}
-
 .quantity-select .entry.value-minus:hover, .quantity-select .entry.value-plus:hover {
   background: #E5E5E5;
-}
-
-.quantity-select .entry.value-minus {
-  margin-left: 0;
-  float: left;
-}
-
-.so_luong {
-  float: left;
 }
 
 .quantity {
@@ -4496,9 +4482,33 @@ button.button {
 
 @keyframes Items {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+
+.thu_nho {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.tru, .cong {
+  border: 1px solid #ccc;
+  line-height: 22px;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  color: darkorange;
+}
+.khung{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin: 0 3px;
+    border: 1px solid #ccc;
+    color: #1E7EC8;
+    font-weight: bold;
 }
