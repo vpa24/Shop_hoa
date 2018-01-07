@@ -54,6 +54,8 @@ function cap_nhap_gia_gio_hang(response, mahoa) {
   tongTienTheoMaHoa = mang.tongTienTheoMaHoa;
   if (sl == 1)
     document.getElementById('tru_' + mahoa).setAttribute("onClick", "xoagiohang(" + mahoa + "," + sl + "," + tongTienTheoMaHoa + ");");
+  else
+    document.getElementById('tru_' + mahoa).setAttribute("onClick", "giam(" + mahoa + ");");
   document.getElementById('tong_' + mahoa).innerHTML = numeral(tongTienTheoMaHoa).format('0,0') + ' đ';
   document.getElementById('gio_hang' + mahoa).innerHTML = sl;
   document.getElementById('xoa_' + mahoa).setAttribute("onClick", "xoagiohang(" + mahoa + "," + sl + "," + tongTienTheoMaHoa + ");");
