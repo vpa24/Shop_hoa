@@ -44,7 +44,11 @@ class C_gio_hang
                         echo "<img src='public/images/hoa/$sp->Hinh' ></div>";
                         echo "<div class='product-details'><h3>$sp->TenHoa</h3></div>";
                         echo "<div class='actions'><a id='xoa_$sp->MaHoa' onclick='xoagiohang($sp->MaHoa,$value,$sp->GiaKhuyenMai*$value)' href='javascript:void(0)'  class='delete-item'>Xóa</a></div>";
-                        echo "<div class='thu_nho tru' id='tru_$sp->MaHoa' onclick='giam($sp->MaHoa)'><i class='fa fa-minus' aria-hidden='true'></i></div>";
+                        if ($value==1) {
+                            echo "<div class='thu_nho tru' id='tru_$sp->MaHoa' onclick='xoagiohang($sp->MaHoa,$value,$sp->GiaKhuyenMai*$value)'><i class='fa fa-minus' aria-hidden='true'></i></div>";
+                        } else {
+                            echo "<div class='thu_nho tru' id='tru_$sp->MaHoa' onclick='giam($sp->MaHoa)'><i class='fa fa-minus' aria-hidden='true'></i></div>";
+                        }
                         echo "<div class='so_luong khung' id='gio_hang$sp->MaHoa'>$value</div>";
                         echo "<div class='thu_nho cong' onclick='tang($sp->MaHoa)'><i class='fa fa-plus' aria-hidden='true'></i></div>";
                         echo "<div class='price' id='tong_$sp->MaHoa'>".number_format($sp->GiaKhuyenMai*$value)." đ </div></li>";

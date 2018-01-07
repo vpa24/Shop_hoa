@@ -28,7 +28,7 @@
 					<!-- products added to the cart will be inserted here using JavaScript -->
 				</ul>
 			</div>
-		
+
 			<footer class='footer_gio_hang'>
 				<a href="khach-hang.html" alt="Xem giỏ hàng" class="checkout">
 					<em>Đặt hàng - 

@@ -15,8 +15,8 @@ class C_index {
         $doc_hoa_don=$m_hoa_don->xem_hoa_don_chua_xu_ly();
         //Hóa đơn trong ngày
         $day = date("d");
-        $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_trong_ngay($day);
-        $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet($day);
+        $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay($day);
+        $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay($day);
 
         //Controller
         include("Smarty_admin.php");

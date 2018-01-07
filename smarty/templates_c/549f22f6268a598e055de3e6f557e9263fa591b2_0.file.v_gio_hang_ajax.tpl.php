@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-05 08:51:02
+/* Smarty version 3.1.30, created on 2018-01-07 03:47:47
   from "C:\wamp64\www\shop_hoa-master\views\v_gio_hang_ajax.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4f3c76c0df60_24626125',
+  'unifunc' => 'content_5a51986347e857_70860052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '549f22f6268a598e055de3e6f557e9263fa591b2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_gio_hang_ajax.tpl',
-      1 => 1515142061,
+      1 => 1515296866,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4f3c76c0df60_24626125 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a51986347e857_70860052 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_SESSION['giohang'])) {?>
   <div class="cd-cart-container">
 <?php } else { ?>
@@ -53,7 +53,7 @@ if (isset($_SESSION['giohang'])) {?>
 					<!-- products added to the cart will be inserted here using JavaScript -->
 				</ul>
 			</div>
-		
+
 			<footer class='footer_gio_hang'>
 				<a href="khach-hang.html" alt="Xem giỏ hàng" class="checkout">
 					<em>Đặt hàng - 
