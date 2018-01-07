@@ -1,10 +1,10 @@
-<section id="section-fillup-5">
+<section id="section-fillup-3">
   <div class="row">
     <div class="col-sm-12">  <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-bar-chart"></i>Doanh thu theo quý</div>
+          <i class="fa fa-bar-chart"></i>Doanh thu theo tuần</div>
         <div class="card-body">
-              <canvas id="myBarChartTheoQuy" width="100%" height="30"></canvas>
+            <canvas id="myBarChart" width="100" height="30"></canvas>
     </div></div></div>
 </div>
 </section>

@@ -10,3 +10,4 @@ RewriteRule ^khach-hang.html khach_hang.php
 RewriteRule ^tin-tuc.html tin_tuc.php
 RewriteRule ^check-hoa-don.html check_hoa_don.php
 RewriteRule ^gioi-thieu.html gioi_thieu.php
+RewriteRule ^dat-hang-thanh-cong.html luu_du_lieu.php

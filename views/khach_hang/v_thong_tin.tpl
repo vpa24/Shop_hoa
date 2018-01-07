@@ -1,6 +1,6 @@
 <div  class="col-md-6 product-left-block">
   <h3 class="canh_giua khach_hang thong_tin">Thông tin</h3>
-  <form name="them_khach_hang" action="luu_du_lieu.php" method="post">
+  <form name="them_khach_hang" method="post">
     <ul class="form-style-1">
   <li><label>Tên khách hàng </label><input type="text" name="ten_kh" class="field-divided" placeholder="Tên khách hàng" /></li>
   <li>

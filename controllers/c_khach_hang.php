@@ -10,6 +10,11 @@ class C_khach_hang
     public function khach_hang()
     {
         if (isset($_SESSION['giohang'])) {
+            if (isset($_POST['luu'])) {
+                $ma_kh=$this->luu_khach_hang();
+                $_SESSION['ma_hoa_don']=$this->luu_gio_hang($ma_kh);
+                header('Location: dat-hang-thanh-cong.html');
+            }
             include("c_data_contact.php");
             include("models/m_hoa.php");
             $m_hoa=new M_hoa();
@@ -27,17 +32,15 @@ class C_khach_hang
     }
     public function luu_khach_hang()
     {
-        if (isset($_POST['luu'])) {
-            include("models/m_khach_hang.php");
-            $m_khach_hang=new M_khach_hang();
-            $_SESSION['ten']=$_POST['ten_kh'];
-            $phai=$_POST['phai'];
-            $_SESSION['email']=$_POST['email'];
-            $dia_chi=$_POST['dia_chi'];
-            $_SESSION['dien_thoai']=$_POST['dien_thoai'];
-            $ma_kh=$m_khach_hang->Them_khach_hang($_SESSION['ten'], $phai, $_SESSION['email'], $dia_chi, $_SESSION['dien_thoai']);
-            return $ma_kh;
-        }
+        include("models/m_khach_hang.php");
+        $m_khach_hang=new M_khach_hang();
+        $_SESSION['ten']=$_POST['ten_kh'];
+        $phai=$_POST['phai'];
+        $_SESSION['email']=$_POST['email'];
+        $dia_chi=$_POST['dia_chi'];
+        $_SESSION['dien_thoai']=$_POST['dien_thoai'];
+        $ma_kh=$m_khach_hang->Them_khach_hang($_SESSION['ten'], $phai, $_SESSION['email'], $dia_chi, $_SESSION['dien_thoai']);
+        return $ma_kh;
     }
     public function luu_gio_hang($ma_kh)
     {
@@ -49,7 +52,7 @@ class C_khach_hang
         }
         return $ma_hoa_don;
     }
-    public function CapNhapSoLuongGioHang()
+    public function CapNhapSoLuongHoa()
     {
         include("models/m_hoa.php");
         $m_hoa=new M_hoa();
@@ -79,9 +82,9 @@ class C_khach_hang
         $mail->Password = '02041997vpa';                           // SMTP password
         $mail->setFrom('vuphuonganh020497@gmail.com', 'ShopHoa');
         $mail->addAddress($_SESSION['email']);     // Add a recipient
-        $mail->Subject = "Đơn hàng $ma_hoa_don đã sẵn sàng giao đến quý khách" ;
+        $mail->Subject = "Đơn hàng số $ma_hoa_don đã sẵn sàng giao đến quý khách" ;
         $noidung="<h3 style='font-size:13px;font-weight:bold;color:#02acea;text-transform:uppercase;margin:20px 0 5px 0'>
-        Thông tin đơn hàng $ma_hoa_don</h3>";
+        Thông tin đơn hàng số $ma_hoa_don</h3>";
         $noidung.="<div style='margin:0 0 5px 0'><b>Thông tin thanh toán</b></div><div style='margin:0 0 5px 0'>".
           $_SESSION['ten']."</div><div style='margin:0 0 5px 0'>".$_SESSION['email']."</div><div style='margin:0 0 5px 0'>".$_SESSION['dien_thoai']."</div>";
         $noidung.="<div style='margin:0 0 5px 0'><b>Tổng giá trị đơn hàng</b></div>";
@@ -94,10 +97,8 @@ class C_khach_hang
     }
     public function luu_du_lieu()
     {
-        $ma_kh=$this->luu_khach_hang();
-        $ma_hoa_don=$this->luu_gio_hang($ma_kh);
-        $this->CapNhapSoLuongGioHang();
-        $this->GuiMail($ma_hoa_don);
+        $this->CapNhapSoLuongHoa();
+        $this->GuiMail($_SESSION['ma_hoa_don']);
         session_destroy();
         include("c_data_contact.php");
         include("Smarty_shop_hoa.php");
