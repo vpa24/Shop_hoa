@@ -29,7 +29,7 @@
 if ($('.container').hasClass('auto_refresh')) {
       setTimeout(function(){
       window.location.reload(1);
-  }, 5 *1000);
+  }, 60 *1000);
 }
 </script>
   </div>
