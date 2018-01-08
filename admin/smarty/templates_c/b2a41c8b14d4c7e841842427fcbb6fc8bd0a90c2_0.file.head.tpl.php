@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-22 15:31:05
+/* Smarty version 3.1.30, created on 2018-01-08 01:35:15
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3d2539e5a9d8_28061957',
+  'unifunc' => 'content_5a52cad344b505_20211983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a41c8b14d4c7e841842427fcbb6fc8bd0a90c2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1513942046,
+      1 => 1515375311,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3d2539e5a9d8_28061957 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a52cad344b505_20211983 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@ function content_5a3d2539e5a9d8_28061957 (Smarty_Internal_Template $_smarty_tpl)
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="refresh" content="60; URL=http://localhost/shop_hoa-master/admin/index.php"
   <meta name="description" content="">
   <meta name="author" content="">
   <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
