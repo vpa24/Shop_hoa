@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 03:53:26
+/* Smarty version 3.1.30, created on 2018-01-08 13:31:26
   from "C:\wamp64\www\shop_hoa-master\admin\views\thong_tin\v_modal_them_thong_tin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a373bb6143d74_77676468',
+  'unifunc' => 'content_5a5372ae21d465_35966476',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc1dfff909d98409d3842b2368aa615f45597146' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\thong_tin\\v_modal_them_thong_tin.tpl',
-      1 => 1513569200,
+      1 => 1515130855,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a373bb6143d74_77676468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5372ae21d465_35966476 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

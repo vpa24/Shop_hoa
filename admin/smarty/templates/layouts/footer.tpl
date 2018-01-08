@@ -26,9 +26,12 @@
     $('#gia_khuyen_mai').number(true);
   </script>
 <script>
-setTimeout(function(){
- window.location.reload(1);
-}, 60 *1000);
+if ($('.container').hasClass('auto_refresh')) {
+      alert('asdas');
+      setTimeout(function(){
+      window.location.reload(1);
+  }, 5 *1000);
+}
 </script>
   </div>
 </body>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 04:02:29
+/* Smarty version 3.1.30, created on 2018-01-08 13:31:19
   from "C:\wamp64\www\shop_hoa-master\admin\views\thong_tin\v_danh_sach_thong_tin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a373dd5ae72a9_82118273',
+  'unifunc' => 'content_5a5372a7a14e85_40689386',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd6f2e5a20dbb36b7a88ab8bdee02a3d9bd597673' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\thong_tin\\v_danh_sach_thong_tin.tpl',
-      1 => 1513569748,
+      1 => 1515130855,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/thong_tin/v_modal_sua_thong_tin.tpl' => 1,
   ),
 ),false)) {
-function content_5a373dd5ae72a9_82118273 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5372a7a14e85_40689386 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>

@@ -1,5 +1,5 @@
 {include file="views/index/v_don_hang.tpl"}
-<div class="container">
+<div class="container auto_refresh">
     {include file="views/index/v_ds_hoa_don_chua_duyet.tpl"}
     <div class="row">
       {* {include file="views/index/v_so_luong_loai.tpl"} *}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 03:20:45
+/* Smarty version 3.1.30, created on 2018-01-08 13:31:19
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_thong_tin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a37340dda4652_40344588',
+  'unifunc' => 'content_5a5372a77f1003_50882364',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8b5b036020d0147d311d7f098237fbbf0588206' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_thong_tin.tpl',
-      1 => 1513567213,
+      1 => 1515130855,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/thong_tin/v_modal_them_thong_tin.tpl' => 1,
   ),
 ),false)) {
-function content_5a37340dda4652_40344588 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5372a77f1003_50882364 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
