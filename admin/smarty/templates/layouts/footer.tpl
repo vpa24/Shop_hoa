@@ -27,7 +27,6 @@
   </script>
 <script>
 if ($('.container').hasClass('auto_refresh')) {
-      alert('asdas');
       setTimeout(function(){
       window.location.reload(1);
   }, 5 *1000);
