@@ -115,11 +115,4 @@ $(document).ready(function() {
 function hienthi(data, page) {
   $('.ds_hoa').html(data);
   $('#' + page).addClass('active');
-  if ($('.item').hasClass('dshoa')) {
-    $('.item').each(function(i) {
-      setTimeout(function() {
-        $('.item').eq(i).addClass('is-visible');
-      }, 200 * i);
-    });
-  }
 }

@@ -1,6 +1,7 @@
 <script src="public/js/jquery.js"></script>
 <script src="public/js/bootstrap.js"></script>
 <script src="public/js/slider.js"></script>
+<script src="public/js/aos.js"></script>
 <script src="public/js/custom.js"></script>
 <script src="public/js/parallax.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem.js"></script>
@@ -30,24 +31,6 @@
       });
 </script>
 <script type="text/javascript">
-  {if isset($giohang)}
-    {foreach $hoa as $sp}
-      $("#tang_{$sp->MaHoa}").click(function(){
-        var sl=$("#qty_{$sp->MaHoa}").val();
-        sl++;
-        $("#qty_{$sp->MaHoa}").val(sl);
-      });
-    $("#giam_{$sp->MaHoa}").click(function(){
-      var sl=$("#qty_{$sp->MaHoa}").val();
-      sl--;
-      $("#qty_{$sp->MaHoa}").val(sl);
-      if(sl<=1)
-        $("#qty_{$sp->MaHoa}").val(1);
-      });
-    {/foreach}
-  {/if}
-</script>
-<script type="text/javascript">
   $('#gotop').gotop({
     background: '#FF3366',
     bottom : '100px',
@@ -55,13 +38,7 @@
   });
 </script>
 <script>
-  {if isset($smarty.session.success)}
-	swal({
-	title: "Đặt hàng thành công!",
-	text: "{$smarty.session.success}!",
-	type: "success"
-	}).then(function() {
-		window.location="check_hoa_don.php?dien_thoai={$smarty.session.dien_thoai}";
-	});
-  {/if}
+AOS.init({
+       easing: 'ease-in-out-sine'
+     });
 </script>

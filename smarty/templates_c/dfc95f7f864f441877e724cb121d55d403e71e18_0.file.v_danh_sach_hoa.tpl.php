@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 13:31:22
+/* Smarty version 3.1.30, created on 2018-01-09 14:20:13
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a48e6aa543993_38894856',
+  'unifunc' => 'content_5a54cf9de81000_81677334',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1514727074,
+      1 => 1515507603,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a48e6aa543993_38894856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a54cf9de81000_81677334 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
-        <ul class="products-grid row">
+        <ul class="products-grid row aos-all" id="transcroller-body">
+          <?php $_smarty_tpl->_assignInScope('dem', 0);
+?>
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_hoa']->value, 'hoa');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 ?>
-            <li class="item dshoa">
+            <?php echo $_smarty_tpl->tpl_vars['dem']->value++;?>
+
+              <?php if (($_smarty_tpl->tpl_vars['dem']->value%3 == 1)) {?>
+                <li class="item aos-item" data-aos="fade-up">
+              <?php } elseif (($_smarty_tpl->tpl_vars['dem']->value%3 == 2)) {?>
+                <li class="item aos-item" data-aos="fade-down">
+              <?php } else { ?>
+                <li class="item aos-item" data-aos="flip-down">
+              <?php }?>
+
+            
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

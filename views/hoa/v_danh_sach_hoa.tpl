@@ -1,7 +1,15 @@
     <div class="category-products">
-        <ul class="products-grid row">
+        <ul class="products-grid row aos-all" id="transcroller-body">
+          {$dem=0}
             {foreach $doc_hoa as $hoa}
-            <li class="item dshoa">
+            {$dem++}
+              {if ($dem%3==1) }
+                <li class="item aos-item" data-aos="fade-up">
+              {elseif ($dem%3==2) }
+                <li class="item aos-item" data-aos="fade-down">
+              {else}
+                <li class="item aos-item" data-aos="flip-down">
+              {/if}
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
