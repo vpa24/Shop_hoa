@@ -97,6 +97,7 @@ class C_khach_hang
     }
     public function luu_du_lieu()
     {
+      if (isset($_SESSION['giohang'])) {
         $this->CapNhapSoLuongHoa();
         $this->GuiMail($_SESSION['ma_hoa_don']);
         session_destroy();
@@ -107,5 +108,8 @@ class C_khach_hang
         $view = "views/v_dh_thanh_cong.tpl";
         include("c_smarty_info.php");
         $smarty->display("layout.tpl");
+    } else{
+      header('Location: .');
     }
+  }
 }
