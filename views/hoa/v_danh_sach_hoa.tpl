@@ -2,7 +2,7 @@
         <ul class="products-grid row aos-all" id="transcroller-body">
           {$dem=0}
             {foreach $doc_hoa as $hoa}
-            {$dem++}
+            {$dem=$dem+1}
               {if ($dem%3==1) }
                 <li class="item aos-item" data-aos="fade-up">
               {elseif ($dem%3==2) }
