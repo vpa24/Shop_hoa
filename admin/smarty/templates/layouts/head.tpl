@@ -24,6 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
+  <link href="public/css/pretty-checkbox.min.css" rel="stylesheet">
   <script src="public/js/modernizr.custom.js"></script>
   <script type="text/javascript" src="public/ckeditor/ckeditor.js"></script>
 

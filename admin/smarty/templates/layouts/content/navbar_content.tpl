@@ -112,8 +112,8 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link">Xin chào
-          {if isset($smarty.session.hoTen)}
-            {$smarty.session.hoTen}
+          {if isset($smarty.cookies.hoTen)}
+            {$smarty.cookies.hoTen}
           {/if}
           </a>
         </li>
