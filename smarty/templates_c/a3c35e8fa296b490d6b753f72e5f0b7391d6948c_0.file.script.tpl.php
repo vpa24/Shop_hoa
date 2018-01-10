@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-09 14:12:56
+/* Smarty version 3.1.30, created on 2018-01-10 09:08:13
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a54cde8771f08_60290616',
+  'unifunc' => 'content_5a55d7fd9474a7_44188852',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1515506759,
+      1 => 1515575245,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a54cde8771f08_60290616 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a55d7fd9474a7_44188852 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -34,10 +34,10 @@ echo '<script'; ?>
  src="public/js/aos.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="public/js/custom.js"><?php echo '</script'; ?>
+ src="public/js/jquery.range.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="public/js/parallax.js"><?php echo '</script'; ?>
+ src="public/js/custom.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/ajax/ajax_tim_kiem.js"><?php echo '</script'; ?>
@@ -97,6 +97,25 @@ echo '<script'; ?>
 AOS.init({
        easing: 'ease-in-out-sine'
      });
+<?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
+function filterProducts() {
+    var price_range = $('.price_range').val();
+    $.ajax({
+        type: 'POST',
+        url: 'getProducts.php',
+        data:'price_range='+price_range,
+        beforeSend: function () {
+            $('.container').css("opacity", ".5");
+        },
+        success: function (html) {
+            $('#productContainer').html(html);
+            $('.container').css("opacity", "");
+        }
+    });
+}
 <?php echo '</script'; ?>
 >
 <?php }

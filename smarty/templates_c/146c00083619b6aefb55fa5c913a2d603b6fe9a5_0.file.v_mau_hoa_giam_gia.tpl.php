@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 13:20:38
+/* Smarty version 3.1.30, created on 2018-01-10 01:00:22
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_giam_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a48e426c8be76_13511292',
+  'unifunc' => 'content_5a5565a6e68327_85449800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '146c00083619b6aefb55fa5c913a2d603b6fe9a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_giam_gia.tpl',
-      1 => 1514726418,
+      1 => 1515546013,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a48e426c8be76_13511292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5565a6e68327_85449800 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">
-        <ul class="products-grid row">
+        <ul class="products-grid row aos-all" id="aos-demo">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_hoa_khuyen_mai']->value, 'hoa_km');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa_km']->value) {
 ?>
-            <li class="item hoa">
+            <li class="item hoa" data-aos="fade-up">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

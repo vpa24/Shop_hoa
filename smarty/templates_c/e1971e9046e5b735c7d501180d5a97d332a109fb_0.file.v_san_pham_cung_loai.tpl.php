@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-31 12:25:37
+/* Smarty version 3.1.30, created on 2018-01-10 02:42:29
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_san_pham_cung_loai.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a48d741baf567_79892761',
+  'unifunc' => 'content_5a557d95dc8ca4_74787384',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e1971e9046e5b735c7d501180d5a97d332a109fb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_san_pham_cung_loai.tpl',
-      1 => 1514686613,
+      1 => 1515552148,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a48d741baf567_79892761 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a557d95dc8ca4_74787384 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
   <ul class="magictabs">
@@ -30,12 +30,21 @@ function content_5a48d741baf567_79892761 (Smarty_Internal_Template $_smarty_tpl)
   </ul>
   <div class="category-products">
     <ul class="products-grid row">
+      <?php $_smarty_tpl->_assignInScope('i', 0);
+?>
+      <?php $_smarty_tpl->_assignInScope('j', 0);
+?>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['hoa_cung_loai']->value, 'hoa');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 ?>
-        <li class="item">
+        <li class="item" data-aos="flip-left" data-aos-duration="300"  data-aos-delay="<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+">
+          <?php $_smarty_tpl->_assignInScope('j', $_smarty_tpl->tpl_vars['j']->value+1);
+?>
+          <?php $_smarty_tpl->_assignInScope('i', $_smarty_tpl->tpl_vars['j']->value*300);
+?>
             <div class="category-products-grid">
                 <div class="images-container">
                     <div class="product-hover">

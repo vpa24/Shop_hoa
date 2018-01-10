@@ -11,7 +11,7 @@
       <div class="mage-magictabs mc-saleproduct">
         <ul class="flexisel-content products-grid saleproduct zoomOut play">
           {foreach $san_pham_giam_gia as $giam_gia}
-          <li style="-webkit-animation-delay:0ms;-moz-animation-delay:0ms;-o-animation-delay:0ms;animation-delay:0ms;" class="item item-animate">
+          <li data-aos="fade-up" data-aos-duration="600">
             <div class="per-product clearfix">
               <div class="images-container">
                 <div class="product-hover">

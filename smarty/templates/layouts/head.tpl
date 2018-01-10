@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="public/css/style.css" />
         <link rel="stylesheet" href="public/css/cart.css">
         <link rel="stylesheet" href="public/css/aos.css">
+        <link rel="stylesheet" href="public/css/jquery.range.css">
+        <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="public/css/responsive.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />

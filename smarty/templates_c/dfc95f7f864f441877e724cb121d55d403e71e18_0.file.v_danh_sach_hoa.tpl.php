@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-09 14:32:39
+/* Smarty version 3.1.30, created on 2018-01-10 01:57:09
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a54d287dd55f1_25685783',
+  'unifunc' => 'content_5a5572f5e3a8a9_26406460',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1515508355,
+      1 => 1515549265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a54d287dd55f1_25685783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5572f5e3a8a9_26406460 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row aos-all" id="transcroller-body">
@@ -34,15 +34,15 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
             <?php $_smarty_tpl->_assignInScope('dem', $_smarty_tpl->tpl_vars['dem']->value+1);
 ?>
               <?php if (($_smarty_tpl->tpl_vars['dem']->value%3 == 1)) {?>
-                <li class="item aos-item" data-aos="fade-up">
+                <li class="item do_dai aos-item" data-aos="fade-up">
               <?php } elseif (($_smarty_tpl->tpl_vars['dem']->value%3 == 2)) {?>
-                <li class="item aos-item" data-aos="fade-down">
+                <li class="item do_dai aos-item" data-aos="fade-down">
               <?php } else { ?>
-                <li class="item aos-item" data-aos="flip-down">
+                <li class="item do_dai aos-item" data-aos="flip-down">
               <?php }?>
                 <div class="category-products-grid">
                     <div class="images-container">
-                        <div class="product-hover">
+                        <div class="product-hover cp_img">
                             <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
 .html" title="<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa;?>
@@ -52,6 +52,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 ">
                             </a>
                         </div>
+
                         <h2 class="product-name">
                         <a href="san-pham/<?php echo $_smarty_tpl->tpl_vars['hoa']->value->TenHoa_URL;?>
 -<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>

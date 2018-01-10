@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 04:24:55
+/* Smarty version 3.1.30, created on 2018-01-10 02:02:44
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_san_pham_re_nhat.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3743171bc203_72671198',
+  'unifunc' => 'content_5a557444773928_76098944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6adffd827dc340e49dccc91eae852819de07aeae' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_san_pham_re_nhat.tpl',
-      1 => 1513571088,
+      1 => 1515549743,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3743171bc203_72671198 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a557444773928_76098944 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 custom-product custom3">
   <div class= "vmqhdvpnqm magicproduct mage-custom">
@@ -39,7 +39,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['re_nhat']->value) {
 ?>
-          <li style="-webkit-animation-delay:0ms;-moz-animation-delay:0ms;-o-animation-delay:0ms;animation-delay:0ms;" class="item item-animate">
+          <li data-aos="fade-up" data-aos-duration="600">
             <div class="per-product clearfix">
               <div class="images-container">
                 <div class="product-hover">

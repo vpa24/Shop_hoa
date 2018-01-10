@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 12:45:15
+/* Smarty version 3.1.30, created on 2018-01-10 02:16:17
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_slider.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3666db264624_23605922',
+  'unifunc' => 'content_5a55777137f996_94771921',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f772f3e0cad92d38deac9f0781fa84a1ac7b9f11' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_slider.tpl',
-      1 => 1513512077,
+      1 => 1515550551,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3666db264624_23605922 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a55777137f996_94771921 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="wrapper-page">
         <div class="wrap-body container">
@@ -56,5 +56,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 </div>
             </div>
         </div>
-    </div><?php }
+    </div>
+<?php }
 }

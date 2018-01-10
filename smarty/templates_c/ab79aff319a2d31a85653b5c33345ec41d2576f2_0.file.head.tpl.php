@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-09 13:38:55
+/* Smarty version 3.1.30, created on 2018-01-10 09:08:13
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a54c5ef87a174_69806598',
+  'unifunc' => 'content_5a55d7fd7acef6_60077406',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab79aff319a2d31a85653b5c33345ec41d2576f2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1515505098,
+      1 => 1515575285,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a54c5ef87a174_69806598 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a55d7fd7acef6_60077406 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +61,8 @@ function content_5a54c5ef87a174_69806598 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="public/css/style.css" />
         <link rel="stylesheet" href="public/css/cart.css">
         <link rel="stylesheet" href="public/css/aos.css">
+        <link rel="stylesheet" href="public/css/jquery.range.css">
+        <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="public/css/responsive.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />

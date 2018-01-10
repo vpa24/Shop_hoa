@@ -2814,6 +2814,7 @@ th {
   height: auto;
   max-width: 100%;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 .products-grid {
@@ -2911,6 +2912,7 @@ th {
 .product-hover {
   position: relative;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 
 .images-container {
@@ -4458,9 +4460,6 @@ button.button {
 .hoa {
   height: 370px;
   position: relative;
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.3s ease-in-out;
 }
 
 .dshoa {
@@ -4512,3 +4511,29 @@ button.button {
     color: #1E7EC8;
     font-weight: bold;
 }
+.do_dai{
+  height: 370px;
+}
+/* .hover{
+  display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+.hover a:hover{
+  background: #fff;
+}
+.mau_xanh{
+  font-weight: 500;
+  color: #0275d8;
+  font-size: 18px;
+  position: relative;
+}
+.cp_img:hover{
+  top:-20px;
+}
+.cp_img:hover img{
+  box-shadow:0 19px 38px rgba(0,0,0,0.3),0 15px 12px rgba(0,0,0,0.22);
+}
+.aos-item:hover .cp_img .hover{
+  display: block;
+} */

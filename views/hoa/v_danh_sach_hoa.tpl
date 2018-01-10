@@ -4,19 +4,20 @@
             {foreach $doc_hoa as $hoa}
             {$dem=$dem+1}
               {if ($dem%3==1) }
-                <li class="item aos-item" data-aos="fade-up">
+                <li class="item do_dai aos-item" data-aos="fade-up">
               {elseif ($dem%3==2) }
-                <li class="item aos-item" data-aos="fade-down">
+                <li class="item do_dai aos-item" data-aos="fade-down">
               {else}
-                <li class="item aos-item" data-aos="flip-down">
+                <li class="item do_dai aos-item" data-aos="flip-down">
               {/if}
                 <div class="category-products-grid">
                     <div class="images-container">
-                        <div class="product-hover">
+                        <div class="product-hover cp_img">
                             <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}" class="product-image">
                                 <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}"  alt="{$hoa->TenHoa}">
                             </a>
                         </div>
+
                         <h2 class="product-name">
                         <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}">{$hoa->TenHoa}</a>
                         </h2>

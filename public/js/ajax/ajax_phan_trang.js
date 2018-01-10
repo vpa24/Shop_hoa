@@ -116,3 +116,19 @@ function hienthi(data, page) {
   $('.ds_hoa').html(data);
   $('#' + page).addClass('active');
 }
+
+function filterProducts() {
+  var price_range = $('.price_range').val();
+  $.ajax({
+    type: 'POST',
+    url: 'getProducts.php',
+    data: 'price_range=' + price_range,
+    beforeSend: function() {
+      $('.container').css("opacity", ".5");
+    },
+    success: function(html) {
+      $('#productContainer').html(html);
+      $('.container').css("opacity", "");
+    }
+  });
+}

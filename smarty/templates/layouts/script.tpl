@@ -2,8 +2,8 @@
 <script src="public/js/bootstrap.js"></script>
 <script src="public/js/slider.js"></script>
 <script src="public/js/aos.js"></script>
+<script src="public/js/jquery.range.js"></script>
 <script src="public/js/custom.js"></script>
-<script src="public/js/parallax.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem-mobile.js"></script>
 <script src="public/js/ajax/ajax_phan_trang.js"></script>

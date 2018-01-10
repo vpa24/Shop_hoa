@@ -1,8 +1,8 @@
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">
-        <ul class="products-grid row">
+        <ul class="products-grid row aos-all" id="aos-demo">
         {foreach $doc_hoa_khuyen_mai as $hoa_km}
-            <li class="item hoa">
+            <li class="item hoa" data-aos="fade-up">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

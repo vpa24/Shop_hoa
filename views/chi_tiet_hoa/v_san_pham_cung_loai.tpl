@@ -6,8 +6,12 @@
   </ul>
   <div class="category-products">
     <ul class="products-grid row">
+      {$i=0}
+      {$j=0}
       {foreach $hoa_cung_loai as $hoa}
-        <li class="item">
+        <li class="item" data-aos="flip-left" data-aos-duration="300"  data-aos-delay="{$i}">
+          {$j=$j+1}
+          {$i=$j*300}
             <div class="category-products-grid">
                 <div class="images-container">
                     <div class="product-hover">
