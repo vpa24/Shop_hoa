@@ -10,7 +10,7 @@ class C_ajax_danh_sach_hoa
         if (isset($_POST['maloai'])) {
             $ma_loai=$_POST['maloai'];
             $doc_hoa = $m_hoa->doc_ds_loai_hoa($ma_loai);
-         } 
+         }
          elseif (isset($_POST['price_range'])) {
             $priceRange=$_POST['price_range'];
             $priceRangeArr = explode(',', $priceRange);

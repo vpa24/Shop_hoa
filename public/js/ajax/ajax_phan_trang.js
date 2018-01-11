@@ -48,7 +48,6 @@
   }
 
   function doctheoGia(price_range,page) {
-    alert('gia');
     $.ajax({
       type: 'POST',
       url: 'ajax_danh_sach_hoa.php',
@@ -61,10 +60,22 @@
       }
     });
   }
+
   function hienthi(data, page) {
     $('.ds_hoa').html(data);
     $('#' + page).addClass('active');
   }
+
+  //click vào giá
+  $(document).on('click', '.tim_theo_gia', function () {
+    var chuoiGia = $(this).attr('id');
+    price_range = chuoiGia.replace('-',',');
+    if (maloai != 0) {
+      doctheoMaLoaiGia(maloai, price_range, 1);
+    } else {
+      doctheoGia(price_range, 1);
+    }
+  });
 
   //click vào nút tìm
   $(document).on('click', '.nut_tim', function () {
@@ -74,19 +85,20 @@
     } else{
       doctheoGia(price_range, 1);
     }
-   
+
   });
 
   //click vao link phan trang
   $(document).on('click', '.pagination_link', function() {
     var page = $(this).attr('id');
-    phantrang(page);
     if (maloai != 0 && price_range != -1 ) {
       doctheoMaLoaiGia(maloai, price_range, page);
     } else if (maloai != 0) {
       doctheoMaLoai(maloai, page);
     } else if (price_range != -1) {
       doctheoGia(price_range, page);
+    }else{
+      phantrang(page);
     }
 
     $('html, body').animate({
