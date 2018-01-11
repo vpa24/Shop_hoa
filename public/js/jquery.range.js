@@ -224,7 +224,7 @@
 			var prc = Math.round((100 / (s.length - 1)) * 10) / 10;
 			var str = '';
 			for (var i = 0; i < s.length; i++) {
-				str += '<span style="left: ' + i * prc + '%">' + (s[i] != '|' ? '<ins>' + s[i] + '</ins>' : '') + '</span>';
+				str += '<span style="left: ' + i * prc + '%">' + (s[i] != '|' ? '<ins>' + numeral(s[i]).format('0,0') + '</ins>' : '') + '</span>';
 			}
 			this.scale.html(str);
 
@@ -245,14 +245,14 @@
 		showPointerValue: function(pointer, position, animate) {
 			var label = $('.pointer-label', this.domNode)[pointer.hasClass('low') ? 'first' : 'last']();
 			var text;
-			var value = this.positionToValue(position);
+			var value = parseInt(this.positionToValue(position));
 			// Is it higer or lower than it should be?
 
 			if ($.isFunction(this.options.format)) {
 				var type = this.isSingle() ? undefined : (pointer.hasClass('low') ? 'low' : 'high');
-				text = this.options.format(value, type);
+				text = this.options.format(numeral(value).format('0,0'), type);
 			} else {
-				text = this.options.format.replace('%s', value);
+				text = this.options.format.replace('%s', numeral(value).format('0,0'));
 			}
 
 			var width = label.html(text).width(),

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-10 09:08:13
+/* Smarty version 3.1.30, created on 2018-01-10 14:18:11
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a55d7fd9474a7_44188852',
+  'unifunc' => 'content_5a5620a365ed14_13380292',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1515575245,
+      1 => 1515593888,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a55d7fd9474a7_44188852 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5620a365ed14_13380292 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -101,21 +101,15 @@ AOS.init({
 >
 <?php echo '<script'; ?>
 >
-function filterProducts() {
-    var price_range = $('.price_range').val();
-    $.ajax({
-        type: 'POST',
-        url: 'getProducts.php',
-        data:'price_range='+price_range,
-        beforeSend: function () {
-            $('.container').css("opacity", ".5");
-        },
-        success: function (html) {
-            $('#productContainer').html(html);
-            $('.container').css("opacity", "");
-        }
-    });
-}
+$('.price_range').jRange({
+    from: 0,
+    to: 1000000,
+    step: 100000,
+    format: '%s'+' đ',
+    width: 250,
+    showLabels: true,
+    isRange : true
+});
 <?php echo '</script'; ?>
 >
 <?php }

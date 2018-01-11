@@ -42,3 +42,14 @@ AOS.init({
        easing: 'ease-in-out-sine'
      });
 </script>
+<script>
+$('.price_range').jRange({
+    from: 0,
+    to: 1000000,
+    step: 100000,
+    format: '%s'+' đ',
+    width: 250,
+    showLabels: true,
+    isRange : true
+});
+</script>

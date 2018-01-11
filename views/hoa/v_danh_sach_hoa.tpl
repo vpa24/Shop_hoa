@@ -1,5 +1,8 @@
     <div class="category-products">
         <ul class="products-grid row aos-all" id="transcroller-body">
+        {if (count($doc_hoa) == 0)}
+            Rất tiếc chưa có sản phẩm
+        {/if}
           {$dem=0}
             {foreach $doc_hoa as $hoa}
             {$dem=$dem+1}

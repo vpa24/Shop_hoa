@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-10 01:57:09
+/* Smarty version 3.1.30, created on 2018-01-11 00:07:52
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5572f5e3a8a9_26406460',
+  'unifunc' => 'content_5a56aad88ce866_00076457',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1515549265,
+      1 => 1515629270,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5572f5e3a8a9_26406460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a56aad88ce866_00076457 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row aos-all" id="transcroller-body">
+        <?php if ((count($_smarty_tpl->tpl_vars['doc_hoa']->value) == 0)) {?>
+            Rất tiếc chưa có sản phẩm
+        <?php }?>
           <?php $_smarty_tpl->_assignInScope('dem', 0);
 ?>
             <?php

@@ -26,19 +26,13 @@
                 <div id="narrow-by-list">
                     <dl class="narrow-by">
                         <dl class="narrow-by">
-                            <dt class="odd">Giá bán</dt>
+                            <dt class="odd gia_ban">Giá bán</dt>
                             <dt class="toggle-tab mobile even" style="display:none"></dt>
                             <dd class="Giá bán toggle-content odd">
-                                <ol>
-                                    <li class="tim_theo_gia" id="0-500000">
-                                            <span class="price">0&nbsp;₫ - </span>
-                                            <span class="price">{number_format(500000)}&nbsp;₫</span>
-                                    </li>
-                                    <li class="tim_theo_gia" id="500000-1000000">
-                                            <span class="price">{number_format(500000)}&nbsp;₫ - </span> 
-                                            <span class="price">{number_format(1000000)}&nbsp;₫</span>
-                                    </li>
-                                </ol>
+                                  <div class="filter-panel">
+                                     <p><input type="hidden" class="price_range" value="0,1000000" /></p>
+                                 </div>
+                                 <input class="nut_tim" type="button"  value="Tìm" />
                             </dd>
                         </dl>
                     </dl>
