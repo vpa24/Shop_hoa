@@ -138,6 +138,7 @@ function xoagiohang(mahoa, sl, gia) {
   cartList.find('.deleted').remove();
   updateCartTotal(-gia);
   updateCartCount(true, -sl);
+  cap_nhap_tong_tt();
 }
 
 function updateCartTotal(price) {
