@@ -1,6 +1,6 @@
 <?php
 if (isset($_COOKIE['id'])==false) {
-    header('Location: dang_nhap.php');
+    header('Location: dang_xuat.php');
 }
 else{
   if(isset($_COOKIE['checked'])){

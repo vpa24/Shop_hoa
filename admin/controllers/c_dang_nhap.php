@@ -11,7 +11,7 @@ class C_dang_nhap
             $matKhau=$_POST["mat_khau"];
             if ($this->luu_dang_nhap($taiKhoan, $matKhau)) {
                 if (isset($_POST['checked'])) {
-                    setcookie('checked', true, time() + 10);
+                    setcookie('checked', true, time() + 300);
                 }
                 header('Location: index.php');
             }
