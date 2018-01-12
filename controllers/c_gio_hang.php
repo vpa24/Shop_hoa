@@ -10,21 +10,25 @@ class C_gio_hang
         if (isset($_POST['MaHoa']) && isset($_POST['sl'])) {
             $id=$_POST['MaHoa'];
             $sl=$_POST['sl'];
-            $tong_sl=0;
+            if(isset($_SESSION['tong_gio_hang']))
+            {
+              $_SESSION['tong_gio_hang']++;
+            }
+            $vong=1;
             if (isset($_SESSION["giohang"])) {
                 foreach ($_SESSION["giohang"] as $k=>$value) {
-                    $tong_sl+=$value;
-                    if ($k==$id) {
+                    if ($k == $id) {
                         $value+=$sl;
                         $_SESSION["giohang"][$id]=$value;
+                        break;
                     } else {
                         $_SESSION["giohang"][$id]=$sl;
                     }
                 }
             } else {
                 $_SESSION["giohang"][$id]=$sl;
+                $_SESSION['tong_gio_hang']=1;
             }
-            $_SESSION['tong_gio_hang']=$tong_sl;
         }
     }
     public function hien_gio_hang()
