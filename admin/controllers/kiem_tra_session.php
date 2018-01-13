@@ -8,5 +8,6 @@ else{
     setcookie('id', $_COOKIE['id'] , time() + (60*2));
     setcookie('hoTen',$_COOKIE['hoTen'], time() + (60*2));
     setcookie('taiKhoan',$_COOKIE['taiKhoan'], time() + (60*2));
+    setcookie('permission', $_COOKIE['permission'] , time() + (60*2));
   }
 }

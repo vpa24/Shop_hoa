@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-12 05:52:58
+/* Smarty version 3.1.30, created on 2017-12-18 02:49:28
   from "C:\wamp64\www\shop_hoa-master\admin\views\quang_cao\v_danh_sach_quang_cao.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a584d3a0b8175_21469831',
+  'unifunc' => 'content_5a372cb83a1207_05184159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ca892b70caa0bfe7edfb50fb0044417949da7a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\quang_cao\\v_danh_sach_quang_cao.tpl',
-      1 => 1515130855,
+      1 => 1513565365,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/quang_cao/v_modal_sua_quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a584d3a0b8175_21469831 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a372cb83a1207_05184159 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>

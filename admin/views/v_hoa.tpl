@@ -16,7 +16,7 @@
           {include file="views/hoa/v_danh_sach_hoa.tpl"}
           </div>
         </div>
-  {include file="views/hoa/v_modal_them_hoa.tpl"}
+    {include file="views/hoa/v_modal_them_hoa.tpl"}
     <script src="public/js/ajax/ajax_delete_hoa.js"></script>
     <script src="public/js/input_file.js"></script>
     <script src="public/js/script_hien_thi_anh_add.js"></script>

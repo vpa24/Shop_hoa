@@ -5,13 +5,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link" href=".">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Tổng quan</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        {if $smarty.cookies.permission == 1}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link" href="thanh_vien.php">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Quản lý thành viên</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Quản lý sản phẩm</span>
@@ -25,7 +32,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Quản lý đơn hàng</span>
@@ -39,7 +46,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-bullhorn"></i>
             <span class="nav-link-text">Quản lý nội dung</span>
@@ -62,7 +69,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
             <span class="nav-link-text">Thống kê</span>
@@ -73,7 +80,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
             <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
             <span class="nav-link-text">Cài đặt thông tin</span>
@@ -90,7 +97,23 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        {else}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Quản lý đơn hàng</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti2">
+            <li>
+              <a href="hoa_don.php">Hóa đơn</a>
+            </li>
+            <li>
+              <a href="khach_hang.php">Khách hàng</a>
+            </li>
+          </ul>
+        </li>
+        {/if}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Cài đặt tài khoản</span>

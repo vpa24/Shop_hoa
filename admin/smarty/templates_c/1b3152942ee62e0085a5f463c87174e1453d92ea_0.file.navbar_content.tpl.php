@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-09 03:49:43
+/* Smarty version 3.1.30, created on 2018-01-13 03:50:08
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a543bd771e0e6_57606310',
+  'unifunc' => 'content_5a5981f0a8f8f8_43106449',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1515469779,
+      1 => 1515815399,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5981f0a8f8f8_43106449 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -29,13 +29,20 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link" href=".">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Tổng quan</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <?php if ($_COOKIE['permission'] == 1) {?>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link" href="thanh_vien.php">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Quản lý thành viên</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Quản lý sản phẩm</span>
@@ -49,7 +56,7 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Quản lý đơn hàng</span>
@@ -63,7 +70,7 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-bullhorn"></i>
             <span class="nav-link-text">Quản lý nội dung</span>
@@ -86,7 +93,7 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
             <span class="nav-link-text">Thống kê</span>
@@ -97,7 +104,7 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
             <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
             <span class="nav-link-text">Cài đặt thông tin</span>
@@ -114,7 +121,23 @@ function content_5a543bd771e0e6_57606310 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <?php } else { ?>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Quản lý đơn hàng</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti2">
+            <li>
+              <a href="hoa_don.php">Hóa đơn</a>
+            </li>
+            <li>
+              <a href="khach_hang.php">Khách hàng</a>
+            </li>
+          </ul>
+        </li>
+        <?php }?>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Cài đặt tài khoản</span>

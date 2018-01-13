@@ -1,0 +1,163 @@
+[11-Jan-2018 09:50:30 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(9): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/index.php(4): C_index->hien_thi_trang_index()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 09:50:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(39): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/so_luong_loai_hoa.php(6): C_index->json_so_luong_loai_hoa()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 09:50:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(22): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_ngay.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_ngay()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 09:50:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(40): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_tuan.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_tuan()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 09:50:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(60): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_quy.php(5): C_thong_ke_doanh_thu->json_theo_quy()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 09:50:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(53): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_thang.php(5): C_thong_ke_doanh_thu->json_doanh_theo_theo_thang()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:55 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(9): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/index.php(4): C_index->hien_thi_trang_index()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(39): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/so_luong_loai_hoa.php(6): C_index->json_so_luong_loai_hoa()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(40): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_tuan.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_tuan()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(22): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_ngay.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_ngay()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(53): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_thang.php(5): C_thong_ke_doanh_thu->json_doanh_theo_theo_thang()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:26:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(60): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_quy.php(5): C_thong_ke_doanh_thu->json_theo_quy()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:27:12 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(32): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(12): C_dang_nhap->luu_dang_nhap('lmhanh', 'lmhanh123')
+#3 /home/wikicach/public_html/shop_hoa/admin/dang_nhap.php(4): C_dang_nhap->hien_thi_trang_dang_nhap()
+#4 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:27:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(32): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(12): C_dang_nhap->luu_dang_nhap('lmhanh', 'lmhanh123')
+#3 /home/wikicach/public_html/shop_hoa/admin/dang_nhap.php(4): C_dang_nhap->hien_thi_trang_dang_nhap()
+#4 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:27:41 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(32): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(12): C_dang_nhap->luu_dang_nhap('lmhanh', 'lmhanh123')
+#3 /home/wikicach/public_html/shop_hoa/admin/dang_nhap.php(4): C_dang_nhap->hien_thi_trang_dang_nhap()
+#4 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:22 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(9): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/index.php(4): C_index->hien_thi_trang_index()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(60): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_quy.php(5): C_thong_ke_doanh_thu->json_theo_quy()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(53): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_thang.php(5): C_thong_ke_doanh_thu->json_doanh_theo_theo_thang()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(40): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_tuan.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_tuan()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_thong_ke_doanh_thu.php(22): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/doanh_thu_theo_ngay.php(5): C_thong_ke_doanh_thu->json_doanh_thu_theo_ngay()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_index.php(39): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/so_luong_loai_hoa.php(6): C_index->json_so_luong_loai_hoa()
+#3 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[11-Jan-2018 10:28:27 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (-2)' in /home/wikicach/public_html/shop_hoa/admin/models/database.php:8
+Stack trace:
+#0 /home/wikicach/public_html/shop_hoa/admin/models/database.php(8): PDO->__construct('mysql:host=loca...', 'wikicach_hoa', 'Doanphp123')
+#1 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(32): database->database()
+#2 /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php(12): C_dang_nhap->luu_dang_nhap('lmhanh', 'lmhanh123')
+#3 /home/wikicach/public_html/shop_hoa/admin/dang_nhap.php(4): C_dang_nhap->hien_thi_trang_dang_nhap()
+#4 {main}
+  thrown in /home/wikicach/public_html/shop_hoa/admin/models/database.php on line 8
+[12-Jan-2018 19:36:19 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to undefined method C_them_thanh_vien::hien_thi_them_thanh_vien() in /home/wikicach/public_html/shop_hoa/admin/them_thanh_vien.php on line 4
+[12-Jan-2018 19:55:41 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected end of file in /home/wikicach/public_html/shop_hoa/admin/models/m_thanh_vien.php on line 15
+[12-Jan-2018 20:10:11 Asia/Ho_Chi_Minh] PHP Fatal error:  Class 'M_hoa' not found in /home/wikicach/public_html/shop_hoa/admin/controllers/c_thanh_vien.php on line 16
+[12-Jan-2018 20:10:24 Asia/Ho_Chi_Minh] PHP Fatal error:  Class 'M_hoa' not found in /home/wikicach/public_html/shop_hoa/admin/controllers/c_thanh_vien.php on line 16
+[12-Jan-2018 20:27:57 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected 'setcookie' (T_STRING) in /home/wikicach/public_html/shop_hoa/admin/controllers/c_dang_nhap.php on line 40

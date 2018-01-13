@@ -2,7 +2,7 @@
     <form method="POST" action="doi_mat_khau.php">
     <div class="form-group">
         <label for="tai_khoan">Tài khoản:</label>
-        <input type="text" class="form-control" name="tai_khoan" id="tai_khoan" value="{if isset($smarty.session.taiKhoan)}{$smarty.session.taiKhoan}{/if}" disabled>
+        <input type="text" class="form-control" name="tai_khoan" id="tai_khoan" value="{if isset($smarty.cookies.taiKhoan)}{$smarty.cookies.taiKhoan}{/if}" disabled>
     </div>
     <div class="form-group">
         <input type="password" class="form-control" name="mat_khau" id="mat_khau" placeholder="Nhập mật khẩu hiện tại">    

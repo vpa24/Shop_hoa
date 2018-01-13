@@ -4,13 +4,13 @@ class M_hoa_don extends database
 {
     public function xem_hoa_don()
     {
-        $sql="SELECT * FROM hoa_don inner join khach_hang on khach_hang.ma_khach_hang=hoa_don.ma_khach_hang";
+        $sql="SELECT * FROM hoa_don inner join khach_hang on khach_hang.ma_khach_hang=hoa_don.ma_khach_hang ORDER BY ngay_dat DESC";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
     public function xem_hoa_don_chua_xu_ly()
     {
-        $sql="SELECT * FROM hoa_don inner join khach_hang on khach_hang.ma_khach_hang=hoa_don.ma_khach_hang WHERE hoa_don.trang_thai = 'Chưa xử lý'";
+        $sql="SELECT * FROM hoa_don inner join khach_hang on khach_hang.ma_khach_hang=hoa_don.ma_khach_hang WHERE hoa_don.trang_thai = 'Chưa xử lý' ORDER BY ngay_dat DESC";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }

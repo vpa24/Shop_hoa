@@ -1,6 +1,8 @@
 <?php
 session_start();
 include("kiem_tra_session.php");
+include("kiem_tra_phan_quyen.php");
+
 class C_logo
 {
     function hien_thi_logo(){

@@ -5,18 +5,17 @@
       <div class="card-body">
         <form method="POST" action="dang_nhap.php" autocomplete="off">
           <div class="form-group">
-            <input class="form-control" name="tai_khoan" id="taiKhoan" type="text"
+            <input class="form-control" name="tai_khoan" id="taiKhoan" type="text" 
             min="6" max="50"
             placeholder="Nhập tài khoản" value="{if isset($smarty.post.btn_dang_nhap)}{$smarty.post.tai_khoan}{/if}" autocomplete="off" required>
           </div>
           <div class="form-group">
-            <input class="form-control" name="mat_khau" id="matKhau" type="password"
+            <input class="form-control" name="mat_khau" id="matKhau" type="password" 
             min="6" max="50"
             placeholder="Nhập mật khẩu" autocomplete="off" required>
           </div>
-
-    <div class="pretty p-svg p-curve">
-        <input type="checkbox" name='checked' />
+            <div class="pretty p-svg p-curve">
+        <input type="checkbox" name='checked'/>
         <div class="state p-success">
             <!-- svg path -->
             <svg class="svg svg-icon" viewBox="0 0 20 20">

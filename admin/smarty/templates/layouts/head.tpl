@@ -18,13 +18,13 @@
   <link href="public/css/print.css" rel="stylesheet" media="print">
 
   <!-- Custom styles for this template-->
-  <link href="public/css/sb-admin.css" rel="stylesheet">
-  <link href="public/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="public/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="public/css/demo.css" />
+    <link href="public/css/sb-admin.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
 	<link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
-  <link href="public/css/pretty-checkbox.min.css" rel="stylesheet">
+	 <link href="public/css/pretty-checkbox.min.css" rel="stylesheet">
   <script src="public/js/modernizr.custom.js"></script>
   <script type="text/javascript" src="public/ckeditor/ckeditor.js"></script>
 

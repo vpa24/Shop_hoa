@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 09:03:38
+/* Smarty version 3.1.30, created on 2018-01-12 15:19:14
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\body.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30ecea5377e9_68316376',
+  'unifunc' => 'content_5a58d1f254e5e3_91906040',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f3dfe73f5a765b089e84df12abf67866f9bc81e' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\body.tpl',
-      1 => 1513090550,
+      1 => 1515420850,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layouts/content/logout_modal.tpl' => 1,
   ),
 ),false)) {
-function content_5a30ecea5377e9_68316376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a58d1f254e5e3_91906040 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <div id="fb-root"></div>
+    <?php echo '<script'; ?>
+>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=1925421851050773';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));<?php echo '</script'; ?>
+>
   <!-- Navigation-->
   <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_216825a30ecea4c2f80_85236423', "navbar_content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_256985a58d1f252aa16_59659110', "navbar_content");
 ?>
 
     <div class="content-wrapper">
@@ -53,7 +63,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_216825a30ecea4c2f8
   <!-- /.container-fluid-->
   <!-- /.content-wrapper-->
   <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_317475a30ecea512760_90094083', "footer_content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189315a58d1f2547fd0_00954926', "footer_content");
 ?>
 
   <!-- Scroll to Top Button-->
@@ -62,10 +72,10 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_317475a30ecea51276
   </a>
   <!-- Logout Modal-->
   <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_264965a30ecea530803_33910194', "logout_modal");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_140005a58d1f254c3f9_46488232', "logout_modal");
 }
 /* {block "navbar_content"} */
-class Block_216825a30ecea4c2f80_85236423 extends Smarty_Internal_Block
+class Block_256985a58d1f252aa16_59659110 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:layouts/content/navbar_content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -73,7 +83,7 @@ $_smarty_tpl->_subTemplateRender("file:layouts/content/navbar_content.tpl", $_sm
 }
 /* {/block "navbar_content"} */
 /* {block "footer_content"} */
-class Block_317475a30ecea512760_90094083 extends Smarty_Internal_Block
+class Block_189315a58d1f2547fd0_00954926 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:layouts/content/footer_content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -81,7 +91,7 @@ $_smarty_tpl->_subTemplateRender("file:layouts/content/footer_content.tpl", $_sm
 }
 /* {/block "footer_content"} */
 /* {block "logout_modal"} */
-class Block_264965a30ecea530803_33910194 extends Smarty_Internal_Block
+class Block_140005a58d1f254c3f9_46488232 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:layouts/content/logout_modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
