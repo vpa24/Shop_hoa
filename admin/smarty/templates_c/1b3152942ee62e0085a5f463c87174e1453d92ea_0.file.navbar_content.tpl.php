@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-13 03:50:08
+/* Smarty version 3.1.30, created on 2018-01-13 10:28:05
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5981f0a8f8f8_43106449',
+  'unifunc' => 'content_5a59df35ae2230_16068729',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1515815399,
+      1 => 1515839283,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5981f0a8f8f8_43106449 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a59df35ae2230_16068729 (Smarty_Internal_Template $_smarty_tpl) {
+if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -157,6 +158,46 @@ function content_5a5981f0a8f8f8_43106449 (Smarty_Internal_Template $_smarty_tpl)
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+       <?php if ($_COOKIE['permission'] == 1 || $_COOKIE['permission'] == 0) {?>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="hien_thi_don_hang dropdown-menu" aria-labelledby="messagesDropdown">
+            <h6 class="dropdown-header">Đơn Hàng Chưa Duyệt:</h6>
+            <div class="dropdown-divider"></div>
+            <?php if (count($_smarty_tpl->tpl_vars['thong_bao']->value) == 0) {?>
+              <div class="chua_co_don_hang"> Chưa có đơn đặt hàng</div>
+            <?php } else { ?>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['thong_bao']->value, 'tb');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['tb']->value) {
+?>
+              <a class="dropdown-item" href="chi_tiet_hoa_don.php?ma_hoa_don=<?php echo $_smarty_tpl->tpl_vars['tb']->value->ma_hoa_don;?>
+">
+              <strong>Đơn hàng số <?php echo $_smarty_tpl->tpl_vars['tb']->value->ma_hoa_don;?>
+</strong>
+              <span class="small float-right text-muted"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['tb']->value->ngay_dat,"%H:%M");?>
+</span>
+              <div class="dropdown-message small">Tổng số tiền là <?php echo number_format($_smarty_tpl->tpl_vars['tb']->value->tong_thanh_tien);?>
+ đ</div>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">Hiển thị tất cả</a>
+            <?php }?>
+          </div>
+        </li>
+        <?php }?>
         <li class="nav-item">
           <a class="nav-link">Xin chào
           <?php if (isset($_COOKIE['hoTen'])) {?>

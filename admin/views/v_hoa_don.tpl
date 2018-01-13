@@ -1,11 +1,9 @@
-
-      <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Danh sách hóa đơn</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>Mã đơn hàng</th>
@@ -29,7 +27,9 @@
                   <td>{number_format($hoa_don->tong_thanh_tien)} đ</td>
                   <td>{$hoa_don->trang_thai}</td>
                   <td>
+                  {if ($hoa_don->trang_thai) == 'Chưa xử lý'}
                       <button type="button" onclick="updateAjax({$hoa_don->ma_hoa_don})" class="btn btn-success">Xử lý</button>
+                  {/if}
                       <button type="button" onclick="deleteAjax({$hoa_don->ma_hoa_don})" class="btn btn-danger">Xóa</button>
                   </td>
                 </tr>

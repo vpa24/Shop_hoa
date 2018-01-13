@@ -25,6 +25,7 @@ class C_thanh_vien
         $smarty = new  Smarty_Admin();
         $view = "views/v_thanh_vien.tpl";
         $title = "Danh sách thành viên";
+        include("nav.php");
         $smarty->assign("title", $title);
         $smarty->assign("thanh_viens", $thanh_viens);
         $smarty->assign("view", $view);

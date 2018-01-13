@@ -70,6 +70,7 @@ class C_seo {
         $smarty = new Smarty_Admin();
         $view = "views/v_seo.tpl";
         $title = "Seo Admin";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);
         $smarty->assign('title_website', $title_website);

@@ -4,7 +4,7 @@ if (isset($_COOKIE['id'])==false) {
 }
 else{
   if(isset($_COOKIE['checked'])){
-    setcookie('checked', true, time() + (60*2));
+    setcookie('checked', true, time() + (60*60));
     setcookie('id', $_COOKIE['id'] , time() + (60*2));
     setcookie('hoTen',$_COOKIE['hoTen'], time() + (60*2));
     setcookie('taiKhoan',$_COOKIE['taiKhoan'], time() + (60*2));

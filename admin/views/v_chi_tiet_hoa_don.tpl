@@ -18,13 +18,13 @@
               <label><span style="margin-left:20px">Điện thoại:</span></label> {$chi_tiet_hoa_don->dien_thoai}
               <label><span style="margin-left:20px">Email: </span></label> {$chi_tiet_hoa_don->email}
             </p>
-            <p><input class="button print" type="button" value="In đơn hàng" name="btnIn" onclick="window.print()" /></p>
+            <p><input class="button print btn btn-success" type="button" value="In đơn hàng" name="btnIn" onclick="window.print()" /></p>
         </fieldset>
         <div class="clear"></div>
         <div class="tieu_de">
            <h1>Chi tiết hóa đơn</h1>
         </div>
-  <table>
+  <table class="table table-bordered">
    <thead>
      <tr>
        <th>STT</th>
@@ -34,13 +34,6 @@
        <th>Thành tiền</th>
      </tr>
    </thead>
-   <tfoot>
-       <tr>
-         <td colspan="3">
-         <div class="pagination"><h4>Tổng thành tiền: {number_format($chi_tiet_hoa_don->tong_thanh_tien)} đồng</h4> </div>
-         <div class="clear"></div></td>
-       </tr>
-     </tfoot>
    <tbody>
      {$stt=0}
     {foreach $doc_san_pham as $sp}
@@ -55,5 +48,6 @@
     {/foreach}
    </tbody>
  </table>
+ <div class="pagination"><h4>Tổng thành tiền: {number_format($chi_tiet_hoa_don->tong_thanh_tien)} đồng</h4> </div>
     </div>
   </div>

@@ -57,6 +57,7 @@ class C_logo
         $smarty = new  Smarty_Admin();
         $view = "views/v_logo.tpl";
         $title = "Cập nhật logo";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("hinh", $hinh);
         $smarty->assign("view", $view);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-07 11:03:34
+/* Smarty version 3.1.30, created on 2018-01-13 10:47:41
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_hoa_don.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a51fe86ba87b2_50911471',
+  'unifunc' => 'content_5a59e3cd78cd04_38613473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '664b5d4c986b052a2d0668b864a45d3f82d1e6b4' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_hoa_don.tpl',
-      1 => 1515130855,
+      1 => 1515840459,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a51fe86ba87b2_50911471 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a59e3cd78cd04_38613473 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
-
-      <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Danh sách hóa đơn</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>Mã đơn hàng</th>
@@ -65,8 +63,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_don']->value) {
                   <td><?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->trang_thai;?>
 </td>
                   <td>
+                  <?php if (($_smarty_tpl->tpl_vars['hoa_don']->value->trang_thai) == 'Chưa xử lý') {?>
                       <button type="button" onclick="updateAjax(<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
 )" class="btn btn-success">Xử lý</button>
+                  <?php }?>
                       <button type="button" onclick="deleteAjax(<?php echo $_smarty_tpl->tpl_vars['hoa_don']->value->ma_hoa_don;?>
 )" class="btn btn-danger">Xóa</button>
                   </td>

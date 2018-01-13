@@ -19,6 +19,7 @@ class C_thong_tin
         $smarty = new  Smarty_Admin();
         $view = "views/v_thong_tin.tpl";
         $title = "Danh sách thông tin";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_thong_tin",$doc_thong_tin);
         $smarty->assign("view", $view);

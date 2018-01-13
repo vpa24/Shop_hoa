@@ -17,6 +17,7 @@ class C_tin_tuc
         $smarty = new  Smarty_Admin();
         $view = "views/v_tin_tuc.tpl";
         $title = "Danh sách tin tức";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_tin_tuc", $doc_tin_tuc);
         $smarty->assign("doc_loai_tin", $doc_loai_tin);

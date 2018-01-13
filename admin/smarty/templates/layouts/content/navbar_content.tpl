@@ -133,6 +133,33 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+       {if $smarty.cookies.permission == 1 || $smarty.cookies.permission == 0}
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="hien_thi_don_hang dropdown-menu" aria-labelledby="messagesDropdown">
+            <h6 class="dropdown-header">Đơn Hàng Chưa Duyệt:</h6>
+            <div class="dropdown-divider"></div>
+            {if count($thong_bao)==0}
+              <div class="chua_co_don_hang"> Chưa có đơn đặt hàng</div>
+            {else}
+            {foreach $thong_bao as $tb}
+              <a class="dropdown-item" href="chi_tiet_hoa_don.php?ma_hoa_don={$tb->ma_hoa_don}">
+              <strong>Đơn hàng số {$tb->ma_hoa_don}</strong>
+              <span class="small float-right text-muted">{$tb->ngay_dat|date_format:"%H:%M"}</span>
+              <div class="dropdown-message small">Tổng số tiền là {number_format($tb->tong_thanh_tien)} đ</div>
+            {/foreach}
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">Hiển thị tất cả</a>
+            {/if}
+          </div>
+        </li>
+        {/if}
         <li class="nav-item">
           <a class="nav-link">Xin chào
           {if isset($smarty.cookies.hoTen)}

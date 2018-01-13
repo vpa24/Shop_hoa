@@ -25,13 +25,13 @@
     $('#price').number(true);
     $('#gia_khuyen_mai').number(true);
   </script>
-<script>
+{* <script>
 if ($('.container').hasClass('auto_refresh')) {
       setTimeout(function(){
       window.location.reload(1);
   }, 5 *1000);
 }
-</script>
+</script> *}
   </div>
 </body>
 

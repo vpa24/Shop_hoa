@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-21 14:31:50
+/* Smarty version 3.1.30, created on 2018-01-13 10:36:22
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_chi_tiet_hoa_don.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3bc5d68a61f7_15614123',
+  'unifunc' => 'content_5a59e126efa891_44596945',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69a9355d6c210e428667ee1e42c3d1be0d9eeb80' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_chi_tiet_hoa_don.tpl',
-      1 => 1513866708,
+      1 => 1515839781,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3bc5d68a61f7_15614123 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a59e126efa891_44596945 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <div class="card mb-3">
@@ -50,13 +50,13 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\
               <label><span style="margin-left:20px">Email: </span></label> <?php echo $_smarty_tpl->tpl_vars['chi_tiet_hoa_don']->value->email;?>
 
             </p>
-            <p><input class="button print" type="button" value="In đơn hàng" name="btnIn" onclick="window.print()" /></p>
+            <p><input class="button print btn btn-success" type="button" value="In đơn hàng" name="btnIn" onclick="window.print()" /></p>
         </fieldset>
         <div class="clear"></div>
         <div class="tieu_de">
            <h1>Chi tiết hóa đơn</h1>
         </div>
-  <table>
+  <table class="table table-bordered">
    <thead>
      <tr>
        <th>STT</th>
@@ -66,14 +66,6 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\
        <th>Thành tiền</th>
      </tr>
    </thead>
-   <tfoot>
-       <tr>
-         <td colspan="3">
-         <div class="pagination"><h4>Tổng thành tiền: <?php echo number_format($_smarty_tpl->tpl_vars['chi_tiet_hoa_don']->value->tong_thanh_tien);?>
- đồng</h4> </div>
-         <div class="clear"></div></td>
-       </tr>
-     </tfoot>
    <tbody>
      <?php $_smarty_tpl->_assignInScope('stt', 0);
 ?>
@@ -104,6 +96,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
    </tbody>
  </table>
+ <div class="pagination"><h4>Tổng thành tiền: <?php echo number_format($_smarty_tpl->tpl_vars['chi_tiet_hoa_don']->value->tong_thanh_tien);?>
+ đồng</h4> </div>
     </div>
   </div>
 <?php }

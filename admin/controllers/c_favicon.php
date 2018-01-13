@@ -65,6 +65,7 @@ class C_favicon {
         $smarty = new Smarty_Admin();
         $view = "views/v_favicon.tpl";
         $title = "Setting favicon website";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);
         $smarty->assign('favicon', $favicon);

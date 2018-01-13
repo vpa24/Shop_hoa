@@ -19,6 +19,7 @@ class C_quang_cao
         $smarty = new  Smarty_Admin();
         $view = "views/v_quang_cao.tpl";
         $title = "Danh sách quảng cáo";
+        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_quang_cao",$doc_quang_cao);
         $smarty->assign("view", $view);
