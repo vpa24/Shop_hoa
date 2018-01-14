@@ -23,7 +23,6 @@ class C_index {
         $smarty = new Smarty_Admin();
         $view = "views/v_index.tpl";
         $title = "Trang quản lý";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("dem_tin_tuc",$dem_tin_tuc);
         $smarty->assign("dem_hoa",$dem_hoa);

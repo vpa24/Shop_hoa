@@ -12,7 +12,6 @@ class C_thong_ke_san_pham
         $smarty = new  Smarty_Admin();
         $view = "views/v_thong_ke_san_pham.tpl";
         $title = "Thống kê sản phẩm";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");

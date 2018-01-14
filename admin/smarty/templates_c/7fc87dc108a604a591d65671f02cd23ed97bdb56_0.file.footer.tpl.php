@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-13 09:12:53
+/* Smarty version 3.1.30, created on 2018-01-14 08:33:36
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a59cd9596dfa3_63910332',
+  'unifunc' => 'content_5a5b15e02ef692_45272965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7fc87dc108a604a591d65671f02cd23ed97bdb56' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\footer.tpl',
-      1 => 1515834771,
+      1 => 1515918813,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a59cd9596dfa3_63910332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5b15e02ef692_45272965 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.number.min.js"><?php echo '</script'; ?>
 >
@@ -31,6 +31,9 @@ echo '<script'; ?>
   <!-- Custom scripts for this page-->
   <?php echo '<script'; ?>
  src="public/js/sb-admin-datatables.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="public/js/ajax/ajax_hien_thi_thong_bao_don_hang.js"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
  src="public/js/Chart.min.js"><?php echo '</script'; ?>

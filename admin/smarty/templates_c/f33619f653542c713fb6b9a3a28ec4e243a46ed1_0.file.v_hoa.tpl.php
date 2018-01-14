@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-08 13:24:11
+/* Smarty version 3.1.30, created on 2018-01-13 13:40:08
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5370fb0e98f9_90208045',
+  'unifunc' => 'content_5a5a0c38bb49e7_12380885',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f33619f653542c713fb6b9a3a28ec4e243a46ed1' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_hoa.tpl',
-      1 => 1515130855,
+      1 => 1515762266,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:views/hoa/v_modal_them_hoa.tpl' => 1,
   ),
 ),false)) {
-function content_5a5370fb0e98f9_90208045 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5a0c38bb49e7_12380885 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
@@ -44,7 +44,7 @@ function content_5a5370fb0e98f9_90208045 (Smarty_Internal_Template $_smarty_tpl)
 
           </div>
         </div>
-  <?php $_smarty_tpl->_subTemplateRender("file:views/hoa/v_modal_them_hoa.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    <?php $_smarty_tpl->_subTemplateRender("file:views/hoa/v_modal_them_hoa.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
     <?php echo '<script'; ?>

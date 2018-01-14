@@ -11,7 +11,7 @@ class C_dang_nhap
             $matKhau=$_POST["mat_khau"];
             if ($this->luu_dang_nhap($taiKhoan, $matKhau)) {
                 if (isset($_POST['checked'])) {
-                    setcookie('checked', true, time() + 300);
+                    setcookie('checked', true, time() + 86400 * 3);
                 }
                 header('Location: index.php');
             }
@@ -37,14 +37,13 @@ class C_dang_nhap
             $cookie_taiKhoan=$user->TaiKhoan;
             $cookie_permission=$user->permission;
             //set cookie trong 5
-            setcookie('id', $cookie_id, time() + 10);
-            setcookie('hoTen', $cookie_hoTen, time() + (60*2));
-            setcookie('taiKhoan', $cookie_taiKhoan, time() + (60*2));
+            setcookie('id', $cookie_id, time() + 10, '/');
+            setcookie('hoTen', $cookie_hoTen, time() + (60*2), '/');
+            setcookie('taiKhoan', $cookie_taiKhoan, time() + (60*2), '/');
             setcookie('permission', $cookie_permission);
             return true;
-        } else {
-            $_SESSION['thongBao']="Tài khoản hoặc mật khẩu không hợp lệ";
-            return false;
         }
+        $_SESSION['thongBao']="Tài khoản hoặc mật khẩu không hợp lệ";
+        return false;
     }
 }

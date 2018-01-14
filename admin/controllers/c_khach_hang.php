@@ -15,7 +15,6 @@ class C_khach_hang
         $smarty = new  Smarty_Admin();
         $view = "views/v_khach_hang.tpl";
         $title = "Khách hàng";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_khach_hang", $doc_khach_hang);
         $smarty->assign("view", $view);

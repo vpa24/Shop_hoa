@@ -13,7 +13,6 @@ class C_hoa_don
         $smarty = new  Smarty_Admin();
         $view = "views/v_hoa_don.tpl";
         $title = "Danh sách hóa đơn";
-        include("nav.php");
         $smarty->assign("doc_hoa_don",$doc_hoa_don);
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);

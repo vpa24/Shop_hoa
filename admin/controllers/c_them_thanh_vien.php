@@ -16,7 +16,6 @@ class C_them_thanh_vien
         $smarty = new  Smarty_Admin();
         $view = "views/v_them_thanh_vien.tpl";
         $title = "Thêm thành viên";
-        include("nav.php");
         $smarty->assign("title", $title);
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");

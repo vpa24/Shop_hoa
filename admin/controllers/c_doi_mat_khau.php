@@ -31,7 +31,6 @@ class C_doi_mat_khau
         $smarty = new  Smarty_Admin();
         $view = "views/v_doi_mat_khau.tpl";
         $title = "Đổi mật khẩu";
-        include("nav.php");
         $smarty->assign("title", $title);
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");

@@ -63,7 +63,6 @@ class C_slider
         $smarty = new  Smarty_Admin();
         $view = "views/v_slider.tpl";
         $title = "Danh sách slider";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_slider",$doc_slider);
         $smarty->assign("view", $view);

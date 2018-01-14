@@ -28,7 +28,6 @@ class C_loai_hoa
         $smarty = new  Smarty_Admin();
         $view = "views/v_loai_hoa.tpl";
         $title = "Danh sách loại hoa";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("doc_loai_hoa",$doc_loai_hoa);
         $smarty->assign("view", $view);
