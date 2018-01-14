@@ -4,6 +4,7 @@
   <!-- Custom scripts for this page-->
   <script src="public/js/sb-admin-datatables.min.js"></script>
   <script src="public/js/ajax/ajax_hien_thi_thong_bao_don_hang.js"></script>
+  <script src="public/js/ajax/ajax_don_hang.js"></script>
   <script src="public/js/Chart.min.js"></script>
   <script src="public/js/app.js"></script>
   <script src="public/js/doanh_thu_theo_ngay.js"></script>

@@ -5,7 +5,7 @@
         <div class="card-body-icon">
           <i class="fa fa-fw fa-shopping-cart"></i>
         </div>
-        <div class="mr-5">có {$so_hoa_don_trong_ngay->count} đơn hàng đã đặt ngày hôm nay</div>
+        <div class="mr-5">có <span id="tong_dh_hom_nay"> </span> đơn hàng đã đặt ngày hôm nay</div>
       </div>
     </div>
   </div>
@@ -15,7 +15,7 @@
         <div class="card-body-icon">
           <i class="fa fa-fw fa-exclamation"></i>
         </div>
-        <div class="mr-5">có {$so_hoa_don_chua_duyet->count} đơn hàng chưa duyệt ngày hôm nay</div>
+        <div class="mr-5">có <span id="tong_dh_chua_duyet_hom_nay"></span>  đơn hàng chưa duyệt ngày hôm nay</div>
       </div>
     </div>
   </div>
@@ -26,9 +26,9 @@
         <div class="card-body-icon">
           <i class="fa fa-fw fa-reply-all"></i>
         </div>
-        <div class="mr-5" style="font-size: 14px">xem tất đơn hàng chưa duyệt</div>
+        <div class="mr-5" style="font-size: 14px">xem tất cả đơn hàng chưa duyệt</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#chua_duyet">
+      <a class="card-footer text-white clearfix small z-1" href="hoa_don_chua_duyet.php">
         <span class="float-left">Xem chi tiết</span>
         <span class="float-right">
           <i class="fa fa-angle-right"></i>
@@ -43,9 +43,9 @@
         <div class="card-body-icon">
           <i class="fa fa-fw fa-file-o"></i>
         </div>
-        <div class="mr-5">xem tất cả đơn hàng</div>
+        <div class="mr-5">xem tất cả đơn hàng đã duyệt</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="hoa_don.php">
+      <a class="card-footer text-white clearfix small z-1" href="hoa_don_da_duyet.php">
         <span class="float-left">Xem chi tiết</span>
         <span class="float-right">
           <i class="fa fa-angle-right"></i>

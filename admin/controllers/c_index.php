@@ -13,23 +13,23 @@ class C_index {
         include("models/m_hoa_don.php");
         $m_hoa_don=new M_hoa_don();
         $doc_hoa_don=$m_hoa_don->xem_hoa_don_chua_xu_ly_hom_nay();
-        //Hóa đơn trong ngày
-        $day = date("d");
-        $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay($day);
-        $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay($day);
-
+        if(isset($_POST['hien_thi'])){
+            $day = date("d");
+            $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay($day)->count;
+            $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay($day)->count;
+            $mang_hoa_don = array($so_hoa_don_chua_duyet , $so_hoa_don_trong_ngay );
+            echo json_encode($mang_hoa_don);
+            return;
+        }
         //Controller
         include("Smarty_admin.php");
         $smarty = new Smarty_Admin();
         $view = "views/v_index.tpl";
         $title = "Trang quản lý";
         $smarty->assign("title",$title);
-        $smarty->assign("dem_tin_tuc",$dem_tin_tuc);
-        $smarty->assign("dem_hoa",$dem_hoa);
         $smarty->assign("doc_hoa_don",$doc_hoa_don);
-        $smarty->assign("day",$day);
-        $smarty->assign("so_hoa_don_trong_ngay",$so_hoa_don_trong_ngay);
-        $smarty->assign("so_hoa_don_chua_duyet",$so_hoa_don_chua_duyet);
+        // $smarty->assign("so_hoa_don_trong_ngay",$so_hoa_don_trong_ngay);
+        // $smarty->assign("so_hoa_don_chua_duyet",$so_hoa_don_chua_duyet);
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");
     }

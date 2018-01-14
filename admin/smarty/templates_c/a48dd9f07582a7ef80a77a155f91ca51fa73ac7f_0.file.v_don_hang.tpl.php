@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-07 10:57:59
+/* Smarty version 3.1.30, created on 2018-01-14 10:55:19
   from "C:\wamp64\www\shop_hoa-master\admin\views\index\v_don_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a51fd37cf9bd6_78015247',
+  'unifunc' => 'content_5a5b3717cfbaf9_20438463',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a48dd9f07582a7ef80a77a155f91ca51fa73ac7f' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\index\\v_don_hang.tpl',
-      1 => 1515322662,
+      1 => 1515927311,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a51fd37cf9bd6_78015247 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5b3717cfbaf9_20438463 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
   <div class="col-xl-3 col-sm-6 mb-3">
@@ -29,8 +29,7 @@ function content_5a51fd37cf9bd6_78015247 (Smarty_Internal_Template $_smarty_tpl)
         <div class="card-body-icon">
           <i class="fa fa-fw fa-shopping-cart"></i>
         </div>
-        <div class="mr-5">có <?php echo $_smarty_tpl->tpl_vars['so_hoa_don_trong_ngay']->value->count;?>
- đơn hàng đã đặt ngày hôm nay</div>
+        <div class="mr-5">có <span id="tong_dh_hom_nay"> </span> đơn hàng đã đặt ngày hôm nay</div>
       </div>
     </div>
   </div>
@@ -40,8 +39,7 @@ function content_5a51fd37cf9bd6_78015247 (Smarty_Internal_Template $_smarty_tpl)
         <div class="card-body-icon">
           <i class="fa fa-fw fa-exclamation"></i>
         </div>
-        <div class="mr-5">có <?php echo $_smarty_tpl->tpl_vars['so_hoa_don_chua_duyet']->value->count;?>
- đơn hàng chưa duyệt ngày hôm nay</div>
+        <div class="mr-5">có <span id="tong_dh_chua_duyet_hom_nay"></span>  đơn hàng chưa duyệt ngày hôm nay</div>
       </div>
     </div>
   </div>
@@ -52,9 +50,9 @@ function content_5a51fd37cf9bd6_78015247 (Smarty_Internal_Template $_smarty_tpl)
         <div class="card-body-icon">
           <i class="fa fa-fw fa-reply-all"></i>
         </div>
-        <div class="mr-5" style="font-size: 14px">xem tất đơn hàng chưa duyệt</div>
+        <div class="mr-5" style="font-size: 14px">xem tất cả đơn hàng chưa duyệt</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#chua_duyet">
+      <a class="card-footer text-white clearfix small z-1" href="hoa_don_chua_duyet.php">
         <span class="float-left">Xem chi tiết</span>
         <span class="float-right">
           <i class="fa fa-angle-right"></i>
@@ -69,9 +67,9 @@ function content_5a51fd37cf9bd6_78015247 (Smarty_Internal_Template $_smarty_tpl)
         <div class="card-body-icon">
           <i class="fa fa-fw fa-file-o"></i>
         </div>
-        <div class="mr-5">xem tất cả đơn hàng</div>
+        <div class="mr-5">xem tất cả đơn hàng đã duyệt</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="hoa_don.php">
+      <a class="card-footer text-white clearfix small z-1" href="hoa_don_da_duyet.php">
         <span class="float-left">Xem chi tiết</span>
         <span class="float-right">
           <i class="fa fa-angle-right"></i>
