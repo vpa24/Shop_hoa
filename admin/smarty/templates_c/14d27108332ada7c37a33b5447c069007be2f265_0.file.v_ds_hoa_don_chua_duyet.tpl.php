@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-14 09:58:24
+/* Smarty version 3.1.30, created on 2018-01-14 13:33:12
   from "C:\wamp64\www\shop_hoa-master\admin\views\index\v_ds_hoa_don_chua_duyet.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5b29c0cb6752_63321675',
+  'unifunc' => 'content_5a5b5c18eeac28_09703376',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14d27108332ada7c37a33b5447c069007be2f265' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\index\\v_ds_hoa_don_chua_duyet.tpl',
-      1 => 1515923897,
+      1 => 1515936322,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5b29c0cb6752_63321675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5b5c18eeac28_09703376 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
-<div class="card mb-3" id="chua_duyet">
-  <div class="card-header">
+ <div class="card-header">
     <i class="fa fa-table"></i> Danh sách hóa đơn chưa xử lý hôm nay</div>
   <div class="card-body">
     <div class="table-responsive">
@@ -80,6 +79,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
       </table>
     </div>
   </div>
-</div>
 <?php }
 }

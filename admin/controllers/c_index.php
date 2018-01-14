@@ -7,12 +7,8 @@ class C_index {
     function hien_thi_trang_index(){
       include("models/m_index.php");
         $m_index = new M_index();
-        $dem_tin_tuc = $m_index->dem_tin_tuc();
-        $dem_hoa = $m_index->dem_hoa();
-        //Hóa đơn chưa xử lý
-        include("models/m_hoa_don.php");
-        $m_hoa_don=new M_hoa_don();
-        $doc_hoa_don=$m_hoa_don->xem_hoa_don_chua_xu_ly_hom_nay();
+        // $dem_tin_tuc = $m_index->dem_tin_tuc();
+        // $dem_hoa = $m_index->dem_hoa();
         if(isset($_POST['hien_thi'])){
             $day = date("d");
             $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay($day)->count;
@@ -27,11 +23,23 @@ class C_index {
         $view = "views/v_index.tpl";
         $title = "Trang quản lý";
         $smarty->assign("title",$title);
-        $smarty->assign("doc_hoa_don",$doc_hoa_don);
+       
         // $smarty->assign("so_hoa_don_trong_ngay",$so_hoa_don_trong_ngay);
         // $smarty->assign("so_hoa_don_chua_duyet",$so_hoa_don_chua_duyet);
         $smarty->assign("view", $view);
         $smarty->display("layout.tpl");
+    }
+    public function hoa_don_chua_xu_ly()
+    {
+        if(isset($_POST['hien_thi'])){
+            include("models/m_hoa_don.php");
+            $m_hoa_don=new M_hoa_don();
+            $doc_hoa_don=$m_hoa_don->xem_hoa_don_chua_xu_ly_hom_nay();
+            include("Smarty_admin.php");
+            $smarty = new Smarty_Admin();
+            $smarty->assign("doc_hoa_don",$doc_hoa_don);
+            $smarty->display("views/index/v_ds_hoa_don_chua_duyet.tpl");
+        }
     }
     // function json_so_luong_loai_hoa(){
 

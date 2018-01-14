@@ -1,5 +1,4 @@
-<div class="card mb-3" id="chua_duyet">
-  <div class="card-header">
+ <div class="card-header">
     <i class="fa fa-table"></i> Danh sách hóa đơn chưa xử lý hôm nay</div>
   <div class="card-body">
     <div class="table-responsive">
@@ -37,4 +36,3 @@
       </table>
     </div>
   </div>
-</div>
