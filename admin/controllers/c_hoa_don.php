@@ -3,16 +3,31 @@ session_start();
 include("kiem_tra_session.php");
 class C_hoa_don
 {
-    function hien_thi_hoa_don(){
+    function hien_thi_hoa_don_chua_duyet(){
         //Model
         include("models/m_hoa_don.php");
         $m_hoa_don=new M_hoa_don();
-        $doc_hoa_don=$m_hoa_don->xem_hoa_don();
+        $doc_hoa_don=$m_hoa_don->xem_hoa_don_chua_duyet();
         //Controller
         include("Smarty_admin.php");
         $smarty = new  Smarty_Admin();
         $view = "views/v_hoa_don.tpl";
-        $title = "Danh sách hóa đơn";
+        $title = "Danh sách hóa đơn chưa duyệt";
+        $smarty->assign("doc_hoa_don",$doc_hoa_don);
+        $smarty->assign("title",$title);
+        $smarty->assign("view", $view);
+        $smarty->display("layout.tpl");
+    }
+     function hien_thi_hoa_don_da_duyet(){
+        //Model
+        include("models/m_hoa_don.php");
+        $m_hoa_don=new M_hoa_don();
+        $doc_hoa_don=$m_hoa_don->xem_hoa_don_da_duyet();
+        //Controller
+        include("Smarty_admin.php");
+        $smarty = new  Smarty_Admin();
+        $view = "views/v_hoa_don.tpl";
+        $title = "Danh sách hóa đơn đã duyệt";
         $smarty->assign("doc_hoa_don",$doc_hoa_don);
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);

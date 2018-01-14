@@ -39,10 +39,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
-              <a href="hoa_don.php">Hóa đơn</a>
+              <a href="hoa_don_da_duyet.php">Hóa đơn đã duyệt</a>
             </li>
-            <li>
-              <a href="khach_hang.php">Khách hàng</a>
+             <li>
+              <a href="hoa_don_chua_duyet.php">Hóa đơn chưa duyệt</a>
             </li>
           </ul>
         </li>
@@ -105,10 +105,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
-              <a href="hoa_don.php">Hóa đơn</a>
-            </li>
-            <li>
-              <a href="khach_hang.php">Khách hàng</a>
+              <a href="hoa_don.php">Hóa đơn đã duyệt</a>
             </li>
           </ul>
         </li>

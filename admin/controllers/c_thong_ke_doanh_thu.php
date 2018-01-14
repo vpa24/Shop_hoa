@@ -14,7 +14,6 @@ class C_thong_ke_doanh_thu
         $smarty = new  Smarty_Admin();
         $view = "views/v_thong_ke_doanh_thu.tpl";
         $title = "Thống kê theo doanh thu";
-        include("nav.php");
         $smarty->assign("theo_sp",$theo_sp);
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);

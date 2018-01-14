@@ -18,11 +18,7 @@ class C_hien_thi_thong_bao_don_hang
                 echo "<div class='dropdown-message small'>Tổng số tiền là ".number_format($tb->tong_thanh_tien)." đ</div>";
                 echo "</a>";
             }
-            echo "<div class='dropdown-divider'></div>";
-            echo "<a class='dropdown-item small' href='#'>Hiển thị tất cả</a>";
         }
-        
-        // $smarty->assign('thong_bao', $hien_thi_thong_bao);
     }
 }
 
