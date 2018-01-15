@@ -445,6 +445,7 @@ Main Components
   backface-visibility: hidden;
 }
 .cd-cart .delete-item {
+  cursor: pointer;
   margin:0 1em;
   color: #F10F23;
 }

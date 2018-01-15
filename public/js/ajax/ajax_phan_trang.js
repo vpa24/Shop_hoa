@@ -17,7 +17,6 @@
   }
 
   function doctheoMaLoai(maloai, page) {
-    alert('maloai');
     $.ajax({
       type: 'post',
       url: 'ajax_danh_sach_hoa.php',
@@ -32,7 +31,6 @@
   }
 
   function doctheoMaLoaiGia(maloai, price_range , page) {
-    alert('maloai gia');
     $.ajax({
       type: 'post',
       url: 'ajax_danh_sach_hoa.php',
@@ -85,7 +83,6 @@
     } else{
       doctheoGia(price_range, 1);
     }
-
   });
 
   //click vao link phan trang
@@ -100,7 +97,6 @@
     }else{
       phantrang(page);
     }
-
     $('html, body').animate({
       scrollTop: 250,
     }, 'fast');
@@ -115,7 +111,6 @@
     } else {
       doctheoMaLoai(maloai, 1);
     }
-
     $('html, body').animate({
       scrollTop: 250,
     }, 'fast');

@@ -12,6 +12,7 @@
 <script src="public/js/main.js"></script>
 <script src="public/js/numeral.min.js"></script>
 <script src="public/js/slider/script.slider.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script type="text/javascript">
       $("#giam").click(function(){

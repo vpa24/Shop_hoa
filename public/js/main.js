@@ -4,16 +4,12 @@ var tongThanhTien = 0;
 function addToCart(MaHoa, sl) {
   var cartIsEmpty = cartWrapper.hasClass('empty');
   addProduct(MaHoa, sl);
-  updateCartCount(cartIsEmpty);
-  cartWrapper.removeClass('empty');
 }
 
 function addToCartCT(MaHoa) {
   var cartIsEmpty = cartWrapper.hasClass('empty');
   var sl = parseInt(document.getElementById('sl_' + MaHoa).value);
   addProduct(MaHoa, sl);
-  updateCartCount(true, sl);
-  cartWrapper.removeClass('empty');
 }
 
 function tang(mahoa) {
@@ -24,9 +20,18 @@ function tang(mahoa) {
       tang: 'tang',
       mahoa: mahoa,
     },
-    success: function(response) {
-      cap_nhap_gia_gio_hang(response, mahoa);
-      updateCartCount(true, 1);
+    success: function(response) { 
+      if (response.includes('loi_sl_')) {
+        data = response.replace('loi_sl_', '');
+        hien_thi_loi_sl(data);
+      }
+      if (response == 'loi') {
+        hien_thi_loi();
+      }
+      else{
+        cap_nhap_gia_gio_hang(response, mahoa);
+        updateCartCount(true, 1);
+      }
     },
   });
 }
@@ -155,22 +160,44 @@ function addProduct(MaHoa, sl) {
     data: {
       MaHoa: MaHoa,
       sl: sl,
-    },
+    },success: function (data) {
+      if(data == 'loi'){
+        hien_thi_loi();
+        return;
+      }
+      if (data == '') {
+        cap_nhap_tong_tt();
+        updateCartCount(true, sl);
+        cartWrapper.removeClass('empty');
+      } else {
+        data = data.replace('loi_sl_','');
+        hien_thi_loi_sl(data);
+      }
+    }
   });
+}
+function hien_thi_loi_sl(sl) {
+  swal({
+    title: "Lỗi!!",
+    text: "Rất tiếc chỉ còn " + sl + " sản phẩm",
+    icon: "warning",
+    dangerMode: true,
+  })
+}
+function hien_thi_loi() {
+  swal({
+    title: "Lỗi!!",
+    text: "Số lượng tối đa được phép mua là 10",
+    icon: "warning",
+    dangerMode: true,
+  })
 }
 
 function updateCartCount(emptyCart, quantity) {
-  if (typeof quantity === 'undefined') {
-    var actual = Number(cartCount.find('li').eq(0).text()) + 1;
-    var next = actual + 1;
-    cartCount.find('li').eq(0).text(actual);
-    cartCount.find('li').eq(1).text(next);
-  } else {
     var actual = Number(cartCount.find('li').eq(0).text()) + quantity;
     var next = actual + 1;
     cartCount.find('li').eq(0).text(actual);
     cartCount.find('li').eq(1).text(next);
-  }
 
   cartCount.addClass('update-count');
 

@@ -16,25 +16,16 @@
   <script src="public/js/cbpFWTabs.js"></script>
   <script>
     (function() {
-
       [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
         new CBPFWTabs( el );
       });
-
     })();
   </script>
   <script>
     $('#price').number(true);
     $('#gia_khuyen_mai').number(true);
   </script>
-{* <script>
-if ($('.container').hasClass('auto_refresh')) {
-      setTimeout(function(){
-      window.location.reload(1);
-  }, 5 *1000);
-}
-</script> *}
-  </div>
+</div>
 </body>
 
 </html>
