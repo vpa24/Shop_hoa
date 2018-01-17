@@ -8,7 +8,7 @@
             unset($_COOKIE['taiKhoan']);
             if(isset($_COOKIE['checked'])){
                 unset($_COOKIE['checked']);
-                setcookie('checked', false, time() - 3600);
+                setcookie('checked', false, time() + 86400 * 3, '/');
             }
                 
             header("location:dang_nhap.php");
