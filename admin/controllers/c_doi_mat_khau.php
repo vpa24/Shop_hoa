@@ -16,7 +16,7 @@ class C_doi_mat_khau
             $ktmk = $m_doi_mat_khau->kiem_tra_mat_khau_cu($id, $matKhau);
             if (!$ktmk) {
                 echo "<script>
-                window.alert('Sai mật khẩu hiện tại vui lòng nhập lại')
+                window.alert('$matKhau')
                 </script>";
             } else {
                 $dmk = $m_doi_mat_khau->doi_mat_khau($matKhauMoi, $id, $matKhau);

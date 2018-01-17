@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 13:02:34
+/* Smarty version 3.1.30, created on 2018-01-17 14:02:43
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_doi_mat_khau.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32766a8a3ca3_99210498',
+  'unifunc' => 'content_5a5f5783118bd3_30114856',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cf72ad6d413f4e73958b6ac32138f0f948797b8a' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_doi_mat_khau.tpl',
-      1 => 1513161974,
+      1 => 1516197761,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a32766a8a3ca3_99210498 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5f5783118bd3_30114856 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
     <form method="POST" action="doi_mat_khau.php">
     <div class="form-group">
         <label for="tai_khoan">Tài khoản:</label>
-        <input type="text" class="form-control" name="tai_khoan" id="tai_khoan" value="<?php if (isset($_SESSION['taiKhoan'])) {
-echo $_SESSION['taiKhoan'];
+        <input type="text" class="form-control" name="tai_khoan" id="tai_khoan" value="<?php if (isset($_COOKIE['taiKhoan'])) {
+echo $_COOKIE['taiKhoan'];
 }?>" disabled>
     </div>
     <div class="form-group">
@@ -36,7 +36,7 @@ echo $_SESSION['taiKhoan'];
     <div class="form-group">
         <input type="password" class="form-control" name="mat_khau_moi" id="mat_khau_moi"
         data-validation="strength" data-validation-strength="2" data-validation-error-msg="Mật khẩu bao gồm chữ và số và tối thiểu 8 ký tự"
-        placeholder="Nhập mật khẩu">    
+        placeholder="Nhập mật khẩu mới">    
     </div>
     <div class="form-group">
         <input type="password" class="form-control" name="nl_mat_khau_moi" 

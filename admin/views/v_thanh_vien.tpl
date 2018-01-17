@@ -56,9 +56,27 @@
                           <div class="form-group">
                             <label for="recipient-name" class="form-control-label">Quyền:</label>
                             <select class="form-control" name="permission">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                <option {if $thanh_vien->permission == 1} selected="selected" {/if} value="1">Admin</option>
+                                <option {if $thanh_vien->permission == 0} selected="selected" {/if}  value="0">QL Đơn Hàng</option>
+                                <option {if $thanh_vien->permission == 2} selected="selected" {/if}  value="2">QL Sản Phẩm</option>
+=======
                                 <option value="{$thanh_vien->permission}">{if $thanh_vien->permission == 1}Admin{else}Thành viên{/if}</option>
                                 <option value="1">Admin</option>
                                 <option value="0">Thành viên</option>
+>>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+=======
+                                <option value="{$thanh_vien->permission}">{if $thanh_vien->permission == 1}Admin{else}Thành viên{/if}</option>
+                                <option value="1">Admin</option>
+                                <option value="0">Thành viên</option>
+>>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+=======
+                                <option value="{$thanh_vien->permission}">{if $thanh_vien->permission == 1}Admin{else}Thành viên{/if}</option>
+                                <option value="1">Admin</option>
+                                <option value="0">Thành viên</option>
+>>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
                             </select>
                           </div>
                           <div class="modal-footer">

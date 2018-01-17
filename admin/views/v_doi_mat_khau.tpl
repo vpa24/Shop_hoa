@@ -10,7 +10,7 @@
     <div class="form-group">
         <input type="password" class="form-control" name="mat_khau_moi" id="mat_khau_moi"
         data-validation="strength" data-validation-strength="2" data-validation-error-msg="Mật khẩu bao gồm chữ và số và tối thiểu 8 ký tự"
-        placeholder="Nhập mật khẩu">    
+        placeholder="Nhập mật khẩu mới">    
     </div>
     <div class="form-group">
         <input type="password" class="form-control" name="nl_mat_khau_moi" 
