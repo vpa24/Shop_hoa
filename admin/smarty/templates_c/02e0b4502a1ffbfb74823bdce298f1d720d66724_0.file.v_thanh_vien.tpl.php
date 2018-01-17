@@ -1,54 +1,18 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Smarty version 3.1.30, created on 2018-01-17 14:22:06
-=======
-/* Smarty version 3.1.30, created on 2018-01-13 10:44:43
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-/* Smarty version 3.1.30, created on 2018-01-13 10:44:43
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-/* Smarty version 3.1.30, created on 2018-01-13 10:44:43
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+/* Smarty version 3.1.30, created on 2018-01-17 14:51:51
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_thanh_vien.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'unifunc' => 'content_5a5f5c0e0b92a0_19341043',
-=======
-  'unifunc' => 'content_5a59e31b027e24_38639530',
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-  'unifunc' => 'content_5a59e31b027e24_38639530',
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-  'unifunc' => 'content_5a59e31b027e24_38639530',
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+  'unifunc' => 'content_5a5f6307850e70_30609121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '02e0b4502a1ffbfb74823bdce298f1d720d66724' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_thanh_vien.tpl',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      1 => 1516198921,
-=======
-      1 => 1515762910,
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-      1 => 1515762910,
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-      1 => 1515762910,
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+      1 => 1516200708,
       2 => 'file',
     ),
   ),
@@ -56,19 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-function content_5a5f5c0e0b92a0_19341043 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5a59e31b027e24_38639530 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-function content_5a59e31b027e24_38639530 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-function content_5a59e31b027e24_38639530 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
+function content_5a5f6307850e70_30609121 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
@@ -146,28 +98,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['thanh_vien']->value) {
                           <div class="form-group">
                             <label for="recipient-name" class="form-control-label">Quyền:</label>
                             <select class="form-control" name="permission">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 <option <?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 1) {?> selected="selected" <?php }?> value="1">Admin</option>
                                 <option <?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 0) {?> selected="selected" <?php }?>  value="0">QL Đơn Hàng</option>
                                 <option <?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 2) {?> selected="selected" <?php }?>  value="2">QL Sản Phẩm</option>
-=======
-=======
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-                                <option value="<?php echo $_smarty_tpl->tpl_vars['thanh_vien']->value->permission;?>
-"><?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 1) {?>Admin<?php } else { ?>Thành viên<?php }?></option>
-                                <option value="1">Admin</option>
-                                <option value="0">Thành viên</option>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
                             </select>
                           </div>
                           <div class="modal-footer">

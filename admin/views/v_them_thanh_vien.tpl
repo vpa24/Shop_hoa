@@ -15,24 +15,9 @@
     <div class="form-group">
         <label for="recipient-name" class="form-control-label">Quyền:</label>
         <select class="form-control" name="permission">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <option value="0">QL Dơn Hàng</option>
             <option value="1">Admin</option>
             <option value="2">QL Sản Phẩm</option>
-=======
-            <option value="0">Thành viên</option>
-            <option value="1">Admin</option>
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-            <option value="0">Thành viên</option>
-            <option value="1">Admin</option>
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-            <option value="0">Thành viên</option>
-            <option value="1">Admin</option>
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
         </select>
     </div>
     <button type="submit" class="btn btn-primary" name="btn_submit">Thêm thành viên</button>

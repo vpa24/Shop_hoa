@@ -11,19 +11,7 @@ class C_dang_nhap
             $matKhau=$_POST["mat_khau"];
             if ($this->luu_dang_nhap($taiKhoan, $matKhau)) {
                 if (isset($_POST['checked'])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     setcookie('checked', true, time() + 86400 * 3, '/');
-=======
-                    setcookie('checked', true, time() + 86400 * 3);
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-                    setcookie('checked', true, time() + 86400 * 3);
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
-=======
-                    setcookie('checked', true, time() + 86400 * 3);
->>>>>>> ecb47bcaeeda9a0ea3b2a6fb628cd60df7506547
                 }
                 header('Location: index.php');
             }
