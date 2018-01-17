@@ -27,7 +27,11 @@
                 <tr id="delete{$thanh_vien->ID}">
                   <td>{$thanh_vien->TaiKhoan}</td>
                   <td>{$thanh_vien->HoTen}</td>
-                  <td>{if $thanh_vien->permission == 1}Admin{else}Thành viên{/if}</td>
+                  <td>
+                    {if $thanh_vien->permission == 1}Admin
+                    {elseif $thanh_vien->permission == 0}Quản lý đơn hàng
+                    {else}Quản lý sản phẩm
+                    {/if}</td>
                   <td>{if $thanh_vien->permission != 1}
                       <button type="button" class="btn btn-primary" onclick="getId({$thanh_vien->ID})" id="update{$thanh_vien->id}" data-toggle="modal" data-target="#edit{$thanh_vien->ID}" >Sửa</button>
                       <button type="button" onclick="deleteAjax({$thanh_vien->ID})" class="btn btn-danger">Xóa</button>

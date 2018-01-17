@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-17 14:51:51
+/* Smarty version 3.1.30, created on 2018-01-17 15:00:28
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_thanh_vien.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5f6307850e70_30609121',
+  'unifunc' => 'content_5a5f650c06b7a1_87884333',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '02e0b4502a1ffbfb74823bdce298f1d720d66724' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_thanh_vien.tpl',
-      1 => 1516200708,
+      1 => 1516201225,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5f6307850e70_30609121 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5f650c06b7a1_87884333 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <!-- Example DataTables Card-->
@@ -58,7 +58,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['thanh_vien']->value) {
 </td>
                   <td><?php echo $_smarty_tpl->tpl_vars['thanh_vien']->value->HoTen;?>
 </td>
-                  <td><?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 1) {?>Admin<?php } else { ?>Thành viên<?php }?></td>
+                  <td>
+                    <?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 1) {?>Admin
+                    <?php } elseif ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission == 0) {?>Quản lý đơn hàng
+                    <?php } else { ?>Quản lý sản phẩm
+                    <?php }?></td>
                   <td><?php if ($_smarty_tpl->tpl_vars['thanh_vien']->value->permission != 1) {?>
                       <button type="button" class="btn btn-primary" onclick="getId(<?php echo $_smarty_tpl->tpl_vars['thanh_vien']->value->ID;?>
 )" id="update<?php echo $_smarty_tpl->tpl_vars['thanh_vien']->value->id;?>
