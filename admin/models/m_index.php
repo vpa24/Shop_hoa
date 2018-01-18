@@ -2,21 +2,28 @@
 require_once("database.php");
 class M_index extends database
 {
-    public function dem_tin_tuc()
-    {
-        $sql = "select COUNT(*) as dem from tin_tuc";
-        $this->setQuery($sql);
-        return $this->loadRow();
-    }
     public function dem_hoa()
     {
-        $sql = "select COUNT(*) as dem from hoa";
+        $sql = "select COUNT(*) as count from hoa";
         $this->setQuery($sql);
         return $this->loadRow();
     }
-    public function So_luong_loai_hoa()
+    public function dem_loai_hoa()
     {
-        $sql="SELECT TenLoai, count(hoa.MaLoai) as so_luong FROM loai_hoa inner join hoa on hoa.MaLoai=loai_hoa.MaLoai group by hoa.MaLoai";
+        $sql = "select COUNT(*) as count from loai_hoa";
+        $this->setQuery($sql);
+        return $this->loadRow();
+    }
+
+    public function hoa_het_hang()
+    {
+        $sql = "select COUNT(*) as count from hoa where SoLuongSP = 0";
+        $this->setQuery($sql);
+        return $this->loadRow();
+    }
+    public function ds_hoa_het_hang()
+    {
+        $sql = "select *  from hoa where SoLuongSP = 0";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
@@ -33,4 +40,11 @@ class M_index extends database
         $this->setQuery($sql);
         return $this->loadRow(array($day));
     }
+    public function sua_sl($maHoa,$sl)
+    {
+        $sql = "UPDATE hoa SET ThoiGian=now(),SoLuongSP='$sl' WHERE MaHoa='$maHoa'";
+        $this->setQuery($sql);
+        return $this->execute();
+    }
+
 }

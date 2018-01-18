@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-14 10:13:10
+/* Smarty version 3.1.30, created on 2018-01-17 15:13:21
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5b2d36d71f42_02022477',
+  'unifunc' => 'content_5a5f681150b6f8_23074286',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1515924789,
+      1 => 1516201997,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5b2d36d71f42_02022477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5f681150b6f8_23074286 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -121,7 +121,7 @@ function content_5a5b2d36d71f42_02022477 (Smarty_Internal_Template $_smarty_tpl)
             </li>
           </ul>
         </li>
-        <?php } else { ?>
+        <?php } elseif ($_COOKIE['permission'] == 0) {?>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
@@ -129,7 +129,25 @@ function content_5a5b2d36d71f42_02022477 (Smarty_Internal_Template $_smarty_tpl)
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
-              <a href="hoa_don.php">Hóa đơn đã duyệt</a>
+              <a href="hoa_don_da_duyet.php">Hóa đơn đã duyệt</a>
+            </li>
+             <li>
+              <a href="hoa_don_chua_duyet.php">Hóa đơn chưa duyệt</a>
+            </li>
+          </ul>
+        </li>
+        <?php } elseif ($_COOKIE['permission'] == 2) {?>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Quản lý sản phẩm</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti">
+            <li>
+              <a href="hoa.php">Hoa</a>
+            </li>
+            <li>
+              <a href="loai_hoa.php">Loại hoa</a>
             </li>
           </ul>
         </li>

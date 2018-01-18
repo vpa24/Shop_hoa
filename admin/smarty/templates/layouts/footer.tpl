@@ -11,7 +11,6 @@
   <script src="public/js/doanh_thu_theo_tuan.js"></script>
   <script src="public/js/doanh_thu_theo_thang.js"></script>
   <script src="public/js/doanh_thu_theo_quy.js"></script>
-  <script src="public/js/sl_theo_tuan.js"></script>
   <script src="public/js/accounting.min.js"></script>
   <script src="public/js/cbpFWTabs.js"></script>
   <script>

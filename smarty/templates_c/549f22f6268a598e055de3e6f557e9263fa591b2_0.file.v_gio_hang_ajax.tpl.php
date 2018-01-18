@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-15 14:24:06
+/* Smarty version 3.1.30, created on 2018-01-18 01:50:56
   from "C:\wamp64\www\shop_hoa-master\views\v_gio_hang_ajax.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5cb986bfb9f5_56895305',
+  'unifunc' => 'content_5a5ffd8074b5a8_83914069',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '549f22f6268a598e055de3e6f557e9263fa591b2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_gio_hang_ajax.tpl',
-      1 => 1516026194,
+      1 => 1516200216,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5cb986bfb9f5_56895305 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5ffd8074b5a8_83914069 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_SESSION['giohang'])) {?>
   <div class="cd-cart-container">
 <?php } else { ?>

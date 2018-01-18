@@ -1,32 +1,35 @@
 <?php
 session_start();
 include("kiem_tra_session.php");
-include("RandomColor.php");
-use \Colors\RandomColor;
 class C_index {
     function hien_thi_trang_index(){
-      include("models/m_index.php");
+        include("models/m_index.php");
         $m_index = new M_index();
-        // $dem_tin_tuc = $m_index->dem_tin_tuc();
-        // $dem_hoa = $m_index->dem_hoa();
         if(isset($_POST['hien_thi'])){
             $day = date("d");
             $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay($day)->count;
             $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay($day)->count;
             $mang_hoa_don = array($so_hoa_don_chua_duyet , $so_hoa_don_trong_ngay );
-            echo json_encode($mang_hoa_don);
-            return;
+            return json_encode($mang_hoa_don);
         }
-        //Controller
+        if($_COOKIE['permission']==2){
+            $hoa=$m_index->ds_hoa_het_hang();
+            $dem_hoa = $m_index->dem_hoa()->count;
+            $dem_loai_hoa = $m_index->dem_loai_hoa()->count;
+            $hoa_het_hang= $m_index->hoa_het_hang()->count;
+        }
         include("Smarty_admin.php");
         $smarty = new Smarty_Admin();
         $view = "views/v_index.tpl";
         $title = "Trang quản lý";
         $smarty->assign("title",$title);
-       
-        // $smarty->assign("so_hoa_don_trong_ngay",$so_hoa_don_trong_ngay);
-        // $smarty->assign("so_hoa_don_chua_duyet",$so_hoa_don_chua_duyet);
         $smarty->assign("view", $view);
+         if($_COOKIE['permission']==2){
+            $smarty->assign("dshoa", $hoa);
+            $smarty->assign("dem_hoa", $dem_hoa);
+            $smarty->assign("dem_loai_hoa", $dem_loai_hoa);
+            $smarty->assign("hoa_het_hang", $hoa_het_hang);
+         }
         $smarty->display("layout.tpl");
     }
     public function hoa_don_chua_xu_ly()
@@ -41,18 +44,18 @@ class C_index {
             $smarty->display("views/index/v_ds_hoa_don_chua_duyet.tpl");
         }
     }
-    // function json_so_luong_loai_hoa(){
-
-    //   include("models/m_index.php");
-    //   $m_index = new M_index();
-    //   $so_luong_loai_hoa=$m_index->So_luong_loai_hoa();
-    //   $mang_color=array('color' => RandomColor::one(array('luminosity'=>'dark')) );
-    //   $i=0;
-    //   foreach ($so_luong_loai_hoa as $sl) {
-    //      $mang[$i]= array('TenLoai' =>$sl->TenLoai ,'so_luong'=>$sl->so_luong,'mau'=> RandomColor::one(array('format'=>'hex')));
-    //      $i++;
-    //   }
-    //   print json_encode($mang, JSON_UNESCAPED_UNICODE);
-    // }
+    public function sua_sl_hoa()
+    {
+        if(isset($_POST['btn_update'])){
+            $maHoa=$_POST['ma_hoa'];
+            $sl=$_POST['sl'];
+            include("models/m_index.php");
+            $m_index = new M_index();
+            $update = $m_index->sua_sl($maHoa, $sl);
+          if ($update) {
+              header('Location: index.php');
+          }
+        }
+    }
 }
 ?>

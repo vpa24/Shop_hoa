@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-10 01:00:22
+/* Smarty version 3.1.30, created on 2018-01-18 01:50:56
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_giam_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5565a6e68327_85449800',
+  'unifunc' => 'content_5a5ffd802dc973_53800880',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '146c00083619b6aefb55fa5c913a2d603b6fe9a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_giam_gia.tpl',
-      1 => 1515546013,
+      1 => 1516200216,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5565a6e68327_85449800 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5ffd802dc973_53800880 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">

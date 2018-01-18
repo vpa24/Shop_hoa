@@ -30,4 +30,4 @@ setInterval(function () {
     $('#chua_duyet').html(data); 
     document.getElementById('tong_dh_hom_nay').innerHTML = mang[1];
     document.getElementById('tong_dh_chua_duyet_hom_nay').innerHTML = mang[0];
-}, 1000);
+}, 1000 * 60);

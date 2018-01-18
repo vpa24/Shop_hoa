@@ -97,7 +97,7 @@
             </li>
           </ul>
         </li>
-        {else}
+        {elseif $smarty.cookies.permission == 0}
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
@@ -105,7 +105,25 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
-              <a href="hoa_don.php">Hóa đơn đã duyệt</a>
+              <a href="hoa_don_da_duyet.php">Hóa đơn đã duyệt</a>
+            </li>
+             <li>
+              <a href="hoa_don_chua_duyet.php">Hóa đơn chưa duyệt</a>
+            </li>
+          </ul>
+        </li>
+        {elseif $smarty.cookies.permission == 2}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Quản lý sản phẩm</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti">
+            <li>
+              <a href="hoa.php">Hoa</a>
+            </li>
+            <li>
+              <a href="loai_hoa.php">Loại hoa</a>
             </li>
           </ul>
         </li>

@@ -13,7 +13,7 @@ class M_hoa extends database
         return $this->loadAllRows();
     }
     function update_hoa($tenHoa,$tenHoaURL,$gia,$giakm,$thanhPhan,$noiDung,$hinh,$maLoai,$sl,$maHoa){
-        $sql = "UPDATE shop_hoa.hoa SET TenHoa='$tenHoa', TenHoa_URL='$tenHoaURL',
+        $sql = "UPDATE hoa SET TenHoa='$tenHoa', TenHoa_URL='$tenHoaURL',
          Gia='$gia',GiaKhuyenMai='$giakm', ThanhPhan='$thanhPhan', NoiDung='$noiDung',
          Hinh='$hinh', MaLoai='$maLoai',ThoiGian=now(),SoLuongSP='$sl' WHERE MaHoa='$maHoa'";
         $this->setQuery($sql);

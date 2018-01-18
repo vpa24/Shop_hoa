@@ -3,7 +3,6 @@ $(document).ready(function(){
     url:"doanh_thu_theo_thang.php",
     method:"GET",
     success:function(data){
-      console.log(data);
       var thang=[];
       var tong_tt=[];
       var obj=jQuery.parseJSON(data);
