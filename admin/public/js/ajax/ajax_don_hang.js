@@ -1,5 +1,4 @@
 if (($("#chua_duyet").length > 0)) {
-    alert('asdas');
     var mang = [];
     var data;
     function sl_hoa_don() {
