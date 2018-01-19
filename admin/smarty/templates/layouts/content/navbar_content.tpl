@@ -78,6 +78,9 @@
             <li>
               <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
+             <li>
+              <a href="thong_ke_san_pham.php">Theo Sản Phẩm</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">

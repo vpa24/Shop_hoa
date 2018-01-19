@@ -28,17 +28,17 @@ class M_index extends database
         return $this->loadAllRows();
     }
     
-    public function so_hoa_don_da_dat_trong_ngay($day)
+    public function so_hoa_don_da_dat_trong_ngay()
     {
-        $sql = "select COUNT(*) as count from hoa_don  WHERE day(ngay_dat) = ?";
+        $sql = "select * from hoa_don  WHERE day(ngay_dat) = day(curdate())";
         $this->setQuery($sql);
-        return $this->loadRow(array($day));
+        return $this->loadRow();
     }
-    public function so_hoa_don_chua_duyet_trong_ngay($day)
+    public function so_hoa_don_chua_duyet_trong_ngay()
     {
-        $sql = "select COUNT(*) as count from hoa_don WHERE day(ngay_dat) = ? and trang_thai = 'Chưa xử lý'";
+        $sql = "select * from hoa_don WHERE day(ngay_dat) = day(curdate()) and trang_thai = 'Chưa xử lý'";
         $this->setQuery($sql);
-        return $this->loadRow(array($day));
+        return $this->loadRow();
     }
     public function sua_sl($maHoa,$sl)
     {

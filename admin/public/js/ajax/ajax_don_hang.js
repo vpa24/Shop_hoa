@@ -1,33 +1,36 @@
-var mang=[];
-var data;
-function sl_hoa_don() {
-    $.ajax({
-        type: 'post',
-        url: 'index.php',
-        data: {
-            hien_thi: true,
-        },
-        success: function (response) {
-            mang = jQuery.parseJSON(response);        
-        },
-    });
+if (($("#chua_duyet").length > 0)) {
+    alert('asdas');
+    var mang = [];
+    var data;
+    function sl_hoa_don() {
+        $.ajax({
+            type: 'post',
+            url: 'index.php',
+            data: {
+                hien_thi: true,
+            },
+            success: function (response) {
+                mang = jQuery.parseJSON(response);
+            },
+        });
+    }
+    function hoa_don_chua_duyet() {
+        $.ajax({
+            type: 'post',
+            url: 'ds_hoa_don_chua_duyet.php',
+            data: {
+                hien_thi: true,
+            },
+            success: function (response) {
+                data = response;
+            },
+        });
+    }
+    setInterval(function () {
+        sl_hoa_don();
+        hoa_don_chua_duyet();
+        $('#chua_duyet').html(data);
+        document.getElementById('tong_dh_hom_nay').innerHTML = mang[1];
+        document.getElementById('tong_dh_chua_duyet_hom_nay').innerHTML = mang[0];
+    }, 1000);
 }
-function hoa_don_chua_duyet() {
-    $.ajax({
-        type: 'post',
-        url: 'ds_hoa_don_chua_duyet.php',
-        data: {
-            hien_thi: true,
-        },
-        success: function (response) {
-            data = response;
-        },
-    });
-}
-setInterval(function () {
-    sl_hoa_don();
-    hoa_don_chua_duyet();
-    $('#chua_duyet').html(data); 
-    document.getElementById('tong_dh_hom_nay').innerHTML = mang[1];
-    document.getElementById('tong_dh_chua_duyet_hom_nay').innerHTML = mang[0];
-}, 1000 * 60);

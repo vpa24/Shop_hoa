@@ -28,7 +28,6 @@ class C_contact {
         $smarty = new Smarty_Admin();
         $view = "views/v_contact.tpl";
         $title = "Contact Admin";
-        include("nav.php");
         $smarty->assign("title",$title);
         $smarty->assign("view", $view);
         $smarty->assign('phone_number', $phone_number);
