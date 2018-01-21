@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 class C_dang_nhap
@@ -13,6 +12,7 @@ class C_dang_nhap
             $kq=$m_khach_hang->Doc_khach_hang_theo_email_pass($email,$mat_khau);
             if($kq){
                 $_SESSION['hoTen']=$kq->ten_khach_hang;
+                 $_SESSION['makh']=$kq->ma_khach_hang;
                 header('Location: .');      
             }
             else{
@@ -22,7 +22,7 @@ class C_dang_nhap
         include("c_data_contact.php");
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
-        $title = "Trang Đăng Nhập";
+        $title = "Đăng Nhập";
         $view = "views/v_dang_nhap.tpl";
         include("c_smarty_info.php");
         $smarty->display("layout.tpl");

@@ -16,7 +16,7 @@
 				</form>
 			</div>
 			<div class="register-home">
-				<a href=".">Trang chủ</a>
+				<a href=".">Trở Về Trang chủ</a>
 			</div>
 		</div>
 	</div>

@@ -4627,6 +4627,17 @@ button.button {
 .login-form-grids input[type="radio"]{
     margin-left: 1em;
 }
+.register-home {
+    margin: 2em 0 0;
+    text-align: center;
+}
+.register-home a {
+    padding: 8px 45px;
+    background: #FA5999;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
 .canh_trai{
   text-align: right;
 }
