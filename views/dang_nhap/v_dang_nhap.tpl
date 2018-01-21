@@ -2,6 +2,11 @@
 		<div class="container">
 			<h2 class="h2Login">Đăng Nhập</h2>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+				{if isset($smarty.session.giohang)}
+					<div class="alert alert-warning" role="alert">
+	            		Vui lòng đăng nhập để tiếp tục mua hàng!!!
+					</div>  
+				{/if}
 				<form method="post">
 					<input type="email" name="email" placeholder="Email" required=" " value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}">
 					<input type="password" name="mat_khau" placeholder="Mật Khẩu" required=" ">

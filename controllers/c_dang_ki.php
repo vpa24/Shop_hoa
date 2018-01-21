@@ -9,15 +9,19 @@ class C_dang_ki
     if(isset($_POST['dang_ki'])){
       $_SESSION['hoTen']=$hoten=$_POST['hoTen'];
       $phai=$_POST['phai'];
-      $email=$_POST['email'];
+      $_SESSION['email']= $email=$_POST['email'];
       $dia_chi=$_POST['diaChi'];
       $dien_thoai=$_POST['dienThoai'];
       $mat_khau=$_POST['matKhau'];
       $kq=$m_khach_hang->Them_khach_hang($hoten, $phai,$email, $dia_chi, $dien_thoai,$mat_khau);
-      
       if($kq){
          $_SESSION['makh']=$m_khach_hang->Doc_khach_hang_theo_email_pass($email,$mat_khau)->ma_khach_hang;
-        header('Location: .');  
+         if(isset($_SESSION['giohang'])){
+            header('Location: khach-hang.html');
+          }
+          else{
+            header('Location: .');
+          }
       }
     }
       include("c_data_contact.php");

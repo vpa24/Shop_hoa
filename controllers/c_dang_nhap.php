@@ -12,8 +12,14 @@ class C_dang_nhap
             $kq=$m_khach_hang->Doc_khach_hang_theo_email_pass($email,$mat_khau);
             if($kq){
                 $_SESSION['hoTen']=$kq->ten_khach_hang;
-                 $_SESSION['makh']=$kq->ma_khach_hang;
-                header('Location: .');      
+                $_SESSION['makh']=$kq->ma_khach_hang;
+                $_SESSION['email']=$kq->email;
+                if(isset($_SESSION['giohang'])){
+                    header('Location: khach-hang.html');
+                }
+                else{
+                    header('Location: .');
+                }
             }
             else{
                 echo "<script>alert('Thông tin đăng nhập không hợp lệ')</script>";

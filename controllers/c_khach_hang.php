@@ -9,9 +9,13 @@ class C_khach_hang
 {
     public function khach_hang()
     {
-        if (isset($_SESSION['giohang'])) {
+        if (isset($_SESSION['makh'])) {     
+            include("models/m_khach_hang.php");
+            $m_khach_hang=new M_khach_hang();
+            $ma_kh= $_SESSION['makh'];
+            $kh=$m_khach_hang-> Doc_khach_hang_theo_ma_kh($ma_kh);
             if (isset($_POST['luu'])) {
-                $ma_kh=$this->luu_khach_hang();
+                $ma_kh=$this->Sua_khach_hang($ma_kh,$m_khach_hang);
                 $_SESSION['ma_hoa_don']=$this->luu_gio_hang($ma_kh);
                 header('Location: dat-hang-thanh-cong.html');
             }
@@ -24,22 +28,21 @@ class C_khach_hang
             $title = "Thông tin khách hàng";
             $view = "views/v_khach_hang.tpl";
             include("c_smarty_info.php");
+            $smarty->assign('kh', $kh);
             $smarty->assign('hoa', $hoa);
             $smarty->display("layout.tpl");
-        } else {
-            header('Location: .');
+        }
+        else{
+             header('Location: dang-nhap.html');
         }
     }
-    public function luu_khach_hang()
+    public function Sua_khach_hang($ma_kh,$m_khach_hang)
     {
-        include("models/m_khach_hang.php");
-        $m_khach_hang=new M_khach_hang();
-        $_SESSION['ten']=$_POST['ten_kh'];
+        $_SESSION['hoTen']=$_POST['ten_kh'];
         $phai=$_POST['phai'];
-        $_SESSION['email']=$_POST['email'];
         $dia_chi=$_POST['dia_chi'];
         $_SESSION['dien_thoai']=$_POST['dien_thoai'];
-        $ma_kh=$m_khach_hang->Them_khach_hang($_SESSION['ten'], $phai, $_SESSION['email'], $dia_chi, $_SESSION['dien_thoai']);
+        $ma_kh=$m_khach_hang->Sua_khach_hang($_SESSION['hoTen'], $phai, $dia_chi, $_SESSION['dien_thoai'],$ma_kh);
         return $ma_kh;
     }
     public function luu_gio_hang($ma_kh)
@@ -86,7 +89,7 @@ class C_khach_hang
         $noidung="<h3 style='font-size:13px;font-weight:bold;color:#02acea;text-transform:uppercase;margin:20px 0 5px 0'>
         Thông tin đơn hàng số $ma_hoa_don</h3>";
         $noidung.="<div style='margin:0 0 5px 0'><b>Thông tin thanh toán</b></div><div style='margin:0 0 5px 0'>".
-          $_SESSION['ten']."</div><div style='margin:0 0 5px 0'>".$_SESSION['email']."</div><div style='margin:0 0 5px 0'>".$_SESSION['dien_thoai']."</div>";
+          $_SESSION['hoTen']."</div><div style='margin:0 0 5px 0'>".$_SESSION['email']."</div><div style='margin:0 0 5px 0'>".$_SESSION['dien_thoai']."</div>";
         $noidung.="<div style='margin:0 0 5px 0'><b>Tổng giá trị đơn hàng</b></div>";
         $noidung.="<div style='margin:0 0 5px 0'>".number_format($_SESSION['tong_tt'])."đ </div>";
         $mail->MsgHTML($noidung);
@@ -100,7 +103,10 @@ class C_khach_hang
       if (isset($_SESSION['giohang'])) {
         $this->CapNhapSoLuongHoa();
         $this->GuiMail($_SESSION['ma_hoa_don']);
-        session_destroy();
+        unset($_SESSION['giohang']);
+        unset($_SESSION['ma_hoa_don']);
+        unset($_SESSION['tong_tt']);
+        unset($_SESSION['tong_gio_hang']);
         include("c_data_contact.php");
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
