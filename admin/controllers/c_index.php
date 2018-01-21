@@ -5,12 +5,14 @@ class C_index {
     function hien_thi_trang_index(){
         include("models/m_index.php");
         $m_index = new M_index();
-        if(isset($_POST['hien_thi'])){
-            $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay();
-            $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay();
-            $mang_hoa_don = array(count($so_hoa_don_chua_duyet) , count($so_hoa_don_trong_ngay) );
-            echo json_encode($mang_hoa_don);
-            return;
+        if($_COOKIE['permission']==0 || $_COOKIE['permission']==1){
+            if(isset($_POST['hien_thi'])){
+                $so_hoa_don_trong_ngay  = $m_index->so_hoa_don_da_dat_trong_ngay();
+                $so_hoa_don_chua_duyet = $m_index->so_hoa_don_chua_duyet_trong_ngay();
+                $mang_hoa_don = array(count($so_hoa_don_chua_duyet) , count($so_hoa_don_trong_ngay) );
+                echo json_encode($mang_hoa_don);
+                return;
+            }
         }
         if($_COOKIE['permission']==2){
             $hoa=$m_index->ds_hoa_het_hang();
