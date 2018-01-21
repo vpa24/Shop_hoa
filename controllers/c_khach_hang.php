@@ -15,7 +15,7 @@ class C_khach_hang
             $ma_kh= $_SESSION['makh'];
             $kh=$m_khach_hang-> Doc_khach_hang_theo_ma_kh($ma_kh);
             if (isset($_POST['luu'])) {
-                $ma_kh=$this->Sua_khach_hang($ma_kh,$m_khach_hang);
+                $this->Sua_khach_hang($ma_kh,$m_khach_hang);
                 $_SESSION['ma_hoa_don']=$this->luu_gio_hang($ma_kh);
                 header('Location: dat-hang-thanh-cong.html');
             }
@@ -42,8 +42,7 @@ class C_khach_hang
         $phai=$_POST['phai'];
         $dia_chi=$_POST['dia_chi'];
         $_SESSION['dien_thoai']=$_POST['dien_thoai'];
-        $ma_kh=$m_khach_hang->Sua_khach_hang($_SESSION['hoTen'], $phai, $dia_chi, $_SESSION['dien_thoai'],$ma_kh);
-        return $ma_kh;
+        $m_khach_hang->Sua_khach_hang($_SESSION['hoTen'], $phai, $dia_chi, $_SESSION['dien_thoai'],$ma_kh);
     }
     public function luu_gio_hang($ma_kh)
     {
