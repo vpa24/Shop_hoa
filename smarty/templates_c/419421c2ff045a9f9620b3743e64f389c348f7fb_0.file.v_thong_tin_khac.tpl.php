@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-13 08:35:43
+/* Smarty version 3.1.30, created on 2018-01-21 10:01:44
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_thong_tin_khac.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a30e65fdb2b87_45618264',
+  'unifunc' => 'content_5a64650863b6c9_91570954',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '419421c2ff045a9f9620b3743e64f389c348f7fb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_thong_tin_khac.tpl',
-      1 => 1513090550,
+      1 => 1516200216,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a30e65fdb2b87_45618264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a64650863b6c9_91570954 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-md-7 ">
   <div class="product-right-block">

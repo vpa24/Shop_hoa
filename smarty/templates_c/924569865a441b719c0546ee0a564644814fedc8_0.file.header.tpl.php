@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-05 09:25:27
+/* Smarty version 3.1.30, created on 2018-01-21 10:36:40
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4f4487d279e8_67798969',
+  'unifunc' => 'content_5a646d382b2140_42506712',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '924569865a441b719c0546ee0a564644814fedc8' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\header.tpl',
-      1 => 1515144325,
+      1 => 1516530960,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4f4487d279e8_67798969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a646d382b2140_42506712 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header class="row">
     <div id="bsm_header_mobile">
@@ -76,7 +76,7 @@ function content_5a4f4487d279e8_67798969 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div id="bsm_header_top_bar">
         <div class="container">
-            <div class="col-md-6 col-sm-8">
+            <div class="col-md-9 col-sm-8">
                 <ul>
                     <li>
                         <a href="tel:<?php echo $_smarty_tpl->tpl_vars['phone_number']->value;?>
@@ -95,6 +95,26 @@ function content_5a4f4487d279e8_67798969 (Smarty_Internal_Template $_smarty_tpl)
                     </li>
                 </ul>
             </div>
+            <div class="col-md-3 col-sm-8 canh_trai">
+                <ul>
+                 <?php if (isset($_SESSION['hoTen'])) {?>
+                    <li>
+                        Xin Chào <?php echo $_SESSION['hoTen'];?>
+
+                    </li>
+                    <li>
+                        <a href="dang-xuat.html">Đăng Xuất</a>
+                    </li>
+                <?php } else { ?>
+                    <li>
+                        <a href="dang-nhap.html">Đăng Nhập</a>
+                    </li>
+                    <li>
+                       <a href="dang-ki.html">Đăng Kí</a>
+                    </li>
+                <?php }?>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -108,8 +128,7 @@ function content_5a4f4487d279e8_67798969 (Smarty_Internal_Template $_smarty_tpl)
             </nav>
         </div>
         <div class="col-md-2">
-            <a href=".">
-              
+            <a href=".">   
             <img src="public/images/logo/<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="" style="width: 165px;height: 130px;">
         </a>

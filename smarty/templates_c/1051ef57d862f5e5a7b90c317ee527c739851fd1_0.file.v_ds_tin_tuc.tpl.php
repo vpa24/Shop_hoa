@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 15:10:29
+/* Smarty version 3.1.30, created on 2018-01-19 11:30:58
   from "C:\wamp64\www\shop_hoa-master\views\tin_tuc\v_ds_tin_tuc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3e71e5f05663_05400958',
+  'unifunc' => 'content_5a61d6f2516813_41025955',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1051ef57d862f5e5a7b90c317ee527c739851fd1' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\tin_tuc\\v_ds_tin_tuc.tpl',
-      1 => 1514041826,
+      1 => 1516200216,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3e71e5f05663_05400958 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a61d6f2516813_41025955 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <div class="col-main col-md-12 content-color color f-right">

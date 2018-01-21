@@ -50,7 +50,7 @@
     </div>
     <div id="bsm_header_top_bar">
         <div class="container">
-            <div class="col-md-6 col-sm-8">
+            <div class="col-md-9 col-sm-8">
                 <ul>
                     <li>
                         <a href="tel:{$phone_number}">Gọi ngay: {$phone_number}</a>
@@ -67,6 +67,25 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-md-3 col-sm-8 canh_trai">
+                <ul>
+                 {if isset($smarty.session.hoTen)}
+                    <li>
+                        Xin Chào {$smarty.session.hoTen}
+                    </li>
+                    <li>
+                        <a href="dang-xuat.html">Đăng Xuất</a>
+                    </li>
+                {else}
+                    <li>
+                        <a href="dang-nhap.html">Đăng Nhập</a>
+                    </li>
+                    <li>
+                       <a href="dang-ki.html">Đăng Kí</a>
+                    </li>
+                {/if}
+                </ul>
+            </div>
         </div>
     </div>
     <div id="bsm_header_navigation" class="container">
@@ -80,8 +99,7 @@
             </nav>
         </div>
         <div class="col-md-2">
-            <a href=".">
-              
+            <a href=".">   
             <img src="public/images/logo/{$logo}" alt="" style="width: 165px;height: 130px;">
         </a>
         </div>

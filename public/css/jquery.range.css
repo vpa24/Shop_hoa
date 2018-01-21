@@ -76,8 +76,7 @@
 }
 .theme-green .back-bar .selected-bar {
   border-radius: 2px;
-  background-color: #a1fad0;
-  background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
+  background-color: deeppink;
 }
 .theme-green .back-bar .pointer {
   width: 14px;

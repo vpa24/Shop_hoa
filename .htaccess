@@ -11,3 +11,6 @@ RewriteRule ^tin-tuc.html tin_tuc.php
 RewriteRule ^check-hoa-don.html check_hoa_don.php
 RewriteRule ^gioi-thieu.html gioi_thieu.php
 RewriteRule ^dat-hang-thanh-cong.html luu_du_lieu.php
+RewriteRule ^dang-nhap.html dang_nhap.php
+RewriteRule ^dang-ki.html dang_ki.php
+RewriteRule ^dang-xuat.html dang_xuat.php
