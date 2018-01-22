@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-22 08:58:40
-  from "C:\wamp64\www\shop_hoa-master\admin\views\index\v_ds_hoa_het_hang.tpl" */
+/* Smarty version 3.1.30, created on 2018-01-22 08:54:27
+  from "C:\wamp64\www\shop_hoa-master\admin\views\index\v_hien_thi_ds_hoa_het_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a65a7c09d7656_01128527',
+  'unifunc' => 'content_5a65a6c3447bb4_93100518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8053e42169dd2f5a8ef458627bd2009d760e4cdc' => 
+    '0223e24576bc64d168b023308e67de6da09e27a5' => 
     array (
-      0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\index\\v_ds_hoa_het_hang.tpl',
-      1 => 1516611440,
+      0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\index\\v_hien_thi_ds_hoa_het_hang.tpl',
+      1 => 1516611197,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a65a7c09d7656_01128527 (Smarty_Internal_Template $_smarty_tpl) {
-?>
- <div class="card-header">
-    <i class="fa fa-table"></i> Danh sách hoa hết hàng</div>
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <thead>
-    <tr>
-      <th>Hình</th>
-      <th>Tên hoa</th>
-      <th>Số Lượng</th>
-    </tr>
-  </thead>
-  <tbody id="ds_hoa_het_hang">
-    <?php
+function content_5a65a6c3447bb4_93100518 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dshoa']->value, 'hoa');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
@@ -50,15 +35,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa']->value) {
 "><?php echo $_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP;?>
 </td>
     </tr>
-  <?php
+<?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
-?>
-
-  </tbody>
-      </table>
-    </div>
-  </div>
-<?php }
+}
 }

@@ -19,6 +19,7 @@ class C_index {
             $dem_hoa = $m_index->dem_hoa()->count;
             $dem_loai_hoa = $m_index->dem_loai_hoa()->count;
             $hoa_het_hang= $m_index->hoa_het_hang()->count;
+            $hoa=$m_index->ds_hoa_het_hang();
         }
         include("Smarty_admin.php");
         $smarty = new Smarty_Admin();
@@ -48,16 +49,12 @@ class C_index {
     }
     public function sua_sl_hoa()
     {
-        if(isset($_POST['btn_update'])){
-            $maHoa=$_POST['ma_hoa'];
-            $sl=$_POST['sl'];
+            $maHoa=$_POST['pk'];
+            $sl=$_POST['value'];
             include("models/m_index.php");
             $m_index = new M_index();
             $update = $m_index->sua_sl($maHoa, $sl);
-          if ($update) {
-              header('Location: index.php');
-          }
-        }
+            echo $maHoa;
     }
 }
 ?>

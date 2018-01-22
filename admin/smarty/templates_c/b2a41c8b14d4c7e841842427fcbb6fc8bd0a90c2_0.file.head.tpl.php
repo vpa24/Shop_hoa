@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-12 15:19:14
+/* Smarty version 3.1.30, created on 2018-01-22 09:53:28
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a58d1f249fc45_46881341',
+  'unifunc' => 'content_5a65b498293fd1_40231467',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a41c8b14d4c7e841842427fcbb6fc8bd0a90c2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1515491448,
+      1 => 1516614664,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a58d1f249fc45_46881341 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a65b498293fd1_40231467 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,10 +46,13 @@ function content_5a58d1f249fc45_46881341 (Smarty_Internal_Template $_smarty_tpl)
     <link href="public/css/sb-admin.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="public/css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
-	<link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
-	 <link href="public/css/pretty-checkbox.min.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="public/css/tabs.css" />
+	  <link rel="stylesheet" type="text/css" href="public/css/tabstyles.css" />
+    <link href="public/css/pretty-checkbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap-editable.css" />
+
   <?php echo '<script'; ?>
  src="public/js/modernizr.custom.js"><?php echo '</script'; ?>
 >
