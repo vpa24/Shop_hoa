@@ -9,10 +9,10 @@
     }(document, 'script', 'facebook-jssdk'));</script>
   <!-- Navigation-->
   {block name="navbar_content"}{include file="layouts/content/navbar_content.tpl"}{/block}
-    <div class="content-wrapper">
+    <div class="content-wrapper ">
           <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
+        <ol class="breadcrumb print ">
+          <li class="breadcrumb-item ">
             <a href=".">Trang quản lý</a>
           </li>
           <li class="breadcrumb-item active">{$title}</li>
