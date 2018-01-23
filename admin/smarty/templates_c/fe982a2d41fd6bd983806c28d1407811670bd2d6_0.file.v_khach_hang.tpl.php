@@ -1,77 +1,37 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 13:01:24
+/* Smarty version 3.1.30, created on 2018-01-23 14:47:20
   from "C:\wamp64\www\shop_hoa-master\admin\views\v_khach_hang.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a366aa4cb8490_55400154',
+  'unifunc' => 'content_5a674af81a3320_93911985',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe982a2d41fd6bd983806c28d1407811670bd2d6' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\views\\v_khach_hang.tpl',
-      1 => 1513515679,
+      1 => 1516718791,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:views/khach_hang/v_ds_khach_hang.tpl' => 1,
   ),
 ),false)) {
-function content_5a366aa4cb8490_55400154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a674af81a3320_93911985 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-
-      <!-- Example DataTables Card-->
-      <div class="card mb-3">
+ <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Danh sách khách hàng</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>Tên khách hàng</th>
-                  <th>Phái</th>
-                  <th>Email</th>
-                  <th>Địa chỉ</th>
-                  <th>Điện thoại</th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['doc_khach_hang']->value, 'khach_hang');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['khach_hang']->value) {
-?>
-                <tr>
-                  <td><?php echo $_smarty_tpl->tpl_vars['khach_hang']->value->ten_khach_hang;?>
-</td>
-                  <td>
-                  <?php if ($_smarty_tpl->tpl_vars['khach_hang']->value->phai == 1) {?>
-                    Nam
-                  <?php } else { ?>
-                    Nữ
-                  <?php }?>
-                  </td>
-                  <td><?php echo $_smarty_tpl->tpl_vars['khach_hang']->value->email;?>
-</td>
-                  <td><?php echo $_smarty_tpl->tpl_vars['khach_hang']->value->dia_chi;?>
-</td>
-                  <td><?php echo $_smarty_tpl->tpl_vars['khach_hang']->value->dien_thoai;?>
-</td>
-                </tr>
-              <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+          <?php $_smarty_tpl->_subTemplateRender("file:views/khach_hang/v_ds_khach_hang.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-              </tbody>
-            </table>
           </div>
         </div>
-      
-<?php }
+</div><?php }
 }

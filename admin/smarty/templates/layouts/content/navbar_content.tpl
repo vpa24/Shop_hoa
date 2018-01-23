@@ -71,10 +71,21 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
+            <i class="fa fa-users"></i>
+            <span class="nav-link-text">Quản lý khách hàng</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+            <li>
+              <a href="khach_hang.php">Tất cả khách hàng</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
             <span class="nav-link-text">Thống kê</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+          <ul class="sidenav-second-level collapse" id="collapseMulti5">
             <li>
               <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
@@ -84,11 +95,11 @@
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti6" data-parent="#exampleAccordion">
             <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
             <span class="nav-link-text">Cài đặt thông tin</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseMulti5">
+          <ul class="sidenav-second-level collapse" id="collapseMulti6">
             <li>
               <a href="seo.php">Seo</a>
             </li>

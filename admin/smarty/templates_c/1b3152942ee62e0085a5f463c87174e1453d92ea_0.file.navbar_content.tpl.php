@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-19 11:17:32
+/* Smarty version 3.1.30, created on 2018-01-23 14:40:49
   from "C:\wamp64\www\shop_hoa-master\admin\smarty\templates\layouts\content\navbar_content.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a61d3cca800a2_32190438',
+  'unifunc' => 'content_5a67497192e710_65942587',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b3152942ee62e0085a5f463c87174e1453d92ea' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\admin\\smarty\\templates\\layouts\\content\\navbar_content.tpl',
-      1 => 1516360636,
+      1 => 1516718435,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a61d3cca800a2_32190438 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a67497192e710_65942587 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top print" id="mainNav">
     <a class="navbar-brand" href="../">Quản lý cửa hàng</a>
@@ -95,10 +95,21 @@ function content_5a61d3cca800a2_32190438 (Smarty_Internal_Template $_smarty_tpl)
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
+            <i class="fa fa-users"></i>
+            <span class="nav-link-text">Quản lý khách hàng</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+            <li>
+              <a href="khach_hang.php">Tất cả khách hàng</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
             <span class="nav-link-text">Thống kê</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+          <ul class="sidenav-second-level collapse" id="collapseMulti5">
             <li>
               <a href="thong_ke_doanh_thu.php">Doanh Thu</a>
             </li>
@@ -108,11 +119,11 @@ function content_5a61d3cca800a2_32190438 (Smarty_Internal_Template $_smarty_tpl)
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti6" data-parent="#exampleAccordion">
             <i class="fa fa-fw  fa-info" aria-hidden="true"></i>
             <span class="nav-link-text">Cài đặt thông tin</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseMulti5">
+          <ul class="sidenav-second-level collapse" id="collapseMulti6">
             <li>
               <a href="seo.php">Seo</a>
             </li>
