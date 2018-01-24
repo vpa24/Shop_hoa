@@ -26,7 +26,7 @@
   position: absolute;
   top: -17px;
   font-size: 8px;
-  background: white;
+  background:#FBF9F5;;
   white-space: nowrap;
   line-height: 1;
 }
@@ -87,8 +87,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 0 3px hsla(0,0%,40%,.62);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
+  background-color: orange;
 }
 .theme-green .back-bar .pointer-label {
   font-size: 12px;

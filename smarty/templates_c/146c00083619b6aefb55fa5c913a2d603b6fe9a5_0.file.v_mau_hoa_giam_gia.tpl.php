@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-18 01:50:56
+/* Smarty version 3.1.30, created on 2018-01-24 14:58:23
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_giam_gia.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5ffd802dc973_53800880',
+  'unifunc' => 'content_5a689f0f37a2a4_82317262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '146c00083619b6aefb55fa5c913a2d603b6fe9a5' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_giam_gia.tpl',
-      1 => 1516200216,
+      1 => 1516805888,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5ffd802dc973_53800880 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a689f0f37a2a4_82317262 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu3" class="tab-pane fade in">
     <div class="category-products">
@@ -57,16 +57,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_km']->value) {
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['hoa_km']->value->GiaKhuyenMai;
-$_prefixVariable2=ob_get_clean();
-echo number_format($_prefixVariable2);?>
+$_prefixVariable3=ob_get_clean();
+echo number_format($_prefixVariable3);?>
  ₫</span>
                                     </a>
                                 </div>
                             </div>
                               <?php if ($_smarty_tpl->tpl_vars['hoa_km']->value->SoLuongSP > 0) {?>
                             <div class="actions-cart">
-                                <a onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_km']->value->MaHoa;?>
-,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <div class="btnGioHang" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_km']->value->MaHoa;?>
+,1)">Thêm vào giỏ hàng</div>
                             </div>
                               <?php } else { ?>
                                 <div class="notify"><button>Đã hết hàng</button></div>

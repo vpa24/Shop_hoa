@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-11 00:07:52
+/* Smarty version 3.1.30, created on 2018-01-24 14:16:00
   from "C:\wamp64\www\shop_hoa-master\views\hoa\v_danh_sach_hoa.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a56aad88ce866_00076457',
+  'unifunc' => 'content_5a689520516b77_98253604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfc95f7f864f441877e724cb121d55d403e71e18' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\hoa\\v_danh_sach_hoa.tpl',
-      1 => 1515629270,
+      1 => 1516803354,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a56aad88ce866_00076457 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a689520516b77_98253604 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <div class="category-products">
         <ul class="products-grid row aos-all" id="transcroller-body">
@@ -78,8 +78,9 @@ echo number_format($_prefixVariable1);?>
                             </div>
                               <?php if ($_smarty_tpl->tpl_vars['hoa']->value->SoLuongSP > 0) {?>
                             <div class="actions-cart">
-                                <a onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
-,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                            <div class="btnGioHang" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa']->value->MaHoa;?>
+,1)">Thêm vào giỏ hàng</div>
+                                
                             </div>
                               <?php } else { ?>
                                 <p class="notify"><button>Đã hết hàng</button></p>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-18 01:50:56
+/* Smarty version 3.1.30, created on 2018-01-24 14:58:23
   from "C:\wamp64\www\shop_hoa-master\views\trang_chu\v_mau_hoa_ban_chay.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a5ffd8019b972_03965066',
+  'unifunc' => 'content_5a689f0f20b888_09348938',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37256ad4d4e40279289ecba03b6d2b7db587fbf9' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\trang_chu\\v_mau_hoa_ban_chay.tpl',
-      1 => 1516200216,
+      1 => 1516805843,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a5ffd8019b972_03965066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a689f0f20b888_09348938 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="menu2" class="tab-pane fade in">
     <div class="category-products">
@@ -57,16 +57,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['hoa_ban_chay']->value) {
                                         <span class="mua_online">Mua online:</span>
                                         <span class="price" id="product-minimal-price-2678"><?php ob_start();
 echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->GiaKhuyenMai;
-$_prefixVariable1=ob_get_clean();
-echo number_format($_prefixVariable1);?>
+$_prefixVariable2=ob_get_clean();
+echo number_format($_prefixVariable2);?>
  ₫</span>
                                     </a>
                                 </div>
                             </div>
                             <?php if ($_smarty_tpl->tpl_vars['hoa_ban_chay']->value->SoLuongSP > 0) {?>
                             <div class="actions-cart">
-                              <a  onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
-,1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                               <div class="btnGioHang" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['hoa_ban_chay']->value->MaHoa;?>
+,1)">Thêm vào giỏ hàng</div>
                             </div>
                             <?php } else { ?>
                               <div class="notify"><button>Đã hết hàng</button></div>

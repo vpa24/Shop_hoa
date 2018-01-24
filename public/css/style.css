@@ -2686,6 +2686,7 @@ th {
 
 .col-left {
   margin: 0 0 20px;
+  background-color: #FBF9F5;
 }
 
 .col-right {
@@ -3021,7 +3022,6 @@ a.detail_links {
 }
 
 .actions-cart {
-  float: right;
   display: block;
   padding: 7px 0 8px;
 }
@@ -3420,7 +3420,7 @@ a.detail_links {
 }
 
 .breadcrumbs ul {
-  margin: 40px 0 0 0;
+  margin: 40px 0 0 -20px;
   padding: 10px;
   background-color: #fa5999;
 }
@@ -4417,7 +4417,7 @@ button.button {
 }
 
 .price {
-  color: #4B85C5;
+  color: #F57F17;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
@@ -4515,18 +4515,19 @@ button.button {
 }
 .filter-panel{
   margin-top: 30px;
-  padding-left: 15px;
+  padding-left: 5px;
 }
 .nut_tim{
   background: #fff;
-    border: 1px solid #189eff;
+    border: 1px solid orange;
     font-size: 12px;
-    color: #189eff;
+    color: orange;
     padding: 5px 15px;
     width: 99px;
     margin-top: 35px;
     border-radius: 4px;
     margin-left: 30%;
+    font-weight: 700;
 }
 .gia_khac{
   font-weight: normal;
@@ -4640,4 +4641,22 @@ button.button {
 }
 .canh_trai{
   text-align: right;
+}
+.actions-no{
+  margin-top: -7px;
+}
+.btnGioHang{
+  font-size: 14px;
+    color: #fff;
+    background: #FA5999;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .45em 0;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
 }

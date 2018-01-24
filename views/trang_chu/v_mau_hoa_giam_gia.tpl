@@ -24,7 +24,7 @@
                             </div>
                               {if $hoa_km->SoLuongSP > 0}
                             <div class="actions-cart">
-                                <a onclick="addToCart({$hoa_km->MaHoa},1)" href="javascript:void(0)"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                              <div class="btnGioHang" onclick="addToCart({$hoa_km->MaHoa},1)">Thêm vào giỏ hàng</div>
                             </div>
                               {else}
                                 <div class="notify"><button>Đã hết hàng</button></div>
