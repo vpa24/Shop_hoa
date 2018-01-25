@@ -2,7 +2,7 @@
     <div class="category-products">
         <ul class="products-grid row">
             {foreach $tin_tuc as $tin}
-            <li class="item tt">
+            <li class="item col-md-3">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">

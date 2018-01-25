@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-19 11:30:58
+/* Smarty version 3.1.30, created on 2018-01-25 10:36:17
   from "C:\wamp64\www\shop_hoa-master\views\tin_tuc\v_ds_tin_tuc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a61d6f2516813_41025955',
+  'unifunc' => 'content_5a69b321723c83_71757987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1051ef57d862f5e5a7b90c317ee527c739851fd1' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\tin_tuc\\v_ds_tin_tuc.tpl',
-      1 => 1516200216,
+      1 => 1516876576,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a61d6f2516813_41025955 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a69b321723c83_71757987 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\libs\\plugins\\modifier.date_format.php';
 ?>
 <div class="col-main col-md-12 content-color color f-right">
@@ -31,7 +31,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['tin']->value) {
 ?>
-            <li class="item tt">
+            <li class="item col-md-3">
                 <div class="category-products-grid">
                     <div class="images-container">
                         <div class="product-hover">
