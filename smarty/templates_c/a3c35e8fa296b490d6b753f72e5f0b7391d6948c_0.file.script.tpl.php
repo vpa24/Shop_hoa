@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-21 07:24:17
+/* Smarty version 3.1.30, created on 2018-01-25 14:34:09
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a644021b0b757_24545460',
+  'unifunc' => 'content_5a69eae100eae3_02310488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1516519374,
+      1 => 1516890822,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a644021b0b757_24545460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a69eae100eae3_02310488 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -65,6 +65,9 @@ echo '<script'; ?>
 >
 <?php echo '<script'; ?>
  src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/js/rating.js"><?php echo '</script'; ?>
 >
 
 <?php echo '<script'; ?>

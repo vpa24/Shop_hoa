@@ -28,13 +28,11 @@
         <link rel="stylesheet" href="public/css/jquery.range.css">
         <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="public/css/responsive.css">
+        <link rel="stylesheet" href="public/css/rating.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <!-- JS alert -->
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
     </head>
     <body id="bsm_page_home" class="bsm_style_pink_violet bsm_page_home container-fluid">
