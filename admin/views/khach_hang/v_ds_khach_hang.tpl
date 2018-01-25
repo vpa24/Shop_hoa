@@ -6,7 +6,6 @@
       <th>Tổng đơn hàng</th>
       <th>Đơn hàng gần nhất</th>
       <th>Tổng chi tiêu</th>
-      <th>Hành động</th>
     </tr>
   </thead>
   <tbody>
@@ -17,11 +16,7 @@
       <td>{$khach_hang->don_hang}</td>
       <td><a href="chi_tiet_hoa_don.php?ma_hoa_don={$khach_hang->don_hang_gan_nhat}" title="Xem chi tiết đơn hàng" >{$khach_hang->don_hang_gan_nhat}</a></td>
       <td>{number_format($khach_hang->tong_chi_tieu)} đ</td>
-      <td>
-        <button type="button" onclick="deleteAjax({$khach_hang->ma_khach_hang})" class="btn btn-danger">Xóa</button>
-      </td>
     </tr>
-    {include file="views/loai_hoa/v_modal_sua_loai_hoa.tpl"}
   {/foreach}
   </tbody>
 </table>
