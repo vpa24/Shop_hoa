@@ -9,7 +9,7 @@ if (($("#chua_duyet").length > 0)) {
                 hien_thi: true,
             },
             success: function (response) {
-                mang = jQuery.parseJSON(response);
+              mang = jQuery.parseJSON(response);
             },
         });
     }
@@ -29,7 +29,7 @@ if (($("#chua_duyet").length > 0)) {
         sl_hoa_don();
         hoa_don_chua_duyet();
         $('#chua_duyet').html(data);
-        document.getElementById('tong_dh_hom_nay').innerHTML = mang[1];
-        document.getElementById('tong_dh_chua_duyet_hom_nay').innerHTML = mang[0];
+        $('#tong_dh_hom_nay').html(mang[1]);
+        $('#tong_dh_chua_duyet_hom_nay').html(mang[0]);
     }, 1000);
 }
