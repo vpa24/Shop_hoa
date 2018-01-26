@@ -1,4 +1,4 @@
-<div class="col-main col-md-12 content-color color f-right">
+<div class="col-main container-fluid content-color color f-right">
     <div class="category-products">
         <ul class="products-grid row">
             {foreach $tin_tuc as $tin}
