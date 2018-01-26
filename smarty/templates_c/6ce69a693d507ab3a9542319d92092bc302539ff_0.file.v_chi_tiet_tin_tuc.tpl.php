@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 15:48:31
+/* Smarty version 3.1.30, created on 2018-01-26 07:36:49
   from "C:\wamp64\www\shop_hoa-master\views\v_chi_tiet_tin_tuc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3e7acfbad1f9_61865014',
+  'unifunc' => 'content_5a6ada91416809_26307535',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ce69a693d507ab3a9542319d92092bc302539ff' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\v_chi_tiet_tin_tuc.tpl',
-      1 => 1514044090,
+      1 => 1516200216,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:layouts/body/quang_cao.tpl' => 1,
   ),
 ),false)) {
-function content_5a3e7acfbad1f9_61865014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6ada91416809_26307535 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="container">
