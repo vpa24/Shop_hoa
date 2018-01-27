@@ -3,7 +3,6 @@
 <script src="public/js/slider.js"></script>
 <script src="public/js/aos.js"></script>
 <script src="public/js/jquery.range.js"></script>
-<script src="public/js/custom.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem.js"></script>
 <script src="public/js/ajax/ajax_tim_kiem-mobile.js"></script>
 <script src="public/js/ajax/ajax_phan_trang.js"></script>
@@ -14,7 +13,7 @@
 <script src="public/js/slider/script.slider.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="public/js/rating.js"></script>
-
+<script src="public/js/custom.js"></script>
 <script type="text/javascript">
       $("#giam").click(function(){
         var sl=$(".value").val();
@@ -48,7 +47,7 @@ AOS.init({
 $('.price_range').jRange({
     from: 0,
     to: 1000000,
-    step: 100000,
+    step: 10000,
     format: '%s'+' đ',
     width: 250,
     showLabels: true,

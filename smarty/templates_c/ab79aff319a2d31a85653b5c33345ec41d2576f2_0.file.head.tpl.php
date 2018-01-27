@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 14:34:05
+/* Smarty version 3.1.30, created on 2018-01-27 14:53:53
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69eadd4a79f5_86053788',
+  'unifunc' => 'content_5a6c9281913719_67279146',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab79aff319a2d31a85653b5c33345ec41d2576f2' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\head.tpl',
-      1 => 1516890834,
+      1 => 1517064830,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a69eadd4a79f5_86053788 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6c9281913719_67279146 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +65,7 @@ function content_5a69eadd4a79f5_86053788 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="public/css/responsive.css">
         <link rel="stylesheet" href="public/css/rating.css">
+        <link rel="stylesheet" href="public/css/home.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>

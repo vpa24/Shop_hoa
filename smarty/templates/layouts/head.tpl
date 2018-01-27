@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="public/css/responsive.css">
         <link rel="stylesheet" href="public/css/rating.css">
+        <link rel="stylesheet" href="public/css/home.css">
         <!-- STYLE FONTS -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" media="all" />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>

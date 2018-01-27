@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 14:34:09
+/* Smarty version 3.1.30, created on 2018-01-27 14:58:35
   from "C:\wamp64\www\shop_hoa-master\smarty\templates\layouts\script.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69eae100eae3_02310488',
+  'unifunc' => 'content_5a6c939b418838_79979689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c35e8fa296b490d6b753f72e5f0b7391d6948c' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\smarty\\templates\\layouts\\script.tpl',
-      1 => 1516890822,
+      1 => 1517065110,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a69eae100eae3_02310488 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6c939b418838_79979689 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="public/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -35,9 +35,6 @@ echo '<script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/jquery.range.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="public/js/custom.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="public/js/ajax/ajax_tim_kiem.js"><?php echo '</script'; ?>
@@ -69,7 +66,9 @@ echo '<script'; ?>
 <?php echo '<script'; ?>
  src="public/js/rating.js"><?php echo '</script'; ?>
 >
-
+<?php echo '<script'; ?>
+ src="public/js/custom.js"><?php echo '</script'; ?>
+>
 <?php echo '<script'; ?>
  type="text/javascript">
       $("#giam").click(function(){
@@ -110,13 +109,12 @@ AOS.init({
 $('.price_range').jRange({
     from: 0,
     to: 1000000,
-    step: 100000,
+    step: 10000,
     format: '%s'+' đ',
     width: 250,
     showLabels: true,
     isRange : true
 });
 <?php echo '</script'; ?>
->
-<?php }
+><?php }
 }
