@@ -1,7 +1,7 @@
 <div class="container">
   <ul class="magictabs">
         <li class="item active loaded single">
-            <span class="title">Sản phẩm cùng loại</span>
+            <span class="title cung_loai">Sản phẩm cùng loại</span>
         </li>
   </ul>
   <div class="category-products">

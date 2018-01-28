@@ -1,84 +1,57 @@
  {if isset($smarty.session.makh)}
-        <div id="bsm_products" class="bsm_new_products">
-                    <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
-                        <h1>{$ds_lich_su|@count}</h1>
+    {if count($ds_lich_su)>=4}
+    <div class="container MarginTop">
+  <ul class="magictabs">
+        <li class="item active loaded single">
+            <span class="title da_xem">Sản phẩm đã xem</span>
+           
+        </li>
+        <div>
+         <a class="xem_tat_ca" href="san-pham-da-xem">Xem thêm</a>
+         </div>   
+  </ul>
+  <div class="category-products">
+    <ul class="products-grid row">
+      {$i=0}
+      {$j=0}
+      {foreach $ds_lich_su as $hoa}
+        <li class="item">
+            <div class="category-products-grid">
+                    <div class="images-container">
+                        <div class="product-hover cp_img">
+                            <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}" class="product-image">
+                                <img class="img-responsive hinh_hoa" src="public/images/hoa/{$hoa->Hinh}"  alt="{$hoa->TenHoa}">
+                            </a>
+                        </div>
+
+                        <h2 class="product-name">
+                        <a href="san-pham/{$hoa->TenHoa_URL}-{$hoa->MaHoa}.html" title="{$hoa->TenHoa}">{$hoa->TenHoa}</a>
+                        </h2>
+                        <div class="actions-no hover-box">
+                            <div class="actions">
+                                <div class="price-box">
+                                    <a class="minimal-price-link">
+                                        <span class="mua_online">Mua online:</span>
+                                        <span class="price" id="product-minimal-price-2678">{number_format({$hoa->GiaKhuyenMai})} ₫</span>
+                                    </a>
+                                </div>
+                            </div>
+                              {if $hoa->SoLuongSP > 0}
+                            <div class="actions-cart">
+                            <div class="btnGioHang" onclick="addToCart({$hoa->MaHoa},1)">Thêm vào giỏ hàng</div>
+                            </div>
+                              {else}
+                                <p class="notify"><button>Đã hết hàng</button></p>
+                              {/if}
+                        </div>
                     </div>
-                <div id="bsm_new_products" class="container swiper-container-horizontal">
-                        <div class="swiper-wrapper" >
-						<div class="bsm_product swiper-slide swiper-slide-duplicate"style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-						<div class="bsm_product swiper-slide swiper-slide-duplicate" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-						<div class="bsm_product swiper-slide swiper-slide-duplicate" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-                        <div class="bsm_product swiper-slide" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-                        <div class="bsm_product swiper-slide swiper-slide-prev" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-                        <div class="bsm_product swiper-slide swiper-slide-active"  style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div>
-                    <div class="bsm_product swiper-slide swiper-slide-duplicate swiper-slide-next" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div><div class="bsm_product swiper-slide swiper-slide-duplicate" style="width: 270px; margin-right: 30px;">
-                            <div class="bsm_product_image">
-                                <img src="public/images/hoa/hoa_binh_7.jpg" alt="">
-                            </div>
-                            <div class="bsm_product_info">
-                                <h4>My Pink Heaven Bouquet / T194</h4>
-                                <span>$299.99</span>
-                            </div>
-                        </div></div>
                 </div>
-                <div class="bsm_products_new_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-                <div class="bsm_products_new_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-            </div>
-   {/if}
+        </li>
+        {/foreach}
+    </ul>
+  </div>
+</div>
+
+{/if}
+    {/if}
    

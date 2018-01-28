@@ -4664,3 +4664,32 @@ button.button {
   margin-right: 55px;
     margin-left: 40px;
 }
+.da_xem{
+  font-size: 2em;
+  font-family: inherit;
+  color:#FA5999 !important;
+}
+.cung_loai{
+  font-size:2em;
+  font-family: inherit;
+  color: coral !important;
+}
+.MarginTop{
+  margin-top: -100px;
+}
+.cung_loai:after, .cung_loai:before, .da_xem:after, .da_xem:before {
+  background-color: #fff !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cung_loai:after, .da_xem:after {
+   background-color: #ddd;
+}
+.xem_tat_ca{
+  float: right;
+  margin: -25px 20px 0 0;
+  color:orange;
+  font-weight:400;
+  font-size:15px;
+}

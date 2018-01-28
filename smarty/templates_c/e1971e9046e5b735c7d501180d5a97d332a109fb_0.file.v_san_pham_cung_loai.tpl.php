@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-25 15:43:03
+/* Smarty version 3.1.30, created on 2018-01-28 11:36:25
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_san_pham_cung_loai.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a69fb076fb642_62002200',
+  'unifunc' => 'content_5a6db5b98b67d3_06908767',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e1971e9046e5b735c7d501180d5a97d332a109fb' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_san_pham_cung_loai.tpl',
-      1 => 1516894980,
+      1 => 1517139342,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a69fb076fb642_62002200 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6db5b98b67d3_06908767 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
   <ul class="magictabs">
         <li class="item active loaded single">
-            <span class="title">Sản phẩm cùng loại</span>
+            <span class="title cung_loai">Sản phẩm cùng loại</span>
         </li>
   </ul>
   <div class="category-products">
