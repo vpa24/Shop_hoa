@@ -14,16 +14,21 @@ class C_chi_tiet_hoa
         $hoa = $m_chi_tiet_hoa->doc_theo_ma_hoa($id);
         $maLoai = $hoa->MaLoai;
         $hoa_cung_loai = $m_chi_tiet_hoa->doc_hoa_cung_loai($maLoai, $id);
+        
         if(isset($_SESSION['makh'])){
             $ma_kh=$_SESSION['makh'];
             include("models/m_lich_su.php");
             $m_lich_su = new M_lich_su();
             $ds_lich_su=$m_lich_su->xem($ma_kh);
             foreach ($ds_lich_su as $item) {
-                if($item->ma_hoa!=$id){
-                    $m_lich_su->them($id,$ma_kh);
+                if($item->ma_hoa == $id){
+                   $m_lich_su->xoa($id,$ma_kh);
                 }
             }
+            $m_lich_su->them($id,$ma_kh);
+            $ds_lich_su=$m_lich_su->xem($ma_kh);
+            echo json_encode($ds_lich_su);
+            die();
         }
       
         //view

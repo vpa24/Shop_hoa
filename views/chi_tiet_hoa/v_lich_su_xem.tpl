@@ -1,4 +1,5 @@
-    <div id="bsm_products" class="bsm_new_products">
+ {if isset($smarty.session.makh)}
+        <div id="bsm_products" class="bsm_new_products">
                     <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
                         <h1>{$ds_lich_su|@count}</h1>
                     </div>
@@ -79,3 +80,5 @@
                 <div class="bsm_products_new_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
                 <div class="bsm_products_new_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
+   {/if}
+   

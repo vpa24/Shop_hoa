@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-27 15:45:01
+/* Smarty version 3.1.30, created on 2018-01-28 06:02:11
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_lich_su_xem.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6c9e7d19d0d2_61177205',
+  'unifunc' => 'content_5a6d676388a998_53111832',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cfbaf102cdd045578e65bd65fd3b551d0b4656ad' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_lich_su_xem.tpl',
-      1 => 1517067898,
+      1 => 1517119330,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a6c9e7d19d0d2_61177205 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a6d676388a998_53111832 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-    <div id="bsm_products" class="bsm_new_products">
+ <?php if (isset($_SESSION['makh'])) {?>
+        <div id="bsm_products" class="bsm_new_products">
                     <div class="col-md-12 col-sm-12 col-xs-12 bsm_title_section">
                         <h1><?php echo count($_smarty_tpl->tpl_vars['ds_lich_su']->value);?>
 </h1>
@@ -103,5 +104,7 @@ function content_5a6c9e7d19d0d2_61177205 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="bsm_products_new_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
                 <div class="bsm_products_new_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-            </div><?php }
+            </div>
+   <?php }?>
+   <?php }
 }
