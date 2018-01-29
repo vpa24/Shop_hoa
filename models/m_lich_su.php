@@ -20,10 +20,13 @@ class M_lich_su extends database
 		$this->setQuery($sql);
 	    return $this->loadAllRows(array($ma_kh));
     }
-    function xem_tat_ca($ma_kh)
+    function xem_tat_ca($ma_kh, $vt=-1, $limit=-1)
     {
-        $sql="select * from lich_su inner join hoa on hoa.MaHoa=lich_su.ma_hoa where ma_khach_hang=? order by id desc";
+        $sql="select * from lich_su inner join hoa on hoa.MaHoa=lich_su.ma_hoa where ma_khach_hang=$ma_kh order by id desc";
+        if($vt>=0 && $limit>0){
+           $sql.=" limit $vt,$limit";
+        }
 		$this->setQuery($sql);
-	    return $this->loadAllRows(array($ma_kh));
+	    return $this->loadAllRows();
     }
 }

@@ -1,5 +1,7 @@
 
   phantrang(1);
+  phantrangSPdaxem(1);
+  
   var maloai = 0;
   var price_range = -1;
 
@@ -12,6 +14,19 @@
       },
       success: function(data) {
         hienthi(data, page);
+      },
+    });
+  }
+
+function phantrangSPdaxem(trang) {
+    $.ajax({
+      type: 'post',
+      url: 'ajax_san_pham_da_Xem.php',
+      data: {
+        page: trang,
+      },
+      success: function (data) {
+        hienthiSP(data, trang);
       },
     });
   }
@@ -63,6 +78,10 @@
     $('.ds_hoa').html(data);
     $('#' + page).addClass('active');
   }
+  function hienthiSP(data, trang) {
+    $('#san_pham_da_xem').html(data);
+    $('#' + trang).addClass('active');
+  }
 
   //click vào giá
   $(document).on('click', '.tim_theo_gia', function () {
@@ -101,7 +120,15 @@
       scrollTop: 250,
     }, 'fast');
   });
-
+  //CLICK VAO phan trang san pham da xem
+//click vao link phan trang
+$(document).on('click', '.phan_trang', function () {
+    var trang = $(this).attr('id');
+  phantrangSPdaxem(trang);
+    $('html, body').animate({
+      scrollTop: 250,
+    }, 'fast');
+  });
   //ma loai
   $(document).on('click', '.maLoai', function() {
     var chuoiMaLoai = $(this).attr('id');

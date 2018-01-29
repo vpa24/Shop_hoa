@@ -19,21 +19,14 @@ class C_hoa
     }
     public function san_pham_da_xem()
     {
-            include("models/m_lich_su.php");
-            $m_lich_su = new M_lich_su();
-            $ds_lich_su=[];
-            if(isset($_SESSION['makh'])){
-                $ma_kh=$_SESSION['makh'];
-                $ds_lich_su=$m_lich_su->xem_tat_ca($ma_kh);
-            }       
-            include("URL.php");
-            include("Smarty_shop_hoa.php");
-            include("c_data_contact.php");
-            $smarty = new Smarty_Shop_Hoa();
-            $title = "Sản phẩm đã xem";
-            $view = "views/v_san_pham_da_xem.tpl";
-             include("c_smarty_info.php");
-            $smarty->assign('ds_lich_su', $ds_lich_su);
-            $smarty->display("layout.tpl");
-        }
+        include("c_data_contact.php");
+        include("models/m_hoa.php");
+        include("URL.php");
+        include("Smarty_shop_hoa.php");
+        $smarty = new Smarty_Shop_Hoa();
+        $title = "Sản phẩm đã xem";
+        $view = "views/v_san_pham_da_xem.tpl";
+        include("c_smarty_info.php");
+        $smarty->display("layout.tpl");
+    }
 }
