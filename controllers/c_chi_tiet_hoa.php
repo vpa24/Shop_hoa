@@ -31,8 +31,30 @@ class C_chi_tiet_hoa
                 $m_lich_su->them($id,$ma_kh);
             }
             $ds_lich_su=$m_lich_su->xem($ma_kh);
+        }else{
+            include("models/m_hoa.php");
+            $m_hoa = new M_hoa();
+            $hoa=$m_hoa->doc_hoa_theo_ma($id);
+            if(empty($_SESSION['ds_lich_su'])){
+                $_SESSION['ds_lich_su']=[];
+                array_push($_SESSION['ds_lich_su'],$hoa);
+            }else{
+                $tong_truoc=count($_SESSION['ds_lich_su']);
+                array_push($_SESSION['ds_lich_su'],$hoa);
+                for($i=0;$i<count($_SESSION['ds_lich_su'])-1;$i++) {
+                    if($_SESSION['ds_lich_su'][$i]->MaHoa == $id){
+                        array_splice($_SESSION['ds_lich_su'], $i,1);
+                        break;
+                    }
+                }
+                $tong_sau=count($_SESSION['ds_lich_su']);
+                // if($tong_sau>$tong_truoc){
+                //     $ds_lich_su=$_SESSION['ds_lich_su'];
+                //     array_pop($ds_lich_su);
+                // }
+            }
+            $ds_lich_su=array_reverse($_SESSION['ds_lich_su']); 
         }
-      
         //view
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();
@@ -42,9 +64,7 @@ class C_chi_tiet_hoa
         include("c_smarty_info.php");
         $smarty->assign('hoa', $hoa);
         $smarty->assign('hoa_cung_loai', $hoa_cung_loai);
-        if(isset($_SESSION['makh'])){
-            $smarty->assign('ds_lich_su', $ds_lich_su);
-        }
+        $smarty->assign('ds_lich_su', $ds_lich_su);
         $smarty->display("layout.tpl");
     }
 }

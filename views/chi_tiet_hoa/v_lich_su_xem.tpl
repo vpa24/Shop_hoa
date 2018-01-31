@@ -1,14 +1,14 @@
- {if isset($smarty.session.makh)}
-    {if count($ds_lich_su)>=4}
+{if count($ds_lich_su)>1}
     <div class="container MarginTop">
   <ul class="magictabs">
         <li class="item active loaded single">
             <span class="title da_xem">Sản phẩm đã xem</span>
-           
         </li>
+         {if isset($smarty.session.makh)}
         <div>
          <a class="xem_tat_ca" href="san-pham-da-xem">Xem thêm</a>
-         </div>   
+         </div>
+         {/if}
   </ul>
   <div class="category-products">
     <ul class="products-grid row">
@@ -51,7 +51,5 @@
     </ul>
   </div>
 </div>
-
 {/if}
-    {/if}
    

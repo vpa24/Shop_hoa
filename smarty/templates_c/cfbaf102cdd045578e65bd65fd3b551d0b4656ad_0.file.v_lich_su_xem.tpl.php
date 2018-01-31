@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-28 13:28:10
+/* Smarty version 3.1.30, created on 2018-01-29 09:02:26
   from "C:\wamp64\www\shop_hoa-master\views\chi_tiet_hoa\v_lich_su_xem.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a6dcfea3a07b1_26027917',
+  'unifunc' => 'content_5a6ee3222ed561_57714301',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cfbaf102cdd045578e65bd65fd3b551d0b4656ad' => 
     array (
       0 => 'C:\\wamp64\\www\\shop_hoa-master\\views\\chi_tiet_hoa\\v_lich_su_xem.tpl',
-      1 => 1517146088,
+      1 => 1517216521,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a6dcfea3a07b1_26027917 (Smarty_Internal_Template $_smarty_tpl) {
-?>
- <?php if (isset($_SESSION['makh'])) {?>
-    <?php if (count($_smarty_tpl->tpl_vars['ds_lich_su']->value) >= 4) {?>
+function content_5a6ee3222ed561_57714301 (Smarty_Internal_Template $_smarty_tpl) {
+if (count($_smarty_tpl->tpl_vars['ds_lich_su']->value) > 1) {?>
     <div class="container MarginTop">
   <ul class="magictabs">
         <li class="item active loaded single">
             <span class="title da_xem">Sản phẩm đã xem</span>
-           
         </li>
+         <?php if (isset($_SESSION['makh'])) {?>
         <div>
          <a class="xem_tat_ca" href="san-pham-da-xem">Xem thêm</a>
-         </div>   
+         </div>
+         <?php }?>
   </ul>
   <div class="category-products">
     <ul class="products-grid row">
@@ -100,8 +99,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </ul>
   </div>
 </div>
-
 <?php }?>
-    <?php }?>
    <?php }
 }
