@@ -20,7 +20,6 @@ class C_hoa
     public function san_pham_da_xem()
     {
         include("c_data_contact.php");
-        include("models/m_hoa.php");
         include("URL.php");
         include("Smarty_shop_hoa.php");
         $smarty = new Smarty_Shop_Hoa();

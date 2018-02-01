@@ -21,7 +21,7 @@
 function phantrangSPdaxem(trang) {
     $.ajax({
       type: 'post',
-      url: 'ajax_san_pham_da_Xem.php',
+      url: 'ajax_san_pham_da_xem.php',
       data: {
         page: trang,
       },
@@ -44,7 +44,7 @@ function phantrangSPdaxem(trang) {
       },
     });
   }
-
+  
   function doctheoMaLoaiGia(maloai, price_range , page) {
     $.ajax({
       type: 'post',

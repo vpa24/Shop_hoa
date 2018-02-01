@@ -16,7 +16,7 @@ class M_lich_su extends database
     }
     function xem($ma_kh)
     {
-        $sql="select * from lich_su inner join hoa on hoa.MaHoa=lich_su.ma_hoa where ma_khach_hang=? order by id desc limit 1,4";
+        $sql="select * from lich_su inner join hoa on hoa.MaHoa=lich_su.ma_hoa where ma_khach_hang=? order by id desc limit 1,5";
 		$this->setQuery($sql);
 	    return $this->loadAllRows(array($ma_kh));
     }
