@@ -4693,3 +4693,10 @@ button.button {
   font-weight:400;
   font-size:15px;
 }
+.hinh_nho{
+  width: 20%;
+}
+.image-container{
+  padding: 15px 15px 0 15px;
+  text-align: left;
+}
