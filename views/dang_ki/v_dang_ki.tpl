@@ -11,7 +11,6 @@
 				<h6>Thông tin đăng nhập</h6>
 					<input type="email" name="email" placeholder="Nhập Email..." required=" " >
 					<input type="password" name="matKhau" placeholder="Mật khẩu..." required=" " >
-					<input type="password" placeholder="Nhập Lại Mật khẩu..." required=" " >
 					<input type="submit" name="dang_ki" value="Đăng Kí">
 				</form>
 			</div>
