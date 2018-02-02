@@ -32,6 +32,9 @@ class C_gio_hang
                 if($value > $slSP){
                     echo "loi_sl_$slSP";
                     break;
+                }else if($value >10 ){
+                    echo 'loi';
+                    break;
                 }
                 $gio_hang[$id]=$value;
                 break;
