@@ -102,7 +102,8 @@ class C_gio_hang
         $hoa=$m_hoa->doc_tat_ca_hoa();
         $tong_tt=0;
         $tong_sl=0;
-        foreach ($_SESSION["giohang"] as $k=>$value) {
+        if(isset($_SESSION['giohang'])){
+             foreach ($_SESSION["giohang"] as $k=>$value) {
             foreach ($hoa as $sp) {
                 if ($k==$sp->MaHoa) {
                     $tong_tt+=$value*$sp->GiaKhuyenMai;
@@ -111,6 +112,9 @@ class C_gio_hang
             }
         }
         $_SESSION['tong_gio_hang']=$tong_sl;
-        echo $_SESSION['tong_tt']=$tong_tt;
+        $_SESSION['tong_tt']=$tong_tt;
+        }
+        
+        echo json_encode(array($tong_sl,$tong_tt));
     }
 }

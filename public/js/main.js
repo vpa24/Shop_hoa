@@ -1,12 +1,15 @@
 var cartWrapper = $('.cd-cart-container');
 var tongThanhTien = 0;
+var tong_sl = 0;
 
 function addToCart(MaHoa, sl) {
+  cap_nhap_tong_tt();
   var cartIsEmpty = cartWrapper.hasClass('empty');
   addProduct(MaHoa, sl);
 }
 
 function addToCartCT(MaHoa) {
+  cap_nhap_tong_tt();
   var cartIsEmpty = cartWrapper.hasClass('empty');
   var sl = parseInt(document.getElementById('sl_' + MaHoa).value);
   addProduct(MaHoa, sl);
@@ -74,8 +77,12 @@ function cap_nhap_tong_tt() {
   $.ajax({
     url: 'cap_nhap_tong_tt.php',
     success: function(response) {
-      tongThanhTien = response;
-      document.getElementById('tong_thanh_tien').innerHTML = numeral(response).format('0,0') + ' đ';
+      var obj = jQuery.parseJSON(response);   
+      console.log(obj);
+         
+      tong_sl = obj[0];     
+      tongThanhTien = obj[1];
+      document.getElementById('tong_thanh_tien').innerHTML = numeral(obj[1]).format('0,0') + ' đ';
     },
   });
 }
@@ -142,6 +149,7 @@ function xoagiohang(mahoa, sl, gia) {
       cartList.find('.deleted').remove();
       updateCartTotal(-gia);
       updateCartCount(true, -sl);
+      cap_nhap_tong_tt();
     },
   });
 }
@@ -195,7 +203,9 @@ function hien_thi_loi() {
 }
 
 function updateCartCount(emptyCart, quantity) {
-    var actual = Number(cartCount.find('li').eq(0).text()) + quantity;
+  console.log(tong_sl);
+  
+    var actual = tong_sl + quantity;
     var next = actual + 1;
     cartCount.find('li').eq(0).text(actual);
     cartCount.find('li').eq(1).text(next);
