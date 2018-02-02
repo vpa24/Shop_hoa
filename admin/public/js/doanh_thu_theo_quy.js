@@ -5,9 +5,12 @@ $(document).ready(function(){
     success:function(data){
       var quy=[];
       var tong_tt=[];
-      var obj=jQuery.parseJSON(data);
+      var obj=jQuery.parseJSON(data);      
       for(var i in obj){
         quy.push('Quý '+obj[i].quy);
+        if (obj[i].tong_tt == null){
+          obj[i].tong_tt=0;
+        }
         tong_tt.push(obj[i].tong_tt);
       };
       var chardata={

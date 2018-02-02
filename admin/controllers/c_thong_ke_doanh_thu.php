@@ -18,7 +18,7 @@ class C_thong_ke_doanh_thu
       include("models/m_thong_ke_doanh_thu.php");
       $m_thong_ke_doanh_thu = new M_thong_ke_doanh_thu();
       $doanh_thu_theo_ngay=$m_thong_ke_doanh_thu->theo_ngay();
-      print json_encode($doanh_thu_theo_ngay, JSON_UNESCAPED_UNICODE);
+      print json_encode(array_reverse($doanh_thu_theo_ngay), JSON_UNESCAPED_UNICODE);
     }
     function getStartAndEndDate($week, $year)
     {
@@ -43,7 +43,7 @@ class C_thong_ke_doanh_thu
         $mang[$i] = array('tongtt'=>$doanh_thu->tong_tt,'ngay_trong_tuan'=>"$ngaybd - $ngaykt");
         $i++;
       }
-      print json_encode($mang, JSON_UNESCAPED_UNICODE);
+      print json_encode(array_reverse($mang), JSON_UNESCAPED_UNICODE);
     }
     function json_doanh_theo_theo_thang(){
       include("models/m_thong_ke_doanh_thu.php");

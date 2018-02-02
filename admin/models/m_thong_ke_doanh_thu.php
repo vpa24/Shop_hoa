@@ -9,15 +9,13 @@ class M_thong_ke_doanh_thu extends database
     }
     public function theo_ngay()
     {
-        $sql="SELECT DATE_FORMAT(ngay_dat, '%d/%m/%Y') as ngay_dat,sum(tong_thanh_tien) as tong_tt FROM chi_tiet_hoa_don inner join hoa_don on hoa_don.ma_hoa_don=chi_tiet_hoa_don.ma_hoa_don WHERE MONTH(ngay_dat) = MONTH(CURRENT_DATE())
-AND YEAR(ngay_dat) = YEAR(CURRENT_DATE()) group by day(ngay_dat)";
+        $sql="SELECT DATE_FORMAT(ngay_dat, '%d/%m/%Y') as ngay_dat,sum(tong_thanh_tien) as tong_tt FROM chi_tiet_hoa_don inner join hoa_don on hoa_don.ma_hoa_don=chi_tiet_hoa_don.ma_hoa_don WHERE YEAR(ngay_dat) = YEAR(CURRENT_DATE()) group by day(ngay_dat)  order by month(ngay_dat) desc,day(ngay_dat) desc limit 10";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
     public function theo_tuan()
     {
-        $sql="SELECT week(ngay_dat)as tuan,sum(tong_thanh_tien) as tong_tt FROM chi_tiet_hoa_don inner join hoa_don on hoa_don.ma_hoa_don=chi_tiet_hoa_don.ma_hoa_don WHERE MONTH(ngay_dat) = MONTH(CURRENT_DATE())
-AND YEAR(ngay_dat) = YEAR(CURRENT_DATE()) group by week(ngay_dat)";
+        $sql="SELECT week(ngay_dat)as tuan,sum(tong_thanh_tien) as tong_tt FROM chi_tiet_hoa_don inner join hoa_don on hoa_don.ma_hoa_don=chi_tiet_hoa_don.ma_hoa_don WHERE YEAR(ngay_dat) = YEAR(CURRENT_DATE()) group by week(ngay_dat) order by week(ngay_dat) desc limit 5";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
