@@ -137,19 +137,20 @@ function xoagiohang(mahoa, sl, gia) {
     url: 'xoagiohang.php',
     data: {
       mahoa: mahoa,
+    }, success: function (response) {
+      $('#delete' + mahoa).hide('slow');
+      cartList.find('.deleted').remove();
+      updateCartTotal(-gia);
+      updateCartCount(true, -sl);
     },
   });
-  $('#delete' + mahoa).hide('slow');
-  cartList.find('.deleted').remove();
-  updateCartTotal(-gia);
-  updateCartCount(true, -sl);
-  cap_nhap_tong_tt();
 }
 
 function updateCartTotal(price) {
   tongThanhTien = parseInt(tongThanhTien) + parseInt(price);
-  if (tongThanhTien == 0)
+  if (tongThanhTien == 0){
     $('.footer_gio_hang').hide('slow');
+  }
   document.getElementById('tong_thanh_tien').innerHTML = numeral(tongThanhTien).format('0,0') + ' đ';
 }
 

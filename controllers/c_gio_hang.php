@@ -87,8 +87,8 @@ class C_gio_hang
         if (isset($_POST["mahoa"])) {
             $id=$_POST["mahoa"];
             unset($_SESSION["giohang"][$id]);
-            if (count($_SESSION["giohang"])==0) {
-                session_destroy();
+            if(count($_SESSION['giohang'])==0){
+                unset($_SESSION['giohang']);
             }
         }
     }
